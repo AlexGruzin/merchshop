@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "react",
+    "stage-1"
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "react",
+        "stage-1",
+        "jest"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
