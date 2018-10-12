@@ -21,16 +21,15 @@ export default ({ palette, colors }) => ({
 
   advertIconWrapper: {
     height: '35px',
+    width: '35px',
+    lineHeight: '35px',
     justifySelf: 'flex-end',
     backgroundColor: palette.primary.dark,
-    paddingRight: '2%',
-    fontSize: '14px',
-    color: colors.BLACK,
+    padding: '0 1%',
+    color: palette.secondary.main,
   },
 
   advertIcon: {
-    position: 'relative',
-    height: '35px',
-    padding: 0,
+    fontSize: '10px',
   },
 });

@@ -5,7 +5,6 @@ import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
-import Arrow from '@material-ui/icons/ArrowForward';
 
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -71,19 +70,25 @@ export default class Footer extends PureComponent {
           </div>
 
           <div className={classes.servicesContainer}>
-            <Button
-              component={Link}
-              to={'subscribe'}
-              size="medium"
-              className={classes.subscribeButton}
-              classes={{
-                label: classes.footerSubscribeLabel,
-              }}>
-              <Typography variant='subtitle2'>
-                {'Subscribe'}
+            <div className={classes.subscribeContainer}>
+              <Button
+                component={Link}
+                to={'subscribe'}
+                size="medium"
+                className={classes.subscribeButton}>
+                <Typography className={classes.buttonLabel} variant='text'>
+                  {'Subscribe'}
+                </Typography>
+                <Icon
+                  icon={ICONS.ARROW_ICON}/>
+              </Button>
+              <Typography variant='display3'>{'By Subscribing I agree to the '}
+                <Link
+                  to={''}
+                  className={classes.underlined}>{'Email Communication Policy.'}
+                </Link>
               </Typography>
-              <Arrow className={classes.arrowFooterIcon} />
-            </Button>
+            </div>
           </div>
 
         </div>

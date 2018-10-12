@@ -61,18 +61,14 @@ export default class Header extends PureComponent {
 
               <div className={classes.iconsWrapper}>
                 <div className={classes.headerIcons}>
-                  <img
-                    src={Images.search1x}
-                    alt=''
-                    srcSet={`${Images.search2x} 2x,${Images.search3x} 3x`}
+                  <Icon
+                    icon={ICONS.SEARCH_ICON}
                     className={classes.smallIconSearch}/>
-
-                  <img
-                    src={Images.can1x}
-                    alt=''
-                    srcSet={`${Images.can2x} 2x,${Images.can3x} 3x`}
+                  <Icon
+                    icon={ICONS.CAN_ICON}
                     className={classes.smallIconCan}/>
                 </div>
+
               </div>
 
             </div>

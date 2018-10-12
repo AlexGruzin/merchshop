@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import { translate } from 'react-i18next';
-import CloseIcon from '@material-ui/icons/Close';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import styles from './styles';
 
 @translate()
@@ -35,9 +35,9 @@ export default class Advertisement extends PureComponent {
           <Typography className={phraze} variant="display3">Terms & conditions apply</Typography>
         </div>
         <div className={advertIconWrapper}>
-          <IconButton aria-label="Close" className={advertIcon}>
-            <CloseIcon fontSize='inherit' />
-          </IconButton>
+          <Icon
+            icon={ICONS.CROSS_ICON}
+            className={advertIcon}/>
         </div>
       </div>
     );

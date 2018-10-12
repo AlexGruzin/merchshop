@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import injectSheet from 'react-jss';
-import ArrowRight from 'components/ArrowRight';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import styles from './styles';
 
 @injectSheet( styles )
@@ -34,7 +36,9 @@ export default class ActionImage extends PureComponent {
           <Typography className={classes.buttonLabel} variant='button'>
             {label}
           </Typography>
-          <ArrowRight />
+          <Icon
+            icon={ICONS.ARROW_ICON}
+          />
         </Button>
       </div>
     );

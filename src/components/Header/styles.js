@@ -31,6 +31,7 @@ export default function({ colors, breakpoints, palette }) {
       display: 'flex',
       justifyContent: 'flex-end',
       right: 0,
+      marginRight: '3%',
       position: 'absolute',
       top: '23px',
     },
@@ -42,17 +43,14 @@ export default function({ colors, breakpoints, palette }) {
       width: '80px',
       justifyContent: 'space-around',
       height: '32px', // equal to logo height
-      marginRight: '5%',
     },
 
     smallIconSearch: {
-      width: '14px',
-      height: '14px',
+      fontSize: '14px',
     },
 
     smallIconCan: {
-      width: '14px',
-      height: '18px',
+      fontSize: '17px',
     },
 
     navigationRow: {

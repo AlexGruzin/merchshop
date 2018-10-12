@@ -9,6 +9,7 @@ export default {
   GREY900: '#263238',
   CORAL: '#f25353',
   GREY300: '#f4f4f4',
+  GREY600: '#757575',
   //  default theme
   //    primary
   GREY400: '#8e8e8e',

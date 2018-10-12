@@ -5,4 +5,8 @@ export const ICONS = {
   SPOTIFY_ICON: '&#xe903;',
   ZULU_ICON: '&#xe904;',
   TWITTER_ICON: '&#xe905;',
+  SEARCH_ICON: '&#xe906',
+  CAN_ICON: '&#xe907',
+  CROSS_ICON: '&#xe908',
+  ARROW_ICON: '&#xe909',
 };

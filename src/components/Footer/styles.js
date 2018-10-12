@@ -38,27 +38,32 @@ export default function({ colors }) {
       margin: 'auto 0',
     },
 
+    subscribeContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+
     serviceIcon: {
       margin: '0 10px',
     },
 
     subscribeButton: {
-      width: '250px',
+      justifyContent: 'space-between',
+      width: '290px',
       height: '40px',
-    },
+      margin: '5px 0',
 
-    arrowFooterIcon: {
-      marginLeft: '150px',
-    },
-
-    footerSubscribeLabel: {
-      justifyContent: 'flex-start',
       fontFamily: 'Avenir-Book',
       fontSize: '12px',
       fontWeight: '300',
-      textTransform: 'none',
+      textTransform: 'capitalize',
       letterSpacing: '0.5px',
-      color: colors.GREY800,
+      color: colors.GREY600,
     },
+
+    underlined: {
+      textDecoration: 'underline',
+    },
+
   }
 }

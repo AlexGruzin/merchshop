@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import classNames from 'classnames'
 import Typography from '@material-ui/core/Typography';
-import ArrowRight from 'components/ArrowRight';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import styles from './styles';
 
 @injectSheet( styles )
@@ -46,7 +47,9 @@ class Item extends PureComponent {
               variant='button'>
               {'Shop Helmets'}
             </Typography>
-            <ArrowRight />
+            <Icon
+              className={''}
+              icon={ICONS.ARROW_ICON}/>
           </Button>
         </div>
       </div>
