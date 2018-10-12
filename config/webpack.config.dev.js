@@ -11,6 +11,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+// console.dir(process.cwd());
+const iconsPath = path.resolve(process.cwd(), 'front/src/theme/icons');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -166,6 +168,7 @@ module.exports = {
                   importLoaders: 1,
                 },
               },
+
               {
                 loader: require.resolve('postcss-loader'),
                 options: {

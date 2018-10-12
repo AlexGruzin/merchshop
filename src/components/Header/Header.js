@@ -12,9 +12,17 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Hidden from '@material-ui/core/Hidden';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import Collapse from '@material-ui/core/Collapse';
 
 import styles from './styles';
-import Images from 'theme/images';
 
 @translate()
 @injectSheet( styles )
@@ -34,9 +42,20 @@ export default class Header extends PureComponent {
   constructor( props ) {
     super( props );
     this.state = {
-      mobileMenuOpened: false,
+      mobileMenuOpened: true,
+      subo: false,
     }
   }
+
+  toggleDrawer = ( open ) => () => {
+    this.setState({
+      mobileMenuOpened: open,
+    });
+  };
+
+  subRouteOpener = () => {
+    this.setState( state => ({ open: !state.open }) );
+  };
 
   render() {
     const {
@@ -52,6 +71,7 @@ export default class Header extends PureComponent {
     return (
       <div className={rootHeader}>
 
+        {/* DESCKTOP */}
         <Hidden smDown>
           <div className={classes.smDown}>
 
@@ -132,6 +152,98 @@ export default class Header extends PureComponent {
           </div>
 
         </Hidden>
+
+        {/* MOBILE */}
+        <Hidden mdUp>
+          <div className={classes.mdUp} >
+
+            <div className={classes.headerFlexPart}>
+              <div className={classes.menuIconWrapper}>
+                <Icon
+                  icon={ICONS.MENU}
+                  onClick={this.toggleDrawer( true )}
+                  className={classes.mobileMenuIcon}/>
+              </div>
+              <SwipeableDrawer
+                classes={{
+                  paper: classes.swiperWidth,
+                }}
+                open={this.state.mobileMenuOpened}
+                onClose={this.toggleDrawer( false )}
+                onOpen={this.toggleDrawer( true )}
+                swipeAreaWidth={ 20 }>
+                <div
+                  tabIndex={0}
+                  role="button"
+                  onKeyDown={this.toggleDrawer( false )}>
+                  <div className={classes.swipedList}>
+                    <List>
+
+                      <ListItem button>
+
+                          <div className={classes.swipedLogoWrapper}>
+                            <Icon icon={ICONS.ZULU_ICON} className={classes.swipedLogo}/>
+                          </div>
+
+                      </ListItem>
+
+                      <Divider/>
+
+                      <ListItem button>
+                        <Typography className={classes.swipingNavLabel} variant='headline'>
+                          {'AKSESOIRES'}
+                        </Typography>
+                      </ListItem>
+
+                      <Divider/>
+
+                      <ListItem button onClick={this.subRouteOpener} className={classes.listItemWithSubroutes}>
+                        <Typography className={classes.swipingNavLabel} variant='headline'>
+                          {'SHOP ALL'}
+                        </Typography>
+                        {this.state.subo ? <ExpandLess /> : <ExpandMore />}
+                      </ListItem>
+                      <Collapse
+                        in={this.state.open}
+                        timeout="auto"
+                        unmountOnExit
+                        classes={{
+                          container: classes.mobileSubRouteContainer,
+                        }}>
+                        <List component="div" disablePadding>
+                          <ListItem button>
+                            <Typography className={classes.swipingNavSubLabel} variant='headline'>
+                              {'Bluetooth'}
+                            </Typography>
+                          </ListItem>
+                        </List>
+                      </Collapse>
+
+                    </List>
+                  </div>
+                </div>
+              </SwipeableDrawer>
+            </div>
+
+            <div className={classes.headerFlexPart}>
+              <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
+            </div>
+
+            <div className={classes.headerFlexPart}>
+              <div className={classes.leftIconsWrapper}>
+                <Icon
+                  icon={ICONS.SEARCH_ICON}
+                  onClick={this.toggleDrawer( true )}
+                  className={classes.mobileIconSearch}/>
+                <Icon
+                  icon={ICONS.CAN_ICON}
+                  className={classes.mobileIconCan}/>
+              </div>
+            </div>
+
+          </div>
+        </Hidden>
+
       </div>
     );
   }

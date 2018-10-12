@@ -9,4 +9,5 @@ export const ICONS = {
   CAN_ICON: '&#xe907',
   CROSS_ICON: '&#xe908',
   ARROW_ICON: '&#xe909',
+  MENU: '&#xe90a',
 };

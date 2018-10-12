@@ -1,12 +1,5 @@
 export default function({ colors, breakpoints, palette }) {
   return {
-    rootHeader: {
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: palette.primary.main,
-      width: '100%',
-      height: '100px',
-    },
 
     smDown: {
       display: 'flex',
@@ -18,13 +11,6 @@ export default function({ colors, breakpoints, palette }) {
       display: 'flex',
       flexFlow: 'row',
       position: 'relative',
-    },
-
-    logoIcon: {
-      height: '32px',
-      fontSize: '32px',
-      marginTop: '22px',
-      marginLeft: 'calc(50% - 40px)',
     },
 
     iconsWrapper: {
@@ -118,17 +104,20 @@ export default function({ colors, breakpoints, palette }) {
       height: '37px',
     },
 
-    // --------------------- ADVERTISMENT --------------------------
-    promo: {
-      color: colors.CORAL,
-    },
-
-
-
     // ---- scaled styles ----
 
-    canIcon: {
-      color: colors.WHITE,
+    rootHeader: {
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: palette.primary.main,
+      width: '100%',
+
+      [breakpoints.down( 'md' )]: {
+        height: '70px',
+      },
+      [breakpoints.up( 'md' )]: {
+        height: '100px',
+      },
     },
 
     logoContainer: {
@@ -143,5 +132,96 @@ export default function({ colors, breakpoints, palette }) {
       },
     },
 
+    logoIcon: {
+      height: '32px',
+      fontSize: '32px',
+      marginTop: '22px',
+      marginLeft: 'calc(50% - 40px)',
+
+      [breakpoints.down( 'md' )]: {
+        margin: 'auto',
+      },
+      [breakpoints.up( 'md' )]: {
+        margin: '0 auto',
+        alignSelf: 'flex-end',
+      },
+    },
+
+    // ------ mobile styles only ------
+
+    mdUp: {
+      display: 'flex',
+      flexDirection: 'row',
+      width: '100%',
+      height: '70px',
+    },
+
+    headerFlexPart: {
+      display: 'flex',
+      flexGrow: '1',
+      width: '33%',
+      height: '70px',
+    },
+
+    menuIconWrapper: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+
+    leftIconsWrapper: {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'flex-end',
+      margin: 'auto 20px'
+    },
+
+    mobileIconSearch: {
+      fontSize: '16px',
+      padding: '0 10px',
+    },
+
+    mobileIconCan: {
+      fontSize: '20px',
+      padding: '0 10px',
+    },
+
+    mobileMenuIcon: {
+      padding: '0 20px',
+      fontSize: '12px',
+    },
+
+    // ---- Swiping menu ----
+    swiperWidth: {
+      width: '85%',
+    },
+
+    swipedLogoWrapper: {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'center',
+    },
+
+    swipedLogo: {
+      fontSize: '32px',
+    },
+
+    swipingNavLabel: {
+      padding: '5px 0',
+    },
+
+    listItemWithSubroutes: {
+      justifyContent: 'space-between',
+    },
+
+    swipingNavSubLabel: {
+      padding: '5px 0',
+      fontFamily: 'Avenir',
+      fontWeight: 300,
+    },
+
+    mobileSubRouteContainer: {
+      width: '100%',
+      boxShadow: 'none',
+    },
   };
 }

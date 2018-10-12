@@ -14,10 +14,14 @@ export default class Icon extends PureComponent {
   };
 
   render() {
-    const { classes, icon, className } = this.props;
+    const { classes, icon, className, onClick } = this.props;
 
     return (
-      <div className={classnames( classes.root, className )} dangerouslySetInnerHTML={{ __html: icon }} />
+      <div
+        className={classnames( classes.root, className )}
+        dangerouslySetInnerHTML={{ __html: icon }}
+        onClick={onClick}
+      />
     );
   }
 }

@@ -49,7 +49,7 @@ export default class Footer extends PureComponent {
 
         <div className={classes.footerColumn}>
 
-          <div className={classes.servicesContainer}>
+          <div className={classes.iconsServicesContainer}>
             <div className={classes.servicesWrapper}>
               <div className={classes.serviceIcon}>
                 <Icon icon={ICONS.FACEBOOK_ICON}/>
@@ -69,8 +69,8 @@ export default class Footer extends PureComponent {
             </div>
           </div>
 
-          <div className={classes.servicesContainer}>
-            <div className={classes.subscribeContainer}>
+          <div className={classes.servicesSubscribeContainer}>
+            <div className={classes.subscribeWrapper}>
               <Button
                 component={Link}
                 to={'subscribe'}
@@ -82,7 +82,7 @@ export default class Footer extends PureComponent {
                 <Icon
                   icon={ICONS.ARROW_ICON}/>
               </Button>
-              <Typography variant='display3'>{'By Subscribing I agree to the '}
+              <Typography className={classes.privacy} variant='display3'>{'By Subscribing I agree to the '}
                 <Link
                   to={''}
                   className={classes.underlined}>{'Email Communication Policy.'}
