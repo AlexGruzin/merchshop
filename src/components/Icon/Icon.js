@@ -9,7 +9,7 @@ import styles from './styles';
 export default class Icon extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     icon: PropTypes.string.isRequired,
   };
 

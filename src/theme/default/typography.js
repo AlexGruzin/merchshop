@@ -2,6 +2,8 @@ import colors from './colors';
 import palette from './palette';
 
 export default {
+  useNextVariants: true,
+
   button: {
     fontFamily: 'Avenir',
     fontSize: '12px',
@@ -12,7 +14,7 @@ export default {
     textTransform: 'uppercase',
   },
 
-  headline: {
+  h5: {
     fontFamily: [
       'HelveticaNeue-Medium',
     ].join( ',' ),
@@ -22,7 +24,7 @@ export default {
     color: colors.BLACK,
   },
 
-  display3: {
+  h2: {
     fontFamily: 'Avenir',
     fontSize: '10px',
     fontStyle: 'normal',
@@ -32,31 +34,28 @@ export default {
     color: colors.BLACK,
   },
 
-  display2: {
-    fontFamily: 'Avenir',
-    fontSize: '14px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.5px',
-    color: colors.BLACK,
-  },
-
-  display1: {
+  h3: {
     fontFamily: 'Avenir',
     fontSize: '12px',
     fontStyle: 'normal',
     fontStretch: 'normal',
     lineHeight: 'normal',
     letterSpacing: '0.5px',
-    color: colors.CORAL,
-    textTransform: 'uppercase',
+    color: colors.BLACK,
     fontWeight: '500',
   },
 
-  body2: {
-    fontFamily: 'HelveticaNeue',
-    fontWeight: 300,
+  h4: {
+    fontFamily: 'HelveticaNeue-Light',
+    fontSize: '12px',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: '0.5px',
+  },
+
+  body1: {
+    fontFamily: 'Avenir',
     fontSize: '12px',
     fontStyle: 'normal',
     fontStretch: 'normal',
@@ -64,7 +63,7 @@ export default {
     textTransform: 'none',
   },
 
-  display4: {
+  h1: {
     fontFamily: 'HelveticaNeue-Bold',
     fontWeight: 900,
     fontSize: '20px',
@@ -75,7 +74,7 @@ export default {
     color: palette.secondary.main
   },
 
-  subheading: {
+  subtitle1: {
     fontFamily: 'HelveticaNeue',
     fontWeight: 300,
     fontSize: '8px',
@@ -84,6 +83,7 @@ export default {
     letterSpacing: '0.3px',
     textTransform: 'none',
   },
+
 
   fontFamily: [
     'sofia-pro',

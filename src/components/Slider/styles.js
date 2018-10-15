@@ -88,20 +88,20 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderIndicatorWrapper: {
       display: 'flex',
       alignItems: 'center',
-      width: '10%',
+      width: '150px',
       height: '50px',
     },
 
     indicator: {
+      transition: 'all 0.5s ease',
+      display: 'flex',
       flexGrow: 1,
-      margin: '0 2px',
-      width: '12px',
+      margin: '0 5px',
       height: '2px',
     },
 
     activated: {
       backgroundColor: colors.BLACK,
-      boxShadow: '0px 0px 3px 2px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
     },
 
     disactivated: {

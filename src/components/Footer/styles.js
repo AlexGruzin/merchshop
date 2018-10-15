@@ -11,7 +11,7 @@ export default function({ colors, breakpoints }) {
       height: '36px',
       width: '150px',
       background: colors.GREY300,
-      margin: '0 10%'
+      margin: '0 6%'
     },
 
     footerButtonLabel: {
@@ -20,14 +20,12 @@ export default function({ colors, breakpoints }) {
 
     servicesWrapper: {
       display: 'flex',
-      margin: 'auto 0',
+      width: '170px',
+      justifyContent: 'space-between',
+      //margin: 'auto 0',
     },
 
-    serviceIcon: {
-      margin: '0 10px',
-    },
-
-
+    serviceIcon: {},
 
     underlined: {
       textDecoration: 'underline',
@@ -42,6 +40,7 @@ export default function({ colors, breakpoints }) {
     footerContainer: {
       display: 'flex',
       width: '100%',
+      padding: '25px 0',
       background: colors.GREY300,
 
       [breakpoints.down( 'sm' )]: {
@@ -56,7 +55,8 @@ export default function({ colors, breakpoints }) {
       display: 'flex',
       flexDirection: 'row',
       height: '50%',
-      alignItems: 'center',
+      paddingTop: '8px',
+      //alignItems: 'center',
 
       [breakpoints.down( 'sm' )]: {
         justifyContent: 'flex-start',
@@ -77,7 +77,9 @@ export default function({ colors, breakpoints }) {
 
       [breakpoints.down( 'sm' )]: {
         justifyContent: 'center',
-        margin: '20px 10%',
+        margin: '0 10%',
+        marginTop: '30px',
+        marginBottom: '25px',
       },
       [breakpoints.up( 'sm' )]: {
         justifyContent: 'flex-end',
@@ -94,6 +96,9 @@ export default function({ colors, breakpoints }) {
         width: '100%',
       },
 
+      [breakpoints.up( 'sm' )]: {
+        width: 'auto',
+      },
     },
 
     subscribeButton: {
@@ -113,7 +118,12 @@ export default function({ colors, breakpoints }) {
       fontWeight: '300',
       textTransform: 'capitalize',
       letterSpacing: '0.5px',
-      color: colors.GREY600,
+      color: colors.GREY400,
+    },
+
+    arrowIcon: {
+      fontSize: '8px',
+      color: colors.BLACK,
     },
 
   }

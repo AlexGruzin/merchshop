@@ -2,7 +2,6 @@ export default () => ({
   instagram: {
     display: 'flex',
     height: '254px',
-    marginBottom: '29px',
     position: 'relative'
   },
   instagramImage: {

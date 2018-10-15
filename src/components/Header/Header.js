@@ -5,23 +5,20 @@ import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
+import classNames from 'classnames';
 
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Hidden from '@material-ui/core/Hidden';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import Collapse from '@material-ui/core/Collapse';
 
+import DescktopMenuRoute from 'components/Navigation/DescktopMenuRoute';
+import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
+import MobileSubRoute from 'components/Navigation/MobileSubRoutes';
+import { AUTHENTICATE } from 'constants/routing';
 import styles from './styles';
 
 @translate()
@@ -42,8 +39,8 @@ export default class Header extends PureComponent {
   constructor( props ) {
     super( props );
     this.state = {
-      mobileMenuOpened: true,
-      subo: false,
+      mobileMenuOpened: false,
+      subRotesShow: false,
     }
   }
 
@@ -53,16 +50,16 @@ export default class Header extends PureComponent {
     });
   };
 
-  subRouteOpener = () => {
-    this.setState( state => ({ open: !state.open }) );
-  };
-
   render() {
     const {
       t,
       classes,
       linkList,
     } = this.props;
+
+    const {
+      mobileMenuOpened,
+    } = this.state;
 
     const {
       rootHeader,
@@ -96,55 +93,13 @@ export default class Header extends PureComponent {
             <div className={classes.navigationRow}>
               <div className={classes.navRowWrapper}>
                 {linkList.map(( linkItem, index ) => (
-                  <ExpansionPanel
-                    classes={{
-                      root: classes.expandPanel,
-                      expanded: classes.expandPanelExpanded,
-                    }}
-                    key={index}>
-                    <ExpansionPanelSummary
-                      classes={{
-                        root: classes.rootSummary,
-                        content: classes.contentSummary,
-                        expanded: classes.summaryExpanded,
-                      }}>
-                      <Typography
-                        variant="headline"
-                        className={classes.headline}>
-                        {t( linkItem.label )}
-                      </Typography>
-                    </ExpansionPanelSummary>
 
-                    <ExpansionPanelActions
-                      classes={{
-                        root: classes.expandedActionsRoot,
-                      }}>
-                      <div className={classes.expandedActionsWrapper}>
-                        { linkItem.subRoutes
-                          ?
-                          linkItem.subRoutes.map(( subLink, index ) => (
-                            <Button
-                              key={index}
-                              component={Link}
-                              to={subLink.route}
-                              size='medium'
-                              fullWidth
-                              color='secondary'
-                              className={classes.navigationExpandedButton}
-                              classes={{
-                                label: classes.expandSubButtonLabel,
-                              }}>
-                              <Typography variant='body2'>
-                                {subLink.label}
-                              </Typography>
-                            </Button>
-                          ))
-                          : null
-                        }
-                      </div>
-                    </ExpansionPanelActions>
+                  <DescktopMenuRoute
+                    key={index}
+                    label={linkItem.label}
+                    route={linkItem.route}
+                    subRoutes={linkItem.subRoutes}/>
 
-                  </ExpansionPanel>
                 ))}
               </div>
             </div>
@@ -168,7 +123,7 @@ export default class Header extends PureComponent {
                 classes={{
                   paper: classes.swiperWidth,
                 }}
-                open={this.state.mobileMenuOpened}
+                open={mobileMenuOpened}
                 onClose={this.toggleDrawer( false )}
                 onOpen={this.toggleDrawer( true )}
                 swipeAreaWidth={ 20 }>
@@ -177,47 +132,41 @@ export default class Header extends PureComponent {
                   role="button"
                   onKeyDown={this.toggleDrawer( false )}>
                   <div className={classes.swipedList}>
-                    <List>
+                    <List disablePadding>
 
                       <ListItem button>
-
-                          <div className={classes.swipedLogoWrapper}>
-                            <Icon icon={ICONS.ZULU_ICON} className={classes.swipedLogo}/>
-                          </div>
-
+                        <div className={classes.swipedLogoWrapper}>
+                          <Icon icon={ICONS.ZULU_ICON} className={classes.swipedLogo}/>
+                        </div>
                       </ListItem>
-
                       <Divider/>
+
+                      {linkList.map(( linkItem, index ) => (
+                        <div key={index}>
+                          {linkItem.subRoutes
+                            ? <MobileSubRoute
+                              label={linkItem.label}
+                              subRoutes={linkItem.subRoutes}/>
+                            : <MobileMenuRoute
+                              route={linkItem.route}
+                              label={linkItem.label}/>
+                          }
+                        </div>
+                      ))}
 
                       <ListItem button>
-                        <Typography className={classes.swipingNavLabel} variant='headline'>
-                          {'AKSESOIRES'}
-                        </Typography>
-                      </ListItem>
-
-                      <Divider/>
-
-                      <ListItem button onClick={this.subRouteOpener} className={classes.listItemWithSubroutes}>
-                        <Typography className={classes.swipingNavLabel} variant='headline'>
-                          {'SHOP ALL'}
-                        </Typography>
-                        {this.state.subo ? <ExpandLess /> : <ExpandMore />}
-                      </ListItem>
-                      <Collapse
-                        in={this.state.open}
-                        timeout="auto"
-                        unmountOnExit
-                        classes={{
-                          container: classes.mobileSubRouteContainer,
-                        }}>
-                        <List component="div" disablePadding>
-                          <ListItem button>
-                            <Typography className={classes.swipingNavSubLabel} variant='headline'>
-                              {'Bluetooth'}
+                        <div className={classes.swipedButtonWrapper}>
+                          <Button
+                            component={Link}
+                            to={AUTHENTICATE}
+                            size="medium"
+                            className={classes.swipedButton}>
+                            <Typography className={classes.buttonLabel} variant='h5'>
+                              {'SIGN UP / LOG IN'}
                             </Typography>
-                          </ListItem>
-                        </List>
-                      </Collapse>
+                          </Button>
+                        </div>
+                      </ListItem>
 
                     </List>
                   </div>
@@ -248,4 +197,3 @@ export default class Header extends PureComponent {
     );
   }
 }
-

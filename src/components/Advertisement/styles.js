@@ -1,26 +1,64 @@
-export default ({ palette, colors }) => ({
-  rootAdvert: {
-    display: 'flex',
-    width: '100%',
-    height: '35px',
-  },
-
-  advertismentRow: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '35px',
-    backgroundColor: palette.primary.dark,
-  },
+export default ({ palette, colors, breakpoints }) => ({
 
   phraze: {
     marginLeft: '10px',
   },
 
+  promo: {
+    color: colors.CORAL,
+  },
+
+  advertIcon: {
+    display: 'flex',
+    fontSize: '10px',
+    height: '100%',
+    alignItems: 'center',
+  },
+
+  // scaled styles
+  advertismentRow: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+
+    [breakpoints.down( 'sm' )]: {
+      margin: '0 2%',
+    },
+    [breakpoints.up( 'sm' )]: {
+      margin: '0',
+    },
+  },
+
+  root: {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: palette.primary.dark,
+
+    [breakpoints.down( 'sm' )]: {
+      height: '50px',
+    },
+    [breakpoints.up( 'sm' )]: {
+      height: '35px',
+    },
+  },
+
+  advertismentWrapper: {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center',
+
+    [breakpoints.down( 'sm' )]: {
+      flexDirection: 'column',
+    },
+    [breakpoints.up( 'sm' )]: {
+      flexDirection: 'row',
+    },
+  },
+
   advertIconWrapper: {
-    height: '35px',
+    height: '100%',
     width: '35px',
     lineHeight: '35px',
     justifySelf: 'flex-end',
@@ -29,7 +67,4 @@ export default ({ palette, colors }) => ({
     color: palette.secondary.main,
   },
 
-  advertIcon: {
-    fontSize: '10px',
-  },
 });

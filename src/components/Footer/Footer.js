@@ -39,7 +39,7 @@ export default class Footer extends PureComponent {
               classes={{
                 label: classes.footerButtonLabel,
               }}>
-              <Typography variant='body2'>
+              <Typography variant='body1'>
                 {t( link.label )}
               </Typography>
             </Button>
@@ -76,13 +76,13 @@ export default class Footer extends PureComponent {
                 to={'subscribe'}
                 size="medium"
                 className={classes.subscribeButton}>
-                <Typography className={classes.buttonLabel} variant='text'>
+                <Typography className={classes.buttonLabel} variant={'inherit'}>
                   {'Subscribe'}
                 </Typography>
-                <Icon
+                <Icon className={classes.arrowIcon}
                   icon={ICONS.ARROW_ICON}/>
               </Button>
-              <Typography className={classes.privacy} variant='display3'>{'By Subscribing I agree to the '}
+              <Typography className={classes.privacy} variant='h2'>{'By Subscribing I agree to the '}
                 <Link
                   to={''}
                   className={classes.underlined}>{'Email Communication Policy.'}

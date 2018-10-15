@@ -41,15 +41,15 @@ export default class SellItem extends PureComponent {
     return (
       <div className={classes.root}>
         <div className={classes.imageWrapper}>
-          { soldOut && <Typography className={classes.soldOut} variant="body2">{t( 'homePage:soldOut' )}</Typography> }
+          { soldOut && <Typography className={classes.soldOut} variant="body1">{t( 'homePage:soldOut' )}</Typography> }
           <div
             className={classes.image}
             style={{
               backgroundImage: `url('${image}')`
             }}/>
         </div>
-        <Typography className={classes.name} variant="body2">{name}</Typography>
-        <Typography className={classes.cost} variant="body2">{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+        <Typography className={classes.name} variant="body1">{name}</Typography>
+        <Typography className={classes.cost} variant="body1">{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
         <div className={classes.rating}>
           <Rating
             readonly
@@ -75,7 +75,7 @@ export default class SellItem extends PureComponent {
                   backgroundImage: `url('${Images.placeholder}')`
                 }}/>
             }/>
-          <Typography className={classes.reviewsCount} variant="subheading">{reviews}</Typography>
+          <Typography className={classes.reviewsCount} variant="subtitle1">{reviews}</Typography>
         </div>
       </div>
     );

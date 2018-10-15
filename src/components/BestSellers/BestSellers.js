@@ -20,7 +20,7 @@ export default class BestSellers extends PureComponent {
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant="display4">{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
         <div className={classes.bestSellersItems}>
           {
             bestSellers.map( item => <SellItem {...item} key={item.id} /> )

@@ -9,8 +9,13 @@ export default function({ colors, breakpoints, palette }) {
     },
     logoRow: {
       display: 'flex',
+      height: '50px',
       flexFlow: 'row',
       position: 'relative',
+    },
+
+    'headerlinks:promo': {
+      color: colors.CORAL,
     },
 
     iconsWrapper: {
@@ -64,6 +69,7 @@ export default function({ colors, breakpoints, palette }) {
       backgroundColor: 'transparent',
       maxWidth: '100px',
       height: '50px',
+      zIndex: '100',
     },
 
     expandPanelExpanded: {
@@ -203,25 +209,20 @@ export default function({ colors, breakpoints, palette }) {
 
     swipedLogo: {
       fontSize: '32px',
+      margin: '10px 0',
     },
 
-    swipingNavLabel: {
-      padding: '5px 0',
-    },
-
-    listItemWithSubroutes: {
-      justifyContent: 'space-between',
-    },
-
-    swipingNavSubLabel: {
-      padding: '5px 0',
-      fontFamily: 'Avenir',
-      fontWeight: 300,
-    },
-
-    mobileSubRouteContainer: {
+    swipedButtonWrapper: {
+      display: 'flex',
       width: '100%',
-      boxShadow: 'none',
+      justifyContent: 'center',
     },
+
+    swipedButton: {
+      width: '50%',
+      minWidth: '150px',
+      margin: '10% 0',
+      border: `solid 1px ${colors.BLACK}`
+    }
   };
 }

@@ -36,7 +36,7 @@ export default class InstagramAdv extends PureComponent {
         </Button>
         {
           images.map(( item, index ) => (
-            <div
+            <div key={index}
               className={classes.instagramImage}
               style={{
                 backgroundImage: `url('${item}')`,

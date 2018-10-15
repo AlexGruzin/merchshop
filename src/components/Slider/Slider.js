@@ -152,7 +152,10 @@ export default class Slider extends React.Component {
                 items.map(( item, index ) => {
                   const indicatorColor = ( index === this.state.active ) ? 'activated' : 'disactivated';
                   return(
-                    <div key={index} className={classNames( classes.indicator, classes[indicatorColor])}></div>
+                    <div
+                      key={index}
+                      className={classNames( classes.indicator, classes[indicatorColor])}
+                    ></div>
                   )}
                 )
               }
