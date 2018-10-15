@@ -33,6 +33,10 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'contain',
+
+      [breakpoints.down( 'xs' )]: {
+        backgroundSize: 'cover',
+      },
     },
 
     'level-1': {

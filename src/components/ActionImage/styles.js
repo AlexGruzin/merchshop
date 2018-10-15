@@ -3,6 +3,11 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       position: 'relative',
       width: '50%',
+
+      [breakpoints.down( 'xs' )]: {
+        width: '100%',
+        height: '200px',
+      },
     },
     image: {
       margin: '0 auto',
