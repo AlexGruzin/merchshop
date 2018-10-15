@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       position: 'relative',
       width: '50%',
+      height: '320px',
 
       [breakpoints.down( 'xs' )]: {
         width: '100%',
