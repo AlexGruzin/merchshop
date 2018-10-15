@@ -1,13 +1,19 @@
-export default function({ palette }) {
+export default function({ breakpoints, palette }) {
   return {
     root: {
       display: 'flex',
       flexDirection: 'column',
       width: '183px',
+      marginRight: '11px',
+
+      [breakpoints.down( 'xs' )]: {
+        width: '128px',
+        marginRight: '8px',
+      },
     },
     image: {
       width: '100%',
-      height: '183px',
+      height: '100%',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
@@ -15,7 +21,12 @@ export default function({ palette }) {
     imageWrapper: {
       width: '100%',
       height: '183px',
-      position: 'relative'
+      position: 'relative',
+
+
+      [breakpoints.down( 'xs' )]: {
+        height: '128px',
+      },
     },
     soldOut: {
       color: palette.secondary.main,
