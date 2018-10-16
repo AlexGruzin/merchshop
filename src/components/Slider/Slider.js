@@ -80,9 +80,9 @@ export default class Slider extends React.Component {
   }
 
   componentDidMount() {
-    // this.setState({
-    //   timer: setInterval( function() { this.setActive() }.bind( this ), 5000 )
-    // });
+    this.setState({
+      timer: setInterval( function() { this.setActive() }.bind( this ), 5000 )
+    });
   }
 
   generateItems( items ) {

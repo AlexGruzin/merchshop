@@ -48,8 +48,19 @@ export default class SellItem extends PureComponent {
               backgroundImage: `url('${image}')`
             }}/>
         </div>
-        <Typography className={classes.name} variant="body1">{name}</Typography>
-        <Typography className={classes.cost} variant="body1">{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+
+        <Typography
+          className={classes.name}
+          variant="body1">
+          {name}
+        </Typography>
+
+        <Typography
+          className={classes.cost}
+          variant="body1">
+          {t( 'homePage:cost' ).replace( '${cost}', cost )}
+        </Typography>
+
         <div className={classes.rating}>
           <Rating
             readonly

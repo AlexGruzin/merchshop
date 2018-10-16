@@ -42,7 +42,7 @@ export default class MobileMenuRoute extends PureComponent {
           to={route}
           className={classes.listItemWithSubroutes}>
           <Typography
-            className={classNames(classes.swipingNavLabel, classes[label.toLowerCase()])}
+            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
             variant={labelClass}>
             {t( label )}
           </Typography>

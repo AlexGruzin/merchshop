@@ -63,9 +63,7 @@ export default function({ colors, values, breakpoints, palette }) {
       background: '#81898c',
     },
 
-    sliderButtonLink: {
-      //color: colors.BLACK,
-    },
+    sliderButtonLink: {},
 
     sliderLabel: {
       marginRight: '46px',

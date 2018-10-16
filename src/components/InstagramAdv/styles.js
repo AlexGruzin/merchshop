@@ -29,6 +29,7 @@ export default ({ breakpoints }) => ({
     transform: 'translate3d(-50%, -50%, 0)'
   },
   instagramButtonLabel: {
+    fontFamily: 'HelveticaNeue-Bold',
     textTransform: 'lowercase',
   },
 

@@ -19,6 +19,5 @@ export default function({ colors, breakpoints, palette }) {
       width: '100%',
       boxShadow: 'none',
     },
-
   }
 }

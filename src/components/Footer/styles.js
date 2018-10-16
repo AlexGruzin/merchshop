@@ -22,7 +22,6 @@ export default function({ colors, breakpoints }) {
       display: 'flex',
       width: '170px',
       justifyContent: 'space-between',
-      //margin: 'auto 0',
     },
 
     serviceIcon: {},
@@ -56,7 +55,6 @@ export default function({ colors, breakpoints }) {
       flexDirection: 'row',
       height: '50%',
       paddingTop: '8px',
-      //alignItems: 'center',
 
       [breakpoints.down( 'sm' )]: {
         justifyContent: 'flex-start',

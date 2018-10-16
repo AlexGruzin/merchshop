@@ -5,7 +5,7 @@ export default {
   useNextVariants: true,
 
   button: {
-    fontFamily: 'Avenir',
+    fontFamily: 'Avenir-Heavy',
     fontSize: '12px',
     fontWeight: 900,
     letterSpacing: '0.5px',

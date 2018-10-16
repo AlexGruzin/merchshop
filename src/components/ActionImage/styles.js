@@ -20,6 +20,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
     button: {
       position: 'absolute',
+      minWidth: '190px',
       left: '50%',
       bottom: '34px',
       transform: 'translate3d(-50%, 0, 0)',

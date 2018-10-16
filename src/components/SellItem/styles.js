@@ -1,4 +1,4 @@
-export default function({ breakpoints, palette }) {
+export default function({ breakpoints, palette, colors }) {
   return {
     root: {
       display: 'flex',
@@ -22,7 +22,6 @@ export default function({ breakpoints, palette }) {
       width: '100%',
       height: '183px',
       position: 'relative',
-
 
       [breakpoints.down( 'xs' )]: {
         height: '128px',
@@ -56,6 +55,7 @@ export default function({ breakpoints, palette }) {
       paddingBottom: '2px',
     },
     star: {
+      opacity: '.5',
       width: '8.2px',
       height: '7.5px',
       backgroundPosition: 'center',

@@ -134,7 +134,7 @@ export default class Header extends PureComponent {
                   <div className={classes.swipedList}>
                     <List disablePadding>
 
-                      <ListItem button>
+                      <ListItem>
                         <div className={classes.swipedLogoWrapper}>
                           <Icon icon={ICONS.ZULU_ICON} className={classes.swipedLogo}/>
                         </div>
@@ -154,7 +154,7 @@ export default class Header extends PureComponent {
                         </div>
                       ))}
 
-                      <ListItem button>
+                      <ListItem>
                         <div className={classes.swipedButtonWrapper}>
                           <Button
                             component={Link}
