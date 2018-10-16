@@ -46,13 +46,13 @@ export default class Header extends PureComponent {
     }
   }
 
-  ShowDrawer = () => {
+  showDrawer = () => {
     this.setState({
       mobileMenuOpened: true,
     });
   };
 
-  HideDrawer = () => {
+  hideDrawer = () => {
     this.setState({
       mobileMenuOpened: false,
     });
@@ -124,7 +124,7 @@ export default class Header extends PureComponent {
               <div className={classes.menuIconWrapper}>
                 <Icon
                   icon={ICONS.MENU}
-                  onClick={this.ShowDrawer}
+                  onClick={this.showDrawer}
                   className={classes.mobileMenuIcon}/>
               </div>
               <SwipeableDrawer
@@ -132,13 +132,13 @@ export default class Header extends PureComponent {
                   paper: classes.swiperWidth,
                 }}
                 open={mobileMenuOpened}
-                onClose={this.HideDrawer}
-                onOpen={this.ShowDrawer}
+                onClose={this.hideDrawer}
+                onOpen={this.showDrawer}
                 swipeAreaWidth={ 20 }>
                 <div
                   tabIndex={0}
                   role="button"
-                  onKeyDown={this.HideDrawer}>
+                  onKeyDown={this.hideDrawer}>
                   <div className={classes.swipedList}>
                     <List disablePadding>
 
@@ -197,7 +197,7 @@ export default class Header extends PureComponent {
               <div className={classes.leftIconsWrapper}>
                 <Icon
                   icon={ICONS.SEARCH_ICON}
-                  onClick={this.ShowDrawer}
+                  onClick={this.showDrawer}
                   className={classes.mobileIconSearch}/>
                 <Icon
                   icon={ICONS.CAN_ICON}

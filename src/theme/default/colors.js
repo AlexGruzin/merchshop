@@ -10,6 +10,7 @@ export default {
   CORAL: '#f25353',
   GREY300: '#f4f4f4',
   GREY600: '#757575',
+  ZEPLIN_GREY: '#81898c',
   //  default theme
   //    primary
   GREY400: '#8e8e8e',

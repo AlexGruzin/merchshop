@@ -12,7 +12,7 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'absolute',
       width: '100%',
       float: 'left',
-      background: colors.GREY600,
+      background: colors.ZEPLIN_GREY,
       transition: 'all 1s',
       color: colors.WHITE,
     },
@@ -22,7 +22,6 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'center',
       height: '408px',
       overflow: 'hidden',
-
       position: 'relative',
       width: '100%',
     },
@@ -51,16 +50,16 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- background of image on slider each per image ----
     slide0: {
-      background: colors.GREY400,
+      background: colors.ZEPLIN_GREY,
     },
     slide1: {
-      background: colors.GREY400,
+      background: colors.ZEPLIN_GREY,
     },
     slide2: {
-      background: colors.GREY400,
+      background: colors.ZEPLIN_GREY,
     },
     slide3: {
-      background: colors.GREY400,
+      background: colors.ZEPLIN_GREY,
     },
 
     sliderButtonLink: {},

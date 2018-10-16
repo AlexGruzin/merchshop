@@ -1,4 +1,4 @@
-export default function({ breakpoints, palette, colors }) {
+export default function({ breakpoints, palette, colors, values }) {
   return {
     root: {
       display: 'flex',
@@ -30,7 +30,9 @@ export default function({ breakpoints, palette, colors }) {
     soldOut: {
       color: palette.secondary.main,
       position: 'absolute',
-      right: '18px',
+      fontSize: '11px',
+      right: '8px',
+      fontWeight: '900',
       top: '7px',
       height: '12px',
       lineHeight: '12px',

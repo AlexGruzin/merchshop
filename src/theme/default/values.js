@@ -1,7 +1,7 @@
 export default {
   PRIMARY_FONT: 'Avenir',
   AVENIR_BOOK_FONT: 'Avenir-Book',
-
+  HELVETICA_NEUE: 'HelveticaNeue',
 
   EXTRA_SMALL_FONT_SIZE: '8px',
   SMALL_FONT_SIZE: '10px',
