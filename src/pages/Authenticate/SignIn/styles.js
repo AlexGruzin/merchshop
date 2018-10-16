@@ -30,7 +30,7 @@ export default ({ colors, spacing, breakpoints, values }) => ({
     width: '100%',
   },
   heading: {
-    fontSize: '14px',
+    fontSize: values.MEDIUM_LARGE_FONT_SIZE,
     fontWeight: '600',
   },
   submitButton: {

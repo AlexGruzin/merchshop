@@ -1,4 +1,4 @@
-export default function({ colors, breakpoints, palette }) {
+export default function({ colors, breakpoints, palette, values }) {
   return {
 
     smDown: {
@@ -37,11 +37,11 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     smallIconSearch: {
-      fontSize: '14px',
+      fontSize: values.MEDIUM_LARGE_FONT_SIZE,
     },
 
     smallIconCan: {
-      fontSize: '17px',
+      fontSize: values.LARGE_FONT_SIZE,
     },
 
     navigationRow: {
@@ -140,7 +140,7 @@ export default function({ colors, breakpoints, palette }) {
 
     logoIcon: {
       height: '32px',
-      fontSize: '32px',
+      fontSize: values.GIANT_FONT_SIZE,
       marginTop: '22px',
       marginLeft: 'calc(50% - 40px)',
 
@@ -182,18 +182,18 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     mobileIconSearch: {
-      fontSize: '16px',
+      fontSize: values.LARGE_FONT_SIZE,
       padding: '0 10px',
     },
 
     mobileIconCan: {
-      fontSize: '20px',
+      fontSize: values.EXTRA_LARGE_FONT_SIZE,
       padding: '0 10px',
     },
 
     mobileMenuIcon: {
       padding: '0 20px',
-      fontSize: '12px',
+      fontSize: values.MEDIUM_FONT_SIZE,
     },
 
     // ---- Swiping menu ----
@@ -208,7 +208,7 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     swipedLogo: {
-      fontSize: '32px',
+      fontSize: values.GIANT_FONT_SIZE,
       margin: '10px 0',
     },
 

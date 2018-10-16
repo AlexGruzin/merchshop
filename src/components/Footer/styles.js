@@ -1,4 +1,4 @@
-export default function({ colors, breakpoints }) {
+export default function({ colors, breakpoints, values }) {
   return {
 
     footerColumn: {
@@ -111,8 +111,8 @@ export default function({ colors, breakpoints }) {
         width: '290px',
       },
 
-      fontFamily: 'Avenir-Book',
-      fontSize: '12px',
+      fontFamily: values.AVENIR_BOOK_FONT,
+      fontSize: values.MEDIUM_FONT_SIZE,
       fontWeight: '300',
       textTransform: 'capitalize',
       letterSpacing: '0.5px',
@@ -120,7 +120,7 @@ export default function({ colors, breakpoints }) {
     },
 
     arrowIcon: {
-      fontSize: '8px',
+      fontSize: values.EXTRA_SMALL_FONT_SIZE,
       color: colors.BLACK,
     },
 

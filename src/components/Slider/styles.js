@@ -12,9 +12,9 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'absolute',
       width: '100%',
       float: 'left',
-      background: '#CCC',
+      background: colors.GREY600,
       transition: 'all 1s',
-      color: '#FFFFFF',
+      color: colors.WHITE,
     },
 
     slideWrapper: {
@@ -51,16 +51,16 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- background of image on slider each per image ----
     slide0: {
-      background: '#81898c',
+      background: colors.GREY400,
     },
     slide1: {
-      background: '#81898c',
+      background: colors.GREY400,
     },
     slide2: {
-      background: '#81898c',
+      background: colors.GREY400,
     },
     slide3: {
-      background: '#81898c',
+      background: colors.GREY400,
     },
 
     sliderButtonLink: {},

@@ -1,4 +1,4 @@
-export default ({ palette, colors, breakpoints }) => ({
+export default ({ palette, colors, breakpoints, values }) => ({
 
   phraze: {
     marginLeft: '10px',
@@ -10,7 +10,7 @@ export default ({ palette, colors, breakpoints }) => ({
 
   advertIcon: {
     display: 'flex',
-    fontSize: '10px',
+    fontSize: values.SMALL_FONT_SIZE,
     height: '100%',
     alignItems: 'center',
   },
