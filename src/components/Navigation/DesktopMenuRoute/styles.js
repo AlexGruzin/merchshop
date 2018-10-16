@@ -29,7 +29,7 @@ export default function({ colors, breakpoints, palette }) {
       backgroundColor: 'transparent',
       maxWidth: '100px',
       height: '50px',
-      zIndex: '100',
+      zIndex: '2',
     },
 
     expandPanelExpanded: {
@@ -43,13 +43,16 @@ export default function({ colors, breakpoints, palette }) {
       maxHeight: '50px',
       margin: 0,
       padding: 0,
+
+      '&$summaryExpanded': {
+        minHeight: 'unset',
+        margin: '0 0',
+      },
     },
 
     contentSummary: {},
 
-    summaryExpanded: {
-      minHeight: 'unset !important',
-    },
+    summaryExpanded: {},
 
     expandedActionsWrapper: {
       margin: 0,
@@ -68,6 +71,5 @@ export default function({ colors, breakpoints, palette }) {
       padding: '0 35px',
       height: '37px',
     },
-
   }
 }

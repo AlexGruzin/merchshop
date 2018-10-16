@@ -77,7 +77,7 @@ export default class Footer extends PureComponent {
                 size="medium"
                 className={classes.subscribeButton}>
                 <Typography className={classes.buttonLabel} variant={'inherit'}>
-                  {'Subscribe'}
+                  {t( 'homePage:subscribe' )}
                 </Typography>
                 <Icon className={classes.arrowIcon}
                   icon={ICONS.ARROW_ICON}/>

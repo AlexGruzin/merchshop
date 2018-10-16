@@ -3,5 +3,8 @@ export default () => ({
     fontFamily: 'Icomoon',
     userSelect: 'none',
     cursor: 'pointer',
-  }
+  },
+
+  defaultIcon: {},
+
 });

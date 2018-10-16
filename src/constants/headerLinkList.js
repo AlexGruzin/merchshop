@@ -1,13 +1,20 @@
 import * as ROUTES from 'constants/routing';
 
+export const HEADER_LINKS_TYPES = {
+  COMMON_ROUTE: 'commonRoute',
+  SUB_ROUTER: 'subRouter',
+};
+
 export default [
   {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.HOME,
     label: 'headerLinks:shopAll',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.AUTHENTICATE,
     label: 'headerLinks:auth',
     predicate: ({
@@ -15,6 +22,7 @@ export default [
     }) => true || !isAuthorized,
   },
   {
+    type: HEADER_LINKS_TYPES.SUB_ROUTER,
     route: ROUTES.HOME,
     subRoutes: [
       {
@@ -33,30 +41,35 @@ export default [
       isAuthorized,
     }) => true || isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.HOME,
     label: 'headerLinks:masker',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.HOME,
     label: 'headerLinks:aksesoris',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.HOME,
     label: 'headerLinks:pakaian',
     predicate: ({
       isAuthorized,
     }) => true ||  isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
     route: ROUTES.HOME,
     label: 'headerLinks:promo',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
+    type: HEADER_LINKS_TYPES.SUB_ROUTER,
     route: ROUTES.HOME,
     subRoutes: [
       {

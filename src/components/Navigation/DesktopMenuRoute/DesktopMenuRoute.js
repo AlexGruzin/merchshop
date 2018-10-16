@@ -15,7 +15,7 @@ import styles from './styles';
 
 @translate()
 @injectSheet( styles )
-export default class MobileMenuRoute extends PureComponent {
+export default class DesktopMenuRoute extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
@@ -61,7 +61,7 @@ export default class MobileMenuRoute extends PureComponent {
           }}>
           <Typography
             variant="h5"
-            className={classNames(classes.headline, classes[label.toLowerCase()])}>
+            className={classNames( classes.headline, classes[label.toLowerCase()])}>
             {t( label )}
           </Typography>
         </ExpansionPanelSummary>
@@ -74,7 +74,7 @@ export default class MobileMenuRoute extends PureComponent {
             { subRoutes
               ? subRoutes.map(( subLink, index ) => (
                 <Button
-                  key={index}
+                  key={subLink.label}
                   component={Link}
                   to={subLink.route}
                   size='medium'
@@ -86,7 +86,7 @@ export default class MobileMenuRoute extends PureComponent {
                   }}>
                   <Typography
                     variant='body1'>
-                    {subLink.label}
+                    {t ( subLink.label )}
                   </Typography>
                 </Button>
               ))

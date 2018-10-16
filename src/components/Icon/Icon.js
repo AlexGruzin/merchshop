@@ -13,6 +13,10 @@ export default class Icon extends PureComponent {
     icon: PropTypes.string.isRequired,
   };
 
+  static defaultProps = {
+    className: 'defaultIcon',
+  };
+
   render() {
     const { classes, icon, className, onClick } = this.props;
 

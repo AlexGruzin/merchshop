@@ -56,7 +56,7 @@ export default class MobileSubRoutes extends PureComponent {
           className={classes.listItemWithSubroutes}
           onClick={this.subRouteOpener}>
           <Typography
-            className={classNames(classes.swipingNavLabel, classes[label.toLowerCase()])}
+            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
             variant='h5'>
             {t( label )}
           </Typography>
@@ -72,11 +72,11 @@ export default class MobileSubRoutes extends PureComponent {
           classes={{
             container: classes.mobileSubRouteContainer,
           }}>
-          <List component="div" disablePadding>
+          <List component='ul' disablePadding>
             {subRoutes.map(( subLink, index ) => (
               <MobileMenuRoute
-                key={index}
-                label={subLink.label}
+                key={subLink.label}
+                label={t ( subLink.label )}
                 route={subLink.route}
                 labelClass={'h4'}/>
             ))}

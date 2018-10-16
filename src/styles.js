@@ -22,6 +22,18 @@ export default {
         fontFamily: 'Icomoon',
         src: 'url("/fonts/icomoon.ttf") format("truetype")',
       },
+      {
+        fontFamily: 'HelveticaNeue-Light',
+        src: 'url("/fonts/HelveticaNeue_Light.ttf") format("truetype")',
+      },
+      {
+        fontFamily: 'Avenir-Book',
+        src: 'url("/fonts/Avenir-Book.ttf") format("truetype")',
+      },
+      {
+        fontFamily: 'Avenir-Heavy',
+        src: 'url("/fonts/Avenir-Heavy.ttf") format("truetype")',
+      },
     ],
 
     body: {

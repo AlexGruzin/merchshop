@@ -15,10 +15,12 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 
-import DescktopMenuRoute from 'components/Navigation/DescktopMenuRoute';
+
+import DesktopMenuRoute from 'components/Navigation/DesktopMenuRoute';
 import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
 import MobileSubRoute from 'components/Navigation/MobileSubRoutes';
 import { AUTHENTICATE } from 'constants/routing';
+import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 import styles from './styles';
 
 @translate()
@@ -94,7 +96,7 @@ export default class Header extends PureComponent {
               <div className={classes.navRowWrapper}>
                 {linkList.map(( linkItem, index ) => (
 
-                  <DescktopMenuRoute
+                  <DesktopMenuRoute
                     key={index}
                     label={linkItem.label}
                     route={linkItem.route}
@@ -141,18 +143,25 @@ export default class Header extends PureComponent {
                       </ListItem>
                       <Divider/>
 
-                      {linkList.map(( linkItem, index ) => (
-                        <div key={index}>
-                          {linkItem.subRoutes
-                            ? <MobileSubRoute
-                              label={linkItem.label}
-                              subRoutes={linkItem.subRoutes}/>
-                            : <MobileMenuRoute
-                              route={linkItem.route}
-                              label={linkItem.label}/>
-                          }
-                        </div>
-                      ))}
+                      {linkList.map(( linkItem ) => {
+
+                        switch ( linkItem.type ) {
+                          case HEADER_LINKS_TYPES.COMMON_ROUTE:
+                            return (
+                              <MobileMenuRoute
+                                key={linkItem.label}
+                                route={linkItem.route}
+                                label={linkItem.label}/>
+                            );
+                          case HEADER_LINKS_TYPES.SUB_ROUTER:
+                            return (
+                              <MobileSubRoute
+                                key={linkItem.label}
+                                label={linkItem.label}
+                                subRoutes={linkItem.subRoutes}/>
+                            )
+                        }
+                      })}
 
                       <ListItem>
                         <div className={classes.swipedButtonWrapper}>
