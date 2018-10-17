@@ -3,6 +3,12 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       position: 'relative',
       width: '50%',
+      height: '320px',
+
+      [breakpoints.down( 'xs' )]: {
+        width: '100%',
+        height: '200px',
+      },
     },
     image: {
       margin: '0 auto',
@@ -14,10 +20,12 @@ export default function({ colors, values, breakpoints, palette }) {
     },
     button: {
       position: 'absolute',
+      minWidth: '190px',
       left: '50%',
       bottom: '34px',
       transform: 'translate3d(-50%, 0, 0)',
-      padding: '8px 12px 8px 14px'
+      padding: '8px 12px 8px 14px',
+      justifyContent: 'space-between',
     },
     buttonLabel: {
       marginRight: '28px',

@@ -4,6 +4,7 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import SellItem from 'components/SellItem';
 import Typography from '@material-ui/core/Typography';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
 
 import styles from './styles';
 
@@ -20,12 +21,11 @@ export default class BestSellers extends PureComponent {
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant="display4">{t( 'homePage:bestSellers' )}</Typography>
-        <div className={classes.bestSellersItems}>
-          {
-            bestSellers.map( item => <SellItem {...item} key={item.id} /> )
-          }
-        </div>
+        <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
+        <ScrollMenu
+          alignCenter={false}
+          data={bestSellers.map( item => <SellItem {...item} key={item.id} /> )}
+        />
       </div>
     );
   }

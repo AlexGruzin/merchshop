@@ -2,21 +2,28 @@ import React, { PureComponent }  from 'react';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import classNames from 'classnames'
 import Typography from '@material-ui/core/Typography';
-import ArrowRight from 'components/ArrowRight';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import styles from './styles';
 
+@translate()
 @injectSheet( styles )
 class Item extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
+    level: PropTypes.number.isRequired,
   };
 
   render() {
     const {
+      t,
       classes,
       productImage,
       index,
@@ -44,9 +51,11 @@ class Item extends PureComponent {
             <Typography
               className={classes.sliderLabel}
               variant='button'>
-              {'Shop Helmets'}
+              {t ( 'homePage:shopHelmets' )}
             </Typography>
-            <ArrowRight />
+            <Icon
+              className={''}
+              icon={ICONS.ARROW_ICON}/>
           </Button>
         </div>
       </div>
@@ -149,7 +158,10 @@ export default class Slider extends React.Component {
                 items.map(( item, index ) => {
                   const indicatorColor = ( index === this.state.active ) ? 'activated' : 'disactivated';
                   return(
-                    <div key={index} className={classNames( classes.indicator, classes[indicatorColor])}></div>
+                    <div
+                      key={index}
+                      className={classNames( classes.indicator, classes[indicatorColor])}
+                    ></div>
                   )}
                 )
               }

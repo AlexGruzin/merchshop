@@ -12,9 +12,9 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'absolute',
       width: '100%',
       float: 'left',
-      background: '#CCC',
+      background: colors.ZEPLIN_GREY,
       transition: 'all 1s',
-      color: '#FFFFFF',
+      color: colors.WHITE,
     },
 
     slideWrapper: {
@@ -22,7 +22,6 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'center',
       height: '408px',
       overflow: 'hidden',
-
       position: 'relative',
       width: '100%',
     },
@@ -33,6 +32,10 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'contain',
+
+      [breakpoints.down( 'xs' )]: {
+        backgroundSize: 'cover',
+      },
     },
 
     'level-1': {
@@ -47,21 +50,19 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- background of image on slider each per image ----
     slide0: {
-      background: '#81898c',
+      background: colors.ZEPLIN_GREY,
     },
     slide1: {
-      background: '#81898c',
+      background: colors.ZEPLIN_GREY,
     },
     slide2: {
-      background: '#81898c',
+      background: colors.ZEPLIN_GREY,
     },
     slide3: {
-      background: '#81898c',
+      background: colors.ZEPLIN_GREY,
     },
 
-    sliderButtonLink: {
-      //color: colors.BLACK,
-    },
+    sliderButtonLink: {},
 
     sliderLabel: {
       marginRight: '46px',
@@ -88,20 +89,20 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderIndicatorWrapper: {
       display: 'flex',
       alignItems: 'center',
-      width: '10%',
+      width: '150px',
       height: '50px',
     },
 
     indicator: {
+      transition: 'all 0.5s ease',
+      display: 'flex',
       flexGrow: 1,
-      margin: '0 2px',
-      width: '12px',
+      margin: '0 5px',
       height: '2px',
     },
 
     activated: {
       backgroundColor: colors.BLACK,
-      boxShadow: '0px 0px 3px 2px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
     },
 
     disactivated: {

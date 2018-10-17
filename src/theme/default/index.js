@@ -8,11 +8,13 @@ import expansionPanelSummary from './muiComponents/ExpansionPanelSummary';
 import expansionPanelActions from './muiComponents/ExpansionPanelActions';
 import iconButton from './muiComponents/IconButton';
 import collapseArea from './muiComponents/Collapse';
+import values from './values';
 
 export default createMuiTheme({
   typography,
   colors,
   palette,
+  values,
   overrides: {
     MuiButton: button,
     MuiCollapse: collapseArea,

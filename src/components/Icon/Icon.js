@@ -9,15 +9,23 @@ import styles from './styles';
 export default class Icon extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     icon: PropTypes.string.isRequired,
   };
 
+  static defaultProps = {
+    className: 'defaultIcon',
+  };
+
   render() {
-    const { classes, icon, className } = this.props;
+    const { classes, icon, className, onClick } = this.props;
 
     return (
-      <div className={classnames( classes.root, className )} dangerouslySetInnerHTML={{ __html: icon }} />
+      <div
+        className={classnames( classes.root, className )}
+        dangerouslySetInnerHTML={{ __html: icon }}
+        onClick={onClick}
+      />
     );
   }
 }

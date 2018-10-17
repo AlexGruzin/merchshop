@@ -1,9 +1,13 @@
-export default () => ({
+export default ({ breakpoints }) => ({
   instagram: {
     display: 'flex',
     height: '254px',
-    marginBottom: '29px',
-    position: 'relative'
+    position: 'relative',
+
+    [breakpoints.down( 'xs' )]: {
+      flexWrap: 'wrap',
+      height: '324px',
+    },
   },
   instagramImage: {
     width: '25%',
@@ -11,6 +15,11 @@ export default () => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+
+    [breakpoints.down( 'xs' )]: {
+      width: '50%',
+      height: '50%',
+    },
   },
   instagramButton: {
     position: 'absolute',

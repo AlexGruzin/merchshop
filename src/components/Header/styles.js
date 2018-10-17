@@ -1,12 +1,5 @@
-export default function({ colors, breakpoints, palette }) {
+export default function({ colors, breakpoints, palette, values }) {
   return {
-    rootHeader: {
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: palette.primary.main,
-      width: '100%',
-      height: '100px',
-    },
 
     smDown: {
       display: 'flex',
@@ -16,21 +9,20 @@ export default function({ colors, breakpoints, palette }) {
     },
     logoRow: {
       display: 'flex',
+      height: '50px',
       flexFlow: 'row',
       position: 'relative',
     },
 
-    logoIcon: {
-      height: '32px',
-      fontSize: '32px',
-      marginTop: '22px',
-      marginLeft: 'calc(50% - 40px)',
+    'headerlinks:promo': {
+      color: colors.CORAL,
     },
 
     iconsWrapper: {
       display: 'flex',
       justifyContent: 'flex-end',
       right: 0,
+      marginRight: '3%',
       position: 'absolute',
       top: '23px',
     },
@@ -42,17 +34,14 @@ export default function({ colors, breakpoints, palette }) {
       width: '80px',
       justifyContent: 'space-around',
       height: '32px', // equal to logo height
-      marginRight: '5%',
     },
 
     smallIconSearch: {
-      width: '14px',
-      height: '14px',
+      fontSize: values.MEDIUM_LARGE_FONT_SIZE,
     },
 
     smallIconCan: {
-      width: '14px',
-      height: '18px',
+      fontSize: values.LARGE_FONT_SIZE,
     },
 
     navigationRow: {
@@ -80,6 +69,7 @@ export default function({ colors, breakpoints, palette }) {
       backgroundColor: 'transparent',
       maxWidth: '100px',
       height: '50px',
+      zIndex: '100',
     },
 
     expandPanelExpanded: {
@@ -120,17 +110,20 @@ export default function({ colors, breakpoints, palette }) {
       height: '37px',
     },
 
-    // --------------------- ADVERTISMENT --------------------------
-    promo: {
-      color: colors.CORAL,
-    },
-
-
-
     // ---- scaled styles ----
 
-    canIcon: {
-      color: colors.WHITE,
+    rootHeader: {
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: palette.primary.main,
+      width: '100%',
+
+      [breakpoints.down( 'md' )]: {
+        height: '70px',
+      },
+      [breakpoints.up( 'md' )]: {
+        height: '100px',
+      },
     },
 
     logoContainer: {
@@ -145,5 +138,91 @@ export default function({ colors, breakpoints, palette }) {
       },
     },
 
+    logoIcon: {
+      height: '32px',
+      fontSize: values.GIANT_FONT_SIZE,
+      marginTop: '22px',
+      marginLeft: 'calc(50% - 40px)',
+
+      [breakpoints.down( 'md' )]: {
+        margin: 'auto',
+      },
+      [breakpoints.up( 'md' )]: {
+        margin: '0 auto',
+        alignSelf: 'flex-end',
+      },
+    },
+
+    // ------ mobile styles only ------
+
+    mdUp: {
+      display: 'flex',
+      flexDirection: 'row',
+      width: '100%',
+      height: '70px',
+    },
+
+    headerFlexPart: {
+      display: 'flex',
+      flexGrow: '1',
+      width: '33%',
+      height: '70px',
+    },
+
+    menuIconWrapper: {
+      display: 'flex',
+      alignItems: 'center',
+    },
+
+    leftIconsWrapper: {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'flex-end',
+      margin: 'auto 20px'
+    },
+
+    mobileIconSearch: {
+      fontSize: values.LARGE_FONT_SIZE,
+      padding: '0 10px',
+    },
+
+    mobileIconCan: {
+      fontSize: values.EXTRA_LARGE_FONT_SIZE,
+      padding: '0 10px',
+    },
+
+    mobileMenuIcon: {
+      padding: '0 20px',
+      fontSize: values.MEDIUM_FONT_SIZE,
+    },
+
+    // ---- Swiping menu ----
+    swiperWidth: {
+      width: '85%',
+    },
+
+    swipedLogoWrapper: {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'center',
+    },
+
+    swipedLogo: {
+      fontSize: values.GIANT_FONT_SIZE,
+      margin: '10px 0',
+    },
+
+    swipedButtonWrapper: {
+      display: 'flex',
+      width: '100%',
+      justifyContent: 'center',
+    },
+
+    swipedButton: {
+      width: '50%',
+      minWidth: '150px',
+      margin: '10% 0',
+      border: `solid 1px ${colors.BLACK}`
+    }
   };
 }

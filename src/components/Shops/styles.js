@@ -1,7 +1,10 @@
-export default () => ({
+export default ({ breakpoints }) => ({
   mediumPhotoArea: {
     display: 'flex',
     width: '100%',
-    height: '320px',
+
+    [breakpoints.down( 'xs' )]: {
+      flexDirection: 'column',
+    },
   },
 });

@@ -5,7 +5,6 @@ import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
-import Arrow from '@material-ui/icons/ArrowForward';
 
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -40,7 +39,7 @@ export default class Footer extends PureComponent {
               classes={{
                 label: classes.footerButtonLabel,
               }}>
-              <Typography variant='body2'>
+              <Typography variant='body1'>
                 {t( link.label )}
               </Typography>
             </Button>
@@ -50,7 +49,7 @@ export default class Footer extends PureComponent {
 
         <div className={classes.footerColumn}>
 
-          <div className={classes.servicesContainer}>
+          <div className={classes.iconsServicesContainer}>
             <div className={classes.servicesWrapper}>
               <div className={classes.serviceIcon}>
                 <Icon icon={ICONS.FACEBOOK_ICON}/>
@@ -70,20 +69,26 @@ export default class Footer extends PureComponent {
             </div>
           </div>
 
-          <div className={classes.servicesContainer}>
-            <Button
-              component={Link}
-              to={'subscribe'}
-              size="medium"
-              className={classes.subscribeButton}
-              classes={{
-                label: classes.footerSubscribeLabel,
-              }}>
-              <Typography variant='subtitle2'>
-                {'Subscribe'}
+          <div className={classes.servicesSubscribeContainer}>
+            <div className={classes.subscribeWrapper}>
+              <Button
+                component={Link}
+                to={'subscribe'}
+                size="medium"
+                className={classes.subscribeButton}>
+                <Typography className={classes.buttonLabel} variant={'inherit'}>
+                  {t( 'homePage:subscribe' )}
+                </Typography>
+                <Icon className={classes.arrowIcon}
+                  icon={ICONS.ARROW_ICON}/>
+              </Button>
+              <Typography className={classes.privacy} variant='h2'>{'By Subscribing I agree to the '}
+                <Link
+                  to={''}
+                  className={classes.underlined}>{'Email Communication Policy.'}
+                </Link>
               </Typography>
-              <Arrow className={classes.arrowFooterIcon} />
-            </Button>
+            </div>
           </div>
 
         </div>

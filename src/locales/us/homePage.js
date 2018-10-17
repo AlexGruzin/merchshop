@@ -5,5 +5,7 @@ export default {
   bestSellers: 'Best sellers',
   cost: 'Rp ${cost}',
   instagram: '@ridezulu',
-  soldOut: 'Sold out'
+  soldOut: 'Sold out',
+  subscribe: 'Subscribe',
+  shopHelmets: 'Shop Helmets',
 };
