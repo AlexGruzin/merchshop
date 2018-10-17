@@ -1,19 +1,24 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
+    sliderContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
+      height: '458px',
+      margin: 'auto',
+      justifyContent: 'center',
+    },
 
-    slidesContainer: {
+    enhancedSwipeableViews: {
+      justifyContent: 'center',
       height: '408px',
       width: '100%',
-      position: 'relative',
     },
 
     item: {
       height: '408px',
-      position: 'absolute',
       width: '100%',
-      float: 'left',
       background: colors.ZEPLIN_GREY,
-      transition: 'all 1s',
       color: colors.WHITE,
     },
 
@@ -81,7 +86,6 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderIndicatorContainer: {
       display: 'flex',
       justifyContent: 'center',
-      marginTop: '408px', // slider height
       width: '100%',
       height: '50px',
     },
@@ -93,12 +97,20 @@ export default function({ colors, values, breakpoints, palette }) {
       height: '50px',
     },
 
+    sliderIndicatorButton: {
+      display: 'flex',
+      height: '100%',
+      flexGrow: 1,
+      userSelect: 'none',
+      cursor: 'pointer',
+    },
+
     indicator: {
       transition: 'all 0.5s ease',
       display: 'flex',
-      flexGrow: 1,
-      margin: '0 5px',
+      width: '100%',
       height: '2px',
+      margin: 'auto 5px',
     },
 
     activated: {
@@ -109,13 +121,5 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundColor: colors.GREY400,
     },
 
-    sliderContainer: {
-      display: 'flex',
-      overflow: 'hidden',
-      width: '100%',
-      height: '458px',
-      margin: 'auto',
-      justifyContent: 'center',
-    },
   }
 }
