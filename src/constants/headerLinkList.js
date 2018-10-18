@@ -26,13 +26,13 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: ROUTES.HOME,
+        route: '21',
         label: 'All'
       }, {
-        route: ROUTES.HOME,
+        route: '22',
         label: 'Regular'
       }, {
-        route: ROUTES.HOME,
+        route: '23',
         label: 'Bluetooth',
       }
     ],
@@ -73,19 +73,19 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: ROUTES.HOME,
+        route: '11',
         label: 'How to Order',
       }, {
-        route: ROUTES.HOME,
+        route: '12',
         label: 'Customer Service',
       }, {
-        route: ROUTES.HOME,
+        route: '13',
         label: 'FAQs',
       }, {
-        route: ROUTES.HOME,
+        route: '14',
         label: 'Sizing Guide',
       }, {
-        route: ROUTES.HOME,
+        route: '15',
         label: 'About Us',
       },
     ],

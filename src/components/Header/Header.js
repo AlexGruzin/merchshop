@@ -16,9 +16,11 @@ import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 
 
-import DesktopMenuRoute from 'components/Navigation/DesktopMenuRoute';
-import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
-import MobileSubRoute from 'components/Navigation/MobileSubRoutes';
+import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
+import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
+
+import NavigationRow from 'components/Navigation/DesktopNavigationRow'
+
 import { AUTHENTICATE } from 'constants/routing';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 import styles from './styles';
@@ -40,23 +42,8 @@ export default class Header extends PureComponent {
 
   constructor( props ) {
     super( props );
-    this.state = {
-      mobileMenuOpened: false,
-      subRotesShow: false,
-    }
+    this.state = {}
   }
-
-  showDrawer = () => {
-    this.setState({
-      mobileMenuOpened: true,
-    });
-  };
-
-  hideDrawer = () => {
-    this.setState({
-      mobileMenuOpened: false,
-    });
-  };
 
   render() {
     const {
@@ -64,10 +51,6 @@ export default class Header extends PureComponent {
       classes,
       linkList,
     } = this.props;
-
-    const {
-      mobileMenuOpened,
-    } = this.state;
 
     const {
       rootHeader,
@@ -98,19 +81,8 @@ export default class Header extends PureComponent {
 
             </div>
 
-            <div className={classes.navigationRow}>
-              <div className={classes.navRowWrapper}>
-                {linkList.map(( linkItem, index ) => (
-
-                  <DesktopMenuRoute
-                    key={index}
-                    label={linkItem.label}
-                    route={linkItem.route}
-                    subRoutes={linkItem.subRoutes}/>
-
-                ))}
-              </div>
-            </div>
+            <DesktopNavigationRow
+              headerLinks={linkList}/>
 
           </div>
 
@@ -118,94 +90,8 @@ export default class Header extends PureComponent {
 
         {/* MOBILE */}
         <Hidden mdUp>
-          <div className={classes.mdUp} >
-
-            <div className={classes.headerFlexPart}>
-              <div className={classes.menuIconWrapper}>
-                <Icon
-                  icon={ICONS.MENU}
-                  onClick={this.showDrawer}
-                  className={classes.mobileMenuIcon}/>
-              </div>
-              <SwipeableDrawer
-                classes={{
-                  paper: classes.swiperWidth,
-                }}
-                open={mobileMenuOpened}
-                onClose={this.hideDrawer}
-                onOpen={this.showDrawer}
-                swipeAreaWidth={ 20 }>
-                <div
-                  tabIndex={0}
-                  role="button"
-                  onKeyDown={this.hideDrawer}>
-                  <div className={classes.swipedList}>
-                    <List disablePadding>
-
-                      <ListItem>
-                        <div className={classes.swipedLogoWrapper}>
-                          <Icon icon={ICONS.ZULU_ICON} className={classes.swipedLogo}/>
-                        </div>
-                      </ListItem>
-                      <Divider/>
-
-                      {linkList.map(( linkItem ) => {
-
-                        switch ( linkItem.type ) {
-                          case HEADER_LINKS_TYPES.COMMON_ROUTE:
-                            return (
-                              <MobileMenuRoute
-                                key={linkItem.label}
-                                route={linkItem.route}
-                                label={linkItem.label}/>
-                            );
-                          case HEADER_LINKS_TYPES.SUB_ROUTER:
-                            return (
-                              <MobileSubRoute
-                                key={linkItem.label}
-                                label={linkItem.label}
-                                subRoutes={linkItem.subRoutes}/>
-                            )
-                        }
-                      })}
-
-                      <ListItem>
-                        <div className={classes.swipedButtonWrapper}>
-                          <Button
-                            component={Link}
-                            to={AUTHENTICATE}
-                            size="medium"
-                            className={classes.swipedButton}>
-                            <Typography className={classes.buttonLabel} variant='h5'>
-                              {'SIGN UP / LOG IN'}
-                            </Typography>
-                          </Button>
-                        </div>
-                      </ListItem>
-
-                    </List>
-                  </div>
-                </div>
-              </SwipeableDrawer>
-            </div>
-
-            <div className={classes.headerFlexPart}>
-              <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
-            </div>
-
-            <div className={classes.headerFlexPart}>
-              <div className={classes.leftIconsWrapper}>
-                <Icon
-                  icon={ICONS.SEARCH_ICON}
-                  onClick={this.showDrawer}
-                  className={classes.mobileIconSearch}/>
-                <Icon
-                  icon={ICONS.CAN_ICON}
-                  className={classes.mobileIconCan}/>
-              </div>
-            </div>
-
-          </div>
+          <MobileNavigationColumn
+            headerLinks={linkList}/>
         </Hidden>
 
       </div>
