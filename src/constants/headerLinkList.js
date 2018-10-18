@@ -63,8 +63,9 @@ export default [
     }) => true ||  isAuthorized,
   }, {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: '/promo',
     label: 'headerLinks:promo',
+    promo: true,
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,

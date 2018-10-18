@@ -12,3 +12,5 @@ export const DISPLAY4 = 'h1';
 export const TITLE = 'title';
 export const CAPTION = 'caption';
 export const BUTTON = 'button';
+
+export const CORAL_LINK = '/promo';

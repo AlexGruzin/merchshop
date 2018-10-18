@@ -6,6 +6,7 @@ import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import { HEADLINE, CORAL_LINK } from 'constants/typography';
 
 import styles from './styles';
 
@@ -27,6 +28,10 @@ export default class DesktopMenuRoute extends PureComponent {
       label,
     } = this.props;
 
+    const {
+      coral
+    } = classes;
+
     return (
       <div className={classes.ButtonContainer}>
         <div className={classes.ButtonWrapper}>
@@ -34,8 +39,11 @@ export default class DesktopMenuRoute extends PureComponent {
             className={classes.Button}
             to={route}>
             <Typography
-              className={classNames( classes.ButtonLabel, classes[label.toLowerCase()])}
-              variant='h5'>
+              className={classNames(
+                classes.ButtonLabel,
+                route === CORAL_LINK ? classes.coral : null,
+              )}
+              variant={HEADLINE}>
               {t( label )}
             </Typography>
           </Link>
