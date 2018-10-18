@@ -12,6 +12,7 @@ import { mod } from 'react-swipeable-views-core';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+import { SLIDING_DELAY } from 'constants/home';
 import styles from './styles';
 
 const EnhancedSwipeableViews = autoPlay( virtualize( SwipeableViews ));
@@ -124,7 +125,7 @@ export default class Slider extends React.Component {
           index={index}
           onChangeIndex={this.handleChangeIndex}
           enableMouseEvents
-          interval={7000}
+          interval={SLIDING_DELAY}
           className={classes.enhancedSwipeableViews}
           slideRenderer={this.slideRenderer}/>
 
@@ -132,14 +133,16 @@ export default class Slider extends React.Component {
           <div className={classes.sliderIndicatorWrapper}>
             {
               items.map(( item, index ) => {
-                const indicatorColor = ( index === this.state.index ) ? 'activated' : 'disactivated';
                 return(
                   <div
                     key={index}
                     className={classes.sliderIndicatorButton}
                     onClick={() => this.handleChangeIndex( index )}>
                     <div
-                      className={classNames( classes.indicator, classes[indicatorColor])}
+                      className={classNames(
+                        classes.indicator,
+                        index === this.state.index ? classes.activated : classes.disactivated,
+                      )}
                     />
                   </div>
                 )}

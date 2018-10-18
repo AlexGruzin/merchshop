@@ -113,11 +113,11 @@ export default function({ colors, values, breakpoints, palette }) {
       margin: 'auto 5px',
     },
 
-    activated: {
+    'activated': {
       backgroundColor: colors.BLACK,
     },
 
-    disactivated: {
+    'disactivated': {
       backgroundColor: colors.GREY400,
     },
 
