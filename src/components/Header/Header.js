@@ -7,19 +7,10 @@ import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
 import classNames from 'classnames';
 
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
-
 
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
-
-import NavigationRow from 'components/Navigation/DesktopNavigationRow'
 
 import { AUTHENTICATE } from 'constants/routing';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';

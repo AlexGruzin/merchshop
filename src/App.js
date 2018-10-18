@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import Router from 'router';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import Loading from 'components/Loading';
-import ModalPortals from 'components/ModalsPortal';
+import Header from 'containers/Header';
+import Footer from 'containers/Footer';
+import Loading from 'containers/Loading';
+import ModalPortals from 'containers/ModalsPortal';
 import injectSheet from 'react-jss';
 
 import styles from './styles';
