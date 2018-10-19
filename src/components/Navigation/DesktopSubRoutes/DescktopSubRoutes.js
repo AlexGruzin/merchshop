@@ -6,10 +6,6 @@ import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
-//import Button from '@material-ui/core/Button';
 
 import styles from './styles';
 
@@ -33,6 +29,7 @@ export default class DesktopMenuRoute extends PureComponent {
       classes,
       label,
       subRoutes,
+      modificatorClass,
     } = this.props;
 
     return (
@@ -51,7 +48,7 @@ export default class DesktopMenuRoute extends PureComponent {
         </div>
 
         <div className={classes.ExpandedSubRoutesContainer}>
-          <div className={classes.ExpandedSubRoutes}>
+          <div className={classNames( classes.ExpandedSubRoutes, modificatorClass )}>
             {subRoutes.map(( subRoute, index ) => {
               return(
                 <div

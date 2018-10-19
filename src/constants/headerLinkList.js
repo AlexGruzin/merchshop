@@ -5,6 +5,15 @@ export const HEADER_LINKS_TYPES = {
   SUB_ROUTER: 'subRouter',
 };
 
+export const AUTH_LINK = {
+  type: HEADER_LINKS_TYPES.COMMON_ROUTE,
+  route: ROUTES.AUTHENTICATE,
+  label: 'headerLinks:auth',
+  predicate: ({
+    isAuthorized,
+  }) => true || !isAuthorized,
+};
+
 export default [
   {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
@@ -14,14 +23,6 @@ export default [
       isAuthorized,
     }) => true || isAuthorized,
   }, {
-    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.AUTHENTICATE,
-    label: 'headerLinks:auth',
-    predicate: ({
-      isAuthorized,
-    }) => true || !isAuthorized,
-  },
-  {
     type: HEADER_LINKS_TYPES.SUB_ROUTER,
     route: ROUTES.HOME,
     subRoutes: [

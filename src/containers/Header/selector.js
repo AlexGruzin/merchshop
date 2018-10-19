@@ -29,4 +29,5 @@ const linkList = createSelector(
 export default createStructuredSelector({
   linkList,
   displayLogoutButton,
+  isNotAuthenticateHeaderSelector
 });

@@ -10,11 +10,20 @@ import iconButton from './muiComponents/IconButton';
 import collapseArea from './muiComponents/Collapse';
 import values from './values';
 
+const breakpointValues = {
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
+};
+
 export default createMuiTheme({
   typography,
   colors,
   palette,
   values,
+  breakpoints: { values: breakpointValues },
   overrides: {
     MuiButton: button,
     MuiCollapse: collapseArea,

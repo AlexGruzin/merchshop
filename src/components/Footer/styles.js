@@ -40,6 +40,7 @@ export default function({ colors, breakpoints, values }) {
       display: 'flex',
       width: '100%',
       padding: '25px 0',
+
       background: colors.GREY300,
 
       [breakpoints.down( 'sm' )]: {
@@ -47,6 +48,7 @@ export default function({ colors, breakpoints, values }) {
       },
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'row',
+        height: '150px',
       },
     },
 

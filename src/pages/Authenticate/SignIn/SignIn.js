@@ -11,6 +11,7 @@ import TextInput from 'components/Forms/TextInput';
 import PasswordInput from 'components/Forms/PasswordInput';
 import Button from '@material-ui/core/Button';
 
+import { HEADLINE } from 'constants/typography';
 import MODALS_TYPES from 'constants/modals';
 
 @translate()
@@ -31,7 +32,7 @@ export default class SignIn extends PureComponent {
         className={classes.login}
         onSubmit={handleSubmit}>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:email' )}
           </Typography>
           <Field
@@ -43,7 +44,7 @@ export default class SignIn extends PureComponent {
             }}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:password' )}
           </Typography>
           <Field
@@ -63,7 +64,9 @@ export default class SignIn extends PureComponent {
         <Button
           type="submit"
           className={classes.submitButton}>
-          {t( 'auth:signIn' )}
+          <Typography variant="button">
+            {t( 'auth:signIn' )}
+          </Typography>
         </Button>
       </form>
     );

@@ -19,6 +19,7 @@ import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
 import MobileSubRoutes from 'components/Navigation/MobileSubRoutes';
 
 import { AUTHENTICATE } from 'constants/routing';
+import { HEADLINE } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
@@ -124,7 +125,7 @@ export default class MobileNavigationColumn extends PureComponent {
                         className={classes.swipedButton}>
                         <Typography
                           className={classes.buttonLabel}
-                          variant='h5'>
+                          variant={HEADLINE}>
                           {t( 'SIGN UP / LOG IN' )}
                         </Typography>
                       </Button>

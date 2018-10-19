@@ -29,10 +29,18 @@ export default class DesktopNavigationRow extends PureComponent {
       headerLinks,
     } = this.props;
 
+    const {
+      leftDroppedSubRoutes,
+      rightDroppedSubRoutes,
+    } = classes;
+
     return (
       <div className={classes.navigationRow}>
         <div className={classes.navRowWrapper}>
-          {headerLinks.map(( linkItem, index ) => {
+          {headerLinks.map(( linkItem, index, items ) => {
+
+            const centralLink = ( items.length/2 ).toFixed( 0 );
+
 
             switch ( linkItem.type ) {
               case HEADER_LINKS_TYPES.COMMON_ROUTE:
@@ -45,6 +53,9 @@ export default class DesktopNavigationRow extends PureComponent {
               case HEADER_LINKS_TYPES.SUB_ROUTER:
                 return (
                   <DesktopSubRoutes
+                    modificatorClass={
+                      index > centralLink ? leftDroppedSubRoutes : null
+                    }
                     key={index}
                     label={linkItem.label}
                     subRoutes={linkItem.subRoutes}/>

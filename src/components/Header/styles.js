@@ -59,6 +59,7 @@ export default function({ colors, breakpoints, palette, values }) {
       width: '80%',
       height: '50px',
       margin: 'auto',
+
     },
 
     // ---- scaled styles ----
@@ -94,8 +95,28 @@ export default function({ colors, breakpoints, palette, values }) {
 
       margin: '0 auto',
       alignSelf: 'flex-end',
+    },
+
+    authHeadeRroot: {
+      display: 'flex',
+      height: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    authLogoRow: {
 
     },
 
+    authLogoLink: {
+      textDecoration: 'none',
+      color: colors.BLACK,
+    },
+
+    authLogoIcon: {
+      height: '32px',
+      fontSize: values.GIANT_FONT_SIZE,
+      marginLeft: 'calc(50% - 40px)',
+    }
   };
 }

@@ -37,7 +37,6 @@ export default function({ colors, breakpoints, palette }) {
       position: 'relative',
       width: '100%',
       height: '0px',
-
       transition: 'all .3s ease-in-out',
       visibility: 'hidden',
       opacity: 0,
@@ -49,20 +48,28 @@ export default function({ colors, breakpoints, palette }) {
       flexDirection: 'column',
       position: 'absolute',
       background: palette.primary.main,
-      minWidth: '160px',
-      width: '170px',
-      boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+      boxShadow: '0px 6px 9px 0px rgba(0, 0, 0, 0.2)',
 
       transition: 'top .4s ease-in-out',
       top: '-20px',
+      width: '210px',
     },
 
-
     SubButtonWrapper: {
+      '&:hover': {
+        background: colors.GREY300,
+      },
+
       height: '37px',
       display: 'flex',
       justifyContent: 'flex-start',
-      marginLeft: '20px',
+
+      [breakpoints.down( 'lg' )]: {
+        paddingLeft: '3px',
+      },
+      [breakpoints.up( 'lg' )]: {
+        paddingLeft: '20px',
+      },
     },
 
     SubButton: {

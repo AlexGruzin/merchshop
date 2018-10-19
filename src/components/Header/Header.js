@@ -12,7 +12,7 @@ import Hidden from '@material-ui/core/Hidden';
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
 
-import { AUTHENTICATE } from 'constants/routing';
+import { AUTHENTICATE, HOME } from 'constants/routing';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 import styles from './styles';
 
@@ -25,6 +25,7 @@ export default class Header extends PureComponent {
     makeLogout: PropTypes.func.isRequired,
     classes: PropTypes.object.isRequired,
     linkList: PropTypes.array,
+    isNotAuthenticateHeaderSelector: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
@@ -41,50 +42,64 @@ export default class Header extends PureComponent {
       t,
       classes,
       linkList,
+      isNotAuthenticateHeaderSelector,
     } = this.props;
 
     const {
       rootHeader,
     } = classes;
 
+    //console.log(isNotAuthenticateHeaderSelector);
+
     return (
       <div className={rootHeader}>
 
-        {/* DESCKTOP */}
-        <Hidden smDown>
-          <div className={classes.smDown}>
+        {isNotAuthenticateHeaderSelector
+          ?  <div>
+            <Hidden smDown>
+              <div className={classes.smDown}>
 
-            <div className={classes.logoRow}>
+                <div className={classes.logoRow}>
 
-              <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
+                  <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
 
-              <div className={classes.iconsWrapper}>
-                <div className={classes.headerIcons}>
-                  <Icon
-                    icon={ICONS.SEARCH_ICON}
-                    className={classes.smallIconSearch}/>
-                  <Icon
-                    icon={ICONS.CAN_ICON}
-                    className={classes.smallIconCan}/>
+                  <div className={classes.iconsWrapper}>
+                    <div className={classes.headerIcons}>
+                      <Icon
+                        icon={ICONS.SEARCH_ICON}
+                        className={classes.smallIconSearch}/>
+                      <Icon
+                        icon={ICONS.CAN_ICON}
+                        className={classes.smallIconCan}/>
+                    </div>
+
+                  </div>
+
                 </div>
+
+                <DesktopNavigationRow
+                  headerLinks={linkList}/>
 
               </div>
 
-            </div>
+            </Hidden>
 
-            <DesktopNavigationRow
-              headerLinks={linkList}/>
-
+            <Hidden mdUp>
+              <MobileNavigationColumn
+                headerLinks={linkList}/>
+            </Hidden>
           </div>
 
-        </Hidden>
-
-        {/* MOBILE */}
-        <Hidden mdUp>
-          <MobileNavigationColumn
-            headerLinks={linkList}/>
-        </Hidden>
-
+          : <div className={classes.authHeadeRroot}>
+            <div className={classes.authLogoRow}>
+              <Link  className={classes.authLogoLink} to={HOME}>
+                <Icon
+                  icon={ICONS.ZULU_ICON}
+                  className={classes.authLogoIcon}/>
+              </Link>
+            </div>
+          </div>
+        }
       </div>
     );
   }

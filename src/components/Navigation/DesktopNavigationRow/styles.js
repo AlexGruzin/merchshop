@@ -13,10 +13,31 @@ export default function({ colors, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
-      width: '80%',
+
       height: '50px',
       margin: 'auto',
+
+      [breakpoints.down( 'lg' )]: {
+        width: '80%',
+      },
+      [breakpoints.up( 'lg' )]: {
+        width: '65%',
+      },
     },
 
+    leftDroppedSubRoutes: {
+      //right: '0px',
+
+      [breakpoints.down( 'lg' )]: {
+        right: '0px',
+      },
+      [breakpoints.up( 'lg' )]: {
+        left: '0px',
+      },
+    },
+
+    rightDroppedSubRoutes: {
+      left: '0px',
+    },
   }
 }
