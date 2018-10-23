@@ -34,6 +34,7 @@
     "react-horizontal-scrolling-menu": "^0.3.3",
     "react-i18next": "^8.0.6",
     "react-jss": "^8.6.1",
+    "react-paginate": "^5.2.4",
     "react-rating": "^1.4.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
@@ -72,7 +73,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.12",
     "@storybook/addon-links": "^3.2.12",
-    "@storybook/react": "^3.2.12",
+    "@storybook/react": "^3.4.11",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-jest": "20.0.3",
