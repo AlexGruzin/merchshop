@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import injectSheet from 'react-jss';
 import styles from './styles';
 import TextField from '@material-ui/core/TextField';
@@ -19,6 +19,9 @@ export default class TextInput extends PureComponent {
     errorClassName: PropTypes.string,
     type: PropTypes.string,
     autoFocus: PropTypes.bool,
+
+    variant: PropTypes.string,
+    disableUnderline: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -29,6 +32,8 @@ export default class TextInput extends PureComponent {
     inputClassName: '',
     errorClassName: '',
     type: 'text',
+    variant: 'standard',
+    disableUnderline: false,
   };
 
   render() {
@@ -43,19 +48,25 @@ export default class TextInput extends PureComponent {
       className,
       inputClassName,
       errorClassName,
+      variant,
+      disableUnderline,
     } = this.props;
 
     const errorMessage = meta.error || meta.warning;
     const messageType = ( meta.error ) ? 'error' : 'warning';
+    const error = !!meta.error && meta.touched;
 
     return (
-      <div className={classnames( className, classes.textInput )}>
+      <div className={classNames( className, classes.textInput )}>
         <TextField
-          error={!!meta.error && meta.touched}
+          variant={variant}
+          error={error}
           multiline={multiline}
           placeholder={placeholder}
           InputProps={{
-            className: `${inputClassName}`
+            className: `${inputClassName}`,
+            fullWidth: true,
+            disableUnderline: disableUnderline,
           }}
           fullWidth
           onChange={event => input.onChange( event.target.value )}

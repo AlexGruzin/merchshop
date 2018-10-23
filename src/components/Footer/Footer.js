@@ -40,7 +40,7 @@ export default class Footer extends PureComponent {
               classes={{
                 label: classes.footerButtonLabel,
               }}>
-              <Typography variant='body2'>
+              <Typography variant='body1'>
                 {t( link.label )}
               </Typography>
             </Button>

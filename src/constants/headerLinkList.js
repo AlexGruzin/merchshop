@@ -18,7 +18,7 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: ROUTES.HOME,
+        route: ROUTES.SHOP,
         label: 'All'
       }, {
         route: ROUTES.HOME,

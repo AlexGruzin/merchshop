@@ -93,7 +93,7 @@ export default class Header extends PureComponent {
                         expanded: classes.summaryExpanded,
                       }}>
                       <Typography
-                        variant="headline"
+                        variant="h5"
                         className={classes.headline}>
                         {t( linkItem.label )}
                       </Typography>
@@ -118,7 +118,7 @@ export default class Header extends PureComponent {
                               classes={{
                                 label: classes.expandSubButtonLabel,
                               }}>
-                              <Typography variant='body2'>
+                              <Typography variant='body1'>
                                 {subLink.label}
                               </Typography>
                             </Button>

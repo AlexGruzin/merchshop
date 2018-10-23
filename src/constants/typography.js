@@ -1,4 +1,4 @@
-export const HEADLINE = 'headline';
+export const HEADLINE = 'h5';
 export const SUBHEADING = 'subheading';
 
 export const BODY1 = 'body1';

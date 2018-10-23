@@ -29,10 +29,10 @@ export default class Advertisement extends PureComponent {
     return (
       <div className={rootAdvert}>
         <div className={advertismentRow}>
-          <Typography className={phraze} variant="display1">Free delivery</Typography>
-          <Typography className={phraze} variant="display2">across Indonesia</Typography>
-          <Typography className={phraze} variant="display2">|</Typography>
-          <Typography className={phraze} variant="display3">Terms & conditions apply</Typography>
+          <Typography className={phraze} variant="h4">Free delivery</Typography>
+          <Typography className={phraze} variant="h3">across Indonesia</Typography>
+          <Typography className={phraze} variant="h3">|</Typography>
+          <Typography className={phraze} variant="h2">Terms & conditions apply</Typography>
         </div>
         <div className={advertIconWrapper}>
           <IconButton aria-label="Close" className={advertIcon}>
