@@ -6,6 +6,7 @@ import SellItem from 'components/SellItem';
 import Typography from '@material-ui/core/Typography';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 
+import { H1 } from 'constants/typography';
 import styles from './styles';
 
 @translate()
