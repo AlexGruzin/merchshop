@@ -27,25 +27,8 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     // cost
-    costFieldWrapper: {
+    rangeInputWrapper: {
       display: 'flex',
-      justifyContent: 'space-between',
-    },
-
-    textFieldMinCost: {
-      border: `1px solid ${colors.GREY400}`,
-      padding: '0 3px',
-      background: colors.WHITE,
-
-      '&:hover': {
-        borderColor: colors.GREY800,
-      },
-
-      width: '35%',
-    },
-
-    textFieldMaxCost: {
-      width: '35%',
     },
   }
 }

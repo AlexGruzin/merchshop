@@ -2,20 +2,24 @@ export default function({ colors, palette }) {
   return {
     root: {
       display: 'flex',
-      position: 'relative',
-      width: '100%',
-      maxWidth: '100%',
-
-      justifyContent: 'space-around',
-      WebkitFlexWrap: 'wrap',
-      flexWrap: 'wrap',
     },
 
+    itemsWrapper: {
+      display: 'flex',
+      position: 'relative',
+      justifyContent: 'flex-start',
+      WebkitFlexWrap: 'wrap',
+      flexWrap: 'wrap',
+      marginLeft: '85px',
+
+    },
+
+
     itemWrapper: {
+      maxWidth: '190px',
       display: 'flex',
       justifyContent: 'center',
-      flexGrow: '1',
-      margin: '10px 10px',
+      margin: '30px 30px',
     },
   };
 }

@@ -7,6 +7,8 @@ import homePage from './homePage';
 import forgotPasswordModal from './forgotPasswordModal';
 import headerLinks from './headerLinks';
 import footerLinks from './footerLinks';
+import shop from './shop';
+import filter from './filter';
 
 export default {
   auth,
@@ -18,4 +20,6 @@ export default {
   forgotPasswordModal,
   headerLinks,
   footerLinks,
+  shop,
+  filter,
 };

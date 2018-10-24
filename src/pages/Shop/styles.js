@@ -1,7 +1,7 @@
 export default ( colors, palette ) => ({
   root: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
   },
 
   filterPart: {
@@ -12,5 +12,15 @@ export default ( colors, palette ) => ({
   itemsPart: {
     display: 'flex',
     width: '75%',
+  },
+
+  shopContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+
+  paginationContainer: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 });

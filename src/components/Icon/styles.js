@@ -5,6 +5,4 @@ export default () => ({
     cursor: 'pointer',
   },
 
-  defaultIcon: {},
-
 });

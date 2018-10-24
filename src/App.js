@@ -16,7 +16,7 @@ class App extends Component {
       <Loading>
         <Header />
         <Router />
-        <Footer/>
+        <Footer />
         <ModalPortals />
       </Loading>
     );

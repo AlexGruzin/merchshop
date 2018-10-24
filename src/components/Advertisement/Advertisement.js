@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 
+import { H1, H2, H3, H4 } from 'constants/typography';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 import styles from './styles';
