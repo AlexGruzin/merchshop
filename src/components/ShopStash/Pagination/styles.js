@@ -2,7 +2,6 @@ export default function({ colors, palette }) {
   return {
     paginationContainer: {
       display: 'flex',
-      width: '100%',
       flexDirection: 'row',
       textDecoration: 'none',
     },

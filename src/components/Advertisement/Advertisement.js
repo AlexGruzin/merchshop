@@ -6,6 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 
+import { H1, H2, H3, H4 } from 'constants/typography';
 import styles from './styles';
 
 @translate()
@@ -29,10 +30,10 @@ export default class Advertisement extends PureComponent {
     return (
       <div className={rootAdvert}>
         <div className={advertismentRow}>
-          <Typography className={phraze} variant="h4">Free delivery</Typography>
-          <Typography className={phraze} variant="h3">across Indonesia</Typography>
-          <Typography className={phraze} variant="h3">|</Typography>
-          <Typography className={phraze} variant="h2">Terms & conditions apply</Typography>
+          <Typography className={phraze} variant={H4}>Free delivery</Typography>
+          <Typography className={phraze} variant={H3}>across Indonesia</Typography>
+          <Typography className={phraze} variant={H3}>|</Typography>
+          <Typography className={phraze} variant={H2}>Terms & conditions apply</Typography>
         </div>
         <div className={advertIconWrapper}>
           <IconButton aria-label="Close" className={advertIcon}>

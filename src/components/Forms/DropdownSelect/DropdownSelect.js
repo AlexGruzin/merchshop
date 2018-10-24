@@ -2,10 +2,14 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import injectSheet from 'react-jss';
+import { translate } from 'react-i18next';
 import styles from './styles';
 import Select from '@material-ui/core/Select';
+import Typography from '@material-ui/core/Typography';
+import MenuItem from '@material-ui/core/MenuItem';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 
+@translate()
 @injectSheet( styles )
 export default class DropdownSelect extends PureComponent {
   static propTypes = {
@@ -13,58 +17,58 @@ export default class DropdownSelect extends PureComponent {
     type: PropTypes.string,
     variant: PropTypes.string,
     children: PropTypes.array.isRequired,
+    value: PropTypes.string.isRequired,
   };
-
-  constructor( props ) {
-    super( props );
-    this.state={
-      value: null,
-    }
-  }
 
   static defaultProps = {
     className: '',
     type: 'text',
-    variant: 'outlined',
+    variant: 'standard',
   };
 
   render() {
     const {
+      t,
+      input,
       type,
+      value,
+
       classes,
       variant,
       children,
       className,
-
-      initialValue,
-      input,
       ...custom,
     } = this.props;
 
     return (
       <div className={classNames( className, classes.textInput )}>
         <Select
-          input={
-            <OutlinedInput
-              labelWidth={0}
-              name="age"
-              id="outlined-age-simple"
-            />
-          }
+          //{...input}
           {...custom}
           className={classes.select}
           classes={{
             root: classes.root,
           }}
+          disableUnderline
           variant={variant}
           onChange={({ target }) => {
             input.onChange( target.value, this.setState({
               value: target.value
             }));
           }}
-          value={this.state.value || initialValue}
+          value={value}
         >
-          {children}
+          {
+            children.map(( item )=>{
+              return(
+                <MenuItem key={item.name} value={item.name}>
+                  <Typography>
+                    {t( item.name )}
+                  </Typography>
+                </MenuItem>
+              )
+            })
+          }
         </Select>
       </div>
     );

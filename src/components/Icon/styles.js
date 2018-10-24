@@ -3,5 +3,4 @@ export default () => ({
     fontFamily: 'Icomoon',
   },
 
-  default: {},
 });

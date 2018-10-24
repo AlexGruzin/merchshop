@@ -1,14 +1,14 @@
 export const HEADLINE = 'h5';
-export const SUBHEADING = 'subheading';
+export const SUBHEADING = 'subtitle1';
 
 export const BODY1 = 'body1';
 export const BODY2 = 'body2';
 
-export const DISPLAY1 = 'display1';
-export const DISPLAY2 = 'display2';
-export const DISPLAY3 = 'display3';
-export const DISPLAY4 = 'display4';
+export const H4 = 'h4';
+export const H3 = 'h3';
+export const H2 = 'h2';
+export const H1 = 'h1';
 
-export const TITLE = 'title';
+export const TITLE = 'h6';
 export const CAPTION = 'caption';
 export const BUTTON = 'button';

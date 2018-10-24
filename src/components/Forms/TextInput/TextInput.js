@@ -64,7 +64,7 @@ export default class TextInput extends PureComponent {
           multiline={multiline}
           placeholder={placeholder}
           InputProps={{
-            className: `${inputClassName}`,
+            className: inputClassName,
             fullWidth: true,
             disableUnderline: disableUnderline,
           }}

@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
+import { BODY2 } from 'constants/typography';
 import LINK_LIST from 'constants/footerLinkList';
 
 @translate()
@@ -40,7 +41,7 @@ export default class Footer extends PureComponent {
               classes={{
                 label: classes.footerButtonLabel,
               }}>
-              <Typography variant='body1'>
+              <Typography variant={BODY2}>
                 {t( link.label )}
               </Typography>
             </Button>
