@@ -5,6 +5,7 @@ import injectSheet from 'react-jss';
 import SellItem from 'components/SellItem';
 import Typography from '@material-ui/core/Typography';
 
+import { H1 } from 'constants/typography';
 import styles from './styles';
 
 @translate()
@@ -20,7 +21,7 @@ export default class BestSellers extends PureComponent {
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant={H1}>{t( 'homePage:bestSellers' )}</Typography>
         <div className={classes.bestSellersItems}>
           {
             bestSellers.map( item => <SellItem {...item} key={item.id} /> )

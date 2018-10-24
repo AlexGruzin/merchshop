@@ -5,6 +5,8 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
+
+import { BODY1, SUBHEADING } from 'constants/typography';
 import Images from 'theme/images';
 
 @translate()
@@ -46,8 +48,8 @@ export default class SellItem extends PureComponent {
             }}/>
         </div>
 
-        <Typography className={classes.label} variant="body1">{label}</Typography>
-        <Typography className={classes.cost} variant="body1">{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+        <Typography className={classes.label} variant={BODY1}>{label}</Typography>
+        <Typography className={classes.cost} variant={BODY1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
 
         <div className={classes.rating}>
           <Rating
@@ -74,7 +76,7 @@ export default class SellItem extends PureComponent {
                   backgroundImage: `url('${Images.placeholder}')`
                 }}/>
             }/>
-          <Typography className={classes.reviewsCount} variant="subtitle1">{reviews}</Typography>
+          <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
         </div>
       </div>
     );
