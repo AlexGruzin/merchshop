@@ -22,6 +22,7 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'absolute',
       minWidth: '190px',
       left: '50%',
+      minWidth: '190px',
       bottom: '34px',
       transform: 'translate3d(-50%, 0, 0)',
       padding: '8px 12px 8px 14px',

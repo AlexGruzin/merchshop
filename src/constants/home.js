@@ -37,3 +37,4 @@ export const BestSellers = [{
 }];
 
 export const InstagramImages = ['/img/instagram1.jpeg', '/img/instagram2.jpeg', '/img/instagram3.jpg', '/img/instagram4.jpg'];
+export const SLIDING_DELAY = 7000;
