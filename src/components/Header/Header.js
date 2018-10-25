@@ -13,7 +13,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
 import Hidden from '@material-ui/core/Hidden';
 
-import { H5, BODY1 } from 'constants/typography';
+import { HEADLINE, BODY1 } from 'constants/typography';
 import styles from './styles';
 import Images from 'theme/images';
 
@@ -94,7 +94,7 @@ export default class Header extends PureComponent {
                         expanded: classes.summaryExpanded,
                       }}>
                       <Typography
-                        variant={H5}
+                        variant={HEADLINE}
                         className={classes.headline}>
                         {t( linkItem.label )}
                       </Typography>
