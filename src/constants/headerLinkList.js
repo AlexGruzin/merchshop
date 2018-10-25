@@ -26,13 +26,13 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: ROUTES.HOME,
+        route: '/Shop#All',
         label: 'All'
       }, {
-        route: ROUTES.HOME,
+        route: '/Shop#Regular',
         label: 'Regular'
       }, {
-        route: ROUTES.HOME,
+        route: '/Shop#Bluetooth',
         label: 'Bluetooth',
       }
     ],
@@ -63,8 +63,9 @@ export default [
     }) => true ||  isAuthorized,
   }, {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: '/promo',
     label: 'headerLinks:promo',
+    promo: true,
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
@@ -73,19 +74,19 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: ROUTES.HOME,
+        route: '/HowToOrder',
         label: 'How to Order',
       }, {
-        route: ROUTES.HOME,
+        route: '/CustomerService',
         label: 'Customer Service',
       }, {
-        route: ROUTES.HOME,
+        route: '/FAQs',
         label: 'FAQs',
       }, {
-        route: ROUTES.HOME,
+        route: '/SizingGuide',
         label: 'Sizing Guide',
       }, {
-        route: ROUTES.HOME,
+        route: '/AboutUs',
         label: 'About Us',
       },
     ],

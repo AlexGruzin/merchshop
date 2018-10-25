@@ -6,10 +6,7 @@ import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelActions from '@material-ui/core/ExpansionPanelActions';
-import Button from '@material-ui/core/Button';
+import { HEADLINE, CORAL_LINK } from 'constants/typography';
 
 import styles from './styles';
 
@@ -21,18 +18,6 @@ export default class DesktopMenuRoute extends PureComponent {
     route: PropTypes.string.isRequired,
     classes: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
-    subRoutes: PropTypes.array,
-  };
-
-  constructor( props ) {
-    super( props );
-    this.state = {
-      showingSubRoutes: false,
-    }
-  }
-
-  static defaultProps = {
-    subRoutes: [],
   };
 
   render() {
@@ -41,61 +26,29 @@ export default class DesktopMenuRoute extends PureComponent {
       classes,
       route,
       label,
-      subRoutes,
     } = this.props;
 
+    const {
+      coral
+    } = classes;
+
     return (
-      <ExpansionPanel
-        expanded={this.state.showingSubRoutes}
-        onMouseEnter={() => this.setState({ showingSubRoutes: true })}
-        onMouseLeave={() => this.setState({ showingSubRoutes: false })}
-        classes={{
-          root: classes.expandPanel,
-          expanded: classes.expandPanelExpanded,
-        }}>
-        <ExpansionPanelSummary
-          classes={{
-            root: classes.rootSummary,
-            content: classes.contentSummary,
-            expanded: classes.summaryExpanded,
-          }}>
-          <Typography
-            variant="h5"
-            className={classNames( classes.headline, classes[label.toLowerCase()])}>
-            {t( label )}
-          </Typography>
-        </ExpansionPanelSummary>
-
-        <ExpansionPanelActions
-          classes={{
-            root: classes.expandedActionsRoot,
-          }}>
-          <div className={classes.expandedActionsWrapper}>
-            { subRoutes
-              ? subRoutes.map(( subLink, index ) => (
-                <Button
-                  key={subLink.label}
-                  component={Link}
-                  to={subLink.route}
-                  size='medium'
-                  fullWidth
-                  color='secondary'
-                  className={classes.navigationExpandedButton}
-                  classes={{
-                    label: classes.expandSubButtonLabel,
-                  }}>
-                  <Typography
-                    variant='body1'>
-                    {t ( subLink.label )}
-                  </Typography>
-                </Button>
-              ))
-              : null
-            }
-          </div>
-        </ExpansionPanelActions>
-
-      </ExpansionPanel>
+      <div className={classes.ButtonContainer}>
+        <div className={classes.ButtonWrapper}>
+          <Link
+            className={classes.Button}
+            to={route}>
+            <Typography
+              className={classNames(
+                classes.ButtonLabel,
+                route === CORAL_LINK ? classes.coral : null,
+              )}
+              variant={HEADLINE}>
+              {t( label )}
+            </Typography>
+          </Link>
+        </div>
+      </div>
     );
   }
 }

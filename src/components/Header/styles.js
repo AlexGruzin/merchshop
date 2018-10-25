@@ -61,55 +61,6 @@ export default function({ colors, breakpoints, palette, values }) {
       margin: 'auto',
     },
 
-    expandPanel: {
-      '&:before': {
-        content: 'none',
-      },
-      boxShadow: 'none',
-      backgroundColor: 'transparent',
-      maxWidth: '100px',
-      height: '50px',
-      zIndex: '100',
-    },
-
-    expandPanelExpanded: {
-      maxHeight: '50px',
-      margin: 0,
-    },
-
-    rootSummary: {
-      height: '50px',
-      maxWidth: '100px',
-      maxHeight: '50px',
-      margin: 0,
-      padding: 0,
-    },
-
-    contentSummary: {
-    },
-
-    summaryExpanded: {
-      minHeight: 'unset !important',
-    },
-
-    expandedActionsWrapper: {
-      margin: 0,
-    },
-
-    expandedActionsRoot: {
-      padding: 0,
-    },
-
-    expandSubButtonLabel: {
-      textAlign: 'left',
-    },
-
-    navigationExpandedButton: {
-      justifyContent: 'flex-start',
-      padding: '0 35px',
-      height: '37px',
-    },
-
     // ---- scaled styles ----
 
     rootHeader: {
@@ -129,9 +80,6 @@ export default function({ colors, breakpoints, palette, values }) {
     logoContainer: {
       display: 'flex',
 
-      [breakpoints.down( 'md' )]: {
-        margin: 'auto',
-      },
       [breakpoints.up( 'md' )]: {
         margin: '0 auto',
         alignSelf: 'flex-end',
@@ -144,85 +92,10 @@ export default function({ colors, breakpoints, palette, values }) {
       marginTop: '22px',
       marginLeft: 'calc(50% - 40px)',
 
-      [breakpoints.down( 'md' )]: {
-        margin: 'auto',
-      },
-      [breakpoints.up( 'md' )]: {
-        margin: '0 auto',
-        alignSelf: 'flex-end',
-      },
+      margin: '0 auto',
+      alignSelf: 'flex-end',
+
     },
 
-    // ------ mobile styles only ------
-
-    mdUp: {
-      display: 'flex',
-      flexDirection: 'row',
-      width: '100%',
-      height: '70px',
-    },
-
-    headerFlexPart: {
-      display: 'flex',
-      flexGrow: '1',
-      width: '33%',
-      height: '70px',
-    },
-
-    menuIconWrapper: {
-      display: 'flex',
-      alignItems: 'center',
-    },
-
-    leftIconsWrapper: {
-      display: 'flex',
-      width: '100%',
-      justifyContent: 'flex-end',
-      margin: 'auto 20px'
-    },
-
-    mobileIconSearch: {
-      fontSize: values.LARGE_FONT_SIZE,
-      padding: '0 10px',
-    },
-
-    mobileIconCan: {
-      fontSize: values.EXTRA_LARGE_FONT_SIZE,
-      padding: '0 10px',
-    },
-
-    mobileMenuIcon: {
-      padding: '0 20px',
-      fontSize: values.MEDIUM_FONT_SIZE,
-    },
-
-    // ---- Swiping menu ----
-    swiperWidth: {
-      width: '85%',
-    },
-
-    swipedLogoWrapper: {
-      display: 'flex',
-      width: '100%',
-      justifyContent: 'center',
-    },
-
-    swipedLogo: {
-      fontSize: values.GIANT_FONT_SIZE,
-      margin: '10px 0',
-    },
-
-    swipedButtonWrapper: {
-      display: 'flex',
-      width: '100%',
-      justifyContent: 'center',
-    },
-
-    swipedButton: {
-      width: '50%',
-      minWidth: '150px',
-      margin: '10% 0',
-      border: `solid 1px ${colors.BLACK}`
-    }
   };
 }

@@ -10,9 +10,10 @@ export default ({ palette, colors, breakpoints, values }) => ({
 
   advertIcon: {
     display: 'flex',
-    fontSize: values.SMALL_FONT_SIZE,
+    fontSize: values.EXTRA_SMALL_FONT_SIZE,
     height: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
   },
 
   // scaled styles
