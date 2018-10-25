@@ -59,7 +59,6 @@ export default class Advertisement extends PureComponent {
             icon={ICONS.CROSS_ICON}
             className={advertIcon}/>
         </div>
-
       </div>
     );
   }
