@@ -15,13 +15,8 @@ export default class SellItem extends PureComponent {
 
   static propTypes = {
     t: PropTypes.func.isRequired,
+    itemData:  PropTypes.object.isRequired,
     classes: PropTypes.object.isRequired,
-    name: PropTypes.string.isRequired,
-    cost: PropTypes.string.isRequired,
-    rate: PropTypes.number.isRequired,
-    reviews: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    soldOut: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -30,28 +25,32 @@ export default class SellItem extends PureComponent {
 
   render() {
     const {
+      itemData,
       classes,
       t,
-      name,
+    } = this.props;
+
+    const {
+      label,
       cost,
       rate,
-      reviews,
       image,
-      soldOut,
-    } = this.props;
+      reviews,
+    } = itemData;
 
     return (
       <div className={classes.root}>
         <div className={classes.imageWrapper}>
-          { soldOut && <Typography className={classes.soldOut} variant={BODY1}>{t( 'homePage:soldOut' )}</Typography> }
           <div
             className={classes.image}
             style={{
               backgroundImage: `url('${image}')`
             }}/>
         </div>
-        <Typography className={classes.name} variant={BODY1}>{name}</Typography>
+
+        <Typography className={classes.label} variant={BODY1}>{label}</Typography>
         <Typography className={classes.cost} variant={BODY1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+
         <div className={classes.rating}>
           <Rating
             readonly
@@ -59,7 +58,7 @@ export default class SellItem extends PureComponent {
             emptySymbol={
               <div
                 className={classes.star}
-                style={{
+                style={{ // TODO: stars should be made with icomoon icons
                   backgroundImage: `url('${Images.grey}')`
                 }}/>
             }
