@@ -44,7 +44,7 @@ export default class Filter extends PureComponent {
           <div className={classes.oneFilterWrapper}>
 
             <Typography className={classes.label} variant={HEADLINE}>
-              {t( 'Cost' )}
+              {t( 'filter:cost' )}
             </Typography>
             <div className={classes.rangeInputWrapper}>
               <Fields
@@ -56,7 +56,7 @@ export default class Filter extends PureComponent {
 
           <div className={classes.oneFilterWrapper}>
             <Typography className={classes.label} variant={HEADLINE}>
-              {t( 'shop:type' )}
+              {t( 'filter:type' )}
             </Typography>
 
             <Field
@@ -73,7 +73,7 @@ export default class Filter extends PureComponent {
           <Button
             type="submit"
             className={classes.submitButton}>
-            {t( 'Filter' )}
+            {t( 'filter:filter' )}
           </Button>
         </form>
 
