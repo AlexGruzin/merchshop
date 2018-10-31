@@ -4,6 +4,25 @@ export const productTypes = {
   BLUETOOTH: 'Bluetooth',
 };
 
+export const STAGES_TYPES = {
+  CART: {
+    label: 'Cart',
+    number: 0,
+  },
+  SHIPPING: {
+    label: 'Shipping',
+    number: 1,
+  },
+  PAYMENT: {
+    label: 'Payment',
+    number: 2,
+  },
+  REVIEW: {
+    label: 'Review',
+    number: 3,
+  },
+};
+
 export const productsFilter = [
   {
     name: productTypes.ALL,
@@ -13,6 +32,12 @@ export const productsFilter = [
     name: productTypes.BLUETOOTH,
   },
 ];
+
+export const STEPS_VISUALISE = {
+  SHIPPING: 'Shipping',
+  PAYMENT: 'Payment',
+  REVIEW: 'Review',
+};
 
 export const ShopItems = [{
   id: '001',
@@ -42,7 +67,7 @@ export const ShopItems = [{
   id: '004',
   productType: productTypes.REGULAR,
   label: 'OSIRIS MAROON',
-  cost: 3000,
+  cost: '300,000',
   rate: 4,
   reviews: 63,
   image: '/img/helmet4.jpg',
@@ -50,7 +75,7 @@ export const ShopItems = [{
   id: '005',
   productType: productTypes.REGULAR,
   label: 'ORION',
-  cost: 1049,
+  cost: '104,000',
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet5.jpg',

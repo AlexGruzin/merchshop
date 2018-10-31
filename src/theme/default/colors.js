@@ -20,4 +20,5 @@ export default {
   GREY50: '#fafafa',
   WHITE: '#FFF',
   GREY100: '#F5F5F5',
+  GRAY200: '#f9f9f9',
 };
