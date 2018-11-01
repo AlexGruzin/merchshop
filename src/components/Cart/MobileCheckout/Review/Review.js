@@ -6,6 +6,7 @@ import { translate } from 'react-i18next';
 import styles from './styles';
 import classNames from 'classnames';
 import Typography from '@material-ui/core/Typography';
+import Gift from '@material-ui/icons/Archive';
 
 import ReviewItem from 'components/Cart/ReviewItem';
 
@@ -17,7 +18,7 @@ import { BODY1, BUTTON, SUBHEADING, H6, SUBTITLE2, H1 } from 'constants/typograp
 @injectSheet( styles )
 export default class Review extends PureComponent {
   static propTypes = {
-    //handleSubmit: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
     classes: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
 
@@ -26,10 +27,11 @@ export default class Review extends PureComponent {
 
   render() {
     const {
-      //handleSubmit,
+      handleSubmit,
       cartItems,
       classes,
-      t } = this.props;
+      t,
+    } = this.props;
 
     return (
       <div
@@ -37,7 +39,7 @@ export default class Review extends PureComponent {
       >
 
         <Typography
-          className={classNames(classes.title, classes.bagTitle)}>
+          className={classNames( classes.title, classes.bagTitle )}>
           {t( 'checkout:BAG' )}
         </Typography>
 
@@ -57,6 +59,87 @@ export default class Review extends PureComponent {
             className={classes.title}>
             {t( 'checkout:CONTACT' )}
           </Typography>
+          <Typography
+            variant={H6}
+            className={classes.subCategoryLabel}>
+            { t( 'cart:Email' )}
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryData}>
+            { 'john@email.com' }
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryLabel}>
+            { t( 'cart:Phone' )}
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryData}>
+            { '+123 1232 3423' }
+          </Typography>
+        </div>
+
+        <div className={classes.infoBlock}>
+          <Typography
+            className={classes.title}>
+            {t( 'checkout:SHIPPING' )}
+          </Typography>
+          <Typography
+            variant={H6}
+            className={classes.subCategoryLabel}>
+            { t( 'cart:Name' )}
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryData}>
+            { 'John Adams' }
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryLabel}>
+            { t( 'cart:Address' )}
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryData}>
+            { '5861 Ruecker Motorway, #20-34\n' +
+            'Jakarta, Indonesia 46981' }
+          </Typography>
+
+          <div className={classes.wrappingRow}>
+            <Gift fontSize='inherit'/>
+            <Typography className={classes.headingIcon}>
+              {t( 'checkout:Gift wrapping included' )}
+            </Typography>
+          </div>
+        </div>
+
+        <div className={classes.infoBlock}>
+          <Typography
+            className={classes.title}>
+            {t( 'checkout:PAYMENT' )}
+          </Typography>
+          <Typography
+            variant={H6}
+            className={classes.subCategoryLabel}>
+            { t( 'cart:Credit Card' )}
+          </Typography>
+
+          <Typography
+            variant={H6}
+            className={classes.subCategoryData}>
+            { 'VISA **** **** **** 1234' }
+          </Typography>
+
+
         </div>
 
         <div className={classes.totalBlock}>

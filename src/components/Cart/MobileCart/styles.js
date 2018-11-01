@@ -6,8 +6,6 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '100%',
     },
 
-
-
     // -- Items
 
     itemsColumn: {
@@ -41,7 +39,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     cost: {
-      marginRight: '3px',
+      marginLeft: '3px',
     },
 
     totalLabel: {
@@ -74,7 +72,6 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexGrow: '4',
       background: colors.WHITE,
-      padding: '0 10px',
     },
 
     applyButton: {

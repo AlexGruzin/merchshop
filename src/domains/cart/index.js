@@ -1,8 +1,6 @@
 import AllActionsTypes from './actionsTypes';
-import * as Selectors from './selectors';
 import * as AllActionsCreators from './actionsCreators';
 import saga from './saga';
-
 
 const ActionsTypes = {
   FINISH_GET_PROFILE: AllActionsTypes.FINISH_GET_PROFILE,
@@ -10,12 +8,10 @@ const ActionsTypes = {
 };
 
 const ActionsCreators = {
-  startGetProfile: AllActionsCreators.startGetProfile,
-  startCreateProfile: AllActionsCreators.startCreateProfile,
+  startCheckout: AllActionsCreators.startCheckout,
 };
 
 export {
-  Selectors,
   ActionsTypes,
   ActionsCreators,
   saga,

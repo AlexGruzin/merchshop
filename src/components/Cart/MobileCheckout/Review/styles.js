@@ -45,11 +45,20 @@ export default function({ colors, values, breakpoints, palette }) {
     infoBlock: {
       display: 'flex',
       flexDirection: 'column',
-      width: '92%',
-      padding: '0 4%',
+      padding: '0 20px',
+      paddingBottom: '5px',
       margin: '10px 0',
 
-      boxShadow: '0px 0px 4px 1px rgba(0, 0, 0, 0.2)',
+      boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
+    },
+
+    subCategoryLabel: {
+      color: colors.GRAY_TEXT,
+    },
+
+    subCategoryData: {
+      fontWeight: 600,
+      marginBottom: '15px',
     },
 
     totalBlock: {
@@ -60,10 +69,18 @@ export default function({ colors, values, breakpoints, palette }) {
       padding: '0 3%',
     },
 
+    wrappingRow: {
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginBottom: '10px',
+      fontSize: '25px',
+    },
+
     row: {
       display: 'flex',
       flexDirection: 'row',
-      margin: '0 15px',
+      margin: '0 10px',
       marginTop: '15px',
     },
 
@@ -74,6 +91,10 @@ export default function({ colors, values, breakpoints, palette }) {
       letterSpacing: '0.6px',
       margin: '0 15px',
       marginTop: '30px',
+    },
+
+    cost: {
+      marginLeft: '3px',
     },
 
     totalSum: {

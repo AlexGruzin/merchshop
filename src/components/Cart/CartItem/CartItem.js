@@ -2,14 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
-import { Field, Fields } from 'redux-form/immutable';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 import Delete from '@material-ui/icons/DeleteOutline';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import classNames from 'classnames';
 
 import { H1, H4, SUBHEADING, CAPTION } from 'constants/typography';
 import styles from './styles';

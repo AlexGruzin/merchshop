@@ -123,6 +123,5 @@ export default function({ colors, values, breakpoints, palette }) {
     passedRound: {
       background: colors.BLACK,
     },
-
   }
 }

@@ -15,6 +15,7 @@ import RadioGroup from 'components/Forms/RadioGroup';
 
 import Button from '@material-ui/core/Button';
 
+import { required } from 'helpers/validators/generic';
 import { BODY1, SUBHEADING } from 'constants/typography';
 
 @translate()
@@ -29,6 +30,9 @@ export default class ShippingForm extends PureComponent {
   render() {
     const {
       handleSubmit,
+      submitting,
+      invalid,
+      pristine,
       classes,
       t,
       allowTheNext,
@@ -37,8 +41,7 @@ export default class ShippingForm extends PureComponent {
     return (
       <form
         className={classes.shippingRoot}
-        //onSubmit={handleSubmit}
-        onSubmit={allowTheNext}
+        onSubmit={handleSubmit}
       >
 
         <Typography
@@ -51,6 +54,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Email' )}
           </Typography>
           <Field
+            validate={[required]}
             name="email"
             disableUnderline
             className={classes.field}
@@ -65,6 +69,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Phone' )}
           </Typography>
           <Field
+            validate={[required]}
             name="phone"
             disableUnderline
             className={classes.field}
@@ -91,6 +96,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:First Name' )}
           </Typography>
           <Field
+            validate={[required]}
             name="FirstName"
             disableUnderline
             className={classes.field}
@@ -103,6 +109,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Last Name' )}
           </Typography>
           <Field
+            validate={[required]}
             name="LastName"
             disableUnderline
             className={classes.field}
@@ -115,6 +122,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Address' )}
           </Typography>
           <Field
+            validate={[required]}
             name="Address"
             disableUnderline
             className={classes.field}
@@ -127,6 +135,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Apt/Floor/Suite' )}
           </Typography>
           <Field
+            validate={[required]}
             name="Apt/Floor/Suite"
             disableUnderline
             className={classes.field}
@@ -139,6 +148,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:City' )}
           </Typography>
           <Field
+            validate={[required]}
             name="City"
             disableUnderline
             className={classes.field}
@@ -151,6 +161,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Zip Code' )}
           </Typography>
           <Field
+            validate={[required]}
             name="ZipCode"
             disableUnderline
             className={classes.field}
@@ -163,6 +174,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Country' )}
           </Typography>
           <Field
+            validate={[required]}
             name="Country"
             disableUnderline
             className={classes.field}
@@ -192,6 +204,8 @@ export default class ShippingForm extends PureComponent {
 
         <Button
           type="submit"
+          onClick={()=>{setTimeout( allowTheNext, 3000 )}} // while saga submiting
+          disabled={invalid|| submitting || pristine}
           className={classes.submitButton}>
           {t( 'checkout:Next' )}
         </Button>

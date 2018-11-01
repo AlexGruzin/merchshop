@@ -41,7 +41,6 @@ export default function({ colors, values, breakpoints, palette }) {
     formControlRadio: {
       display: 'flex',
       width: '100%',
-      marginBottom: '10px',
     },
 
     radio: {
@@ -73,7 +72,7 @@ export default function({ colors, values, breakpoints, palette }) {
       flexDirection: 'row',
       alignItems: 'center',
       fontSize: '25px',
-      marginTop: '5px',
+      marginTop: '10px',
     },
 
     submitButton: {
@@ -83,6 +82,10 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.WHITE,
       marginTop: '30px',
       marginBottom: '5px',
+
+      '& $root $disabled': {
+        color: colors.WHITE,
+      }
     },
 
   }

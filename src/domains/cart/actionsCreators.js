@@ -6,14 +6,14 @@ import { ENDPOINTS } from './constants';
 export const startCheckout = createAction( ActionsTypes.START_CHECKOUT );
 export const finishCheckout = createAction( ActionsTypes.FINISH_CHECKOUT );
 
-export const checkPromo = () => ({
+export const checkData = () => ({
   [RSAA]: {
-    endpoint: ENDPOINTS.PROMO,
+    endpoint: ENDPOINTS.CHECKDATA,
     method: 'GET',
     types: [
-      ActionsTypes.GET_PROMO_REQUEST,
-      ActionsTypes.GET_PROMO_SUCCESS,
-      ActionsTypes.GET_PROMO_FAILURE,
+      ActionsTypes.GET_DATA_REQUEST,
+      ActionsTypes.GET_DATA_SUCCESS,
+      ActionsTypes.GET_DATA_FAILURE,
     ],
   },
 });

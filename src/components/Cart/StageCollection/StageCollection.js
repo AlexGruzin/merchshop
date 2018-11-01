@@ -2,11 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
-import { Field, Fields } from 'redux-form/immutable';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Add from '@material-ui/icons/Add';
-import Remove from '@material-ui/icons/Remove';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import classNames from 'classnames';
 
@@ -62,7 +58,6 @@ export default class StageCollection extends PureComponent {
     } = classes;
 
     const stageStepperStyling = ( label1, round1, label2, round2, label3, round3 ) => {
-      console.log( label2 );
       return(
         <div className={classes.stepperWrapper}>
           <div className={classes.stageWrap}>
@@ -101,7 +96,6 @@ export default class StageCollection extends PureComponent {
     };
 
     const stageStepper = ( step ) => {
-      console.log( step );
       switch ( step ) {
         case STEPS_VISUALISE.SHIPPING:
           return ( stageStepperStyling(
@@ -134,6 +128,7 @@ export default class StageCollection extends PureComponent {
             <div>
               {stageStepper( STEPS_VISUALISE.SHIPPING )}
               <Shipping
+                onSubmit={ this.props.sendShippingData }
                 allowTheNext={this.jumpToNext}
               />
             </div>
@@ -143,6 +138,7 @@ export default class StageCollection extends PureComponent {
             <div>
               {stageStepper( STEPS_VISUALISE.PAYMENT )}
               <Payment
+                onSubmit={ this.props.sendPaymentData }
                 allowTheNext={this.jumpToNext}
               />
             </div>

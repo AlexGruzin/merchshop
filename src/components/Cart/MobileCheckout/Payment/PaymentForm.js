@@ -15,6 +15,7 @@ import Help from '@material-ui/icons/Help';
 import TextInput from 'components/Forms/TextInput';
 import Button from '@material-ui/core/Button';
 
+import { required } from 'helpers/validators/generic';
 import { BODY1, BUTTON, SUBHEADING } from 'constants/typography';
 
 @translate()
@@ -30,14 +31,17 @@ export default class ShippingForm extends PureComponent {
     const {
       allowTheNext,
       handleSubmit,
+      submitting,
+      invalid,
+      pristine,
       classes,
-      t } = this.props;
+      t
+    } = this.props;
 
     return (
       <form
         className={classes.shippingRoot}
-        //onSubmit={handleSubmit}
-        onSubmit={allowTheNext}
+        onSubmit={handleSubmit}
       >
 
         <Typography
@@ -69,6 +73,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Credit Card Number' )}
           </Typography>
           <Field
+            validate={[required]}
             name="CardNumber"
             disableUnderline
             className={classes.field}
@@ -80,6 +85,7 @@ export default class ShippingForm extends PureComponent {
             {t( 'checkout:Card Holder Name' )}
           </Typography>
           <Field
+            validate={[required]}
             name="CardHolderName"
             disableUnderline
             className={classes.field}
@@ -94,6 +100,7 @@ export default class ShippingForm extends PureComponent {
               {t( 'checkout:Expiry Date (MM/YY)' )}
             </Typography>
             <Field
+              validate={[required]}
               name="ExpiryDate"
               disableUnderline
               className={classes.field}
@@ -106,6 +113,7 @@ export default class ShippingForm extends PureComponent {
               {t( 'checkout:CCV' )}
             </Typography>
             <Field
+              validate={[required]}
               name="ccv"
               disableUnderline
               className={classes.field}
@@ -120,6 +128,8 @@ export default class ShippingForm extends PureComponent {
 
         <Button
           type="submit"
+          onClick={()=>{setTimeout( allowTheNext, 3000 )}}
+          disabled={invalid|| submitting || pristine}
           className={classes.submitButton}>
           {t( 'checkout:Next' )}
         </Button>
