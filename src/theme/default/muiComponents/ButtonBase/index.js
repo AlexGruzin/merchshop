@@ -6,5 +6,4 @@ export default {
   disabled: {
     background: colors.GREY400,
   }
-
 };
