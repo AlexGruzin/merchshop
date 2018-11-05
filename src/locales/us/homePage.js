@@ -1,11 +1,11 @@
 export default {
   title: 'Home',
-  shopBluetooth: 'Shop bluetooth',
-  shopMasks: 'Shop masks',
+  shopBluetooth: 'ShopPage bluetooth',
+  shopMasks: 'ShopPage masks',
   bestSellers: 'Best sellers',
   cost: 'Rp ${cost}',
   instagram: '@ridezulu',
   soldOut: 'Sold out',
   subscribe: 'Subscribe',
-  shopHelmets: 'Shop Helmets',
+  shopHelmets: 'ShopPage Helmets',
 };

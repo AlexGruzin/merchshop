@@ -6,9 +6,12 @@ export default {
   SUCCESS: '#43a047',
   ERROR: '#d32f2f',
   ALERT: '#ffa000',
+  FACEBOOK: '#4267b2',
+  GOOGLE: '#e64746',
   GREY900: '#263238',
   CORAL: '#f25353',
   GREY300: '#f4f4f4',
+  GRAY500: '#9E9E9E',
   GREY600: '#757575',
   ZEPLIN_GREY: '#81898c',
   //  default theme
@@ -21,3 +24,4 @@ export default {
   WHITE: '#FFF',
   GREY100: '#F5F5F5',
 };
+

@@ -5,7 +5,6 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 
 // components
-import Advertisement from 'components/Advertisement';
 import SwipeableSlider from 'components/SwipeableSlider';
 import Shops from 'components/Shops';
 import BestSellers from 'components/BestSellers';
@@ -29,8 +28,6 @@ export default class Home extends PureComponent {
       <div>
         <ReactHelmet
           title={t( 'homePage:title' )}/>
-
-        <Advertisement />
 
         <SwipeableSlider
           items={[

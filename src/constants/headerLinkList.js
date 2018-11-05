@@ -26,13 +26,13 @@ export default [
     route: ROUTES.HOME,
     subRoutes: [
       {
-        route: '/Shop#All',
+        route: '/ShopPage#All',
         label: 'All'
       }, {
-        route: '/Shop#Regular',
+        route: '/ShopPage#Regular',
         label: 'Regular'
       }, {
-        route: '/Shop#Bluetooth',
+        route: '/ShopPage#Bluetooth',
         label: 'Bluetooth',
       }
     ],

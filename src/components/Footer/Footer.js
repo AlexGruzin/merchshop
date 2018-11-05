@@ -10,7 +10,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
-import { BODY2 } from 'constants/typography';
 import LINK_LIST from 'constants/footerLinkList';
 
 @translate()
@@ -40,7 +39,7 @@ export default class Footer extends PureComponent {
               classes={{
                 label: classes.footerButtonLabel,
               }}>
-              <Typography variant={BODY2}>
+              <Typography variant='body1'>
                 {t( link.label )}
               </Typography>
             </Button>
@@ -80,7 +79,8 @@ export default class Footer extends PureComponent {
                 <Typography className={classes.buttonLabel} variant={'inherit'}>
                   {t( 'homePage:subscribe' )}
                 </Typography>
-                <Icon className={classes.arrowIcon}
+                <Icon
+                  className={classes.arrowIcon}
                   icon={ICONS.ARROW_ICON}/>
               </Button>
               <Typography className={classes.privacy} variant='h2'>{'By Subscribing I agree to the '}

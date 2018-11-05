@@ -8,10 +8,10 @@ import Filter from 'containers/Filter';
 import DropdownSelect from 'components/Forms/DropdownSelect';
 import RangeInput from 'components/Forms/RangeInput';
 import Collection from 'components/ShopStash/Collection';
-import StashItem from 'components/ShopStash/StashItem';
+import StashItem from 'components/ShopStash/StashedProduct';
 import Pagination from 'components/ShopStash/Pagination';
 
-import ShopPage from 'pages/Shop';
+import ShopPage from 'pages/ShopPage';
 
 import { ShopItems, productTypes } from 'constants/shop';
 
@@ -74,7 +74,7 @@ storiesOf( 'Storybook Knobs', module )
       </div>
     )
   })
-  .add( 'Shop Page', () => (
+  .add( 'ShopPage Page', () => (
     <div>
       <ShopPage
         handleFilterSubmit={action( "reFilter" )}

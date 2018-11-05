@@ -6,17 +6,12 @@ import { Link } from 'react-router-dom';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
 import classNames from 'classnames';
-
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 
 import { H5, BODY1 } from 'constants/typography';
 
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
-
-import NavigationRow from 'components/Navigation/DesktopNavigationRow'
 
 import { AUTHENTICATE } from 'constants/routing';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';

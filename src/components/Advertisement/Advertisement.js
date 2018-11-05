@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 
-import { H1, H2, H3, H4 } from 'constants/typography';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 import styles from './styles';
@@ -45,11 +44,6 @@ export default class Advertisement extends PureComponent {
               variant="h3"
             >Free delivery</Typography>
             <Typography className={phraze}variant="h3">across Indonesia</Typography>
-            <Hidden xsDown><Typography className={phraze} variant="h3">|</Typography></Hidden>
-          </div>
-
-          <div className={advertismentRow}>
-            <Typography className={phraze} variant="h2">Terms & conditions apply</Typography>
           </div>
 
         </div>
@@ -59,9 +53,9 @@ export default class Advertisement extends PureComponent {
             icon={ICONS.CROSS_ICON}
             className={advertIcon}/>
         </div>
+
       </div>
     );
   }
 }
-
 
