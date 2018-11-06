@@ -19,7 +19,6 @@ export default function({ colors, palette, breakpoints }) {
 
     imageWrapper: {
       margin: 0,
-      //width: '100%',
       alignSelf: 'center',
       position: 'relative',
     },

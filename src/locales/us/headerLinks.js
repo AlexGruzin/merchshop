@@ -2,7 +2,7 @@ export default {
   home: 'Home',
   authenticate: 'Authenticate',
   confirm: 'ConfirmEmail',
-  shopAll: 'ShopPage All',
+  shopAll: 'Shop All',
   helm: 'Helm',
   masker: 'Masker',
   aksesoris: 'Aksesoris',

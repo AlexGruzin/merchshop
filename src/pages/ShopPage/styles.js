@@ -5,11 +5,6 @@ export default ( colors, palette ) => ({
     flexDirection: 'column',
   },
 
-  filterPart: {
-    display: 'flex',
-    width: '25%',
-  },
-
   shopContainer: {
     display: 'flex',
     flexDirection: 'row',

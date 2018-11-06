@@ -82,6 +82,7 @@ export default function({ colors, palette, breakpoints }) {
       },
       [breakpoints.up( 'md' )]: {
         justifyContent: 'flex-start',
+        WebkitFlexWrap: 'wrap',
         width: '100%',
         margin: '10px 0',
       },
@@ -96,7 +97,7 @@ export default function({ colors, palette, breakpoints }) {
       },
       [breakpoints.up( 'sm' )]: {
         width: '175px',
-        margin: '0 10px',
+        margin: '5px 10px',
       },
     },
 

@@ -10,6 +10,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 import styles from './styles';
+import { H3 } from 'constants/typography';
 
 @translate()
 @injectSheet( styles )
@@ -41,9 +42,17 @@ export default class Advertisement extends PureComponent {
               style={{
                 textTransform: 'uppercase'
               }}
-              variant="h3"
+              variant={H3}
             >Free delivery</Typography>
-            <Typography className={phraze}variant="h3">across Indonesia</Typography>
+            <Typography className={phraze}variant={H3}>across Indonesia</Typography>
+
+            <Hidden xsDown>
+              <Typography className={phraze} variant={H3}>|</Typography>
+              <div className={advertismentRow}>
+                <Typography className={phraze} variant={H3}>We offer FREE Exchanges & Refunds</Typography>
+              </div>
+            </Hidden>
+
           </div>
 
         </div>
