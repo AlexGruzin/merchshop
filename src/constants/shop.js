@@ -9,6 +9,25 @@ export const PRODUCT_TYPES = {
   BLUETOOTH: 'Bluetooth',
 };
 
+export const STAGES_TYPES = {
+  CART: {
+    label: 'Cart',
+    number: 0,
+  },
+  SHIPPING: {
+    label: 'Shipping',
+    number: 1,
+  },
+  PAYMENT: {
+    label: 'Payment',
+    number: 2,
+  },
+  REVIEW: {
+    label: 'Review',
+    number: 3,
+  },
+};
+
 export const productsFilter = [
   {
     name: PRODUCT_TYPES.ALL,
@@ -22,6 +41,12 @@ export const productsFilter = [
 export const STASHED_PRODUCT_TYPES = {
   SINGLE: 'single',
   TWIN: 'twin',
+};
+
+export const STEPS_VISUALISE = {
+  SHIPPING: 'Shipping',
+  PAYMENT: 'Payment',
+  REVIEW: 'Review',
 };
 
 export const ShopItems = [{
