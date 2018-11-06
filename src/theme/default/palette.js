@@ -30,6 +30,10 @@ export default {
     main: colors.ALERT,
   },
 
+  action: {
+    disabled: colors.WHITE,
+  },
+
   contrastThreshold: 3,
   tonalOffset: 0.2,
 };
