@@ -36,7 +36,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: palette.primary.dark,
+    backgroundColor: colors.GRAY300,
 
     [breakpoints.down( 'sm' )]: {
       height: '50px',
@@ -66,9 +66,8 @@ export default ({ palette, colors, breakpoints, values }) => ({
     alignItems: 'center',
     lineHeight: '35px',
     justifySelf: 'flex-end',
-    backgroundColor: palette.primary.dark,
     padding: '0 5px',
-    color: palette.secondary.main,
+    color: colors.BLACK,
   },
 
 });

@@ -11,6 +11,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import InputBase from '@material-ui/core/InputBase';
 
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
@@ -18,12 +19,11 @@ import Icon from 'components/Icon';
 import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
 import MobileSubRoutes from 'components/Navigation/MobileSubRoutes';
 import StageCollection from 'components/Cart/StageCollection';
-import InputBase from '@material-ui/core/InputBase';
 
-import { AUTHENTICATE } from 'constants/routing';
-import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
-import { HEADLINE, SUBHEADING } from 'constants/typography';
 import { ShopItems } from 'constants/shop';
+import { AUTHENTICATE } from 'constants/routing';
+import { HEADLINE, SUBHEADING } from 'constants/typography';
+import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
 

@@ -14,7 +14,7 @@ import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
 
 import { AUTHENTICATE } from 'constants/routing';
-import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
+import { HEADER_LINKS_TYPES, NAVIGATION_LINKS } from 'constants/headerLinkList';
 import styles from './styles';
 
 @translate()
@@ -29,7 +29,7 @@ export default class Header extends PureComponent {
   };
 
   static defaultProps = {
-    linkList: [],
+    linkList: NAVIGATION_LINKS,
   };
 
   constructor( props ) {

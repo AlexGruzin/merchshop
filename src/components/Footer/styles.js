@@ -10,7 +10,7 @@ export default function({ colors, breakpoints, values }) {
     footerButton: {
       height: '36px',
       width: '150px',
-      background: colors.GREY300,
+      background: colors.GRAY300,
       margin: '0 6%'
     },
 
@@ -40,13 +40,15 @@ export default function({ colors, breakpoints, values }) {
       display: 'flex',
       width: '100%',
       padding: '25px 0',
-      background: colors.GREY300,
+
+      background: colors.GRAY300,
 
       [breakpoints.down( 'sm' )]: {
         flexDirection: 'column',
       },
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'row',
+        height: '150px',
       },
     },
 

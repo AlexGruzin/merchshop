@@ -10,25 +10,16 @@ import { routerMiddleware } from 'react-router-redux';
 // middlewares
 import createSagaMiddleware from 'redux-saga';
 import { apiMiddleware } from 'redux-api-middleware';
-import persistState from 'redux-localstorage';
 
 // cookies
 import Cookies from 'js-cookie';
 import { createCookieMiddleware } from 'redux-cookie';
 
 //helpers
-import getLocalStorageConfig from 'services/localstorage';
 import rootReducer from 'reducers';
 import rootSaga from 'sagas';
 
-// constants
-import LOCAL_STORAGE_CONFIG from 'constants/localstorage';
-
 let initialState = Map();
-
-const enhancers = [
-  persistState(['session', 'routing'], getLocalStorageConfig( LOCAL_STORAGE_CONFIG )),
-];
 
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [
@@ -37,6 +28,8 @@ const middleware = [
   routerMiddleware( history ),
   createCookieMiddleware( Cookies ),
 ];
+
+const enhancers = [];
 
 if ( process.env.NODE_ENV === 'development' ) {
   const devToolsExtension = window.devToolsExtension;

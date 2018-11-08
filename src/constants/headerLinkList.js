@@ -5,25 +5,25 @@ export const HEADER_LINKS_TYPES = {
   SUB_ROUTER: 'subRouter',
 };
 
-export default [
+export const AUTH_LINK = {
+  type: HEADER_LINKS_TYPES.COMMON_ROUTE,
+  route: ROUTES.AUTHENTICATE,
+  label: 'headerLinks:auth',
+  predicate: ({
+    isAuthorized,
+  }) => true || !isAuthorized,
+};
+
+export const NAVIGATION_LINKS = [
   {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: ROUTES.SHOP,
     label: 'headerLinks:shopAll',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
-    type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.AUTHENTICATE,
-    label: 'headerLinks:auth',
-    predicate: ({
-      isAuthorized,
-    }) => true || !isAuthorized,
-  },
-  {
     type: HEADER_LINKS_TYPES.SUB_ROUTER,
-    route: ROUTES.HOME,
     subRoutes: [
       {
         route: '/Shop#All',

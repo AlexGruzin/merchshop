@@ -37,33 +37,35 @@ export default class Authenticate extends PureComponent {
     } = this.props;
 
     return (
-      <div className={classes.tabWrapperScaled}>
-        <Tabs
-          value={selectedTab}
-          onChange={( event, selectedTab ) => selectTab({ selectedTab })}
-          indicator={classes.selectedTab}
-          classes={{
-            root: classes.tabs,
-          }}
-          fullWidth>
-          <Tab
-            className={classes.tab}
-            label={t( 'auth:signIn' )}/>
-          <Tab
-            className={classes.tab}
-            label={t( 'auth:signUp' )}/>
-        </Tabs>
+      <div className={classes.tabContainer}>
+        <div className={classes.tabWrapper}>
+          <Tabs
+            value={selectedTab}
+            onChange={( event, selectedTab ) => selectTab({ selectedTab })}
+            indicator={classes.selectedTab}
+            classes={{
+              root: classes.rootTabs,
+            }}
+            fullWidth>
+            <Tab
+              className={classes.tab}
+              label={t( 'auth:signIn' )}/>
+            <Tab
+              className={classes.tab}
+              label={t( 'auth:signUp' )}/>
+          </Tabs>
 
-        <SwipeableViews
-          index={selectedTab}
-          onChangeIndex={( event, selectedTab ) => selectTab({ selectedTab: Number( !selectedTab ) })}
-          className={classes.swipeableViews}>
-          <SignIn
-            onSubmit={sendSignInData}
-            openModal={openForgotPasswordModal}/>
-          <SignUp
-            onSubmit={sendSignUpData}/>
-        </SwipeableViews>
+          <SwipeableViews
+            index={selectedTab}
+            onChangeIndex={( event, selectedTab ) => selectTab({ selectedTab: Number( !selectedTab ) })}
+            className={classes.swipeableViews}>
+            <SignIn
+              onSubmit={sendSignInData}
+              openModal={openForgotPasswordModal}/>
+            <SignUp
+              onSubmit={sendSignUpData}/>
+          </SwipeableViews>
+        </div>
       </div>
     );
   }

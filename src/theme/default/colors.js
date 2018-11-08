@@ -10,7 +10,7 @@ export default {
   GOOGLE: '#e64746',
   GREY900: '#263238',
   CORAL: '#f25353',
-  GREY300: '#f4f4f4',
+  GRAY300: '#f4f4f4',
   GRAY500: '#9E9E9E',
   GREY600: '#757575',
   ZEPLIN_GREY: '#81898c',

@@ -12,11 +12,20 @@ import inputBase from './muiComponents/InputBase';
 import buttonBase from './muiComponents/ButtonBase';
 import values from './values';
 
+const breakpointValues = {
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
+};
+
 export default createMuiTheme({
   typography,
   colors,
   palette,
   values,
+  breakpoints: { values: breakpointValues },
   overrides: {
     MuiButtonBase: buttonBase,
     MuiInputBase: inputBase,

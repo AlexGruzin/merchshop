@@ -1,9 +1,9 @@
 import colors from './colors';
 export default {
   primary: {
-    light: colors.GREY50,
+    light: colors.GREY100,
     main: colors.WHITE,
-    dark: colors.GREY100,
+    dark: colors.CORAL,
     contrastText: colors.RED600,
   },
 
