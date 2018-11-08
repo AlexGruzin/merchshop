@@ -9,4 +9,5 @@ export default {
   pakaian: 'Pakaian',
   promo: 'Promo',
   moreInfo: 'More Info',
+  SIGNUPLOGIN: 'SIGN UP / LOG IN',
 };

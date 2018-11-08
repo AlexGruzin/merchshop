@@ -8,6 +8,8 @@ import expansionPanelSummary from './muiComponents/ExpansionPanelSummary';
 import expansionPanelActions from './muiComponents/ExpansionPanelActions';
 import iconButton from './muiComponents/IconButton';
 import collapseArea from './muiComponents/Collapse';
+import inputBase from './muiComponents/InputBase';
+import buttonBase from './muiComponents/ButtonBase';
 import values from './values';
 
 const breakpointValues = {
@@ -25,6 +27,8 @@ export default createMuiTheme({
   values,
   breakpoints: { values: breakpointValues },
   overrides: {
+    MuiButtonBase: buttonBase,
+    MuiInputBase: inputBase,
     MuiButton: button,
     MuiCollapse: collapseArea,
     MuiIconButton: iconButton,

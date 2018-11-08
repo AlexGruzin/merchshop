@@ -14,17 +14,16 @@ export const AUTH_LINK = {
   }) => true || !isAuthorized,
 };
 
-export default [
+export const NAVIGATION_LINKS = [
   {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: ROUTES.SHOP,
     label: 'headerLinks:shopAll',
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,
   }, {
     type: HEADER_LINKS_TYPES.SUB_ROUTER,
-    route: ROUTES.HOME,
     subRoutes: [
       {
         route: '/Shop#All',
@@ -64,8 +63,9 @@ export default [
     }) => true ||  isAuthorized,
   }, {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: '/promo',
     label: 'headerLinks:promo',
+    promo: true,
     predicate: ({
       isAuthorized,
     }) => true || isAuthorized,

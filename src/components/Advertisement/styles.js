@@ -11,7 +11,8 @@ export default ({ palette, colors, breakpoints, values }) => ({
   advertIcon: {
     display: 'flex',
     fontSize: values.EXTRA_SMALL_FONT_SIZE,
-    height: '100%',
+    height: '35px',
+    width: '35px',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -35,7 +36,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: palette.primary.light,
+    backgroundColor: colors.GRAY300,
 
     [breakpoints.down( 'sm' )]: {
       height: '50px',
@@ -59,13 +60,14 @@ export default ({ palette, colors, breakpoints, values }) => ({
   },
 
   advertIconWrapper: {
+    display: 'flex',
     height: '100%',
     width: '35px',
+    alignItems: 'center',
     lineHeight: '35px',
     justifySelf: 'flex-end',
-    backgroundColor: palette.primary.light,
-    padding: '0 1%',
-    color: palette.secondary.main,
+    padding: '0 5px',
+    color: colors.BLACK,
   },
 
 });

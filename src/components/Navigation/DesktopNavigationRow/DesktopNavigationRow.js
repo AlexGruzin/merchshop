@@ -31,9 +31,9 @@ export default class DesktopNavigationRow extends PureComponent {
 
     const {
       leftDroppedSubRoutes,
-      rightDroppedSubRoutes,
     } = classes;
 
+    console.log( headerLinks );
     return (
       <div className={classes.navigationRow}>
         <div className={classes.navRowWrapper}>

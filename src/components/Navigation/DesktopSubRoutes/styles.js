@@ -48,7 +48,7 @@ export default function({ colors, breakpoints, palette }) {
       flexDirection: 'column',
       position: 'absolute',
       background: palette.primary.main,
-      boxShadow: '0px 6px 9px 0px rgba(0, 0, 0, 0.2)',
+      boxShadow: '0px 3px 4px 0px rgba(0, 0, 0, 0.2)',
 
       transition: 'top .4s ease-in-out',
       top: '-20px',
@@ -57,7 +57,7 @@ export default function({ colors, breakpoints, palette }) {
 
     SubButtonWrapper: {
       '&:hover': {
-        background: colors.GREY300,
+        background: colors.GRAY300,
       },
 
       height: '37px',
@@ -73,6 +73,7 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     SubButton: {
+      color: colors.BLACK,
       margin: 'auto 0',
       padding: '5px',
       textDecoration: 'none',

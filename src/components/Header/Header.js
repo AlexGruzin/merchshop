@@ -6,14 +6,15 @@ import { Link } from 'react-router-dom';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
 import classNames from 'classnames';
-
 import Hidden from '@material-ui/core/Hidden';
+
+import { H5, BODY1 } from 'constants/typography';
 
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
 
-import { AUTHENTICATE, HOME } from 'constants/routing';
-import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
+import { AUTHENTICATE } from 'constants/routing';
+import { HEADER_LINKS_TYPES, NAVIGATION_LINKS } from 'constants/headerLinkList';
 import styles from './styles';
 
 @translate()
@@ -25,16 +26,14 @@ export default class Header extends PureComponent {
     makeLogout: PropTypes.func.isRequired,
     classes: PropTypes.object.isRequired,
     linkList: PropTypes.array,
-    isNotAuthenticateHeaderSelector: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
-    linkList: [],
+    linkList: NAVIGATION_LINKS,
   };
 
   constructor( props ) {
     super( props );
-    this.state = {}
   }
 
   render() {
@@ -42,64 +41,50 @@ export default class Header extends PureComponent {
       t,
       classes,
       linkList,
-      isNotAuthenticateHeaderSelector,
     } = this.props;
 
     const {
       rootHeader,
     } = classes;
 
-    //console.log(isNotAuthenticateHeaderSelector);
-
     return (
       <div className={rootHeader}>
 
-        {isNotAuthenticateHeaderSelector
-          ?  <div>
-            <Hidden smDown>
-              <div className={classes.smDown}>
+        {/* DESCKTOP */}
+        <Hidden smDown>
+          <div className={classes.smDown}>
 
-                <div className={classes.logoRow}>
+            <div className={classes.logoRow}>
 
-                  <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
+              <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
 
-                  <div className={classes.iconsWrapper}>
-                    <div className={classes.headerIcons}>
-                      <Icon
-                        icon={ICONS.SEARCH_ICON}
-                        className={classes.smallIconSearch}/>
-                      <Icon
-                        icon={ICONS.CAN_ICON}
-                        className={classes.smallIconCan}/>
-                    </div>
-
-                  </div>
-
+              <div className={classes.iconsWrapper}>
+                <div className={classes.headerIcons}>
+                  <Icon
+                    icon={ICONS.SEARCH_ICON}
+                    className={classes.smallIconSearch}/>
+                  <Icon
+                    icon={ICONS.CAN_ICON}
+                    className={classes.smallIconCan}/>
                 </div>
-
-                <DesktopNavigationRow
-                  headerLinks={linkList}/>
 
               </div>
 
-            </Hidden>
-
-            <Hidden mdUp>
-              <MobileNavigationColumn
-                headerLinks={linkList}/>
-            </Hidden>
-          </div>
-
-          : <div className={classes.authHeadeRroot}>
-            <div className={classes.authLogoRow}>
-              <Link  className={classes.authLogoLink} to={HOME}>
-                <Icon
-                  icon={ICONS.ZULU_ICON}
-                  className={classes.authLogoIcon}/>
-              </Link>
             </div>
+
+            <DesktopNavigationRow
+              headerLinks={linkList}/>
+
           </div>
-        }
+
+        </Hidden>
+
+        {/* MOBILE */}
+        <Hidden mdUp>
+          <MobileNavigationColumn
+            headerLinks={linkList}/>
+        </Hidden>
+
       </div>
     );
   }

@@ -1,6 +1,6 @@
 export default function({ colors, breakpoints, palette }) {
   return {
-    'headerlinks:promo': {
+    coral: {
       color: colors.CORAL,
     },
 

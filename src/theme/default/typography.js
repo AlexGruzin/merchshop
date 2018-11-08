@@ -61,6 +61,14 @@ export default {
     fontStretch: 'normal',
     letterSpacing: '0.5px',
     textTransform: 'none',
+    fontWeight: 'inherit',
+    color: 'inherit',
+  },
+
+  body2: {
+    fontFamily: 'Avenir',
+    fontWeight: 'inherit',
+    color: 'inherit',
   },
 
   h1: {
@@ -84,14 +92,32 @@ export default {
     textTransform: 'none',
   },
 
+  h6: {
+    fontFamily: 'Avenir-Book',
+    fontSize: '15px',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    letterSpacing: '0.5px',
+    textTransform: 'none',
+  },
+
+  subtitle2: {
+    fontFamily: 'Avenir-Heavy',
+    fontSize: '17px',
+    fontStyle: 'normal',
+    fontStretch: 'normal',
+    letterSpacing: '0.5px',
+    textTransform: 'none',
+  },
+
 
   fontFamily: [
     'sofia-pro',
     'Arial',
     'sans-serif',
   ].join( ',' ),
-  color: colors.BLACK,
   fontWeight: 'normal',
   fontStyle: 'normal',
   htmlFontSize: 16,
 };
+

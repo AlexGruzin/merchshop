@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 import Router from 'router';
-import Header from 'containers/Header';
-import Footer from 'containers/Footer';
-import Loading from 'containers/Loading';
-import ModalPortals from 'containers/ModalsPortal';
+import Header from 'components/Header';
+import Advertisement from 'components/Advertisement';
+import Footer from 'components/Footer';
+import Loading from 'components/Loading';
+import ModalPortals from 'components/ModalsPortal';
 import injectSheet from 'react-jss';
 
 import styles from './styles';
@@ -15,9 +16,9 @@ class App extends Component {
     return (
       <Loading>
         <Header />
+        <Advertisement />
         <Router />
-        <Footer/>
-        <ModalPortals />
+        <Footer />
       </Loading>
     );
   }
