@@ -11,7 +11,8 @@ export default ({ palette, colors, breakpoints, values }) => ({
   advertIcon: {
     display: 'flex',
     fontSize: values.EXTRA_SMALL_FONT_SIZE,
-    height: '100%',
+    height: '35px',
+    width: '35px',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -59,12 +60,14 @@ export default ({ palette, colors, breakpoints, values }) => ({
   },
 
   advertIconWrapper: {
+    display: 'flex',
     height: '100%',
     width: '35px',
+    alignItems: 'center',
     lineHeight: '35px',
     justifySelf: 'flex-end',
     backgroundColor: palette.primary.dark,
-    padding: '0 1%',
+    padding: '0 5px',
     color: palette.secondary.main,
   },
 

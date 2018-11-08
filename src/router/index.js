@@ -6,7 +6,7 @@ import * as Routes from '../constants/routing';
 // views
 import Home from 'pages/Home';
 import Authenticate from 'pages/Authenticate';
-import Shop from 'pages/Shop';
+import Shop from 'pages/ShopPage';
 import NotFound from 'pages/NotFound';
 
 const Router = () => (

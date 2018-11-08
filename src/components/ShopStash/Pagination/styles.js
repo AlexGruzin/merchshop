@@ -2,6 +2,8 @@ export default function({ colors, palette }) {
   return {
     paginationContainer: {
       display: 'flex',
+      alignSelf: 'center',
+      padding: 0,
       flexDirection: 'row',
       textDecoration: 'none',
     },
@@ -15,7 +17,7 @@ export default function({ colors, palette }) {
       color: colors.CORAL,
     },
     paginationFont: {
-      fontFamily: 'HelveticaNeue',
+      fontFamily: 'Avenir-Book',
       fontWeight: 300,
       fontSize: '14px',
       fontStyle: 'normal',
@@ -25,12 +27,16 @@ export default function({ colors, palette }) {
     },
 
     nextPreviousButton: {
+      '& a:focus': {
+        outline: 'none',
+      },
+
       cursor: 'pointer',
       width: '90px',
       listStyleType: 'none',
       textTransform: 'uppercase',
       padding: '3px',
-      border: `1px solid ${colors.GREY300}`,
+      border: `1px solid ${colors.BLACK}`,
       textAlign: 'center',
     },
 

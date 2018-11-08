@@ -10,8 +10,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
-import { BODY1 } from 'constants/typography';
 import LINK_LIST from 'constants/footerLinkList';
+import { BODY1 } from 'constants/typography';
 
 @translate()
 @injectSheet( styles )
@@ -80,7 +80,8 @@ export default class Footer extends PureComponent {
                 <Typography className={classes.buttonLabel} variant={'inherit'}>
                   {t( 'homePage:subscribe' )}
                 </Typography>
-                <Icon className={classes.arrowIcon}
+                <Icon
+                  className={classes.arrowIcon}
                   icon={ICONS.ARROW_ICON}/>
               </Button>
               <Typography className={classes.privacy} variant='h2'>{'By Subscribing I agree to the '}
