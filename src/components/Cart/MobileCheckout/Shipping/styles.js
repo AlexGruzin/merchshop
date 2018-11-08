@@ -38,6 +38,11 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '100%',
     },
 
+    giftIcon: {
+      fontSize: '18px',
+      marginRight: '5px',
+    },
+
     formControlRadio: {
       display: 'flex',
       width: '100%',

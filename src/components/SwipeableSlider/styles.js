@@ -69,6 +69,10 @@ export default function({ colors, values, breakpoints, palette }) {
 
     sliderButtonLink: {},
 
+    buttonIcon: {
+      fontSize: '10px',
+    },
+
     sliderLabel: {
       marginRight: '46px',
     },

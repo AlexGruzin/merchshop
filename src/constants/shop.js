@@ -3,6 +3,11 @@ export const COLLECTION_VIEW_MODES = {
   MULTI: 'multi',
 };
 
+export const VIEW_COMPONENTS = {
+  MOBILE: 'mobile',
+  DESKTOP: 'desktop',
+};
+
 export const PRODUCT_TYPES = {
   ALL: 'All',
   REGULAR: 'Regular',

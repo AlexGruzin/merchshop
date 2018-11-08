@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
-import SellItem from 'components/SellItem';
+import SellItem from 'components/SellProduct';
 import Typography from '@material-ui/core/Typography';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 

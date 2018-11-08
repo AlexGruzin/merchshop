@@ -57,7 +57,7 @@ class Slide extends PureComponent {
               {'Shop Helmets'}
             </Typography>
             <Icon
-              className={''}
+              className={classes.buttonIcon}
               icon={ICONS.ARROW_ICON}/>
           </Button>
         </div>

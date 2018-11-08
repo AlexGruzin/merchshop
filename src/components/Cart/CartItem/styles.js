@@ -53,7 +53,8 @@ export default function({ colors, values, breakpoints, palette }) {
       border: '1px solid',
       padding: '0 5px',
 
-      marginTop: '30px',
+      marginTop: 'auto',
+      marginBottom: '10px',
       width: '80px',
       height: '26px',
 
@@ -64,7 +65,6 @@ export default function({ colors, values, breakpoints, palette }) {
       fontSize: '17px',
     },
 
-
     removeColumn: {
       display: 'flex',
       fontSize: '25px',
@@ -73,6 +73,11 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '10%',
 
       marginBottom: '15px',
+    },
+
+    trashIcon: {
+      marginRight: '10px',
+      fontSize: '16px',
     },
   }
 }

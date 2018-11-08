@@ -5,8 +5,10 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 import Images from 'theme/images';
-import { productTypes, COLLECTION_VIEW_MODES } from 'constants/shop';
+import { productTypes, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Hidden from '@material-ui/core/Hidden';
+
+import GrowBox from 'components/ShopStash/GrowBox';
 
 @translate()
 @injectSheet( styles )
@@ -18,6 +20,7 @@ export default class Collection extends PureComponent {
     items: PropTypes.array.isRequired,
     ProductRenderingComponent: PropTypes.func.isRequired,
     viewMode: PropTypes.string.isRequired,
+    viewComponent: PropTypes.string.isRequired,
   };
 
   render() {
@@ -27,6 +30,7 @@ export default class Collection extends PureComponent {
       classes,
       ProductRenderingComponent,
       viewMode,
+      viewComponent,
     } = this.props;
 
     const {
@@ -48,6 +52,8 @@ export default class Collection extends PureComponent {
     let likeClass;
     let soldClass;
 
+    let columnsPerRow;
+
     switch( viewMode ) {
       case COLLECTION_VIEW_MODES.SINGLE:
         itemsContainer = singleItemsWrapper;
@@ -55,6 +61,17 @@ export default class Collection extends PureComponent {
         itemViewClass = singleDestinationItem;
         likeClass = singleLikeClass;
         soldClass = singleSoldClass;
+
+        switch( viewComponent ) {
+          case VIEW_COMPONENTS.MOBILE:
+            columnsPerRow = 1;
+            break;
+
+          case VIEW_COMPONENTS.DESKTOP:
+            columnsPerRow = 3;
+            break;
+        }
+
         break;
 
       case COLLECTION_VIEW_MODES.MULTI:
@@ -63,38 +80,31 @@ export default class Collection extends PureComponent {
         itemViewClass = multiDestinationItem;
         likeClass = multiLikeClass;
         soldClass = multiSoldClass;
+
+        switch( viewComponent ) {
+          case VIEW_COMPONENTS.MOBILE:
+            columnsPerRow = 2;
+            break;
+
+          case VIEW_COMPONENTS.DESKTOP:
+            columnsPerRow = 6;
+            break;
+        }
         break;
+    }
+
+    let growBox = <GrowBox />;
+    if ( items.length % columnsPerRow === 0  ) {
+      growBox = null
     }
 
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP */}
+        {/* DESCKTOP 768-*/}
         <Hidden smDown>
           <div className={itemsContainer}>
-            {
-              items.map(( item, index ) => {
-                return (
-                  <div
-                    className={itemContainer} // W
-                    key={index}
-                  >
-                    <ProductRenderingComponent
-                      itemData={item}
-                      itemViewClass={itemViewClass}
-                      likeClass={likeClass}
-                      soldClass={soldClass}
-                    />
-                  </div>
-                )
-              })
-            }
-          </div>
-        </Hidden>
 
-        {/*MOBILE*/}
-        <Hidden mdUp>
-          <div className={itemsContainer}>
             {
               items.map(( item, index ) => {
                 return (
@@ -112,6 +122,35 @@ export default class Collection extends PureComponent {
                 )
               })
             }
+            {growBox}
+          </div>
+        </Hidden>
+
+        {/*MOBILE 0-768*/}
+        <Hidden mdUp>
+          <div className={itemsContainer}>
+            {
+              items.map(( item, index ) => {
+                const columns = viewMode === COLLECTION_VIEW_MODES.SINGLE ? 1 : 2;
+
+                return (
+                  <div
+                    className={itemContainer}
+                    key={index}
+                  >
+                    <ProductRenderingComponent
+                      itemData={item}
+                      itemViewClass={itemViewClass}
+                      likeClass={likeClass}
+                      soldClass={soldClass}
+                      columns={columns}
+                    />
+
+                  </div>
+                )
+              })
+            }
+            {growBox}
           </div>
         </Hidden>
 

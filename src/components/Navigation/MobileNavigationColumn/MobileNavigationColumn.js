@@ -34,13 +34,17 @@ export default class MobileNavigationColumn extends PureComponent {
     classes: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
     headerLinks: PropTypes.array.isRequired,
+    cartProductsAmount: PropTypes.number,
+  };
+
+  static defaultProps = {
+    cartProductsAmount: 3,
   };
 
   constructor( props ) {
     super( props );
     this.state = {
       mobileMenuOpened: false,
-      searchMode: false,
       mobileCheckoutOpened: false,
     }
   }
@@ -63,39 +67,30 @@ export default class MobileNavigationColumn extends PureComponent {
     });
   };
 
-  swapMode = () => {
-    this.setState({
-      searchMode: !this.state.searchMode,
-    });
-  };
-
   render() {
     const {
       t,
       classes,
       headerLinks,
+      cartProductsAmount,
     } = this.props;
 
     const {
       mobileHeader,
-      mobileHeaderSearch,
       hider,
-      searchElementsWrapper,
-      searchIconMode,
-      searchInputMode,
       closeIconMode,
     } = classes;
 
     const {
       mobileMenuOpened,
       mobileCheckoutOpened,
-      searchMode,
+
     } = this.state;
 
     return (
       <div className={classes.mdUp} >
 
-        <div className={classNames( mobileHeader, searchMode ? hider : null )}>
+        <div className={mobileHeader}>
 
           <div className={classes.headerFlexPart}>
             <div className={classes.menuIconWrapper}>
@@ -177,21 +172,20 @@ export default class MobileNavigationColumn extends PureComponent {
             <div className={classes.leftIconsWrapper}>
               <Icon
                 icon={ICONS.SEARCH_ICON}
-                onClick={this.swapMode}
                 className={classes.mobileIconSearch}/>
 
-              <div className={classes.interactiveCan}>
+              <div onClick={this.swapCheckout}
+                className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
                     variant={SUBHEADING}
-                    onClick={this.swapCheckout}
                     className={classes.canNumberLabel}>
-                    {'3'}
+                    {cartProductsAmount}
                   </Typography>
                 </div>
                 <Icon
                   icon={ICONS.CAN_ICON}
-                  onClick={this.swapCheckout}
+
                   className={classes.mobileIconCan}/>
               </div>
 
@@ -218,35 +212,6 @@ export default class MobileNavigationColumn extends PureComponent {
           </div>
         </div>
 
-        <div className={classNames( mobileHeaderSearch, searchMode ? null : hider )}>
-
-          <div className={searchElementsWrapper}>
-            <div className={searchIconMode}>
-              <Icon
-                icon={ICONS.SEARCH_ICON}
-                className={classes.mobileIconSearch}/>
-            </div>
-
-            <div className={searchInputMode}>
-              {
-                searchMode
-                  ? <InputBase
-                    className={classes.searchInput}
-                    autoFocus={searchMode}/>
-                  : null
-              }
-            </div>
-
-            <div className={closeIconMode}>
-              <Icon
-                icon={ICONS.CROSS_ICON}
-                onClick={this.swapMode}
-                className={classes.closeIconSvg}/>
-            </div>
-
-          </div>
-
-        </div>
       </div>
     );
   }

@@ -27,6 +27,7 @@ export default function({ breakpoints, palette, colors, values }) {
         height: '128px',
       },
     },
+
     soldOut: {
       color: palette.secondary.main,
       position: 'absolute',
@@ -35,12 +36,30 @@ export default function({ breakpoints, palette, colors, values }) {
       fontWeight: '900',
       top: '7px',
       height: '12px',
-      lineHeight: '12px',
-      padding: '2px 12px 5px 12px',
+      padding: '3px 12px',
       backgroundColor: palette.primary.main,
       textTransform: 'uppercase',
-      cursor: 'default',
     },
+
+    amountColorsWrapper: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+
+    number: {},
+
+    hr: {
+      width: '100%',
+      margin: '1px 0',
+      height: '1px',
+      background: colors.GREY100,
+    },
+
+    colors: {
+      textTransform: 'capitalize',
+      margin: '0 5px',
+    },
+
     name: {
       color: palette.secondary.main,
       height: '15px',
@@ -50,19 +69,21 @@ export default function({ breakpoints, palette, colors, values }) {
       display: 'flex',
       alignItems: 'flex-end',
     },
+
+    cost: {
+      letterSpacing: '0.5px',
+      fontSize: '15px',
+      margin: '3px 0',
+    },
+
     reviewsCount: {
+      fontFamily: 'HelveticaNeue-Bold',
+      fontSize: '11px',
       color: palette.secondary.main,
       marginLeft: '4.4px',
-      height: '10px',
-      paddingBottom: '2px',
     },
     star: {
-      opacity: '.5',
-      width: '8.2px',
-      height: '7.5px',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-    }
+      fontSize: '10px',
+    },
   };
 }

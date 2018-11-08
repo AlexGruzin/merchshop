@@ -7,7 +7,9 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import Radio from '@material-ui/core/Radio';
-import Gift from '@material-ui/icons/Archive';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 import TextInput from 'components/Forms/TextInput';
 import CheckBox from 'components/Forms/CheckBox';
@@ -183,7 +185,10 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <div className={classes.row}>
-          <Gift fontSize='inherit'/>
+          <Icon
+            className={classes.giftIcon}
+            icon={ICONS.GIFT}
+          />
           <Typography className={classes.headingIcon}>
             {t( 'checkout:Would you like this gift wrapped?' )}
           </Typography>
