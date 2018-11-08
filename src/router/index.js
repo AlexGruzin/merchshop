@@ -7,6 +7,7 @@ import * as Routes from '../constants/routing';
 import Home from 'pages/Home';
 import Authenticate from 'pages/Authenticate';
 import Shop from 'pages/Shop';
+import ProductPage from 'pages/ProductPage';
 import NotFound from 'pages/NotFound';
 
 const Router = () => (
@@ -14,6 +15,7 @@ const Router = () => (
     <Route exact path={Routes.HOME} component={Home} />
     <Route exact path={Routes.AUTHENTICATE} component={Authenticate} />
     <Route exact path={Routes.SHOP} component={Shop} />
+    <Route exact path={Routes.PRODUCT} component={ProductPage} />
     <Route path="*" component={NotFound} />
   </Switch>
 );

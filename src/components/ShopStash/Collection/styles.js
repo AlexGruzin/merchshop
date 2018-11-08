@@ -1,5 +1,6 @@
 export default function({ colors, palette }) {
   return {
+
     root: {
       display: 'flex',
     },
@@ -11,9 +12,7 @@ export default function({ colors, palette }) {
       WebkitFlexWrap: 'wrap',
       flexWrap: 'wrap',
       marginLeft: '85px',
-
     },
-
 
     itemWrapper: {
       maxWidth: '190px',

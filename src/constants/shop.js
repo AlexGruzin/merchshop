@@ -47,6 +47,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet1.jpg',
+  images: ['/img/helmet1.jpg','/img/helmet1.jpg','/img/helmet1.jpg','/img/helmet1.jpg'],
 }, {
   id: '002',
   productType: productTypes.REGULAR,
@@ -55,6 +56,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet2.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '003',
   productType: productTypes.REGULAR,
@@ -63,6 +65,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 67,
   image: '/img/helmet3.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '004',
   productType: productTypes.REGULAR,
@@ -71,6 +74,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet4.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '005',
   productType: productTypes.REGULAR,
@@ -79,6 +83,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet5.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '006',
   productType: productTypes.REGULAR,
@@ -87,6 +92,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet1.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '007',
   productType: productTypes.REGULAR,
@@ -95,6 +101,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet2.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 }, {
   id: '008',
   productType: productTypes.REGULAR,
@@ -103,5 +110,6 @@ export const ShopItems = [{
   rate: 4,
   reviews: 67,
   image: '/img/helmet3.jpg',
+  images: ['/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg','/img/helmet2.jpg'],
 },
 ];
