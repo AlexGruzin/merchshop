@@ -25,7 +25,7 @@ export default function({ colors, palette, breakpoints }) {
         flexDirection: 'column',
       },
       [breakpoints.up( 'xs' )]: {
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
         flexDirection: 'row',
       },

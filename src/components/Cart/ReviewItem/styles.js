@@ -42,7 +42,8 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     amount: {
-      marginTop: '30px',
+      marginTop: 'auto',
+      marginBottom: '10px',
     },
 
     emptyColumn: {

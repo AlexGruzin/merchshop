@@ -131,7 +131,6 @@ export default class Collection extends PureComponent {
           <div className={itemsContainer}>
             {
               items.map(( item, index ) => {
-                const columns = viewMode === COLLECTION_VIEW_MODES.SINGLE ? 1 : 2;
 
                 return (
                   <div
@@ -143,9 +142,7 @@ export default class Collection extends PureComponent {
                       itemViewClass={itemViewClass}
                       likeClass={likeClass}
                       soldClass={soldClass}
-                      columns={columns}
                     />
-
                   </div>
                 )
               })

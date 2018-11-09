@@ -121,6 +121,7 @@ export default function({ colors, breakpoints, palette, values }) {
 
     // ---- checkout
     checkoutSwiperWidth: {
+      minWidth: '320px',
       width: '35%',
     },
   };

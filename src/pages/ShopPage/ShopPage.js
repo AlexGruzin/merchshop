@@ -37,7 +37,7 @@ export default class ShopPage extends PureComponent {
             <Collection
               items={ShopItems}
               ProductRenderingComponent={StashedProduct}
-              viewMode={COLLECTION_VIEW_MODES.MULTI}
+              viewMode={COLLECTION_VIEW_MODES.SINGLE}
               viewComponent={VIEW_COMPONENTS.DESKTOP}
             />
           </div>
