@@ -10,7 +10,7 @@ import Delete from '@material-ui/icons/DeleteOutline';
 import { H1, H4, SUBHEADING, CAPTION } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter } from 'constants/shop';
+import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 

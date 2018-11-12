@@ -69,7 +69,14 @@ export default class ProductSlider extends React.Component {
     this.state = {
       index: 0,
       direction: '',
+      capacity: null,
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      capacity: this.props.images.length,
+    });
   }
 
   handleChangeIndex = index => {
@@ -78,9 +85,23 @@ export default class ProductSlider extends React.Component {
     });
   };
 
+  moveLeft = index =>{
+    let cycledIndex = mod( index-1, this.state.capacity );
+    this.setState({
+      index: cycledIndex,
+    });
+  };
+
+  moveRight = index =>{
+    let cycledIndex = mod( index+1, this.state.capacity );
+    this.setState({
+      index: cycledIndex,
+    });
+  };
+
   slideRenderer = ( params ) => {
     const { index, key } = params;
-    const circularIndex = mod( index, 4 );
+    const circularIndex = mod( index, this.state.capacity );
 
     return(
       <Slide
@@ -149,18 +170,25 @@ export default class ProductSlider extends React.Component {
           }
         </div>
 
-        <div onClick={()=>{}}
+        <div onClick={() => this.moveLeft( index )}
           className={classes.leftArrow}>
           <Icon
             icon={ICONS.LEFT_ARROW}
             className={classes.controlIcon}/>
         </div>
 
-        <div  onClick={()=>{}}
+        <div onClick={() => this.moveRight( index )}
           className={classes.rightArrow}>
           <Icon
             icon={ICONS.RIGHT_ARROW}
             className={classes.controlIcon}/>
+        </div>
+
+        <div onClick={() => {}}
+          className={classes.zoomer}>
+          <Icon
+            icon={ICONS.ZOOM}
+            className={classes.zoomIcon}/>
         </div>
 
       </div>

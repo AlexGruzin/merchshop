@@ -16,7 +16,7 @@ import DropdownSelect from 'components/Forms/DropdownSelect';
 import { HEADLINE } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter } from 'constants/shop';
+import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )

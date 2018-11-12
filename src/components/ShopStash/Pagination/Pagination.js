@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 import ReactPaginate from 'react-paginate';
 
-import { productTypes } from 'constants/shop';
+import { PRODUCT_TYPES } from 'constants/shop';
 
 @injectSheet( styles )
 export default class Collection extends PureComponent {

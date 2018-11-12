@@ -14,7 +14,7 @@ import CartItem from 'components/Cart/CartItem';
 import { H1, H4, H6, SUBHEADING, CAPTION, SUBTITLE2 } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter } from 'constants/shop';
+import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 

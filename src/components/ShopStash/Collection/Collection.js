@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 import Images from 'theme/images';
-import { productTypes } from 'constants/shop';
+import { PRODUCT_TYPES } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )

@@ -13,7 +13,7 @@ import Pagination from 'components/ShopStash/Pagination';
 
 import ShopPage from 'pages/Shop';
 
-import { ShopItems, productTypes } from 'constants/shop';
+import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
 
 storiesOf( 'Storybook Knobs', module )
   .addDecorator( story => <Provider story={story()}/> )

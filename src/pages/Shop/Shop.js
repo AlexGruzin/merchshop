@@ -11,7 +11,7 @@ import Pagination from 'components/ShopStash/Pagination';
 
 import styles from './styles';
 
-import { ShopItems, productTypes } from 'constants/shop';
+import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )
@@ -36,7 +36,7 @@ export default class HomePage extends PureComponent {
 
           <div className={classes.filterPart}>
             <Filters
-              initProductType={ productTypes.ALL }
+              initProductType={ PRODUCT_TYPES.ALL }
               handleSubmit={  // Should be 'onSubmit' when store connected
                 ( values )=>{handleFilterSubmit}
               }

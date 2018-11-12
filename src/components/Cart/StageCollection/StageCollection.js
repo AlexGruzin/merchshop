@@ -13,7 +13,7 @@ import MobileCart from 'components/Cart/MobileCart';
 import { H1, H4, H6, SUBHEADING, BODY1, SUBTITLE2 } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter, STEPS_VISUALISE, STAGES_TYPES } from 'constants/shop';
+import { PRODUCT_TYPES, productsFilter, STEPS_VISUALISE, STAGES_TYPES } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 

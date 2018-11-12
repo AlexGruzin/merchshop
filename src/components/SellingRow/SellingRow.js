@@ -11,18 +11,24 @@ import styles from './styles';
 
 @translate()
 @injectSheet( styles )
-export default class BestSellers extends PureComponent {
+export default class SellingRow extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     bestSellers: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
-    const { t, bestSellers, classes } = this.props;
+    const {
+      t,
+      bestSellers,
+      classes,
+      title,
+    } = this.props;
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant="h1">{t( title )}</Typography>
         <ScrollMenu
           alignCenter={false}
           data={bestSellers.map( item => <SellItem {...item} key={item.id} /> )}

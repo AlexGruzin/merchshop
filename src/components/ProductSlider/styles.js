@@ -4,7 +4,7 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'relative',
 
       display: 'flex',
-      height: '410px',
+      height: '325px',
       flexDirection: 'column',
       width: '100%',
       margin: 'auto',
@@ -18,7 +18,6 @@ export default function({ colors, values, breakpoints, palette }) {
     // -------------- Controls --------------
 
     item: {
-      height: '408px',
       width: '100%',
       //background: colors.ZEPLIN_GREY,
       color: colors.WHITE,
@@ -27,7 +26,7 @@ export default function({ colors, values, breakpoints, palette }) {
     slideWrapper: {
       display: 'flex',
       justifyContent: 'center',
-      height: '408px',
+      height: '325px',
       overflow: 'hidden',
       position: 'relative',
       width: '100%',
@@ -81,15 +80,18 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       left: 0,
       position: 'absolute',
+      //marginLeft: '20px',
     },
 
     rightArrow: {
       display: 'flex',
       right: 0,
       position: 'absolute',
+      //marginRight: '20px',
     },
 
     controlIcon: {
+      fontSize: '12px',
       padding: '10px'
     },
 
@@ -135,9 +137,8 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundColor: 'transparent',
     },
 
-
     like: {
-      fontSize: '22px',
+      fontSize: '23px',
       position: 'absolute',
       top: 0,
       marginTop: '2vw',
@@ -151,6 +152,20 @@ export default function({ colors, values, breakpoints, palette }) {
     likeDisabled: {
       color: colors.GREY400,
     },
+
+    zoomer: {
+      fontSize: '20px',
+      position: 'absolute',
+      right: 0,
+      bottom: 0,
+    },
+
+    zoomIcon: {
+      fontSize: '30px',
+      marginBottom: '3vw',
+      marginRight: '3vw',
+    },
+
 
   }
 }
