@@ -4,7 +4,7 @@ import Router from 'router';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Loading from 'components/Loading';
-import ModalPortals from 'components/ModalsPortal';
+import ModalsPortal from 'components/ModalsPortal';
 import injectSheet from 'react-jss';
 
 import styles from './styles';
@@ -17,7 +17,7 @@ class App extends Component {
         <Header />
         <Router />
         <Footer />
-        <ModalPortals />
+        <ModalsPortal />
       </Loading>
     );
   }
