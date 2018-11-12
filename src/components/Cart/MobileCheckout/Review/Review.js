@@ -12,6 +12,8 @@ import ReviewItem from 'components/Cart/ReviewItem';
 
 import Button from '@material-ui/core/Button';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import { BODY1, BUTTON, SUBHEADING, H6, SUBTITLE2, H1 } from 'constants/typography';
 
 @translate()
@@ -115,7 +117,10 @@ export default class Review extends PureComponent {
           </Typography>
 
           <div className={classes.wrappingRow}>
-            <Gift fontSize='inherit'/>
+            <Icon
+              className={classes.giftIcon}
+              icon={ICONS.GIFT}
+            />
             <Typography className={classes.headingIcon}>
               {t( 'checkout:Gift wrapping included' )}
             </Typography>

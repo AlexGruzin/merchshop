@@ -28,22 +28,21 @@ export default function({ colors, palette, breakpoints }) {
       height: '0px',
     },
 
-    likeEnabled: {
-      zIndex: 1,
+    like: {
+      fontSize: '15px',
       position: 'absolute',
+      top: 0,
+      marginTop: '1.2vw',
+      marginLeft: '1.2vw',
+      padding: 0,
+    },
 
-      marginTop: '3%',
-      marginLeft: '3%',
+    likeEnabled: {
       color: colors.CORAL,
     },
 
     likeDisabled: {
-      zIndex: 1,
-      position: 'absolute',
-
-      marginTop: '3%',
-      marginLeft: '3%',
-      color: colors.GRAY500,
+      color: colors.GREY400,
     },
 
     soldOutLabel: {
@@ -112,7 +111,7 @@ export default function({ colors, palette, breakpoints }) {
     },
 
     star: {
-      fontSize: '10px',
+      fontSize: '11px',
     },
 
   };

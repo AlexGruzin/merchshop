@@ -28,6 +28,7 @@ export default class Product extends PureComponent {
     likeClass: PropTypes.string.isRequired,
     liked: PropTypes.bool.isRequired,
     soldOut: PropTypes.bool.isRequired,
+    columns: PropTypes.number.isRequired,
   };
 
   render() {
@@ -44,6 +45,7 @@ export default class Product extends PureComponent {
       imageWrapper,
       likeEnabled,
       likeDisabled,
+      like,
       soldOutLabel,
     } = classes;
 
@@ -57,8 +59,8 @@ export default class Product extends PureComponent {
       viewType,
     } = itemData;
 
-
     let { soldOut, liked } = this.props;
+
     if ( id === '003' ) {
       liked = true;
     }
@@ -66,43 +68,27 @@ export default class Product extends PureComponent {
       soldOut = true;
     }// just to match screenshoot
 
-    let imageWrappingClass;
-
-    switch ( viewType ) {
-      case STASHED_PRODUCT_TYPES.SINGLE:
-        imageWrappingClass='';
-        break;
-
-      case STASHED_PRODUCT_TYPES.TWIN:
-        imageWrappingClass='';
-        break;
-    }
-
     return (
       <div className={classes.root}>
         <div className={classNames( imageWrapper, itemViewClass )}>
+
           { soldOut
           && <Typography
             className={classNames( soldOutLabel, soldClass )}
             variant={BODY1}>{t( 'homePage:soldOut' )}
           </Typography> }
-          <div className={classes.likeWrapper}>
-            {
-              liked
-                ? <Icon
-                  icon={ICONS.LIKE_ENABLED}
-                  className={classNames( likeEnabled, likeClass )}/>
-                : <Icon
-                  icon={ICONS.LIKE_DISABLED}
-                  className={classNames( likeDisabled, likeClass )}/>
-            }
-          </div>
 
           <div
             className={classes.image}
             style={{
               backgroundImage: `url('${image}')`
             }}/>
+
+          <Checkbox className={like}
+            icon={<Icon icon={ICONS.LIKE_DISABLED} className={likeDisabled}/> }
+            checkedIcon={<Icon icon={ICONS.LIKE_ENABLED} className={likeEnabled}/>}
+            checked={liked}
+          />
         </div>
 
         <div className={classes.informationWrapper}>

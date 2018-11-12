@@ -1,7 +1,7 @@
 export default ({ palette, colors, breakpoints, values }) => ({
 
   phraze: {
-    marginLeft: '10px',
+    marginLeft: '5px',
   },
 
   promo: {
@@ -10,7 +10,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
 
   advertIcon: {
     display: 'flex',
-    fontSize: values.EXTRA_SMALL_FONT_SIZE,
+    fontSize: '6px',
     height: '35px',
     width: '35px',
     alignItems: 'center',
@@ -24,7 +24,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
     alignItems: 'center',
 
     [breakpoints.down( 'sm' )]: {
-      margin: '0 2%',
+
     },
     [breakpoints.up( 'sm' )]: {
       margin: '0',
@@ -49,6 +49,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
   advertismentWrapper: {
     display: 'flex',
     width: '100%',
+    padding: '0 10px',
     justifyContent: 'center',
 
     [breakpoints.down( 'sm' )]: {

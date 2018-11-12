@@ -69,10 +69,8 @@ export default class CartItem extends PureComponent {
         </div>
 
         <div className={classes.removeColumn}>
-          <Delete
-            className={classes.trashIcon}
-            fontSize='inherit'
-            onClick={()=>console.log( 'remove item' )}
+          <Icon className={classes.trashIcon}
+            icon={ICONS.TRASH}
           />
         </div>
 

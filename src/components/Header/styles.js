@@ -117,6 +117,12 @@ export default function({ colors, breakpoints, palette, values }) {
       height: '32px',
       fontSize: values.GIANT_FONT_SIZE,
       marginLeft: 'calc(50% - 40px)',
-    }
+    },
+
+    // ---- checkout
+    checkoutSwiperWidth: {
+      minWidth: '320px',
+      width: '35%',
+    },
   };
 }

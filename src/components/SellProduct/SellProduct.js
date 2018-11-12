@@ -6,12 +6,15 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING } from 'constants/typography';
+import { BODY1, SUBHEADING, H1 } from 'constants/typography';
 import Images from 'theme/images';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
-export default class SellItem extends PureComponent {
+export default class SellProduct extends PureComponent {
 
   static propTypes = {
     t: PropTypes.func.isRequired,
@@ -50,32 +53,29 @@ export default class SellItem extends PureComponent {
               backgroundImage: `url('${image}')`
             }}/>
         </div>
+
+        <div className={classes.amountColorsWrapper}>
+          <Typography className={classes.number} variant={BODY1}>{'8'}</Typography>
+          <Typography className={classes.colors} variant={BODY1}>{t( 'shop:colors' )}</Typography>
+        </div>
+
+        <div className={classes.hr}/>
+
         <Typography className={classes.name} variant={BODY1}>{name}</Typography>
-        <Typography className={classes.cost} variant={BODY1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+        <Typography className={classes.cost} variant={H1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+
         <div className={classes.rating}>
           <Rating
             readonly
             initialRating={rate}
             emptySymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.grey}')`
-                }}/>
+              <Icon icon={ICONS.STAR_EMPTY} className={classes.star}/>
             }
             fullSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.black}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.star}/>
             }
             placeholderSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.placeholder}')`
-                }}/>
+              <Icon icon={ICONS.STAR_HALF} className={classes.star}/>
             }/>
           <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
         </div>

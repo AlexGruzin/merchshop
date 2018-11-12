@@ -30,29 +30,36 @@ export default function({ colors, breakpoints, values, palette }) {
     menuIconWrapper: {
       display: 'flex',
       alignItems: 'center',
+      padding: '0 10px'
     },
 
     leftIconsWrapper: {
       display: 'flex',
-      width: '100%',
+      flexGrow: '1',
       justifyContent: 'flex-end',
-      margin: 'auto 5px'
+      alignItems: 'center',
+      padding: '0 10px',
     },
 
     mobileIconSearch: {
-      fontSize: '17px',
-      padding: '0 10px',
+      fontSize: '14px',
+      padding: '5px',
+      marginRight: '1.8vw',
+    },
+
+    mobileMenuIcon: {
+      padding: '6px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     mobileIconCan: {
-      fontSize: values.EXTRA_LARGE_FONT_SIZE,
-      padding: '0 10px',
+      fontSize: '18px',
     },
 
     interactiveCan: {
       cursor: 'pointer',
-
       display: 'flex',
+      padding: '5px',
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -71,11 +78,6 @@ export default function({ colors, breakpoints, values, palette }) {
       fontFamily: 'Avenir',
       fontSize: '10px',
       bottom: '5px',
-    },
-
-    mobileMenuIcon: {
-      padding: '0 20px',
-      fontSize: values.MEDIUM_FONT_SIZE,
     },
 
     // ---- Swiping menu ----

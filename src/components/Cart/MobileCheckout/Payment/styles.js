@@ -48,15 +48,12 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       width: '20%',
     },
+
     formIcon: {
       display: 'flex',
       width: '10%',
       justifyContent: 'center',
       alignItems: 'center',
-
-      fontSize: '28px',
-      marginTop: '25px',
-      marginRight: '10px',
     },
 
     title: {
@@ -91,6 +88,17 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.WHITE,
       marginTop: '30px',
       marginBottom: '5px',
+    },
+
+    variantIcon: {
+      fontSize: '20px',
+      marginRight: '10px',
+    },
+
+    questionIcon: {
+      fontSize: '28px',
+      marginTop: '25px',
+      marginRight: '10px',
     },
   }
 }

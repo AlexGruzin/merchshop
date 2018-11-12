@@ -15,6 +15,8 @@ import Help from '@material-ui/icons/Help';
 import TextInput from 'components/Forms/TextInput';
 import Button from '@material-ui/core/Button';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 import { required } from 'helpers/validators/generic';
 import { BODY1, BUTTON, SUBHEADING } from 'constants/typography';
 
@@ -50,14 +52,20 @@ export default class ShippingForm extends PureComponent {
         </Typography>
 
         <div className={classNames( classes.chooseWrapper, classes.enabled )}>
-          <Card color='inherit' fontSize='inherit'/>
+          <Icon
+            className={classes.variantIcon}
+            icon={ICONS.CARD}
+          />
           <Typography className={classes.chooseLabel}>
             {t( 'cart:CREDIT CARD' )}
           </Typography>
         </div>
 
         <div className={classes.chooseWrapper}>
-          <Pal color='inherit' fontSize='inherit'/>
+          <Icon
+            className={classes.variantIcon}
+            icon={ICONS.PAY_PAL}
+          />
           <Typography className={classes.chooseLabel}>
             {t( 'cart:PAYPAL' )}
           </Typography>
@@ -122,7 +130,10 @@ export default class ShippingForm extends PureComponent {
           </FormControl>
 
           <div className={classes.formIcon}>
-            <Help fontSize='inherit'/>
+            <Icon
+              className={classes.questionIcon}
+              icon={ICONS.QUESTION}
+            />
           </div>
         </div>
 

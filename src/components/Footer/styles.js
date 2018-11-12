@@ -31,7 +31,8 @@ export default function({ colors, breakpoints, values }) {
     },
 
     privacy: {
-      margin: '0 auto',
+      textAlign: 'center',
+      margin: '0 15px',
     },
 
     // ---- scaled styles ----

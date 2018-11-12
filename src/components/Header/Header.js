@@ -7,12 +7,15 @@ import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
 import classNames from 'classnames';
 import Hidden from '@material-ui/core/Hidden';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 import { H5, BODY1 } from 'constants/typography';
 
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
+import StageCollection from 'components/Cart/StageCollection';
 
+import { ShopItems } from 'constants/shop';
 import { AUTHENTICATE } from 'constants/routing';
 import { HEADER_LINKS_TYPES, NAVIGATION_LINKS } from 'constants/headerLinkList';
 import styles from './styles';
@@ -34,7 +37,20 @@ export default class Header extends PureComponent {
 
   constructor( props ) {
     super( props );
+
+    this.state = {
+      CheckoutOpened: false,
+    }
   }
+
+  swapCheckout = () => {
+    this.setState({
+      CheckoutOpened: !this.state.CheckoutOpened,
+    });
+  };
+
+
+
 
   render() {
     const {
@@ -46,6 +62,10 @@ export default class Header extends PureComponent {
     const {
       rootHeader,
     } = classes;
+
+    const {
+      CheckoutOpened,
+    } = this.state;
 
     return (
       <div className={rootHeader}>
@@ -63,12 +83,32 @@ export default class Header extends PureComponent {
                   <Icon
                     icon={ICONS.SEARCH_ICON}
                     className={classes.smallIconSearch}/>
-                  <Icon
+                  <Icon onClick={this.swapCheckout}
                     icon={ICONS.CAN_ICON}
                     className={classes.smallIconCan}/>
                 </div>
 
               </div>
+
+              <SwipeableDrawer
+                anchor={'right'}
+                classes={{
+                  paper: classes.checkoutSwiperWidth,
+                }}
+                open={CheckoutOpened}
+                onClose={this.swapCheckout}
+                onOpen={this.swapCheckout}
+                swipeAreaWidth={ 20 }>
+                <div
+                  tabIndex={0}
+                  role="button">
+                  <div className={classes.checkoutRoot}>
+                    <StageCollection
+                      handleClose={this.swapCheckout}
+                      cartItems={[ShopItems[3],ShopItems[4]]}/>
+                  </div>
+                </div>
+              </SwipeableDrawer>
 
             </div>
 

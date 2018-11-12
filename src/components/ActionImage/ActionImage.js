@@ -37,6 +37,7 @@ export default class ActionImage extends PureComponent {
             {label}
           </Typography>
           <Icon
+            className={classes.buttonIcon}
             icon={ICONS.ARROW_ICON}
           />
         </Button>

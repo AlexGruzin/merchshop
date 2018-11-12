@@ -25,7 +25,7 @@ export default function({ colors, palette, breakpoints }) {
         flexDirection: 'column',
       },
       [breakpoints.up( 'xs' )]: {
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
         flexDirection: 'row',
       },
@@ -74,14 +74,15 @@ export default function({ colors, palette, breakpoints }) {
       flexDirection: 'row',
 
       [breakpoints.down( 'md' )]: {
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
         flexWrap: 'wrap',
         width: '94%',
         margin: '0 3%',
       },
+
       [breakpoints.up( 'md' )]: {
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
         width: '100%',
         margin: '10px 0',

@@ -55,11 +55,9 @@ export default class ReviewItem extends PureComponent {
             {`Rp ${itemData.cost}`}
           </Typography>
 
-          <div className={classes.amountSection}>
-            <Typography variant={H6} className={classes.amount}>
-              {'x1'}
-            </Typography>
-          </div>
+          <Typography variant={H6} className={classes.amount}>
+            {'x1'}
+          </Typography>
 
         </div>
 

@@ -12,7 +12,7 @@ import Pagination from 'components/ShopStash/Pagination';
 
 import styles from './styles';
 
-import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES } from 'constants/shop';
+import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )
@@ -32,12 +32,13 @@ export default class ShopPage extends PureComponent {
       <div className={classes.root}>
 
         {/* DESCKTOP */}
-        <Hidden xsDown>
+        <Hidden smDown>
           <div className={classes.shopContainer}>
             <Collection
               items={ShopItems}
               ProductRenderingComponent={StashedProduct}
-              viewMode={COLLECTION_VIEW_MODES.MULTI}
+              viewMode={COLLECTION_VIEW_MODES.SINGLE}
+              viewComponent={VIEW_COMPONENTS.DESKTOP}
             />
           </div>
 
@@ -49,7 +50,7 @@ export default class ShopPage extends PureComponent {
         </Hidden>
 
         {/*MOBILE*/}
-        <Hidden smUp>
+        <Hidden mdUp>
 
           <div className={classes.mobileShopContainer}>
 
@@ -58,6 +59,7 @@ export default class ShopPage extends PureComponent {
                 items={ShopItems}
                 ProductRenderingComponent={StashedProduct}
                 viewMode={COLLECTION_VIEW_MODES.MULTI}
+                viewComponent={VIEW_COMPONENTS.MOBILE}
               />
             </div>
           </div>

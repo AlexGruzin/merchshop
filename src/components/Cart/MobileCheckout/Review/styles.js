@@ -104,5 +104,10 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: '10px',
       fontWeight: '100',
     },
+
+    giftIcon: {
+      fontSize: '18px',
+      marginRight: '5px',
+    },
   }
 }
