@@ -94,7 +94,7 @@ export default {
 
   h6: {
     fontFamily: 'Avenir-Book',
-    fontSize: '15px',
+    fontSize: '13px',
     fontStyle: 'normal',
     fontStretch: 'normal',
     letterSpacing: '0.5px',

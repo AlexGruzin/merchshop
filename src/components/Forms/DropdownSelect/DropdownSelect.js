@@ -7,7 +7,12 @@ import styles from './styles';
 import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
+
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import { Link } from 'react-router-dom';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -43,28 +48,39 @@ export default class DropdownSelect extends PureComponent {
     return (
       <div className={classNames( className, classes.textInput )}>
         <Select
-          //{...input}
+          {...input}
           {...custom}
-          className={classes.select}
+          className={classes.selectRoot}
           classes={{
             root: classes.root,
+            select: classes.select,
+            icon: classes.icon,
+          }}
+          MenuProps={{
+            disableAutoFocusItem: true,
+            classes: {
+              paper: classes.menuPaper,
+            },
           }}
           disableUnderline
           variant={variant}
-          onChange={({ target }) => {
-            input.onChange( target.value, this.setState({
-              value: target.value
-            }));
-          }}
+          IconComponent={ExpandMore}
+          //onChange={( event, index, value ) => input.onChange( value )}
           value={value}
         >
           {
             children.map(( item )=>{
               return(
                 <MenuItem key={item.name} value={item.name}>
-                  <Typography>
-                    {t( item.name )}
-                  </Typography>
+
+                  <Link
+                    className={classes.dropLink}
+                    to={item.route}>
+
+                    <Typography>
+                      {t( item.name )}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               )
             })

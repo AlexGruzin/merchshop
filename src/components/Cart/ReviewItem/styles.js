@@ -34,11 +34,11 @@ export default function({ colors, values, breakpoints, palette }) {
 
     nameLabel: {
       marginTop: '10px',
-      fontSize: '18px',
+      fontSize: '15px',
     },
 
     costLabel: {
-      fontSize: '15px',
+      fontSize: '12px',
     },
 
     amount: {

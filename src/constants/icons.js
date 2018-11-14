@@ -23,7 +23,7 @@ export const ICONS = {
   MINUS: '&#xe919',
   PLUS: '&#xe918',
   GIFT: '&#xe91f',
-  QUESTION: '',
+  QUESTION: '&#xe922',
   RIGHT_ARROW: '&#xe91b',
   LEFT_ARROW: '&#xe91a',
   STAR_FILLED: '&#xe925',

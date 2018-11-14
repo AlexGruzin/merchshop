@@ -21,9 +21,10 @@ export default {
   BLACK: '#000',
   GREY800: '#424242',
   //    secondary
-  GREY50: '#fafafa',
   WHITE: '#FFF',
-  GREY100: '#F5F5F5',
+  GRAY50: '#FAFAFA',
+  GRAY100: '#F5F5F5',
   GRAY200: '#f9f9f9',
+  GRAY400: '#BDBDBD',
 };
 
