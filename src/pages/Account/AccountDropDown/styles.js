@@ -117,13 +117,14 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       alignItems: 'center',
       height: '100px',
-      borderBottom: `1px solid ${colors.GRAY400}`,
+      borderBottom: `2px solid ${colors.GRAY_ACTIVE}`,
       paddingLeft: '17px',
     },
 
     welcomeLabel: {
       whiteSpace: 'pre-line',
-
+      fontFamily: 'Avenir',
+      fontSize: '19px',
     },
 
     deskButtonWrapper: {
@@ -132,9 +133,10 @@ export default function({ colors, values, breakpoints, palette }) {
       flexGrow: 1,
       height: '42px',
       paddingLeft: '17px',
+      marginTop: '15px',
     },
     active: {
-      background: colors.GRAY400,
+      background: colors.GRAY_ACTIVE,
     },
 
     deskSubButton: {

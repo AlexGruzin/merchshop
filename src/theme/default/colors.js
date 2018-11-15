@@ -26,5 +26,6 @@ export default {
   GRAY100: '#F5F5F5',
   GRAY200: '#f9f9f9',
   GRAY400: '#BDBDBD',
+  GRAY_ACTIVE: '#dcdcdc',
 };
 

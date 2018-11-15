@@ -2,8 +2,22 @@ export default function({ colors, values, breakpoints, palette }) {
   return {
     orderRoot: {
       display: 'flex',
-      flexDirection: 'column',
       width: '100%',
+
+      [breakpoints.down( 'xs' )]: {
+        flexDirection: 'column',
+      },
+    },
+
+    listContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'column',
+        width: '58%',
+        margin: '20px 50px'
+      },
     },
 
     trackBlock: {
@@ -132,6 +146,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     subCategoryData: {
+      fontFamily: 'HelveticaNeue-Medium',
       fontWeight: 600,
       marginBottom: '15px',
     },

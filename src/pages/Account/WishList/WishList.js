@@ -37,7 +37,7 @@ export default class WishList extends PureComponent {
         <Hidden smDown>
 
           <AccountDropDown
-            currentLabel={'account:WishList'}
+            currentLabel={'account:Wish List'}
           />
 
           <div className={classes.wishContainer}>

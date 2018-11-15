@@ -3,13 +3,26 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+
+      [breakpoints.down( 'xs' )]: {
+        flexDirection: 'column',
+        minHeight: 'calc(100% - 70px)',
+      },
+    },
+
+    listContainer: {
+      display: 'flex',
       flexDirection: 'column',
 
-      minHeight: 'calc(100% - 70px)',
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'column',
+        width: '40%',
+        margin: '20px 50px'
+      },
     },
 
     field: {
-      marginBottom: '3px',
+      marginBottom: '7px',
     },
 
     input: {
@@ -25,7 +38,6 @@ export default function({ colors, values, breakpoints, palette }) {
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',
-      flexGrow: 1,
       margin: '0 17px',
     },
 

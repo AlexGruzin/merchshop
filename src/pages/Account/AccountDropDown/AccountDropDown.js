@@ -40,7 +40,7 @@ export default class AccountDropDown extends PureComponent {
       <div className={classes.root}>
 
         {/* DESCKTOP */}
-        <Hidden smDown>
+        <Hidden xsDown>
           <div className={classes.smDown}>
 
             <div className={classes.welcomeContainer}>
@@ -62,7 +62,7 @@ export default class AccountDropDown extends PureComponent {
                       to={route.route}>
                       <Typography
                         className={classes.deskButtonLabel}
-                        variant='body1'>
+                        variant='h5'>
                         {t( route.name )}
                       </Typography>
                     </Link>
@@ -75,7 +75,7 @@ export default class AccountDropDown extends PureComponent {
         </Hidden>
 
         {/* MOBILE */}
-        <Hidden mdUp>
+        <Hidden smUp>
           <div className={classes.mdUp}>
 
             <div className={classes.dropButtonContainer}>

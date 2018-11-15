@@ -7,22 +7,22 @@ import { ACCOUNT,
 import { ShopItems } from 'constants/shop';
 
 export const ACCOUNT_DROPPING_ROUTES = [{
-  name: 'account:RecentOrders',
+  name: 'account:Recent Orders',
   route: ACCOUNT,
 }, {
-  name: 'account:WishList',
+  name: 'account:Wish List',
   route: WISHLIST,
 }, {
-  name: 'account:PaymentMethods',
+  name: 'account:Payment Methods',
   route: PAYMENT_METHODS,
 }, {
-  name: 'account:AccountDetails',
+  name: 'account:Account Details',
   route: ACCOUNT_DETAILS,
 }, {
   name: 'account:Addresses',
   route: ADDRESSES,
 }, {
-  name: 'account:LogOut',
+  name: 'account:Log Out',
   route: '',
 },
 ];

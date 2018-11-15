@@ -10,6 +10,8 @@ import modals from './modals';
 import routing from './routing';
 import loading from './loading';
 import authenticate from './authenticate';
+import account from './account';
+
 
 //  views
 
@@ -23,5 +25,6 @@ export default combineReducers({
   ...profile(),
   ...session(),
   //  views
-  authenticate
+  authenticate,
+  account,
 });

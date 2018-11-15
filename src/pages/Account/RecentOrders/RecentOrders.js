@@ -34,62 +34,64 @@ export default class RecentOrders extends PureComponent {
       <div className={classes.root}>
 
         <AccountDropDown
-          currentLabel={'account:RecentOrders'}
+          currentLabel={'account:Recent Orders'}
         />
 
-        {
-          RECENT_ORDERS.map(( orderData )=>{
+        <div className={classes.listContainer}>
+          {
+            RECENT_ORDERS.map(( orderData )=>{
 
-            return (
-              <div key={orderData.name}
-                className={classes.ordersItemWrapper}>
+              return (
+                <div key={orderData.name}
+                  className={classes.ordersItemWrapper}>
 
-                <div className={classes.infoColumn}>
+                  <div className={classes.infoColumn}>
 
-                  <Link
-                    className={classes.link}
-                    to={orderData.link}>
+                    <Link
+                      className={classes.link}
+                      to={orderData.link}>
+                      <Typography
+                        className={classes.orderLabel}
+                        variant={H1}>
+                        {`ORDER # ${orderData.id}`}
+                      </Typography>
+                    </Link>
+
                     <Typography
-                      className={classes.orderLabel}
+                      className={classes.dateLabel}
                       variant={H1}>
-                      {`ORDER # ${orderData.id}`}
+                      {`Placed on ${orderData.date}`}
                     </Typography>
-                  </Link>
 
-                  <Typography
-                    className={classes.dateLabel}
-                    variant={H1}>
-                    {`Placed on ${orderData.date}`}
-                  </Typography>
+                    <Typography
+                      className={classes.statusLabel}
+                      variant={SUBHEADING}>
+                      {orderData.status}
+                    </Typography>
 
-                  <Typography
-                    className={classes.statusLabel}
-                    variant={SUBHEADING}>
-                    {orderData.status}
-                  </Typography>
+                  </div>
 
-                </div>
+                  <div className={classes.imagesWrapper}>
+                    {
+                      orderData.images.map(( image )=>(
+                        <div key={image}
+                          className={classes.imageWrapper}>
+                          <div
+                            className={classes.image}
+                            style={{
+                              backgroundImage: `url('${image}')`
+                            }}/>
+                        </div>
+                      ))
+                    }
 
-                <div className={classes.imagesWrapper}>
-                  {
-                    orderData.images.map(( image )=>(
-                      <div key={image}
-                        className={classes.imageWrapper}>
-                        <div
-                          className={classes.image}
-                          style={{
-                            backgroundImage: `url('${image}')`
-                          }}/>
-                      </div>
-                    ))
-                  }
+                  </div>
 
                 </div>
-
-              </div>
-            )
-          })
-        }
+              )
+            })
+          }
+        </div>
 
       </div>
     );

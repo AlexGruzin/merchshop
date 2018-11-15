@@ -3,9 +3,23 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+
+      [breakpoints.down( 'xs' )]: {
+        flexDirection: 'column',
+        minHeight: 'calc(100% - 70px)',
+      },
+
+    },
+
+    listContainer: {
+      display: 'flex',
       flexDirection: 'column',
 
-      minHeight: 'calc(100% - 70px)',
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'column',
+        width: '58%',
+        margin: '40px 50px'
+      },
     },
 
     trashWrapper: {
@@ -59,6 +73,11 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.WHITE,
       margin: '15px 17px',
       marginTop: 'auto',
+
+      [breakpoints.up( 'sm' )]: {
+        margin: '30px 3px',
+        width: '50%',
+      },
     },
 
   }

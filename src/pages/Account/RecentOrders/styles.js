@@ -3,12 +3,26 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+
+      [breakpoints.down( 'xs' )]: {
+        flexDirection: 'column',
+      },
+    },
+
+    listContainer: {
+      display: 'flex',
       flexDirection: 'column',
+
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'column',
+        width: '58%',
+        margin: '40px 50px'
+      },
     },
 
     ordersItemWrapper: {
       display: 'flex',
-      height: '86px',
+      maxHeight: '86px',
       flexGrow: 1,
       flexDirection: 'row',
       margin: '7px 7px',

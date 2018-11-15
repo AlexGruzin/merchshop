@@ -52,86 +52,89 @@ export default class AccountDetails extends PureComponent {
       <div className={classes.root}>
 
         <AccountDropDown
-          currentLabel={'account:AccountDetails'}
+          currentLabel={'account:Account Details'}
         />
 
-        <form
-          className={classes.detailsRoot}
-          //onSubmit={handleSubmit}
-        >
+        <div className={classes.listContainer}>
+          <form
+            className={classes.detailsRoot}
+            //onSubmit={handleSubmit}
+          >
 
-          <Typography
-            className={classes.title}>
-            {t( 'checkout:Contact' )}
-          </Typography>
-
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Email' )}
+            <Typography
+              className={classes.title}>
+              {t( 'checkout:Contact' )}
             </Typography>
-            <Field
-              validate={[required]}
-              name="email"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}
-              props={{
-                type: 'email',
-              }}/>
-          </FormControl>
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Phone' )}
+
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Email' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="email"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}
+                props={{
+                  type: 'email',
+                }}/>
+            </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Phone' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="phone"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
+
+            <Typography
+              className={classes.title}>
+              {t( 'checkout:Personal Information' )}
             </Typography>
-            <Field
-              validate={[required]}
-              name="phone"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
 
-          <Typography
-            className={classes.title}>
-            {t( 'checkout:Personal Information' )}
-          </Typography>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:First Name' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="FirstName"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:First Name' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="FirstName"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Last Name' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="LastName"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Last Name' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="LastName"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+          </form>
 
-        </form>
+          <Button
+            type="submit"
+            //onClick={allowTheNext}
+            className={classes.addCardButton}>
+            {t( 'account:Save Changes' )}
+          </Button>
 
-        <Button
-          type="submit"
-          //onClick={allowTheNext}
-          className={classes.addCardButton}>
-          {t( 'account:Save Changes' )}
-        </Button>
+        </div>
 
       </div>
     );

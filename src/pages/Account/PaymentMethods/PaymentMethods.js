@@ -41,52 +41,55 @@ export default class PaymentMethods extends PureComponent {
       <div className={classes.root}>
 
         <AccountDropDown
-          currentLabel={'account:PaymentMethods'}
+          currentLabel={'account:Payment Methods'}
         />
 
-        {
-          PAYMENT_METHODS_LIST.map(( method )=>{
+        <div className={classes.listContainer}>
 
-            return (
-              <div
-                key={method.lastNumbers}
-                className={classes.paymentItemWrapper}>
+          {
+            PAYMENT_METHODS_LIST.map(( method )=>{
 
-                <div className={classes.infoColumn}>
+              return (
+                <div
+                  key={method.lastNumbers}
+                  className={classes.paymentItemWrapper}>
 
-                  <Typography
-                    className={classes.typeLabel}
-                    variant={SUBHEADING}>
-                    {method.type}
-                  </Typography>
+                  <div className={classes.infoColumn}>
 
-                  <Typography
-                    className={classes.cardLabel}
-                    variant={HEADLINE}>
-                    {`${method.card} **** **** **** ${method.lastNumbers}`}
-                  </Typography>
+                    <Typography
+                      className={classes.typeLabel}
+                      variant={SUBHEADING}>
+                      {method.type}
+                    </Typography>
+
+                    <Typography
+                      className={classes.cardLabel}
+                      variant={HEADLINE}>
+                      {`${method.card} **** **** **** ${method.lastNumbers}`}
+                    </Typography>
+
+                  </div>
+
+                  <div className={classes.trashWrapper}>
+                    <Icon
+                      className={classes.trashIcon}
+                      icon={ICONS.TRASH}
+                    />
+                  </div>
 
                 </div>
+              )
+            })
+          }
 
-                <div className={classes.trashWrapper}>
-                  <Icon
-                    className={classes.trashIcon}
-                    icon={ICONS.TRASH}
-                  />
-                </div>
+          <Button
+            component={Link}
+            to={ADD_CARD}
+            className={classes.addCardButton}>
+            {t( 'account:Add New Card' )}
+          </Button>
 
-              </div>
-            )
-          })
-        }
-
-        <Button
-          component={Link}
-          to={ADD_CARD}
-          className={classes.addCardButton}>
-          {t( 'account:Add New Card' )}
-        </Button>
-
+        </div>
       </div>
     );
   }

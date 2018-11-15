@@ -98,7 +98,7 @@ export default function({ colors, palette, breakpoints }) {
       },
       [breakpoints.up( 'sm' )]: {
         width: '175px',
-        margin: '5px 10px',
+        margin: '5px 7px',
       },
     },
 

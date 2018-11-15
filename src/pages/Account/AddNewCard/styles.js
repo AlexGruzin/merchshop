@@ -3,8 +3,22 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+
+      [breakpoints.down( 'xs' )]: {
+        flexDirection: 'column',
+        minHeight: 'calc(100% - 70px)',
+      },
+    },
+
+    listContainer: {
+      display: 'flex',
       flexDirection: 'column',
-      minHeight: 'calc(100% - 70px)',
+
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'column',
+        width: '40%',
+        margin: '20px 50px'
+      },
     },
 
     headLine: {
@@ -58,7 +72,6 @@ export default function({ colors, values, breakpoints, palette }) {
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',
-      flexGrow: 1,
       margin: '0 17px',
     },
 
@@ -85,6 +98,19 @@ export default function({ colors, values, breakpoints, palette }) {
       margin: '25px 17px',
     },
 
+    savedButton: {
+      display: 'flex',
+      flexGrow: '1',
+      maxHeight: '40px',
+      border: `1px solid ${colors.BLACK}`,
+      margin: '25px 17px',
+    },
+
+    savedIcon: {
+      margin: '0 5px',
+      fontSize: '17px',
+    },
+
     formControlDate: {
       display: 'flex',
       width: '60%',
@@ -103,8 +129,5 @@ export default function({ colors, values, breakpoints, palette }) {
       alignSelf: 'flex-end',
       marginBottom: '17px',
     },
-
-
-
   }
 }

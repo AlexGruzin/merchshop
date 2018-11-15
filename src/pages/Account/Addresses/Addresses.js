@@ -57,98 +57,101 @@ export default class Addresses extends PureComponent {
           currentLabel={'account:Addresses'}
         />
 
-        <form
-          className={classes.detailsRoot}
-          //onSubmit={handleSubmit}
-        >
+        <div className={classes.listContainer}>
 
-          <Typography
-            className={classes.title}>
-            {t( 'checkout:Shipping' )}
-          </Typography>
+          <form
+            className={classes.detailsRoot}
+            //onSubmit={handleSubmit}
+          >
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Address' )}
+            <Typography
+              className={classes.title}>
+              {t( 'checkout:Shipping' )}
             </Typography>
-            <Field
-              validate={[required]}
-              name="address"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Apt/Floor/Suite' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="AptFloorSuite"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Address' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="address"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:City' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="city"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Apt/Floor/Suite' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="AptFloorSuite"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Zip Code' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="zipCode"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:City' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="city"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControl}>
-            <Typography className={classes.heading}>
-              {t( 'checkout:Country' )}
-            </Typography>
-            <Field
-              validate={[required]}
-              name="country"
-              disableUnderline
-              className={classes.field}
-              inputClassName={classes.input}
-              component={TextInput}/>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Zip Code' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="zipCode"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-          <FormControl className={classes.formControlCheckBox}>
-            <Field
-              name="sameAddress"
-              component={CheckBox}/>
-            <Typography className={classes.headingCheckBox}>
-              {t( 'account:Shipping address same as Billing address' )}
-            </Typography>
-          </FormControl>
+            <FormControl className={classes.formControl}>
+              <Typography className={classes.heading}>
+                {t( 'checkout:Country' )}
+              </Typography>
+              <Field
+                validate={[required]}
+                name="country"
+                disableUnderline
+                className={classes.field}
+                inputClassName={classes.input}
+                component={TextInput}/>
+            </FormControl>
 
-        </form>
+            <FormControl className={classes.formControlCheckBox}>
+              <Field
+                name="sameAddress"
+                component={CheckBox}/>
+              <Typography className={classes.headingCheckBox}>
+                {t( 'account:Shipping address same as Billing address' )}
+              </Typography>
+            </FormControl>
 
-        <Button
-          type="submit"
-          //onClick={allowTheNext}
-          className={classes.addCardButton}>
-          {t( 'account:Save Changes' )}
-        </Button>
+          </form>
+
+          <Button
+            type="submit"
+            //onClick={allowTheNext}
+            className={classes.addCardButton}>
+            {t( 'account:Save Changes' )}
+          </Button>
+        </div>
 
       </div>
     );
