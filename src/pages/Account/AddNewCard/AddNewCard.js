@@ -3,6 +3,8 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import { reduxForm } from 'redux-form/immutable';
+import { Link } from 'react-router-dom';
+import { Field } from 'redux-form/immutable';
 import classNames from 'classnames';
 
 // components
@@ -11,14 +13,8 @@ import Button from '@material-ui/core/Button';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Hidden from '@material-ui/core/Hidden';
 import DoneIcon from '@material-ui/icons/CheckCircleOutline';
-
-import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom';
-
-import { Field } from 'redux-form/immutable';
-
 import FormControl from '@material-ui/core/FormControl';
-import Radio from '@material-ui/core/Radio';
+import Typography from '@material-ui/core/Typography';
 
 import TextInput from 'components/Forms/TextInput';
 

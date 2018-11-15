@@ -8,12 +8,12 @@ export default function({ colors, values, breakpoints, palette }) {
         flexDirection: 'column',
         minHeight: 'calc(100% - 70px)',
       },
-
     },
 
     listContainer: {
       display: 'flex',
       flexDirection: 'column',
+      flexGrow: 1,
 
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'column',
@@ -75,7 +75,7 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: 'auto',
 
       [breakpoints.up( 'sm' )]: {
-        margin: '30px 3px',
+        margin: '30px 5px',
         width: '50%',
       },
     },

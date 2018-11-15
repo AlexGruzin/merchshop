@@ -1,12 +1,15 @@
-import { reduxForm } from 'redux-form/immutable';
 import AccountDetails from './AccountDetails';
 
-export default reduxForm({
-  form: 'AccountDetails',
-  initialValues: {
-    email: 'james@gmail.com',
-    phone: '+62 9823 54095',
-    FirstName: 'James',
-    LastName: 'Sudarmono',
-  },
-})( AccountDetails );
+import { connect } from 'react-redux';
+import { ActionsCreators } from 'domains/account';
+import dataStatus from './selector';
+// action creators
+import { openForgotPasswordModal } from 'actionsCreators/modals';
+
+const mapDispatchToProps = ({
+  onSubmit: ActionsCreators.startSavingData,
+});
+
+export default connect( dataStatus, mapDispatchToProps )(
+  AccountDetails,
+);

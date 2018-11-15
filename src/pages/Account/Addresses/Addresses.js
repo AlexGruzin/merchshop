@@ -2,25 +2,19 @@ import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
+import { Field } from 'redux-form/immutable';
 import classNames from 'classnames';
 
 // components
-import AccountDropDown from 'pages/Account/AccountDropDown';
 import Button from '@material-ui/core/Button';
-
 import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom';
-
-import { Field } from 'redux-form/immutable';
-
 import FormControl from '@material-ui/core/FormControl';
+
 import CheckBox from 'components/Forms/CheckBox';
-
-import Radio from '@material-ui/core/Radio';
-
 import TextInput from 'components/Forms/TextInput';
-
 import { required } from 'helpers/validators/generic';
+import AccountDropDown from 'pages/Account/AccountDropDown';
+
 
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
@@ -40,7 +34,6 @@ export default class Addresses extends PureComponent {
   };
 
   componentDidMount() {
-    // this add ability to pass initialValues from anywhere
     this.props.initialize( this.props.initialValues );
   }
 
@@ -143,14 +136,14 @@ export default class Addresses extends PureComponent {
               </Typography>
             </FormControl>
 
+            <Button
+              type="submit"
+              className={classes.addCardButton}>
+              {t( 'account:Save Changes' )}
+            </Button>
+
           </form>
 
-          <Button
-            type="submit"
-            //onClick={allowTheNext}
-            className={classes.addCardButton}>
-            {t( 'account:Save Changes' )}
-          </Button>
         </div>
 
       </div>

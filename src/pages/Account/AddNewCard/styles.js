@@ -108,7 +108,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     savedIcon: {
       margin: '0 5px',
-      fontSize: '17px',
+      fontSize: '18px',
     },
 
     formControlDate: {

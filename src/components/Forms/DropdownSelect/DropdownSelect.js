@@ -65,7 +65,6 @@ export default class DropdownSelect extends PureComponent {
           disableUnderline
           variant={variant}
           IconComponent={ExpandMore}
-          //onChange={( event, index, value ) => input.onChange( value )}
           value={value}
         >
           {

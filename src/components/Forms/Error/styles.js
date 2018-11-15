@@ -1,11 +1,14 @@
-export default ({ colors }) => ({
-  errorText: {
-    color: colors.RED,
-  },
-  error: {
-    color: colors.RED,
-  },
-  warning: {
-    color: colors.ALERT,
+export default function({ colors }) {
+  return {
+
+    error: {
+      color: colors.CORAL,
+      textAlign: 'right',
+      fontSize: '11px',
+    },
+
+    warning: {
+      color: colors.ALERT,
+    }
   }
-});
+}

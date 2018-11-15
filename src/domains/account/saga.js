@@ -7,7 +7,7 @@ import ActionsTypes from './actionsTypes';
 import * as ActionCreators from './actionsCreators';
 import { DELAY_DURATIONS as delayDurations } from './constants';
 
-function* accWorker({ payload }) {
+function* accountWorker({ payload }) {
   yield put( HTTPActionsCreators.makeRequest( ActionCreators.sendData()));
 
   const { response, timeout } = yield race({
@@ -25,12 +25,12 @@ function* accWorker({ payload }) {
   yield put( ActionCreators.finishSavingData());
 }
 
-function* accWatcher() {
-  yield takeEvery( ActionsTypes.START_SAVE_DATA, accWorker );
+function* accountWatcher() {
+  yield takeEvery( ActionsTypes.START_SAVE_DATA, accountWorker );
 }
 
 export default function* accountDomainSaga() {
   yield all([
-    accWatcher(),
+    accountWatcher(),
   ]);
 }

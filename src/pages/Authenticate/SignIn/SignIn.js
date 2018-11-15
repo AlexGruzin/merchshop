@@ -26,7 +26,6 @@ export default class SignIn extends PureComponent {
 
   render() {
     const { handleSubmit, classes, openModal, t } = this.props;
-    console.log(handleSubmit);
 
     return (
       <form

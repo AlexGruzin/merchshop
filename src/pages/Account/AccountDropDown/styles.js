@@ -61,7 +61,6 @@ export default function({ colors, values, breakpoints, palette }) {
       position: 'relative',
       width: '100%',
       height: '0px',
-      //transition: 'all .3s ease-in-out',
       visibility: 'hidden',
       opacity: 0,
     },
@@ -95,8 +94,6 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     // --------- desktop ----------
-
-
     smDown: {
       display: 'flex',
       width: '250px',
