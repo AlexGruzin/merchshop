@@ -1,22 +1,18 @@
-import React, { PureComponent } from 'react';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
+import DropdownSelect from 'components/Forms/DropdownSelect';
+import RangeInput from 'components/Forms/RangeInput';
+
+import { productsFilter, productTypes } from 'constants/shop';
+
+import { HEADLINE } from 'constants/typography';
 import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import { Field, Fields } from 'redux-form/immutable';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-
-import MenuItem from '@material-ui/core/MenuItem';
-
-import TextInput from 'components/Forms/TextInput';
-import RangeInput from 'components/Forms/RangeInput';
-
-import DropdownSelect from 'components/Forms/DropdownSelect';
-
-import { HEADLINE } from 'constants/typography';
 import styles from './styles';
-
-import { productTypes, productsFilter } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )
@@ -38,8 +34,7 @@ export default class Filter extends PureComponent {
       <div className={classes.rootFilters}>
         <form
           className={classes.filtersWrapper}
-          onSubmit={handleSubmit}
-        >
+          onSubmit={handleSubmit}>
 
           <div className={classes.oneFilterWrapper}>
 
@@ -49,8 +44,7 @@ export default class Filter extends PureComponent {
             <div className={classes.rangeInputWrapper}>
               <Fields
                 names={["minCost", "maxCost"]}
-                component={RangeInput}
-              />
+                component={RangeInput}/>
             </div>
           </div>
 
@@ -64,8 +58,7 @@ export default class Filter extends PureComponent {
                 type: 'text'
               }}
               name="productType"
-              component={DropdownSelect}
-            >
+              component={DropdownSelect}>
               {productsFilter}
             </Field>
           </div>

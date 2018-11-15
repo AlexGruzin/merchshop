@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import injectSheet from 'react-jss';
 
 import styles from './styles';
@@ -24,8 +24,7 @@ export default class Icon extends PureComponent {
       <div
         className={classnames( classes.root, className )}
         dangerouslySetInnerHTML={{ __html: icon }}
-        onClick={onClick}
-      />
+        onClick={onClick}/>
     );
   }
 }

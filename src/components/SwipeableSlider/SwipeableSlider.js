@@ -1,18 +1,18 @@
-import React, { PureComponent }  from 'react';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
-import classNames from 'classnames'
 import Typography from '@material-ui/core/Typography';
-
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize } from 'react-swipeable-views-utils';
-import { mod } from 'react-swipeable-views-core';
+import classNames from 'classnames'
 
 import Icon from 'components/Icon';
-import { ICONS } from 'constants/icons';
 import { SLIDING_DELAY } from 'constants/home';
+import { ICONS } from 'constants/icons';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import injectSheet from 'react-jss';
+import { Link } from 'react-router-dom';
+
+import SwipeableViews from 'react-swipeable-views';
+import { mod } from 'react-swipeable-views-core';
+import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 import styles from './styles';
 
 const EnhancedSwipeableViews = autoPlay( virtualize( SwipeableViews ));
@@ -142,8 +142,7 @@ export default class Slider extends React.Component {
                       className={classNames(
                         classes.indicator,
                         index === this.state.index ? classes.activated : classes.disactivated,
-                      )}
-                    />
+                      )}/>
                   </div>
                 )}
               )

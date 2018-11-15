@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import injectSheet from 'react-jss';
-import styles from './styles';
-import ReactPaginate from 'react-paginate';
 
 import { productTypes } from 'constants/shop';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import injectSheet from 'react-jss';
+import ReactPaginate from 'react-paginate';
+import styles from './styles';
 
 @injectSheet( styles )
 export default class Collection extends PureComponent {
@@ -41,8 +41,7 @@ export default class Collection extends PureComponent {
         activeClassName={classes.activeClassName}
         previousClassName={classes.nextPreviousButton}
         nextClassName={classes.nextPreviousButton}
-        breakClassName={classes.break}
-      />
+        breakClassName={classes.break}/>
     );
   }
 }

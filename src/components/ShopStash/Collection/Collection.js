@@ -1,14 +1,16 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
-import styles from './styles';
-
-import Images from 'theme/images';
-import { productTypes, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Hidden from '@material-ui/core/Hidden';
 
 import GrowBox from 'components/ShopStash/GrowBox';
+import {
+  COLLECTION_VIEW_MODES,
+  productTypes,
+  VIEW_COMPONENTS
+} from 'constants/shop';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -110,14 +112,12 @@ export default class Collection extends PureComponent {
                 return (
                   <div
                     className={itemContainer}
-                    key={index}
-                  >
+                    key={index}>
                     <ProductRenderingComponent
                       itemData={item}
                       itemViewClass={itemViewClass}
                       likeClass={likeClass}
-                      soldClass={soldClass}
-                    />
+                      soldClass={soldClass}/>
                   </div>
                 )
               })
@@ -135,14 +135,12 @@ export default class Collection extends PureComponent {
                 return (
                   <div
                     className={itemContainer}
-                    key={index}
-                  >
+                    key={index}>
                     <ProductRenderingComponent
                       itemData={item}
                       itemViewClass={itemViewClass}
                       likeClass={likeClass}
-                      soldClass={soldClass}
-                    />
+                      soldClass={soldClass}/>
                   </div>
                 )
               })

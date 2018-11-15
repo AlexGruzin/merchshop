@@ -1,18 +1,18 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
+import Collapse from '@material-ui/core/Collapse';
+import Divider from '@material-ui/core/Divider';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 import Typography from '@material-ui/core/Typography';
-import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import Collapse from '@material-ui/core/Collapse';
-import List from '@material-ui/core/List';
+import classNames from 'classnames';
 
 import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
 import styles from './styles';
 
 @translate()
@@ -34,7 +34,7 @@ export default class MobileSubRoutes extends PureComponent {
   }
 
   subRouteOpener = () => {
-    this.setState( state => ({ open: !state.open }) );
+    this.setState( state => ({ open: !state.open }));
   };
 
   render() {

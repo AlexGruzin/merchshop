@@ -1,22 +1,24 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
-import { Field, Fields } from 'redux-form/immutable';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import classNames from 'classnames';
-
-import MenuItem from '@material-ui/core/MenuItem';
 import InputBase from '@material-ui/core/InputBase';
+import Typography from '@material-ui/core/Typography';
 
 import CartItem from 'components/Cart/CartItem';
-import { H1, H4, H6, SUBHEADING, CAPTION, SUBTITLE2 } from 'constants/typography';
-import styles from './styles';
-
-import { productTypes, productsFilter } from 'constants/shop';
-import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+
+import { productsFilter, productTypes } from 'constants/shop';
+import {
+  CAPTION,
+  H1,
+  H4,
+  H6,
+  SUBHEADING,
+  SUBTITLE2
+} from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -52,8 +54,7 @@ export default class MobileCart extends PureComponent {
             cartItems.map(( item ) => (
               <CartItem
                 key={item.id}
-                itemData={item}
-              />
+                itemData={item}/>
             ))
           }
         </div>
@@ -77,7 +78,7 @@ export default class MobileCart extends PureComponent {
             <Typography
               variant={H6}
               className={classes.discountLabel}>
-              { `10% ${t('cart:Discount')}:`}
+              { `10% ${t( 'cart:Discount' )}:`}
             </Typography>
             <Typography
               variant={SUBTITLE2}
@@ -89,7 +90,7 @@ export default class MobileCart extends PureComponent {
           <Typography
             variant={H1}
             className={classes.totalLabel}>
-            {`${t('cart:Total')}:`}
+            {`${t( 'cart:Total' )}:`}
           </Typography>
 
           <Typography
@@ -101,8 +102,7 @@ export default class MobileCart extends PureComponent {
           <div className={classes.applyWrapper}>
             <InputBase
               className={classes.applyInput}
-              placeholder="Promo code"
-            />
+              placeholder="Promo code"/>
             <Button
               type="submit"
               className={classes.applyButton}>

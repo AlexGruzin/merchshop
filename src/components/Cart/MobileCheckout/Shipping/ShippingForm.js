@@ -1,24 +1,23 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
-import injectSheet from 'react-jss';
-import { translate } from 'react-i18next';
-import styles from './styles';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Radio from '@material-ui/core/Radio';
-
-import Icon from 'components/Icon';
-import { ICONS } from 'constants/icons';
-
-import TextInput from 'components/Forms/TextInput';
+import Typography from '@material-ui/core/Typography';
 import CheckBox from 'components/Forms/CheckBox';
 import RadioGroup from 'components/Forms/RadioGroup';
 
-import Button from '@material-ui/core/Button';
+import TextInput from 'components/Forms/TextInput';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
+import { BODY1, SUBHEADING } from 'constants/typography';
 
 import { required } from 'helpers/validators/generic';
-import { BODY1, SUBHEADING } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import { Field } from 'redux-form/immutable';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -43,8 +42,7 @@ export default class ShippingForm extends PureComponent {
     return (
       <form
         className={classes.shippingRoot}
-        onSubmit={handleSubmit}
-      >
+        onSubmit={handleSubmit}>
 
         <Typography
           className={classes.title}>
@@ -187,8 +185,7 @@ export default class ShippingForm extends PureComponent {
         <div className={classes.row}>
           <Icon
             className={classes.giftIcon}
-            icon={ICONS.GIFT}
-          />
+            icon={ICONS.GIFT}/>
           <Typography className={classes.headingIcon}>
             {t( 'checkout:Would you like this gift wrapped?' )}
           </Typography>
@@ -196,11 +193,11 @@ export default class ShippingForm extends PureComponent {
 
         <FormControl className={classes.formControlRadio}>
           <Field className={classes.radioField} name="isWrapped" component={RadioGroup}>
-            <Radio classes={{root: classes.radio}} value='Yes' label="Yes" />
+            <Radio classes={{ root: classes.radio }} value='Yes' label="Yes" />
             <Typography className={classes.headingRadio}>
               {'Yes'}
             </Typography>
-            <Radio  classes={{root: classes.radio}} value='No' label="No" />
+            <Radio  classes={{ root: classes.radio }} value='No' label="No" />
             <Typography className={classes.headingRadio}>
               {'No'}
             </Typography>
