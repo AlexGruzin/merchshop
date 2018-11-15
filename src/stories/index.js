@@ -1,19 +1,18 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
-
-import { Provider } from './provider';
-import Filter from 'containers/Filter';
+import { number, text, withKnobs } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 import DropdownSelect from 'components/Forms/DropdownSelect';
-import RangeInput from 'components/Forms/RangeInput';
 import Collection from 'components/ShopStash/Collection';
-import StashItem from 'components/ShopStash/StashedProduct';
 import Pagination from 'components/ShopStash/Pagination';
+import StashItem from 'components/ShopStash/StashedProduct';
+
+import { productTypes, ShopItems } from 'constants/shop';
+import Filter from 'containers/Filter';
 
 import ShopPage from 'pages/ShopPage';
+import React from 'react';
 
-import { ShopItems, productTypes } from 'constants/shop';
+import { Provider } from './provider';
 
 storiesOf( 'Storybook Knobs', module )
   .addDecorator( story => <Provider story={story()}/> )
@@ -32,8 +31,7 @@ storiesOf( 'Storybook Knobs', module )
   .add( 'Filter', () => (
     <div style={{ width: '35%' }}>
       <Filter
-        handleSubmit={action( "reFilter" )}
-      />
+        handleSubmit={action( "reFilter" )}/>
     </div>
   ))
   .add( 'Item from StashedCollection', () => {
@@ -46,8 +44,7 @@ storiesOf( 'Storybook Knobs', module )
             rate: number( 'rate', 4 ),
             reviews: number( 'reviews', 5 ),
             image: '/img/helmet3.jpg',
-          }}
-        />
+          }}/>
       </div>
     )
   })
@@ -55,8 +52,7 @@ storiesOf( 'Storybook Knobs', module )
     <div>
       <Collection
         ItemRenderingComponent={StashItem}
-        items={ShopItems}
-      />
+        items={ShopItems}/>
     </div>
   ))
   .add( 'Pagination', () => {
@@ -69,16 +65,14 @@ storiesOf( 'Storybook Knobs', module )
           handlePageClick={action( "pageChange" )}
           pageCount={pageCount}
           marginPages={marginPages}
-          pageRange={pageRange}
-        />
+          pageRange={pageRange}/>
       </div>
     )
   })
   .add( 'ShopPage Page', () => (
     <div>
       <ShopPage
-        handleFilterSubmit={action( "reFilter" )}
-      />
+        handleFilterSubmit={action( "reFilter" )}/>
     </div>
   ));
 

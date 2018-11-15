@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import injectSheet from 'react-jss';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import injectSheet from 'react-jss';
+import { Link } from 'react-router-dom';
 import styles from './styles';
 
 @injectSheet( styles )
@@ -38,8 +38,7 @@ export default class ActionImage extends PureComponent {
           </Typography>
           <Icon
             className={classes.buttonIcon}
-            icon={ICONS.ARROW_ICON}
-          />
+            icon={ICONS.ARROW_ICON}/>
         </Button>
       </div>
     );

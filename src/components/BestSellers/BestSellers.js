@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
-import SellItem from 'components/SellProduct';
 import Typography from '@material-ui/core/Typography';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
+import SellItem from 'components/SellProduct';
 
 import { H1 } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
 import styles from './styles';
 
 @translate()
@@ -25,8 +25,7 @@ export default class BestSellers extends PureComponent {
         <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
         <ScrollMenu
           alignCenter={false}
-          data={bestSellers.map( item => <SellItem {...item} key={item.id} /> )}
-        />
+          data={bestSellers.map( item => <SellItem {...item} key={item.id} /> )}/>
       </div>
     );
   }

@@ -1,13 +1,12 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import injectSheet from 'react-jss';
-import { translate } from 'react-i18next';
-import styles from './styles';
+import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -56,8 +55,7 @@ export default class DropdownSelect extends PureComponent {
               value: target.value
             }));
           }}
-          value={value}
-        >
+          value={value}>
           {
             children.map(( item )=>{
               return(
