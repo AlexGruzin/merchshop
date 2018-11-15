@@ -71,7 +71,6 @@ export default class RangeInput extends PureComponent {
           meta={minCost.meta}
           name="minCost"
           className={classes.textFieldMinCost}
-          disableUnderline
           type={'number'}
         />
 
@@ -84,7 +83,7 @@ export default class RangeInput extends PureComponent {
           meta={maxCost.meta}
           name="maxCost"
           className={classes.textFieldMaxCost}
-          disableUnderline
+
           type={'number'}
         />
 

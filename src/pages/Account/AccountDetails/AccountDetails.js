@@ -83,9 +83,7 @@ export default class AccountDetails extends PureComponent {
               <Field
                 validate={[required]}
                 name="email"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}
                 props={{
                   type: 'email',
@@ -98,9 +96,7 @@ export default class AccountDetails extends PureComponent {
               <Field
                 validate={[required]}
                 name="phone"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -116,9 +112,7 @@ export default class AccountDetails extends PureComponent {
               <Field
                 validate={[required]}
                 name="FirstName"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -129,9 +123,7 @@ export default class AccountDetails extends PureComponent {
               <Field
                 validate={[required]}
                 name="LastName"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 

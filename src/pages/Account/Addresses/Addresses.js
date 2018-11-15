@@ -15,7 +15,6 @@ import TextInput from 'components/Forms/TextInput';
 import { required } from 'helpers/validators/generic';
 import AccountDropDown from 'pages/Account/AccountDropDown';
 
-
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
 import { H1, SUBHEADING, HEADLINE, BODY1 } from 'constants/typography';
@@ -69,9 +68,7 @@ export default class Addresses extends PureComponent {
               <Field
                 validate={[required]}
                 name="address"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -82,9 +79,7 @@ export default class Addresses extends PureComponent {
               <Field
                 validate={[required]}
                 name="AptFloorSuite"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -95,9 +90,7 @@ export default class Addresses extends PureComponent {
               <Field
                 validate={[required]}
                 name="city"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -108,9 +101,7 @@ export default class Addresses extends PureComponent {
               <Field
                 validate={[required]}
                 name="zipCode"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 
@@ -121,9 +112,7 @@ export default class Addresses extends PureComponent {
               <Field
                 validate={[required]}
                 name="country"
-                disableUnderline
                 className={classes.field}
-                inputClassName={classes.input}
                 component={TextInput}/>
             </FormControl>
 

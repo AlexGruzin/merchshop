@@ -21,20 +21,6 @@ export default function({ colors, values, breakpoints, palette }) {
       },
     },
 
-    field: {
-      marginBottom: '7px',
-    },
-
-    input: {
-      border: `1px solid ${colors.GRAY400}`,
-      borderRadius: '3px',
-      height: '40px',
-
-      fontFamily: 'Avenir',
-      fontSize: '14px',
-      letterSpacing: '0.5px',
-    },
-
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',

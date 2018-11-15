@@ -77,12 +77,6 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'space-between',
     },
 
-    input: {
-      border: `1px solid ${colors.GREY400}`,
-      borderRadius: '2px',
-      height: '40px',
-    },
-
     submitButton: {
       width: '100%',
       height: '40px',
