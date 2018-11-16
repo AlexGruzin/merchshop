@@ -11,7 +11,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import InputBase from '@material-ui/core/InputBase';
 
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
@@ -21,7 +20,6 @@ import MobileSubRoutes from 'components/Navigation/MobileSubRoutes';
 import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
-import { AUTHENTICATE } from 'constants/routing';
 import { HEADLINE, SUBHEADING } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
@@ -34,6 +32,7 @@ export default class MobileNavigationColumn extends PureComponent {
     classes: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
     headerLinks: PropTypes.array.isRequired,
+    openLogRequestModal: PropTypes.func.isRequired,
     cartProductsAmount: PropTypes.number,
   };
 
@@ -73,6 +72,7 @@ export default class MobileNavigationColumn extends PureComponent {
       classes,
       headerLinks,
       cartProductsAmount,
+      openLogRequestModal,
     } = this.props;
 
     const {
@@ -145,8 +145,9 @@ export default class MobileNavigationColumn extends PureComponent {
                     <ListItem>
                       <div className={classes.swipedButtonWrapper}>
                         <Button
-                          component={Link}
-                          to={AUTHENTICATE}
+                          onClick={() => {
+                            this.hideDrawer();
+                            openLogRequestModal();}}
                           size="medium"
                           className={classes.swipedButton}>
                           <Typography

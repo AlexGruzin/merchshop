@@ -1,6 +1,9 @@
 export default () => ({
   paper: {
-    maxWidth: '900px',
+
+    width: '90%',
+    margin: 0,
+    borderRadius: 0,
     maxHeight: 'none',
   }
 });

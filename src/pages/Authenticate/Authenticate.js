@@ -18,9 +18,8 @@ export default class Authenticate extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     sendSignUpData: PropTypes.func.isRequired,
-    sendSignInData: PropTypes.func.isRequired,
+    sendLogInData: PropTypes.func.isRequired,
     openForgotPasswordModal: PropTypes.func.isRequired,
-    selectTab: PropTypes.func.isRequired,
     selectedTab: PropTypes.number.isRequired,
     t: PropTypes.func.isRequired,
   };
@@ -30,10 +29,9 @@ export default class Authenticate extends PureComponent {
       classes,
       t,
       sendSignUpData,
-      sendSignInData,
+      sendLogInData,
       openForgotPasswordModal,
       selectedTab,
-      selectTab,
     } = this.props;
 
     return (
@@ -41,7 +39,6 @@ export default class Authenticate extends PureComponent {
         <div className={classes.tabWrapper}>
           <Tabs
             value={selectedTab}
-            onChange={( event, selectedTab ) => selectTab({ selectedTab })}
             indicator={classes.selectedTab}
             classes={{
               root: classes.rootTabs,
@@ -60,7 +57,7 @@ export default class Authenticate extends PureComponent {
             onChangeIndex={( event, selectedTab ) => selectTab({ selectedTab: Number( !selectedTab ) })}
             className={classes.swipeableViews}>
             <SignIn
-              onSubmit={sendSignInData}
+              onSubmit={sendLogInData}
               openModal={openForgotPasswordModal}/>
             <SignUp
               onSubmit={sendSignUpData}/>

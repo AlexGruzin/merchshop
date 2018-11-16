@@ -69,10 +69,6 @@ function* signUpWorker({ payload }) {
 
   yield put( stopLoading());
   //need to handle case when email were not sent, but user was successfully created.
-
-  if ( finishCreateProfileAction.payload.isSuccess ) {
-    yield put( selectTab({ selectedTab: TABS.SIGN_IN }));
-  }
 }
 
 function* signUpWatcher() {
