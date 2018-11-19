@@ -54,6 +54,20 @@ export const ShopItems = [{
   image: '/img/helmet1.jpg',
   images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
+  rateData: {
+    totalAmount: 354,
+    rates: [{
+      5: 308
+    }, {
+      4: 38
+    }, {
+      3: 3
+    }, {
+      2: 1
+    }, {
+      1: 4
+    },],
+  },
 }, {
   id: '002',
   productType: PRODUCT_TYPES.REGULAR,

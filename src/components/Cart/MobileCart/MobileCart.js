@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import classNames from 'classnames';
 
-import MenuItem from '@material-ui/core/MenuItem';
 import InputBase from '@material-ui/core/InputBase';
 
 import CartItem from 'components/Cart/CartItem';
@@ -15,8 +14,6 @@ import { H1, H4, H6, SUBHEADING, CAPTION, SUBTITLE2 } from 'constants/typography
 import styles from './styles';
 
 import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
-import Icon from 'components/Icon';
-import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -41,7 +38,6 @@ export default class MobileCart extends PureComponent {
     const {
       root,
     } = classes;
-
 
     return (
       <div className={root}>

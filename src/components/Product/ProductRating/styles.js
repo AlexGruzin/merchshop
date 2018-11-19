@@ -1,0 +1,55 @@
+export default function({ colors, breakpoints, palette }) {
+  return {
+
+    root: {
+      display: 'flex',
+      width: '100%',
+      flexDirection: 'column',
+    },
+
+    title: {
+      fontSize: '17px',
+      alignSelf: 'center',
+    },
+
+    row: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+
+    amount: {
+      width: '30px',
+      margin: '0 20px 0 10px',
+    },
+
+    starLabel: {
+      marginTop: '15px',
+    },
+
+    askLabel: {
+      fontSize: '11px',
+      margin: '10px 0',
+      marginRight: '20px',
+    },
+
+    totalLabel: {
+      color: colors.GREY400,
+      fontSize: '11px',
+    },
+
+    buttonLabel: {
+      fontSize: '10px',
+    },
+
+    rateButton: {
+      display: 'flex',
+      width: '47%',
+      height: '30px',
+      background: colors.BLACK,
+      color: colors.WHITE,
+      marginRight: '20px',
+    },
+
+  }
+}

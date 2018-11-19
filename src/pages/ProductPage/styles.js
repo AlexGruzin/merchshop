@@ -35,6 +35,10 @@ export default function({ colors, values, breakpoints, palette }) {
       boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
     },
 
+    collapseContainer: {
+      width: '100%',
+    },
+
     expandHead: {
       display: 'flex',
       alignItems: 'center',

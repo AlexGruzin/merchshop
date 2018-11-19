@@ -12,11 +12,13 @@ import Rating from 'react-rating';
 
 import ProductSlider from 'components/ProductSlider';
 import SellingRow from 'components/SellingRow';
+import ProductRating from 'components/Product/ProductRating';
+import StarRate from 'components/Product/StarRate';
+import BundleStep2 from 'components/Product/BundleStep2';
 
 import { DESCRIPTION, COMPOSE, REVIEWS_AMOUNT, RATE } from 'constants/product';
 import { BestSellers as sellers } from 'constants/home';
 import { H1, H4, SUBHEADING } from 'constants/typography';
-import Images from 'theme/images';
 import styles from './styles';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -76,19 +78,25 @@ export default class ProductPage extends PureComponent {
       rate,
       reviewsAmount,
       reviewsData,
+      rateData,
     } = ShopItems[0]; // productData
 
 
     description = DESCRIPTION;
     compose = COMPOSE;
     reviewsAmount = REVIEWS_AMOUNT;
-    rate = RATE;
+    reviewsData = <ProductRating
+      rateData={rateData}
+    />;
 
 
     const collapseContainer = ( open, data ) => {
       return(
         <div className={classes.expandedBody}>
           <Collapse
+            classes={{
+              container: classes.collapseContainer,
+            }}
             in={open}
             timeout="auto"
             unmountOnExit>
@@ -107,6 +115,8 @@ export default class ProductPage extends PureComponent {
 
         <ProductSlider
           images={images}/>
+
+        <BundleStep2/>
 
         <div className={classes.infoBlock}>
 
@@ -173,19 +183,7 @@ export default class ProductPage extends PureComponent {
               {t( 'Reviews' )}
             </Typography>
 
-            <Rating
-              className={classes.rateStars}
-              readonly
-              initialRating={rate}
-              emptySymbol={
-                <Icon icon={ICONS.STAR_EMPTY} className={classes.star}/>
-              }
-              fullSymbol={
-                <Icon icon={ICONS.STAR_FILLED} className={classes.star}/>
-              }
-              placeholderSymbol={
-                <Icon icon={ICONS.STAR_HALF} className={classes.star}/>
-              }/>
+            <StarRate className={classes.rateStars} rate={4}/>
 
             <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviewsAmount}</Typography>
 
