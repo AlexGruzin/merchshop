@@ -72,6 +72,7 @@
     "react-redux": "^5.1.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
     "react-swipeable-views": "^0.13.0",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
@@ -96,9 +97,6 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
@@ -160,7 +158,100 @@
       ]
     ]
   },
-  "pre-commit": [
-
-  ]
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "babel",
+      "jest",
+      "react"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest/globals": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "experimentalTransformClassProperties": true,
+        "jsx": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "react/no-unknown-property": [
+        "warn"
+      ],
+      "react/jsx-indent": [
+        "error",
+        2
+      ],
+      "react/jsx-indent-props": [
+        "error",
+        2
+      ],
+      "react/jsx-closing-bracket-location": [
+        1,
+        {
+          "selfClosing": "after-props",
+          "nonEmpty": "after-props"
+        }
+      ],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "class-methods-use-this": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "jsx-a11y/label-has-for": "off",
+      "no-console": "off",
+      "space-in-parens": [
+        "error",
+        "always",
+        {
+          "exceptions": [
+            "{}",
+            "[]",
+            "()",
+            "empty"
+          ]
+        }
+      ],
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "space-before-blocks": [
+        "error",
+        "always"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "no-unused-vars": "off",
+      "babel/semi": "off",
+      "no-empty": "off",
+      "react/prop-types": "warn",
+      "react/jsx-key": "warn",
+      "react/display-name": "warn"
+    },
+    "settings": {
+      "react": {
+        "createClass": "createReactClass",
+        "pragma": "React",
+        "version": "^16.0.0"
+      }
+    }
+  },
+  "pre-commit": []
 }
