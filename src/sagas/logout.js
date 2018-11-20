@@ -1,10 +1,13 @@
-import { takeEvery, put, all } from 'redux-saga/effects';
-import { push } from 'react-router-redux';
-import { AUTHENTICATE } from 'constants/routing';
-import { ActionsCreators as SessionActionCreators, ActionsTypes as SessionActionsTypes } from 'domains/session';
-import { ActionsCreators as ProfileActionCreators } from 'domains/profile';
-import { ActionsTypes as HTTPActionsTypes } from 'domains/http';
 import LogoutActionsTypes from 'actionsTypes/logout';
+import { push } from 'connected-react-router/immutable';
+import { AUTHENTICATE } from 'constants/routing';
+import { ActionsTypes as HTTPActionsTypes } from 'domains/http';
+import { ActionsCreators as ProfileActionCreators } from 'domains/profile';
+import {
+  ActionsCreators as SessionActionCreators,
+  ActionsTypes as SessionActionsTypes
+} from 'domains/session';
+import { all, put, takeEvery } from 'redux-saga/effects';
 
 function* logoutSagaWorker() {
   yield put( SessionActionCreators.clearSession());

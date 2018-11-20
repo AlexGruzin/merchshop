@@ -1,23 +1,18 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Map } from 'immutable';
-import Immutable from 'immutable';
+import { routerMiddleware } from 'connected-react-router/immutable';
+import Immutable, { Map } from 'immutable';
 import installDevTools from 'immutable-devtools';
-
-// router
-import history from './history';
-import { routerMiddleware } from 'react-router-redux';
-
-// middlewares
-import createSagaMiddleware from 'redux-saga';
-import { apiMiddleware } from 'redux-api-middleware';
-
 // cookies
 import Cookies from 'js-cookie';
-import { createCookieMiddleware } from 'redux-cookie';
-
 //helpers
-import rootReducer from 'reducers';
+import createRootReducer from 'reducers';
+import { applyMiddleware, compose, createStore } from 'redux';
+import { apiMiddleware } from 'redux-api-middleware';
+import { createCookieMiddleware } from 'redux-cookie';
+// middlewares
+import createSagaMiddleware from 'redux-saga';
 import rootSaga from 'sagas';
+// router
+import history from './history';
 
 let initialState = Map();
 
@@ -47,7 +42,7 @@ const composedEnhancers = compose(
 );
 
 const store = createStore(
-  rootReducer,
+  createRootReducer( history ),
   initialState,
   composedEnhancers,
 );

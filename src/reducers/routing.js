@@ -1,5 +1,5 @@
-import { LOCATION_CHANGE } from 'react-router-redux';
 import ActionsTypes from 'actionsTypes/routing';
+import { LOCATION_CHANGE } from 'connected-react-router/immutable';
 import { fromJS } from 'immutable';
 
 const initialState = fromJS({
