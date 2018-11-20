@@ -1,24 +1,20 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
-import injectSheet from 'react-jss';
-import { translate } from 'react-i18next';
-import styles from './styles';
-import classNames from 'classnames';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
-
-import Card from '@material-ui/icons/CreditCard';
-import Pal from '@material-ui/icons/LocalParking';
-import Help from '@material-ui/icons/Help';
+import Typography from '@material-ui/core/Typography';
+import classNames from 'classnames';
 
 import TextInput from 'components/Forms/TextInput';
-import Button from '@material-ui/core/Button';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
-import { required } from 'helpers/validators/generic';
 import { BODY1, BUTTON, SUBHEADING } from 'constants/typography';
+import { required } from 'helpers/validators/generic';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import { Field } from 'redux-form/immutable';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -43,8 +39,7 @@ export default class ShippingForm extends PureComponent {
     return (
       <form
         className={classes.shippingRoot}
-        onSubmit={handleSubmit}
-      >
+        onSubmit={handleSubmit}>
 
         <Typography
           className={classes.title}>
@@ -54,8 +49,7 @@ export default class ShippingForm extends PureComponent {
         <div className={classNames( classes.chooseWrapper, classes.enabled )}>
           <Icon
             className={classes.variantIcon}
-            icon={ICONS.CARD}
-          />
+            icon={ICONS.CARD}/>
           <Typography className={classes.chooseLabel}>
             {t( 'cart:CREDIT CARD' )}
           </Typography>
@@ -64,8 +58,7 @@ export default class ShippingForm extends PureComponent {
         <div className={classes.chooseWrapper}>
           <Icon
             className={classes.variantIcon}
-            icon={ICONS.PAY_PAL}
-          />
+            icon={ICONS.PAY_PAL}/>
           <Typography className={classes.chooseLabel}>
             {t( 'cart:PAYPAL' )}
           </Typography>
@@ -124,8 +117,7 @@ export default class ShippingForm extends PureComponent {
           <div className={classes.formIcon}>
             <Icon
               className={classes.questionIcon}
-              icon={ICONS.QUESTION}
-            />
+              icon={ICONS.QUESTION}/>
           </div>
         </div>
 

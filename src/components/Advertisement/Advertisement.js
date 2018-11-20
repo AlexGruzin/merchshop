@@ -1,16 +1,16 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
-import { translate } from 'react-i18next';
-import classNames from 'classnames';
+import Hidden from '@material-ui/core/Hidden';
 
 import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
+import classNames from 'classnames';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
-import styles from './styles';
 import { H3 } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -51,8 +51,7 @@ export default class Advertisement extends PureComponent {
               style={{
                 textTransform: 'uppercase'
               }}
-              variant={H3}
-            >Free delivery</Typography>
+              variant={H3}>Free delivery</Typography>
             <Typography className={phraze}variant={H3}>across Indonesia</Typography>
 
             <Hidden xsDown>

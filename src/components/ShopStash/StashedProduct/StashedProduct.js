@@ -1,19 +1,17 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
-import styles from './styles';
-import classNames from 'classnames';
-import Typography from '@material-ui/core/Typography';
 import Checkbox from '@material-ui/core/Checkbox';
-import Rating from 'react-rating';
-
-import { BODY1, SUBHEADING, H1 } from 'constants/typography';
-import { STASHED_PRODUCT_TYPES } from 'constants/shop';
-
-import Images from 'theme/images';
+import Typography from '@material-ui/core/Typography';
+import classNames from 'classnames';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+import { STASHED_PRODUCT_TYPES } from 'constants/shop';
+
+import { BODY1, H1, SUBHEADING } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import Rating from 'react-rating';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -87,8 +85,7 @@ export default class Product extends PureComponent {
           <Checkbox className={like}
             icon={<Icon icon={ICONS.LIKE_DISABLED} className={likeDisabled}/> }
             checkedIcon={<Icon icon={ICONS.LIKE_ENABLED} className={likeEnabled}/>}
-            checked={liked}
-          />
+            checked={liked}/>
         </div>
 
         <div className={classes.informationWrapper}>

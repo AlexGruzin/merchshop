@@ -1,21 +1,26 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
 import Typography from '@material-ui/core/Typography';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import classNames from 'classnames';
+import MobileCart from 'components/Cart/MobileCart';
+import Payment from 'components/Cart/MobileCheckout/Payment';
 
 import Review from 'components/Cart/MobileCheckout/Review';
-import Payment from 'components/Cart/MobileCheckout/Payment';
 import Shipping from 'components/Cart/MobileCheckout/Shipping';
-import MobileCart from 'components/Cart/MobileCart';
-import { H1, H4, H6, SUBHEADING, BODY1, SUBTITLE2 } from 'constants/typography';
-import styles from './styles';
-
-import { productTypes, productsFilter, STEPS_VISUALISE, STAGES_TYPES } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+
+import {
+  productsFilter,
+  productTypes,
+  STAGES_TYPES,
+  STEPS_VISUALISE
+} from 'constants/shop';
+import { BODY1, H1, H4, H6, SUBHEADING, SUBTITLE2 } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
@@ -120,8 +125,7 @@ export default class StageCollection extends PureComponent {
             <MobileCart
               cartItems={cartItems}
               handleClose={handleClose}
-              allowTheNext={this.jumpToNext} // just to switch forms
-            />
+              allowTheNext={this.jumpToNext}/>
           );
         case STAGES_TYPES.SHIPPING.number:
           return(
@@ -129,8 +133,7 @@ export default class StageCollection extends PureComponent {
               {stageStepper( STEPS_VISUALISE.SHIPPING )}
               <Shipping
                 onSubmit={ this.props.sendShippingData }
-                allowTheNext={this.jumpToNext}
-              />
+                allowTheNext={this.jumpToNext}/>
             </div>
           );
         case STAGES_TYPES.PAYMENT.number:
@@ -139,8 +142,7 @@ export default class StageCollection extends PureComponent {
               {stageStepper( STEPS_VISUALISE.PAYMENT )}
               <Payment
                 onSubmit={ this.props.sendPaymentData }
-                allowTheNext={this.jumpToNext}
-              />
+                allowTheNext={this.jumpToNext}/>
             </div>
           );
         case STAGES_TYPES.REVIEW.number:
@@ -149,8 +151,7 @@ export default class StageCollection extends PureComponent {
               {stageStepper( STEPS_VISUALISE.REVIEW )}
               <Review
                 cartItems={cartItems}
-                allowTheNext={this.jumpToNext}
-              />
+                allowTheNext={this.jumpToNext}/>
             </div>
           );
       }

@@ -42,7 +42,7 @@ export default class DropdownSelect extends PureComponent {
       variant,
       children,
       className,
-      ...custom,
+      ...custom
     } = this.props;
 
     return (

@@ -1,20 +1,20 @@
-import { ConnectedRouter } from 'react-router-redux';
-import { Provider } from 'react-redux';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import store from './store';
-import history from './store/history';
-import App from './App';
-import theme from './theme/default';
-import registerServiceWorker from './services/registerServiceWorker';
-
-import { I18nextProvider } from 'react-i18next';
 import i18n from 'config/i18next';
+import { ConnectedRouter } from 'connected-react-router/immutable';
+
+import jss from 'jss'
+import preset from 'jss-preset-default'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import jss from 'jss'
+import { I18nextProvider } from 'react-i18next';
 import { JssProvider } from 'react-jss'
-import preset from 'jss-preset-default'
+import { Provider } from 'react-redux';
+import App from './App';
+import registerServiceWorker from './services/registerServiceWorker';
+import store from './store';
+import history from './store/history';
+import theme from './theme/default';
 
 jss.setup( preset());
 

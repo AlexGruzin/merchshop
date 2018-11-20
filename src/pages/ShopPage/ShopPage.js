@@ -1,18 +1,21 @@
+import Hidden from '@material-ui/core/Hidden';
+// components
+import Collection from 'components/ShopStash/Collection';
+import Pagination from 'components/ShopStash/Pagination';
+import StashedProduct from 'components/ShopStash/StashedProduct';
+
+import {
+  COLLECTION_VIEW_MODES,
+  PRODUCT_TYPES,
+  ShopItems,
+  VIEW_COMPONENTS
+} from 'constants/shop';
+import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
-import PropTypes from 'prop-types';
-
-// components
-import Filters from 'components/Filters';
-import Collection from 'components/ShopStash/Collection';
-import StashedProduct from 'components/ShopStash/StashedProduct';
-import Hidden from '@material-ui/core/Hidden';
-import Pagination from 'components/ShopStash/Pagination';
 
 import styles from './styles';
-
-import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )
@@ -38,8 +41,7 @@ export default class ShopPage extends PureComponent {
               items={ShopItems}
               ProductRenderingComponent={StashedProduct}
               viewMode={COLLECTION_VIEW_MODES.SINGLE}
-              viewComponent={VIEW_COMPONENTS.DESKTOP}
-            />
+              viewComponent={VIEW_COMPONENTS.DESKTOP}/>
           </div>
 
           <div className={classes.paginationContainer}>
@@ -59,8 +61,7 @@ export default class ShopPage extends PureComponent {
                 items={ShopItems}
                 ProductRenderingComponent={StashedProduct}
                 viewMode={COLLECTION_VIEW_MODES.MULTI}
-                viewComponent={VIEW_COMPONENTS.MOBILE}
-              />
+                viewComponent={VIEW_COMPONENTS.MOBILE}/>
             </div>
           </div>
 

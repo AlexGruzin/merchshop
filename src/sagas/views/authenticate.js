@@ -1,9 +1,10 @@
-import { all, take, takeEvery, put, select } from 'redux-saga/effects';
-import 'regenerator-runtime/runtime';
-import { debounceFor } from 'redux-saga-debounce-effect';
-import { push } from 'react-router-redux';
-import ActionsTypes from 'actionsTypes/views/authenticate';
+import { startLoading, stopLoading, } from 'actionsCreators/loading';
+import { clearFirstRoute, } from 'actionsCreators/routing';
 import { selectTab } from 'actionsCreators/views/authenticate';
+import ActionsTypes from 'actionsTypes/views/authenticate';
+import { push } from 'connected-react-router/immutable';
+import { TABS } from 'constants/authenticate';
+import { AUTHENTICATE, HOME } from 'constants/routing';
 import {
   ActionsCreators as ProfileActionsCreators,
   ActionsTypes as ProfileActionsTypes,
@@ -13,16 +14,10 @@ import {
   ActionsTypes as SessionActionsTypes,
   Selectors as SessionSelectors,
 } from 'domains/session';
-import {
-  startLoading,
-  stopLoading,
-} from 'actionsCreators/loading';
-import {
-  clearFirstRoute,
-} from 'actionsCreators/routing';
+import { debounceFor } from 'redux-saga-debounce-effect';
+import { all, put, select, take, takeEvery } from 'redux-saga/effects';
+import 'regenerator-runtime/runtime';
 import * as RoutingSelectors from 'selectors/routing';
-import { AUTHENTICATE, HOME } from 'constants/routing';
-import { TABS } from 'constants/authenticate';
 
 function* signInWorker({ payload }) {
   //TODO probably move to http saga

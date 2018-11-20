@@ -1,28 +1,7 @@
-import { put, take, select } from 'redux-saga/effects';
-import { push } from 'react-router-redux';
-import * as Routes from 'constants/routing';
-import {
-  ActionsCreators as ProfileActionsCreators,
-  ActionsTypes as ProfileActionsTypes,
-  Selectors as ProfileSelectors
-} from 'domains/profile';
-import {
-  ActionsCreators as SessionActionsCreators,
-  ActionsTypes as SessionActionsTypes,
-  Selectors as SessionSelectors,
-} from 'domains/session';
-import {
-  startLoading,
-  stopLoading,
-} from 'actionsCreators/loading';
-import {
-  setFirstRoute,
-  clearFirstRoute,
-} from 'actionsCreators/routing';
-
-
-import * as RoutingSelectors from 'selectors/routing';
-import { includes } from 'lodash';
+import { startLoading, stopLoading, } from 'actionsCreators/loading';
+import { clearFirstRoute, setFirstRoute, } from 'actionsCreators/routing';
+import { push } from 'connected-react-router/immutable';
+import { put } from 'redux-saga/effects';
 
 export default function* initializeSaga({ payload }) {
   yield put( startLoading({
