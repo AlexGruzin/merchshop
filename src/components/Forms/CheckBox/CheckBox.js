@@ -1,9 +1,11 @@
-import Checkbox from '@material-ui/core/Checkbox'
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import injectSheet from 'react-jss';
 import styles from './styles';
+import Checked from '@material-ui/icons/CheckBox';
+import NotChecked from '@material-ui/icons/CheckBoxOutlineBlank';
+import Checkbox from '@material-ui/core/Checkbox';
 
 @injectSheet( styles )
 export default class CheckBox extends PureComponent {
@@ -32,7 +34,10 @@ export default class CheckBox extends PureComponent {
           onChange={input.onChange}
           classes={{
             root: classes.checkRoot,
-          }}/>
+          }}
+          icon={<NotChecked className={classes.sizeIcon} />}
+          checkedIcon={<Checked className={classes.sizeIcon} />}
+        />
       </div>
     );
   }

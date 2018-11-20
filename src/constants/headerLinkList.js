@@ -56,7 +56,7 @@ export const NAVIGATION_LINKS = [
     }) => true || isAuthorized,
   }, {
     type: HEADER_LINKS_TYPES.COMMON_ROUTE,
-    route: ROUTES.HOME,
+    route: ROUTES.ACCOUNT,
     label: 'headerLinks:pakaian',
     predicate: ({
       isAuthorized,

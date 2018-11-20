@@ -70,6 +70,9 @@ export default function({ colors, breakpoints, palette, values }) {
       backgroundColor: palette.primary.main,
       width: '100%',
 
+      position: 'relative',
+      boxShadow: '0 2px 4px 0 rgba(238, 238, 238, 0.5)',
+
       [breakpoints.down( 'md' )]: {
         height: '70px',
       },

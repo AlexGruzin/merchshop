@@ -17,6 +17,11 @@ import styles from './styles';
 export default class Advertisement extends PureComponent {
   static propTypes = {
     classes: PropTypes.object.isRequired,
+    visibility: PropTypes.bool,
+  };
+
+  static deaultProps = {
+    visibility: false,
   };
 
   render() {
@@ -30,6 +35,10 @@ export default class Advertisement extends PureComponent {
       advertIconWrapper,
       advertIcon,
     } = classes;
+
+    if ( !this.props.visibility ) {
+      return null
+    }
 
     return (
       <div className={root}>

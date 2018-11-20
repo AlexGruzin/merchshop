@@ -51,9 +51,11 @@ export default function({ colors, values, breakpoints, palette }) {
 
     formIcon: {
       display: 'flex',
-      width: '10%',
+      width: '15%',
       justifyContent: 'center',
-      alignItems: 'center',
+      fontSize: '22px',
+      alignSelf: 'flex-end',
+      marginBottom: '17px',
     },
 
     title: {

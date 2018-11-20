@@ -52,7 +52,7 @@ export default function({ breakpoints, palette, colors, values }) {
       width: '100%',
       margin: '1px 0',
       height: '1px',
-      background: colors.GREY100,
+      background: colors.GRAY300,
     },
 
     colors: {

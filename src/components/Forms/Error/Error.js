@@ -24,7 +24,6 @@ export default class Error extends PureComponent {
 
     return (
       <Typography
-        type={BODY2}
         className={classes[messageType]}>
         {error}
       </Typography>

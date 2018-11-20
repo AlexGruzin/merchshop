@@ -9,6 +9,7 @@ import loading from './loading';
 //  generic
 import modals from './modals';
 import routing from './routing';
+import account from './account';
 
 // views
 
@@ -23,5 +24,6 @@ export default history => combineReducers({
   ...profile(),
   ...session(),
   //  views
-  authenticate
+  authenticate,
+  account,
 })

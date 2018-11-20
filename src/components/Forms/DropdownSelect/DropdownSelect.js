@@ -1,12 +1,18 @@
-import MenuItem from '@material-ui/core/MenuItem';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import injectSheet from 'react-jss';
+import { translate } from 'react-i18next';
+import styles from './styles';
 import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
-import styles from './styles';
+import MenuItem from '@material-ui/core/MenuItem';
+
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import { Link } from 'react-router-dom';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -36,33 +42,44 @@ export default class DropdownSelect extends PureComponent {
       variant,
       children,
       className,
-      ...custom,
+      ...custom
     } = this.props;
 
     return (
       <div className={classNames( className, classes.textInput )}>
         <Select
-          //{...input}
+          {...input}
           {...custom}
-          className={classes.select}
+          className={classes.selectRoot}
           classes={{
             root: classes.root,
+            select: classes.select,
+            icon: classes.icon,
+          }}
+          MenuProps={{
+            disableAutoFocusItem: true,
+            classes: {
+              paper: classes.menuPaper,
+            },
           }}
           disableUnderline
           variant={variant}
-          onChange={({ target }) => {
-            input.onChange( target.value, this.setState({
-              value: target.value
-            }));
-          }}
-          value={value}>
+          IconComponent={ExpandMore}
+          value={value}
+        >
           {
             children.map(( item )=>{
               return(
                 <MenuItem key={item.name} value={item.name}>
-                  <Typography>
-                    {t( item.name )}
-                  </Typography>
+
+                  <Link
+                    className={classes.dropLink}
+                    to={item.route}>
+
+                    <Typography>
+                      {t( item.name )}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               )
             })
