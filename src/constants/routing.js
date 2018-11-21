@@ -1,7 +1,7 @@
 export const HOME = '/';
 export const AUTHENTICATE = '/auth';
 export const SHOP = '/shop';
-export const PRODUCT = '/product';
+export const PRODUCT = '/product/:productId';
 
 export const UNAUTHORIZED_ROUTES = [
   AUTHENTICATE,

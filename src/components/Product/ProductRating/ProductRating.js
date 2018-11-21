@@ -68,7 +68,9 @@ export default class ProductReviews extends PureComponent {
 
         </div>
 
-        <StarRate className={classes.starLabel} rate={5}/>
+        <div className={classes.starLabel}>
+          <StarRate rate={5}/>
+        </div>
 
         <Typography className={classes.totalLabel}>{`${rateData.totalAmount} Reviews`}</Typography>
 

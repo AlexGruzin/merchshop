@@ -5,13 +5,13 @@ export default function({ colors, values, breakpoints, palette }) {
       flexDirection: 'column',
       width: '90%',
       margin: '0 5%',
-
     },
 
     dropDownField: {
       height: '40px',
       border: `1px solid ${colors.BLACK}`,
       marginBottom: '15px',
+      flexGrow: 3,
     },
 
     colorLabel: {
@@ -21,15 +21,15 @@ export default function({ colors, values, breakpoints, palette }) {
     dotsWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'flex-start',
       marginBottom: '15px',
     },
 
     dotWrapper: {
       height: '22px',
       width: '22px',
+      marginRight: '20px',
     },
-
 
     chooseWrapper: {
       position: 'relative',
@@ -64,8 +64,11 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.BLACK,
     },
 
-    sizeLabel: {
-      color: 'inherit',
+    guideLabel: {
+      flexGrow: 1,
+      alignSelf: 'center',
+      textAlign: 'center',
+      height: '40px',
     },
 
     buttonWrapper: {
@@ -73,18 +76,17 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: '15px',
     },
 
-    filterButton: {
+    nextButton: {
       height: '40px',
       background: colors.BLACK,
       color: colors.WHITE,
-      flexGrow: '3',
-      marginRight: '5px',
+      width: '100%',
     },
 
-    clearButton: {
-      height: '40px',
-      flexGrow: '2',
-      border: `1px solid ${colors.BLACK}`,
+    row: {
+      display: 'flex',
+      flexDirection: 'row',
     },
+
   }
 }
