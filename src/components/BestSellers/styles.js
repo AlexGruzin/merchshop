@@ -1,6 +1,6 @@
 export default () => ({
   bestSellers: {
-    margin: '28px 0 32px 17px',
+    margin: '28px 30px 27px 30px',
   },
 
   bestSellersItems: {

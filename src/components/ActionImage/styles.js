@@ -18,13 +18,13 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundPosition: 'center',
       backgroundSize: 'cover',
     },
+
     button: {
       position: 'absolute',
+      height: '40px',
       minWidth: '190px',
       left: '50%',
-      bottom: '34px',
-      transform: 'translate3d(-50%, 0, 0)',
-      padding: '8px 12px 8px 14px',
+      bottom: '33px',
       justifyContent: 'space-between',
     },
 

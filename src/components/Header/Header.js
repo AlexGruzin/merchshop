@@ -7,13 +7,14 @@ import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
 import classNames from 'classnames';
 import Hidden from '@material-ui/core/Hidden';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
-import { H5, BODY1 } from 'constants/typography';
+import { H5, BODY1, SUBHEADING } from 'constants/typography';
 
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
-import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
 import { AUTHENTICATE } from 'constants/routing';
@@ -49,9 +50,6 @@ export default class Header extends PureComponent {
     });
   };
 
-
-
-
   render() {
     const {
       t,
@@ -78,38 +76,41 @@ export default class Header extends PureComponent {
 
               <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
 
-              <div className={classes.iconsWrapper}>
-                <div className={classes.headerIcons}>
+              <div className={classes.actionsWrapper}>
+
+                <div className={classes.searchContainer}>
                   <Icon
                     icon={ICONS.SEARCH_ICON}
-                    className={classes.smallIconSearch}/>
-                  <Icon onClick={this.swapCheckout}
+                    className={classes.smallIconSearch}
+                  />
+                  <TextField
+                    placeholder={'Search'}
+                    className={classes.searchField}
+                    margin="none"
+                    InputProps={{
+                      disableUnderline: true,
+                      classes: {
+                        input: classes.placeHolderLabel,
+                      }
+                    }}
+                  />
+                </div>
+
+                <div className={classes.canWrapper}>
+                  <div className={classes.canNumberWrapper}>
+                    <Typography variant={SUBHEADING}
+                                className={classes.canNumberLabel}>
+                      {'3'}
+                    </Typography>
+                  </div>
+
+                  <Icon
                     icon={ICONS.CAN_ICON}
                     className={classes.smallIconCan}/>
+
                 </div>
 
               </div>
-
-              <SwipeableDrawer
-                anchor={'right'}
-                classes={{
-                  paper: classes.checkoutSwiperWidth,
-                }}
-                open={CheckoutOpened}
-                onClose={this.swapCheckout}
-                onOpen={this.swapCheckout}
-                swipeAreaWidth={ 20 }>
-                <div
-                  tabIndex={0}
-                  role="button">
-                  <div className={classes.checkoutRoot}>
-                    <StageCollection
-                      handleClose={this.swapCheckout}
-                      cartItems={[ShopItems[3],ShopItems[4]]}/>
-                  </div>
-                </div>
-              </SwipeableDrawer>
-
             </div>
 
             <DesktopNavigationRow

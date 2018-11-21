@@ -34,6 +34,6 @@ export default ({ breakpoints }) => ({
 
   instagramIcon: {
     fontSize: '15px',
-    marginRight: '7px'
+    marginRight: '7px',
   },
 });

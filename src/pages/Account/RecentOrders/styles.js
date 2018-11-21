@@ -15,7 +15,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'column',
-        width: '58%',
+        width: '65%',
         margin: '40px 50px'
       },
     },
@@ -23,6 +23,7 @@ export default function({ colors, values, breakpoints, palette }) {
     ordersItemWrapper: {
       display: 'flex',
       maxHeight: '86px',
+      width: '582px',
       flexGrow: 1,
       flexDirection: 'row',
       margin: '7px 7px',
@@ -38,7 +39,10 @@ export default function({ colors, values, breakpoints, palette }) {
 
     orderLabel: {
       fontSize: '15px',
+      fontFamily: 'HelveticaNeue-Medium',
+      fontWeight: '100',
     },
+
     link: {
       textDecoration: 'none',
     },
@@ -46,6 +50,8 @@ export default function({ colors, values, breakpoints, palette }) {
     dateLabel: {
       marginTop: '5px',
       fontSize: '12px',
+      fontFamily: 'HelveticaNeue-Medium',
+      fontWeight: '100',
     },
 
     statusLabel: {

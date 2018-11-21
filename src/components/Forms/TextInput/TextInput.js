@@ -35,7 +35,7 @@ export default class TextInput extends PureComponent {
     errorClassName: '',
     type: 'text',
     variant: 'standard',
-    disableUnderline: false,
+    disableUnderline: true,
   };
 
   render() {

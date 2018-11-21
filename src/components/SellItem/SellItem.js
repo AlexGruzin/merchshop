@@ -6,8 +6,11 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING } from 'constants/typography';
+import { BODY1, SUBHEADING, H1 } from 'constants/typography';
 import Images from 'theme/images';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -50,32 +53,22 @@ export default class SellItem extends PureComponent {
               backgroundImage: `url('${image}')`
             }}/>
         </div>
+
         <Typography className={classes.name} variant={BODY1}>{name}</Typography>
         <Typography className={classes.cost} variant={BODY1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+
         <div className={classes.rating}>
           <Rating
             readonly
             initialRating={rate}
             emptySymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.grey}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starDeactivated}/>
             }
             fullSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.black}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starActivated}/>
             }
             placeholderSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.placeholder}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starHalf}/>
             }/>
           <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
         </div>
