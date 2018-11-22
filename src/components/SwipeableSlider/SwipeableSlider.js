@@ -86,13 +86,13 @@ export default class Slider extends React.Component {
 
   handleChangeIndex = index => {
     this.setState({
-      index: index,
+      index: mod( index, this.props.items.length ),
     });
   };
 
   slideRenderer = ( params ) => {
     const { index, key } = params;
-    const circularIndex = mod( index, 4 );
+    const circularIndex = mod( index, this.props.items.length );
 
     return(
       <Slide

@@ -33,16 +33,16 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       width: '50%',
       flexDirection: 'column',
-      marginLeft: '15px',
+      marginLeft: '10px',
     },
 
     nameLabel: {
       marginTop: '10px',
-      fontSize: '18px',
+      fontSize: '15px',
     },
 
     costLabel: {
-      fontSize: '15px',
+      fontSize: '14px',
     },
 
     addRemoveSection: {
@@ -58,11 +58,11 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '80px',
       height: '26px',
 
-      fontSize: '22px',
+      fontSize: '20px',
     },
 
     amountLabel: {
-      fontSize: '17px',
+      fontSize: '15px',
     },
 
     removeColumn: {

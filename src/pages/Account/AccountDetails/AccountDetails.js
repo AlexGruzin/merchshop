@@ -145,7 +145,7 @@ export default class AccountDetails extends PureComponent {
                 : <Button
                   type="submit"
                   className={classes.addCardButton}>
-                  {t( 'account:Save Payment Details' )}
+                  {t( 'account:Save Changes' )}
                 </Button>
             }
 

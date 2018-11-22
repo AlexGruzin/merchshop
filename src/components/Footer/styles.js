@@ -24,7 +24,9 @@ export default function({ colors, breakpoints, values }) {
       justifyContent: 'space-between',
     },
 
-    serviceIcon: {},
+    serviceIcon: {
+      fontSize: '18px',
+    },
 
     underlined: {
       textDecoration: 'underline',
@@ -33,6 +35,7 @@ export default function({ colors, breakpoints, values }) {
     privacy: {
       textAlign: 'center',
       margin: '0 15px',
+      marginTop: '8px',
     },
 
     // ---- scaled styles ----
@@ -105,7 +108,6 @@ export default function({ colors, breakpoints, values }) {
     subscribeButton: {
       justifyContent: 'space-between',
       height: '40px',
-      margin: '5px 0',
 
       [breakpoints.down( 'sm' )]: {
         width: '100%',

@@ -44,6 +44,10 @@ export default function({ colors, palette }) {
       textDecoration: 'none',
       listStyleType: 'none',
       textAlign: 'center',
+
+      '& a': {
+        textDecoration: 'none',
+      },
     },
   };
 }

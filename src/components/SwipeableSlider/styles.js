@@ -4,7 +4,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
-      height: '458px',
+      height: 'calc(408px + 36px)',
       margin: 'auto',
       justifyContent: 'center',
     },
@@ -74,13 +74,14 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     sliderLabel: {
-      marginRight: '46px',
+      marginRight: 'auto',
     },
 
     sliderButton: {
       position: 'absolute',
       bottom: '33px',
-      padding: '8px 12px 8px 14px'
+      height: '40px',
+      width: '180px',
     },
 
     arrowSliderIcon: {},
@@ -91,20 +92,20 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
-      height: '50px',
+      height: '36px',
     },
 
     sliderIndicatorWrapper: {
       display: 'flex',
+      justifyContent: 'center',
       alignItems: 'center',
       width: '150px',
-      height: '50px',
+      height: '36px',
     },
 
     sliderIndicatorButton: {
       display: 'flex',
       height: '100%',
-      flexGrow: 1,
       userSelect: 'none',
       cursor: 'pointer',
     },
@@ -112,9 +113,9 @@ export default function({ colors, values, breakpoints, palette }) {
     indicator: {
       transition: 'all 0.5s ease',
       display: 'flex',
-      width: '100%',
+      width: '17px',
       height: '2px',
-      margin: 'auto 5px',
+      margin: 'auto 3px',
     },
 
     'activated': {
@@ -122,7 +123,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     'disactivated': {
-      backgroundColor: colors.GREY400,
+      backgroundColor: colors.GRAY_ACTIVE,
     },
 
   }

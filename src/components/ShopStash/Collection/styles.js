@@ -42,7 +42,7 @@ export default function({ colors, palette, breakpoints }) {
         margin: '25px auto',
       },
       [breakpoints.up( 'xs' )]: {
-        margin: '30px 10px',
+        margin: '30px 15px',
       },
     },
 

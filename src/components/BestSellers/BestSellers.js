@@ -1,5 +1,5 @@
 import Typography from '@material-ui/core/Typography';
-import SellItem from 'components/SellProduct';
+import SellItem from 'components/SellItem';
 
 import { H1 } from 'constants/typography';
 import PropTypes from 'prop-types';

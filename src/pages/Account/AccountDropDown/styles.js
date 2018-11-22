@@ -142,7 +142,8 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     deskButtonLabel: {
-      color: colors.BLACK
+      color: colors.BLACK,
+      letterSpacing: '0.5px',
     },
 
   }

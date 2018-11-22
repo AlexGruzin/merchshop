@@ -76,7 +76,7 @@ export default function({ colors, palette, breakpoints }) {
       width: '100%',
       margin: '1px 0',
       height: '1px',
-      background: colors.GREY100,
+      background: colors.GRAY300,
     },
 
     colors: {

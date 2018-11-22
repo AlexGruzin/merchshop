@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'center',
       width: '100%',
     },
 
@@ -12,8 +13,8 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      width: '96%',
-      margin: '0 2%',
+      width: '95%',
+      margin: '0 auto',
       marginBottom: '15px',
     },
 

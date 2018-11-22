@@ -13,6 +13,8 @@ export default {
   GRAY300: '#f4f4f4',
   GRAY500: '#9E9E9E',
   GREY600: '#757575',
+  GRAY_LIGHT: '#cecece',
+  GRAY_DARK: '#4e4e4e',
   ZEPLIN_GREY: '#81898c',
   GRAY_TEXT: '#9b9b9b',
   //  default theme

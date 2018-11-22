@@ -43,6 +43,9 @@ export default class Home extends PureComponent {
             }, {
               image: Images.image1,
               link: '/helm4'
+            }, {
+              image: Images.image1,
+              link: '/helm4'
             }
           ]}/>
 
