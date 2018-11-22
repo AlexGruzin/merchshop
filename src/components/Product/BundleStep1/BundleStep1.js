@@ -134,7 +134,7 @@ export default class BundleStep1 extends PureComponent {
           <Typography
             variant={H1}
             className={classes.cost}>
-            {cost}
+            {`Rp ${cost}`}
           </Typography>
 
           <Button

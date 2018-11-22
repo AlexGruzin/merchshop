@@ -24,6 +24,7 @@ import styles from './styles';
 import { productTypes, productsFilter } from 'constants/shop';
 import { TRACKED_COLORS, TRACKED_SIZES } from 'constants/filter';
 import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
+import { H1, H4 } from 'constants/typography';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
@@ -70,6 +71,12 @@ export default class BundleStep2 extends PureComponent {
         >
 
           <Typography
+            variant={H4}
+            className={classes.productLabel}>
+            {t( 'product:VIPER HELMET (1/2)' )}
+          </Typography>
+
+          <Typography
             className={classes.colorLabel}
             variant={CAPTION}>
             {`${t( 'product:Color' )}: White`}
@@ -107,7 +114,7 @@ export default class BundleStep2 extends PureComponent {
                 value: 'XL',
               }}
             >
-              {[{ name: `XL` }]}
+              {TRACKED_SIZES}
             </Field>
 
             <Typography

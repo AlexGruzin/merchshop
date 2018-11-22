@@ -3,14 +3,23 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       display: 'flex',
       flexDirection: 'column',
-      width: '90%',
-      margin: '0 5%',
+      width: '100%',
+    },
+
+    formRoot: {
+      display: 'flex',
+      flexDirection: 'column',
+      margin: '0 17px',
+    },
+
+    productLabel: {
+      margin: '24px 0 16px 0',
+      fontSize: '20px',
     },
 
     dropDownField: {
       height: '40px',
       border: `1px solid ${colors.BLACK}`,
-      marginBottom: '15px',
       flexGrow: 3,
     },
 
@@ -22,7 +31,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'flex-start',
-      marginBottom: '15px',
+      marginBottom: '27px',
     },
 
     dotWrapper: {
@@ -78,9 +87,10 @@ export default function({ colors, values, breakpoints, palette }) {
 
     nextButton: {
       height: '40px',
+      width: '100%',
       background: colors.BLACK,
       color: colors.WHITE,
-      width: '100%',
+      margin: '25px 0',
     },
 
     row: {

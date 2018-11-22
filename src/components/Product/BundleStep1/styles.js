@@ -24,10 +24,10 @@ export default function({ colors, values, breakpoints, palette }) {
       flexGrow: '1',
       background: colors.BLACK,
       color: colors.WHITE,
-      margin: '20px 0',
+      margin: '23px 0',
     },
 
-// -------------  expanded  --------------
+    // -------------  expanded  --------------
 
     expandedBlock: {
       display: 'flex',
@@ -51,6 +51,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     productLabel: {
       fontSize: '20px',
+      marginTop: '23px',
     },
 
     category: {

@@ -5,17 +5,6 @@ import history from 'store/history';
 import queryString from 'query-string';
 import classNames from 'classnames';
 
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Checkbox from '@material-ui/core/Checkbox';
-import Collapse from '@material-ui/core/Collapse';
-import Rating from 'react-rating';
-
-import ProductSlider from 'components/ProductSlider';
-import SellingRow from 'components/SellingRow';
-import ProductRating from 'components/Product/ProductRating';
-import StarRate from 'components/Product/StarRate';
-
 import BundleStep1 from 'components/Product/BundleStep1';
 import BundleStep2 from 'components/Product/BundleStep2';
 import BundleStep3 from 'components/Product/BundleStep3';
@@ -71,7 +60,7 @@ export default class ProductPage extends PureComponent {
           );
         default:
           return(
-            <BundleStep1 customSubmit={this.customSubmit}/>
+            <BundleStep3 customSubmit={this.customSubmit}/>
           );
       }
     };

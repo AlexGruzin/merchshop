@@ -118,6 +118,6 @@ export default {
   ].join( ',' ),
   fontWeight: 'normal',
   fontStyle: 'normal',
-  htmlFontSize: 16,
+
 };
 
