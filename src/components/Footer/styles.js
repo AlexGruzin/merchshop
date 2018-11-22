@@ -121,7 +121,7 @@ export default function({ colors, breakpoints, values }) {
       fontWeight: '300',
       textTransform: 'capitalize',
       letterSpacing: '0.5px',
-      color: colors.GREY400,
+      color: colors.GRAY400,
     },
 
     arrowIcon: {

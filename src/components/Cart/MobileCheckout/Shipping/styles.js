@@ -67,7 +67,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     input: {
-      border: `1px solid ${colors.GREY400}`,
+      border: `1px solid ${colors.GRAY400}`,
       borderRadius: '2px',
       height: '40px',
     },

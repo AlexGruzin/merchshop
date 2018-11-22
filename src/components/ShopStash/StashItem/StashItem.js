@@ -59,7 +59,7 @@ export default class SellItem extends PureComponent {
               <div
                 className={classes.star}
                 style={{ // TODO: stars should be made with icomoon icons
-                  backgroundImage: `url('${Images.grey}')`
+                  backgroundImage: `url('${Images.gray}')`
                 }}/>
             }
             fullSymbol={

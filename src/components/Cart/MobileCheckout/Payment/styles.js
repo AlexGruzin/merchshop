@@ -13,8 +13,8 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'center',
       width: '100%',
       height: '40px',
-      border: `1px solid ${colors.GREY400}`,
-      color: colors.GREY400,
+      border: `1px solid ${colors.GRAY400}`,
+      color: colors.GRAY400,
       fontSize: '18px',
 
       marginBottom: '7px',
@@ -78,7 +78,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     input: {
-      border: `1px solid ${colors.GREY400}`,
+      border: `1px solid ${colors.GRAY400}`,
       borderRadius: '2px',
       height: '40px',
     },

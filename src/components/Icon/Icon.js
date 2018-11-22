@@ -8,13 +8,14 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Icon extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     className: PropTypes.string,
     icon: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     className: '',
+    classes: () => null
   };
 
   render() {

@@ -42,7 +42,7 @@ export default function({ colors, palette, breakpoints }) {
     },
 
     likeDisabled: {
-      color: colors.GREY400,
+      color: colors.GRAY400,
     },
 
     soldOutLabel: {
@@ -76,7 +76,7 @@ export default function({ colors, palette, breakpoints }) {
       width: '100%',
       margin: '1px 0',
       height: '1px',
-      background: colors.GRAY300,
+      background: colors.GRAY100,
     },
 
     colors: {

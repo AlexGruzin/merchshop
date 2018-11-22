@@ -1,43 +1,65 @@
 export default {
   '@global': {
-
-    '@font-face': [
+    '@font-face':  [
       {
-        fontFamily: 'Avenir',
-        src: 'url("/fonts/Avenir.otf") format("opentype")',
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-UltraLight.ttf") format("truetype")',
+        fontWeight: 100,
+        fontStyle: 'normal',
       },
       {
-        fontFamily: 'HelveticaNeue-Medium',
-        src: 'url("/fonts/HelveticaNeue_Medium.ttf") format("truetype")',
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-Regular.ttf") format("truetype")',
+        fontWeight: 400,
+        fontStyle: 'normal',
       },
       {
-        fontFamily: 'HelveticaNeue',
-        src: 'url("/fonts/HelveticaNeue.ttf") format("truetype")',
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-Italic.ttf") format("truetype")',
+        fontWeight: 400,
+        fontStyle: 'italic',
       },
       {
-        fontFamily: 'HelveticaNeue-Bold',
-        src: 'url("/fonts/HelveticaNeue_Bold.ttf") format("truetype")',
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-BoldItalic.ttf") format("truetype")',
+        fontWeight: 700,
+        fontStyle: 'italic',
+      },
+      {
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-Light.ttf") format("truetype")',
+        fontWeight: 300,
+        fontStyle: 'normal',
+      },
+      {
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-LightItalic.ttf") format("truetype")',
+        fontWeight: 300,
+        fontStyle: 'italic',
+      },
+      {
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-BlackItalic.ttf") format("truetype")',
+        fontWeight: 900,
+        fontStyle: 'italic',
+      },
+      {
+        fontFamily: "Helvetica Neue",
+        src: 'url("/fonts/HelveticaNeue-Medium.ttf") format("truetype")',
+        fontWeight: 500,
+        fontStyle: 'normal',
       },
       {
         fontFamily: 'Icomoon',
         src: 'url("/fonts/icomoon.ttf") format("truetype")',
-      },
-      {
-        fontFamily: 'HelveticaNeue-Light',
-        src: 'url("/fonts/HelveticaNeue_Light.ttf") format("truetype")',
-      },
-      {
-        fontFamily: 'Avenir-Book',
-        src: 'url("/fonts/Avenir-Book.ttf") format("truetype")',
-      },
-      {
-        fontFamily: 'Avenir-Heavy',
-        src: 'url("/fonts/Avenir-Heavy.ttf") format("truetype")',
       },
     ],
 
     body: {
       margin: 0,
     },
+    html: {
+      // fontSize: '62.5%'
+    }
   }
 };

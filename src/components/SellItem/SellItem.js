@@ -62,7 +62,11 @@ export default class SellItem extends PureComponent {
             readonly
             initialRating={rate}
             emptySymbol={
-              <Icon icon={ICONS.STAR_FILLED} className={classes.starDeactivated}/>
+              <div
+                className={classes.star}
+                style={{
+                  backgroundImage: `url('${Images.gray}')`
+                }}/>
             }
             fullSymbol={
               <Icon icon={ICONS.STAR_FILLED} className={classes.starActivated}/>

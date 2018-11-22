@@ -79,14 +79,14 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- label
     stageLabel: {
-      color: colors.GREY400,
+      color: colors.GRAY400,
       fontSize: '20px',
       marginTop: '15px',
       marginBottom: '5px',
     },
 
     commonlabel: {
-      color: colors.GREY400,
+      color: colors.GRAY400,
     },
 
     activelabel: {

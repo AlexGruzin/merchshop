@@ -28,7 +28,9 @@ export default function({ colors, breakpoints, palette }) {
       textDecoration: 'none',
     },
 
-    ButtonLabel: {},
+    ButtonLabel: {
+      fontWeight: 500
+    },
 
     // ---- expanded part ----
 
@@ -78,6 +80,9 @@ export default function({ colors, breakpoints, palette }) {
       padding: '5px',
       textDecoration: 'none',
     },
+    SubButtonLabel: {
+      fontWeight: 300
+    }
 
   }
 }
