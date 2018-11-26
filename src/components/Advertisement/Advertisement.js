@@ -16,7 +16,7 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Advertisement extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     visibility: PropTypes.bool,
   };
 
