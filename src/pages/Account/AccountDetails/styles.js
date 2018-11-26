@@ -26,12 +26,6 @@ export default function({ colors, values, breakpoints, palette }) {
       marginBottom: '12px',
     },
 
-    input: {
-      border: `1px solid ${colors.GRAY400}`,
-      borderRadius: '3px',
-      height: '40px',
-    },
-
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',

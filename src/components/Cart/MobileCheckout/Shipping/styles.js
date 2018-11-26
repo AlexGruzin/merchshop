@@ -70,12 +70,6 @@ export default function({ colors, values, breakpoints, palette }) {
       marginLeft: '3px',
     },
 
-    input: {
-      border: `1px solid ${colors.GRAY400}`,
-      borderRadius: '2px',
-      height: '40px',
-    },
-
     row: {
       display: 'flex',
       flexDirection: 'row',

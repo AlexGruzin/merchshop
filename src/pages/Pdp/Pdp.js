@@ -9,14 +9,13 @@ import ReactPlayer from "react-player";
 import Rating from "react-rating";
 import ProductCollapsible from "../../components/ProductCollapsible";
 import ColorSwab from "../../components/ColorSwab/ColorSwab";
-import DropdownSelect
-  from "../../components/Forms/DropdownSelect";
+import DropdownSelect from 'components/Forms/DropdownSelect';
 import Icon from "../../components/Icon";
 import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
 import { ICONS } from "../../constants/icons";
 import { singleShopItem } from "../../constants/shop";
-import * as typography from "../../constants/typography";
 import classNames from 'classnames';
+import { H3, H5, BODY1 } from 'constants/typography';
 import styles from "./styles";
 
 
@@ -79,24 +78,24 @@ export default class Pdp extends Component {
     const fullSymbol = <Icon icon={ICONS.STAR_FILLED} className={classes.starActivated}/>;
     const emptySymbol = <Icon icon={ICONS.STAR_EMPTY} className={classes.starHalf}/>;
     const featuresTitle = (
-      <Typography className={classes.collapseTitle} variant={typography.BODY1}>
+      <Typography className={classes.collapseTitle} variant={BODY1}>
         features
       </Typography>
     );
 
     const reviewsTitle = (
       <div className={classNames( classes.flexContainer )}>
-        <Typography className={classes.collapseTitle} variant={typography.BODY1}>Reviews</Typography>
+        <Typography className={classes.collapseTitle} variant={BODY1}>Reviews</Typography>
         <div className={classes.ratingWrapper}>
           <Rating readonly initialRating={rate} emptySymbol={emptySymbol}
             fullSymbol={fullSymbol} />
-          <Typography variant={typography.BODY1} className={classes.reviews}>{reviews}</Typography>
+          <Typography variant={BODY1} className={classes.reviews}>{reviews}</Typography>
         </div>
       </div>
     );
 
     const descriptionTitle = (
-      <Typography className={classes.collapseTitle} variant={typography.BODY1}>
+      <Typography className={classes.collapseTitle} variant={BODY1}>
         description
       </Typography>
     );
@@ -109,11 +108,11 @@ export default class Pdp extends Component {
         <div className={classes.rightSection}>
           <div className={classes.productBio}>
             <div className={classes.headline}>
-              <Typography variant={typography.H3} className={classes.productName}>{'Osiris Maroon'}</Typography>
-              <Typography variant={typography.H5} className={classes.price}>{t( 'homePage:cost' ).replace( '${cost}', 399000 )}</Typography>
+              <Typography variant={H3} className={classes.productName}>{'Osiris Maroon'}</Typography>
+              <Typography variant={H5} className={classes.price}>{t( 'homePage:cost' ).replace( '${cost}', 399000 )}</Typography>
             </div>
             {label && <div className={classes.VariantSelection}>
-              <Typography variant={typography.BODY1}>{'Color: Black'}</Typography>
+              <Typography variant={BODY1}>{'Color: Black'}</Typography>
               <div className={classes.Swabs}>
                 {colors.map(( color, i ) =>
                   <ColorSwab
@@ -132,7 +131,7 @@ export default class Pdp extends Component {
                   placeholder={'Select Size'}/>
                 <div className={classes.flexContainer}>
                   <Icon icon={ICONS.GIFT} />
-                  <Typography className={classes.sizing} variant={typography.BODY1}>{t( 'shop:sizingGuide' )}</Typography>
+                  <Typography className={classes.sizing} variant={BODY1}>{t( 'shop:sizingGuide' )}</Typography>
                 </div>
               </div>
               <Button color={'secondary'} variant={'text'} fullWidth className={classes.addToCart}>

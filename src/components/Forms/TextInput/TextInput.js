@@ -55,19 +55,32 @@ export default class TextInput extends PureComponent {
       t,
     } = this.props;
 
+    const {
+      rootWrapper,
+      root,
+      errorClass,
+    } = classes;
+
+    let rootModificatorClass;
+
     const errorMessage = (meta.error) ? t(meta.error) : t(meta.warning);
     const messageType = (meta.error) ? 'error' : 'warning';
-    const error = !!meta.error && meta.touched;
+    const errorStatus = !!meta.error && meta.touched;
+
+    if ( errorStatus ) {
+      rootModificatorClass = errorClass;
+    }
 
     return (
-      <div className={classNames( className, classes.textInput )}>
+      <div className={classNames( className, rootWrapper )}>
         <TextField
+          className={classNames( root, rootModificatorClass )}
           variant={variant}
-          error={error}
+          error={errorStatus}
           multiline={multiline}
           placeholder={placeholder}
           InputProps={{
-            className: inputClassName,
+            className: classNames( classes.input, inputClassName ),
             fullWidth: true,
             disableUnderline: disableUnderline,
           }}

@@ -1,12 +1,15 @@
 import Typography from '@material-ui/core/Typography';
-import TextInput from 'components/Forms/TextInput';
 
 import { SUBTITLE1 } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { translate } from 'react-i18next';
+import classNames from 'classnames';
 import injectSheet from 'react-jss';
 import styles from './styles';
+import { translate } from 'react-i18next';
+import TextInput from 'components/Forms/TextInput';
+
+import { SUBHEADING } from 'constants/typography';
 
 @translate()
 @injectSheet( styles )
@@ -69,8 +72,8 @@ export default class RangeInput extends PureComponent {
           meta={minCost.meta}
           name="minCost"
           className={classes.textFieldMinCost}
-          disableUnderline
-          type={'number'}/>
+          type={'number'}
+        />
 
         <Typography className={classes.maxLabel} variant={SUBTITLE1}>
           {t( "filter:max" )}
@@ -81,8 +84,8 @@ export default class RangeInput extends PureComponent {
           meta={maxCost.meta}
           name="maxCost"
           className={classes.textFieldMaxCost}
-          disableUnderline
-          type={'number'}/>
+          type={'number'}
+        />
 
       </div>
     );

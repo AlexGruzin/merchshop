@@ -79,9 +79,7 @@ export default class ShippingForm extends PureComponent {
           <Field
             validate={[required]}
             name="CardNumber"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
         <FormControl className={classes.formControl}>
@@ -92,9 +90,7 @@ export default class ShippingForm extends PureComponent {
           <Field
             validate={[required]}
             name="CardHolderName"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
 
@@ -108,9 +104,7 @@ export default class ShippingForm extends PureComponent {
             <Field
               validate={[required]}
               name="ExpiryDate"
-              disableUnderline
               className={classes.field}
-              inputClassName={classes.input}
               component={TextInput}/>
           </FormControl>
 
@@ -122,9 +116,7 @@ export default class ShippingForm extends PureComponent {
             <Field
               validate={[required]}
               name="ccv"
-              disableUnderline
               className={classes.field}
-              inputClassName={classes.input}
               component={TextInput}/>
           </FormControl>
 

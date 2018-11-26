@@ -36,7 +36,6 @@ export default class ForgotPasswordModal extends PureComponent {
           </Typography>
           <Field
             name="email"
-            inputClassName={classes.input}
             component={TextInput}
             props={{
               type: 'email',
