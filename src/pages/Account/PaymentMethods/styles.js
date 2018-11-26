@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+      background: colors.WHITE,
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -56,19 +57,13 @@ export default function({ colors, values, breakpoints, palette }) {
 
     typeLabel: {
       color: colors.GRAY500,
-      fontSize: '12px',
-      letterSpacing: '0.5px',
-      fontWeight: '900',
     },
 
-    cardLabel: {
-      fontSize: '15px',
-    },
+    cardLabel: {},
 
     addCardButton: {
       display: 'flex',
-      flexGrow: '1',
-      maxHeight: '40px',
+      height: '40px',
       background: colors.BLACK,
       color: colors.WHITE,
       margin: '15px 17px',

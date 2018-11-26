@@ -26,7 +26,7 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     leftDroppedSubRoutes: {
-      //right: '0px',
+      right: '0px',
 
       [breakpoints.down( 'lg' )]: {
         right: '0px',

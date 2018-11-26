@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
     orderRoot: {
       display: 'flex',
       width: '100%',
+      background: colors.WHITE,
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -23,7 +24,7 @@ export default function({ colors, values, breakpoints, palette }) {
     trackBlock: {
       display: 'flex',
       flexGrow: 1,
-      height: '90px',
+      minHeight: '130px',
       boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
       flexDirection: 'column',
       padding: '19px',
@@ -39,14 +40,12 @@ export default function({ colors, values, breakpoints, palette }) {
 
     dateLabel: {
       marginTop: '5px',
-      fontSize: '15px',
+      fontSize: values.LARGE_GIANT_FONT_SIZE,
     },
 
     statusLabel: {
       marginTop: 'auto',
-      fontSize: '12px',
-      fontFamily: 'Avenir',
-      letterSpacing: '0.3px',
+      fontSize: '1rem',
     },
 
     trackRow: {
@@ -57,13 +56,10 @@ export default function({ colors, values, breakpoints, palette }) {
     },
     trackLabel: {
       textTransform: 'uppercase',
-      fontSize: '13px',
-      fontWeight: 900,
-      fontFamily: 'HelveticaNeue-Medium',
       color: colors.BLACK,
     },
-    trackLink: {
 
+    trackLink: {
     },
 
     headLine: {
@@ -85,9 +81,7 @@ export default function({ colors, values, breakpoints, palette }) {
       textDecoration: 'none',
     },
 
-    backLabel: {
-      fontSize: '12px',
-    },
+    backLabel: {},
 
     backIcon: {
       fontSize: '20px',
@@ -111,10 +105,6 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: '25px',
       marginBottom: '15px',
 
-      fontSize: '15px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
       textTransform: 'uppercase',
     },
 
@@ -146,9 +136,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     subCategoryData: {
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: 600,
-      marginBottom: '15px',
+      marginBottom: '20px',
     },
 
     totalBlock: {
@@ -175,12 +163,9 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     totalLabel: {
-      fontFamily: 'HelveticaNeue-Medium',
-      fontSize: '16px',
-      textTransform: 'uppercase',
-      letterSpacing: '0.6px',
       margin: '0 15px',
       marginTop: '30px',
+      textTransform: 'uppercase',
     },
 
     cost: {
@@ -188,14 +173,13 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     totalSum: {
-      fontFamily: 'HelveticaNeue-Light',
       fontSize: '30px',
       margin: '10px 15px 25px 15px',
       fontWeight: '100',
     },
 
     giftIcon: {
-      fontSize: '18px',
+      fontSize: values.GIANT_FONT_SIZE,
       marginRight: '5px',
     },
   }

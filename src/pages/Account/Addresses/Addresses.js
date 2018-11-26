@@ -17,7 +17,7 @@ import AccountDropDown from 'pages/Account/AccountDropDown';
 
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H1, SUBHEADING, HEADLINE, BODY1 } from 'constants/typography';
+import { H6, SUBTITLE2 } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -26,8 +26,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class Addresses extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     initialize: PropTypes.func.isRequired,
     initialValues: PropTypes.object.isRequired,
   };
@@ -56,13 +56,14 @@ export default class Addresses extends PureComponent {
             //onSubmit={handleSubmit}
           >
 
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:Shipping' )}
             </Typography>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Address' )}
               </Typography>
               <Field
@@ -73,7 +74,8 @@ export default class Addresses extends PureComponent {
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Apt/Floor/Suite' )}
               </Typography>
               <Field
@@ -84,7 +86,8 @@ export default class Addresses extends PureComponent {
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:City' )}
               </Typography>
               <Field
@@ -95,7 +98,8 @@ export default class Addresses extends PureComponent {
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Zip Code' )}
               </Typography>
               <Field
@@ -106,7 +110,8 @@ export default class Addresses extends PureComponent {
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Country' )}
               </Typography>
               <Field
@@ -120,7 +125,8 @@ export default class Addresses extends PureComponent {
               <Field
                 name="sameAddress"
                 component={CheckBox}/>
-              <Typography className={classes.headingCheckBox}>
+              <Typography variant={H6}
+                className={classes.headingCheckBox}>
                 {t( 'account:Shipping address same as Billing address' )}
               </Typography>
             </FormControl>

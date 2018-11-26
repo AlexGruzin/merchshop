@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+      background: colors.WHITE,
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -40,9 +41,7 @@ export default function({ colors, values, breakpoints, palette }) {
       textDecoration: 'none',
     },
 
-    backLabel: {
-      fontSize: '12px',
-    },
+    backLabel: {},
 
     backIcon: {
       fontSize: '20px',
@@ -56,7 +55,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     field: {
-      marginBottom: '7px',
+      marginBottom: '12px',
     },
 
     detailsRoot: {
@@ -69,10 +68,7 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: '20px',
       marginBottom: '15px',
 
-      fontSize: '16px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
+      textTransform: 'uppercase',
     },
 
     heading: {
@@ -82,7 +78,7 @@ export default function({ colors, values, breakpoints, palette }) {
     addCardButton: {
       display: 'flex',
       flexGrow: '1',
-      maxHeight: '40px',
+      height: '40px',
       background: colors.BLACK,
       color: colors.WHITE,
       margin: '25px 17px',
@@ -91,14 +87,14 @@ export default function({ colors, values, breakpoints, palette }) {
     savedButton: {
       display: 'flex',
       flexGrow: '1',
-      maxHeight: '40px',
+      height: '40px',
       border: `1px solid ${colors.BLACK}`,
       margin: '25px 17px',
     },
 
     savedIcon: {
       margin: '0 5px',
-      fontSize: '18px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     formControlDate: {
@@ -117,7 +113,7 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'center',
       fontSize: '22px',
       alignSelf: 'flex-end',
-      marginBottom: '28px',
+      marginBottom: '17px',
     },
   }
 }

@@ -120,8 +120,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     welcomeLabel: {
       whiteSpace: 'pre-line',
-      fontFamily: 'Avenir',
-      fontSize: '19px',
     },
 
     deskButtonWrapper: {
@@ -132,6 +130,7 @@ export default function({ colors, values, breakpoints, palette }) {
       paddingLeft: '17px',
       marginTop: '15px',
     },
+
     active: {
       background: colors.GRAY_ACTIVE,
     },
@@ -142,7 +141,8 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     deskButtonLabel: {
-      color: colors.BLACK
+      color: colors.BLACK,
+      letterSpacing: '0.5px',
     },
 
   }

@@ -1,5 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
+
     root: {
       position: 'relative',
       width: '50%',
@@ -10,6 +11,7 @@ export default function({ colors, values, breakpoints, palette }) {
         height: '200px',
       },
     },
+
     image: {
       margin: '0 auto',
       width: '100%',
@@ -18,22 +20,23 @@ export default function({ colors, values, breakpoints, palette }) {
       backgroundPosition: 'center',
       backgroundSize: 'cover',
     },
+
     button: {
       position: 'absolute',
+      height: '40px',
       minWidth: '190px',
-      left: '50%',
-      bottom: '34px',
-      transform: 'translate3d(-50%, 0, 0)',
-      padding: '8px 12px 8px 14px',
+      left: 'calc(50% - 90px)',
+      bottom: '33px',
       justifyContent: 'space-between',
+      border: 'none',
     },
 
     buttonIcon: {
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     buttonLabel: {
-      marginRight: '28px',
+      marginRight: '0 auto',
     },
   };
 }

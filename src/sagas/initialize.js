@@ -26,10 +26,9 @@ export default function* initializeSaga({ payload }) {
   //     yield take(ProfileActionsTypes.FINISH_GET_PROFILE);
   //     isLoggedIn = yield select(ProfileSelectors.isLoggedIn);
   // }
-
   const {
     pathname,
-  } = payload;
+  } = payload.location;
     // const pathnameRoute = '/' + pathname.split('/')[1];
   let newPathname = pathname;
   //

@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 
 import styles from './styles';
 import { ACCOUNT_DROPPING_ROUTES } from 'constants/account';
+import { H4, BUTTON } from 'constants/typography';
 import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -19,8 +20,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class AccountDropDown extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     currentRoute: PropTypes.string.isRequired,
     currentLabel: PropTypes.string.isRequired,
   };
@@ -39,12 +40,13 @@ export default class AccountDropDown extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP */}
+        {/* DESKTOP */}
         <Hidden xsDown>
           <div className={classes.smDown}>
 
             <div className={classes.welcomeContainer}>
-              <Typography className={classes.welcomeLabel}>
+              <Typography variant={H4}
+                className={classes.welcomeLabel}>
                 {'Welcome back,\n John'}
               </Typography>
             </div>
@@ -62,7 +64,7 @@ export default class AccountDropDown extends PureComponent {
                       to={route.route}>
                       <Typography
                         className={classes.deskButtonLabel}
-                        variant='h5'>
+                        variant={BUTTON}>
                         {t( route.name )}
                       </Typography>
                     </Link>
@@ -82,7 +84,7 @@ export default class AccountDropDown extends PureComponent {
               <div className={classes.ButtonWrapper}>
                 <Typography
                   className={classes.ButtonLabel}
-                  variant='h5'>
+                  variant={BUTTON}>
                   {t( currentLabel )}
                 </Typography>
 
@@ -102,7 +104,7 @@ export default class AccountDropDown extends PureComponent {
                           to={subRoute.route}>
                           <Typography
                             className={classes.SubButtonLabel}
-                            variant='h5'>
+                            variant={BUTTON}>
                             {t( subRoute.name )}
                           </Typography>
                         </Link>

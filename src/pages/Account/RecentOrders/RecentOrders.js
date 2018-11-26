@@ -7,12 +7,10 @@ import PropTypes from 'prop-types';
 import AccountDropDown from 'pages/Account/AccountDropDown';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import Hidden from '@material-ui/core/Hidden';
-import DropDown from 'components/Forms/DropdownSelect';
 
 import { ACCOUNT } from 'constants/routing';
 import { RECENT_ORDERS } from 'constants/account';
-import { H4, H1, SUBHEADING } from 'constants/typography';
+import { H6, SUBTITLE2, BUTTON } from 'constants/typography';
 import styles from './styles';
 import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 
@@ -20,8 +18,8 @@ import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from
 @injectSheet( styles )
 export default class RecentOrders extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -52,20 +50,21 @@ export default class RecentOrders extends PureComponent {
                       to={orderData.link}>
                       <Typography
                         className={classes.orderLabel}
-                        variant={H1}>
+                        variant={SUBTITLE2}>
                         {`ORDER # ${orderData.id}`}
                       </Typography>
                     </Link>
 
                     <Typography
                       className={classes.dateLabel}
-                      variant={H1}>
+                      variant={BUTTON}>
                       {`Placed on ${orderData.date}`}
                     </Typography>
 
                     <Typography
                       className={classes.statusLabel}
-                      variant={SUBHEADING}>
+                      variant={H6}
+                      >
                       {orderData.status}
                     </Typography>
 

@@ -7,12 +7,11 @@ import { ICONS } from 'constants/icons';
 
 import { productsFilter, productTypes } from 'constants/shop';
 import {
-  CAPTION,
-  H1,
+  H2,
   H4,
   H6,
-  SUBHEADING,
-  SUBTITLE2
+  SUBTITLE2,
+  BODY2,
 } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -24,8 +23,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class MobileCart extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     cartItems: PropTypes.array.isRequired,
     handleClose: PropTypes.func.isRequired,
 
@@ -64,11 +63,11 @@ export default class MobileCart extends PureComponent {
           <div className={classes.row}>
             <Typography
               variant={H6}
-              className={classes.subTotalLabel}>
+            >
               { `${t( 'cart:Subtotal' )}:`}
             </Typography>
             <Typography
-              variant={SUBTITLE2}
+              variant={BODY2}
               className={classes.cost}>
               {'Rp 798,000'}
             </Typography>
@@ -77,25 +76,27 @@ export default class MobileCart extends PureComponent {
           <div className={classes.row}>
             <Typography
               variant={H6}
-              className={classes.discountLabel}>
+            >
               { `10% ${t( 'cart:Discount' )}:`}
             </Typography>
             <Typography
-              variant={SUBTITLE2}
+              variant={BODY2}
               className={classes.cost}>
               {'-Rp 79,800'}
             </Typography>
           </div>
 
           <Typography
-            variant={H1}
-            className={classes.totalLabel}>
+            variant={SUBTITLE2}
+            className={classes.totalLabel}
+          >
             {`${t( 'cart:Total' )}:`}
           </Typography>
 
           <Typography
-            variant={H1}
-            className={classes.totalSum}>
+            variant={H2}
+            className={classes.totalSum}
+          >
             {'Rp 718,200'}
           </Typography>
 

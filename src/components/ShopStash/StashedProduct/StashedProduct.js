@@ -5,7 +5,7 @@ import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 import { STASHED_PRODUCT_TYPES } from 'constants/shop';
 
-import { BODY1, H1, SUBHEADING } from 'constants/typography';
+import { BODY1, H1, SUBTITLE1, CAPTION } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
@@ -18,9 +18,9 @@ import styles from './styles';
 export default class Product extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     itemData:  PropTypes.object.isRequired,
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     itemViewClass: PropTypes.string.isRequired,
     soldClass: PropTypes.string.isRequired,
     likeClass: PropTypes.string.isRequired,
@@ -91,14 +91,14 @@ export default class Product extends PureComponent {
         <div className={classes.informationWrapper}>
 
           <div className={classes.amountColorsWrapper}>
-            <Typography className={classes.number} variant={BODY1}>{'8'}</Typography>
-            <Typography className={classes.colors} variant={BODY1}>{t( 'shop:colors' )}</Typography>
+            <Typography className={classes.number} variant={CAPTION}>{'8'}</Typography>
+            <Typography className={classes.colors} variant={CAPTION}>{t( 'shop:colors' )}</Typography>
           </div>
 
           <div className={classes.hr}/>
 
-          <Typography className={classes.label} variant={BODY1}>{label}</Typography>
-          <Typography className={classes.cost} variant={H1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
+          <Typography className={classes.label} variant={SUBTITLE1}>{label}</Typography>
+          <Typography className={classes.cost}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
 
           <div className={classes.rating}>
             <Rating
@@ -113,7 +113,7 @@ export default class Product extends PureComponent {
               placeholderSymbol={
                 <Icon icon={ICONS.STAR_HALF} className={classes.star}/>
               }/>
-            <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
+            <Typography className={classes.reviewsCount}>{reviews}</Typography>
           </div>
         </div>
       </div>

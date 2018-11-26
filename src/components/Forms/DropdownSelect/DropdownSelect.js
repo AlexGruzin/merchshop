@@ -1,18 +1,15 @@
+import OutlinedInput from "@material-ui/core/OutlinedInput";
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import FormControl from '@material-ui/core/FormControl';
 import injectSheet from 'react-jss';
 import { translate } from 'react-i18next';
 import styles from './styles';
 import Select from '@material-ui/core/Select';
-import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import { Link } from 'react-router-dom';
-
-import Icon from 'components/Icon';
-import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -21,71 +18,56 @@ export default class DropdownSelect extends PureComponent {
     className: PropTypes.string,
     type: PropTypes.string,
     variant: PropTypes.string,
-    children: PropTypes.array.isRequired,
     value: PropTypes.string.isRequired,
+    choices: PropTypes.array,
+    placeholder: PropTypes.string,
+    onChange: PropTypes.func.isRequired
   };
 
   static defaultProps = {
     className: '',
     type: 'text',
     variant: 'standard',
+    choices: [],
+    placeholder: ''
   };
 
   render() {
     const {
-      t,
-      input,
-      type,
       value,
-
       classes,
-      variant,
-      children,
+      placeholder,
+      choices,
       className,
-      ...custom
     } = this.props;
 
     return (
-      <div className={classNames( className, classes.textInput )}>
+      <FormControl className={classNames( className, classes.formControl )} >
         <Select
-          {...input}
-          {...custom}
-          className={classes.selectRoot}
+          displayEmpty
+          input={<OutlinedInput labelWidth={0} classes={{
+          }}/>}
           classes={{
             root: classes.root,
             select: classes.select,
             icon: classes.icon,
           }}
           MenuProps={{
-            disableAutoFocusItem: true,
             classes: {
               paper: classes.menuPaper,
-            },
+            }
           }}
-          disableUnderline
-          variant={variant}
           IconComponent={ExpandMore}
-          value={value}
-        >
-          {
-            children.map(( item )=>{
-              return(
-                <MenuItem key={item.name} value={item.name}>
-
-                  <Link
-                    className={classes.dropLink}
-                    to={item.route}>
-
-                    <Typography>
-                      {t( item.name )}
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              )
-            })
-          }
+          value={value}>
+          <MenuItem value='' disabled>{placeholder}</MenuItem>
+          {choices.map( size =>
+            Array.isArray( size ) ?
+              <MenuItem key={size[0]} value={size[0]}>{size[1]}</MenuItem>
+              : <MenuItem key={size} value={size}>{size}</MenuItem>
+          )}
         </Select>
-      </div>
+
+      </FormControl>
     );
   }
 }

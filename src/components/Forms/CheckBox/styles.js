@@ -1,4 +1,4 @@
-export default ({ colors }) => ({
+export default ({ colors, values }) => ({
   root: {
     display: 'flex',
     alignSelf: 'stretch',
@@ -7,6 +7,6 @@ export default ({ colors }) => ({
     padding: 0,
   },
   sizeIcon: {
-    fontSize: '18px',
+    fontSize: values.GIANT_FONT_SIZE,
   },
 });

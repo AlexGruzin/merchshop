@@ -8,10 +8,16 @@ export default function({ colors, breakpoints, values }) {
     },
 
     footerButton: {
+      display: 'flex',
+      alignItems: 'center',
       height: '36px',
       width: '150px',
-      background: colors.GRAY300,
-      margin: '0 6%'
+    },
+
+    ulList: {
+      listStyleType: 'none',
+      paddingLeft: '9%',
+      margin: 0,
     },
 
     footerButtonLabel: {
@@ -20,19 +26,29 @@ export default function({ colors, breakpoints, values }) {
 
     servicesWrapper: {
       display: 'flex',
-      width: '170px',
+      width: '160px',
       justifyContent: 'space-between',
     },
 
-    serviceIcon: {},
+    serviceIcon: {
+      fontSize: values.GIANT_FONT_SIZE,
+    },
 
     underlined: {
       textDecoration: 'underline',
+      fontSize: '0.83rem',
     },
 
     privacy: {
+      fontSize: '0.83rem',
+
       textAlign: 'center',
       margin: '0 15px',
+      marginTop: '8px',
+
+      [breakpoints.up( 'sm' )]: {
+        display: 'inline-flex',
+      },
     },
 
     // ---- scaled styles ----
@@ -49,7 +65,6 @@ export default function({ colors, breakpoints, values }) {
       },
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'row',
-        height: '150px',
       },
     },
 
@@ -65,7 +80,7 @@ export default function({ colors, breakpoints, values }) {
       },
       [breakpoints.up( 'sm' )]: {
         justifyContent: 'flex-end',
-        margin: '0 7%',
+        margin: '0 6%',
       },
 
     },
@@ -84,28 +99,29 @@ export default function({ colors, breakpoints, values }) {
       },
       [breakpoints.up( 'sm' )]: {
         justifyContent: 'flex-end',
-        margin: '0 7%',
+        margin: '0 6%',
       },
     },
 
     subscribeWrapper: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
 
       [breakpoints.down( 'sm' )]: {
         width: '100%',
+        alignItems: 'center',
       },
 
       [breakpoints.up( 'sm' )]: {
         width: 'auto',
+        alignItems: 'flex-end',
       },
     },
 
     subscribeButton: {
       justifyContent: 'space-between',
       height: '40px',
-      margin: '5px 0',
+      backgroundColor: colors.WHITE,
 
       [breakpoints.down( 'sm' )]: {
         width: '100%',
@@ -113,18 +129,14 @@ export default function({ colors, breakpoints, values }) {
       [breakpoints.up( 'sm' )]: {
         width: '290px',
       },
+    },
 
-      fontFamily: values.AVENIR_BOOK_FONT,
-      fontSize: values.MEDIUM_FONT_SIZE,
-      fontWeight: '300',
-      textTransform: 'capitalize',
-      letterSpacing: '0.5px',
-      color: colors.GREY400,
+    subscribeButtonLabel: {
+      color: colors.GRAY400,
     },
 
     arrowIcon: {
       fontSize: values.EXTRA_SMALL_FONT_SIZE,
-      color: colors.BLACK,
     },
 
   }

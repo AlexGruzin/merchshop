@@ -7,7 +7,7 @@ import TextInput from 'components/Forms/TextInput';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
-import { BODY1, BUTTON, SUBHEADING } from 'constants/typography';
+import { H6, BUTTON, SUBTITLE2 } from 'constants/typography';
 import { required } from 'helpers/validators/generic';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -21,8 +21,8 @@ import styles from './styles';
 export default class ShippingForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {
@@ -42,7 +42,8 @@ export default class ShippingForm extends PureComponent {
         onSubmit={handleSubmit}>
 
         <Typography
-          className={classes.title}>
+          className={classes.title}
+          variant={SUBTITLE2}>
           {t( 'checkout:SELECT A PAYMENT OPTION' )}
         </Typography>
 
@@ -50,7 +51,7 @@ export default class ShippingForm extends PureComponent {
           <Icon
             className={classes.variantIcon}
             icon={ICONS.CARD}/>
-          <Typography className={classes.chooseLabel}>
+          <Typography className={classNames( classes.enabled )}>
             {t( 'cart:CREDIT CARD' )}
           </Typography>
         </div>
@@ -65,12 +66,14 @@ export default class ShippingForm extends PureComponent {
         </div>
 
         <Typography
+          variant={SUBTITLE2}
           className={classes.title}>
           {t( 'checkout:CREDIT CARD' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Credit Card Number' )}
           </Typography>
           <Field
@@ -80,7 +83,8 @@ export default class ShippingForm extends PureComponent {
             component={TextInput}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Card Holder Name' )}
           </Typography>
           <Field
@@ -93,7 +97,8 @@ export default class ShippingForm extends PureComponent {
         <div className={classes.row}>
 
           <FormControl className={classes.formControlDate}>
-            <Typography className={classes.heading}>
+            <Typography variant={H6}
+              className={classes.heading}>
               {t( 'checkout:Expiry Date (MM/YY)' )}
             </Typography>
             <Field
@@ -104,7 +109,8 @@ export default class ShippingForm extends PureComponent {
           </FormControl>
 
           <FormControl className={classes.formControlCCV}>
-            <Typography className={classes.heading}>
+            <Typography variant={H6}
+              className={classes.heading}>
               {t( 'checkout:CCV' )}
             </Typography>
             <Field

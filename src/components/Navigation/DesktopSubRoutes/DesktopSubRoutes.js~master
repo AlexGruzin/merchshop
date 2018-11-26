@@ -6,6 +6,7 @@ import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import { BODY1 } from "../../../constants/typography";
 
 import styles from './styles';
 
@@ -14,9 +15,10 @@ import styles from './styles';
 export default class DesktopMenuRoute extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     subRoutes: PropTypes.array.isRequired,
+    modificatorClass: PropTypes.string
   };
 
   static defaultProps = {
@@ -34,36 +36,38 @@ export default class DesktopMenuRoute extends PureComponent {
 
     return (
       <div className={classes.ExpandedButtonContainer}>
+        <Link
+          className={classes.Button}
+          to={''}>
+          <div className={classes.ButtonWrapper}>
 
-        <div className={classes.ButtonWrapper}>
-          <Link
-            className={classes.Button}
-            to={''}>
             <Typography
               className={classNames( classes.ButtonLabel, classes[label.toLowerCase()])}
-              variant='h5'>
+              variant={BODY1}>
               {t( label )}
             </Typography>
-          </Link>
-        </div>
+
+          </div>
+        </Link>
 
         <div className={classes.ExpandedSubRoutesContainer}>
           <div className={classNames( classes.ExpandedSubRoutes, modificatorClass )}>
             {subRoutes.map(( subRoute, index ) => {
               return(
-                <div
-                  key={subRoute.route}
-                  className={classes.SubButtonWrapper}>
-                  <Link
-                    className={classes.SubButton}
-                    to={subRoute.route}>
+                <Link
+                  className={classes.SubButtonLink}
+                  to={subRoute.route} >
+                  <div
+                    key={subRoute.route}
+                    className={classes.SubButton}>
+
                     <Typography
                       className={classes.SubButtonLabel}
-                      variant='body1'>
+                      variant={BODY1}>
                       {t( subRoute.label )}
                     </Typography>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               );
             })}
           </div>

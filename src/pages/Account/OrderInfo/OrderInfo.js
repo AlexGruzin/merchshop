@@ -17,7 +17,7 @@ import AccountDropDown from 'pages/Account/AccountDropDown';
 
 import { RECENT_ORDERS } from 'constants/account';
 import { ACCOUNT } from 'constants/routing';
-import { H4, H1, H6, SUBHEADING, SUBTITLE2 } from 'constants/typography';
+import { H4, H5, H6, SUBTITLE2, BUTTON, H2 } from 'constants/typography';
 import styles from './styles';
 import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
@@ -30,8 +30,8 @@ const orderData = RECENT_ORDERS[1];
 @injectSheet( styles )
 export default class OrderInfo extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -62,8 +62,7 @@ export default class OrderInfo extends PureComponent {
                 className={classes.backLink}
                 to={ ACCOUNT }>
                 <Typography
-                  className={classes.backLabel}
-                  variant={H1}>
+                  className={classes.backLabel}>
                   {t('account:Back to Recent Orders')}
                 </Typography>
               </Link>
@@ -80,14 +79,14 @@ export default class OrderInfo extends PureComponent {
 
             <Typography
               className={classes.dateLabel}
-              variant={H1}>
+              variant={H5}>
               {`Placed on ${orderData.date}`}
             </Typography>
 
             <div className={classes.trackRow}>
               <Typography
                 className={classes.statusLabel}
-                variant={SUBHEADING}>
+                variant={H6}>
                 {`Status: ${orderData.status}`}
               </Typography>
 
@@ -96,14 +95,14 @@ export default class OrderInfo extends PureComponent {
                 to={orderData.link}>
                 <Typography
                   className={classes.trackLabel}
-                  variant={H4}>
+                  variant={BUTTON}>
                   {t('account:View Tracking')}
                 </Typography>
               </Link>
             </div>
           </div>
 
-          <Typography
+          <Typography variant={SUBTITLE2}
             className={classNames( classes.title, classes.bagTitle )}>
             {t( 'checkout:Items' )}
           </Typography>
@@ -120,7 +119,7 @@ export default class OrderInfo extends PureComponent {
           </div>
 
           <div className={classes.infoBlock}>
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:CONTACT' )}
             </Typography>
@@ -150,7 +149,7 @@ export default class OrderInfo extends PureComponent {
           </div>
 
           <div className={classes.infoBlock}>
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:SHIPPING' )}
             </Typography>
@@ -184,14 +183,14 @@ export default class OrderInfo extends PureComponent {
                 className={classes.giftIcon}
                 icon={ICONS.GIFT}
               />
-              <Typography className={classes.headingIcon}>
+              <Typography variant={H6}>
                 {t( 'checkout:Gift wrapping included' )}
               </Typography>
             </div>
           </div>
 
           <div className={classes.infoBlock}>
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:PAYMENT' )}
             </Typography>
@@ -218,7 +217,6 @@ export default class OrderInfo extends PureComponent {
                 { `${t( 'cart:Subtotal' )}:`}
               </Typography>
               <Typography
-                variant={SUBTITLE2}
                 className={classes.cost}>
                 {'Rp 798,000'}
               </Typography>
@@ -231,20 +229,18 @@ export default class OrderInfo extends PureComponent {
                 { `10% ${t( 'cart:Discount' )}:`}
               </Typography>
               <Typography
-                variant={SUBTITLE2}
                 className={classes.cost}>
                 {'-Rp 79,800'}
               </Typography>
             </div>
 
-            <Typography
-              variant={H1}
+            <Typography variant={SUBTITLE2}
               className={classes.totalLabel}>
               {`${t( 'cart:Total' )}:`}
             </Typography>
 
             <Typography
-              variant={H1}
+              variant={H2}
               className={classes.totalSum}>
               {'Rp 718,200'}
             </Typography>

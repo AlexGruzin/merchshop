@@ -2,6 +2,9 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Radio from '@material-ui/core/Radio';
 import Typography from '@material-ui/core/Typography';
+import RadioChecked from '@material-ui/icons/RadioButtonCheckedOutlined';
+import RadioUnchecked from '@material-ui/icons/RadioButtonUncheckedRounded';
+
 import CheckBox from 'components/Forms/CheckBox';
 import RadioGroup from 'components/Forms/RadioGroup';
 
@@ -9,7 +12,7 @@ import TextInput from 'components/Forms/TextInput';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
-import { BODY1, SUBHEADING } from 'constants/typography';
+import { SUBTITLE2, H6 } from 'constants/typography';
 
 import { required } from 'helpers/validators/generic';
 import PropTypes from 'prop-types';
@@ -24,8 +27,8 @@ import styles from './styles';
 export default class ShippingForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {
@@ -44,13 +47,14 @@ export default class ShippingForm extends PureComponent {
         className={classes.shippingRoot}
         onSubmit={handleSubmit}>
 
-        <Typography
+        <Typography variant={SUBTITLE2}
           className={classes.title}>
           {t( 'checkout:Contact' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Email' )}
           </Typography>
           <Field
@@ -63,7 +67,8 @@ export default class ShippingForm extends PureComponent {
             }}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Phone' )}
           </Typography>
           <Field
@@ -77,18 +82,20 @@ export default class ShippingForm extends PureComponent {
           <Field
             name="mailsFromUs"
             component={CheckBox}/>
-          <Typography className={classes.headingCheckBox}>
+          <Typography variant={H6}
+            className={classes.question}>
             {t( 'checkout:I’d like to recieve email updates from Zulu' )}
           </Typography>
         </FormControl>
 
-        <Typography
+        <Typography variant={SUBTITLE2}
           className={classes.title}>
           {t( 'checkout:Shipping' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:First Name' )}
           </Typography>
           <Field
@@ -99,7 +106,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Last Name' )}
           </Typography>
           <Field
@@ -110,7 +118,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Address' )}
           </Typography>
           <Field
@@ -121,7 +130,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Apt/Floor/Suite' )}
           </Typography>
           <Field
@@ -132,7 +142,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:City' )}
           </Typography>
           <Field
@@ -143,7 +154,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Zip Code' )}
           </Typography>
           <Field
@@ -154,7 +166,8 @@ export default class ShippingForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Country' )}
           </Typography>
           <Field
@@ -164,23 +177,41 @@ export default class ShippingForm extends PureComponent {
             component={TextInput}/>
         </FormControl>
 
+        <FormControl className={classes.formControlCheckBox}>
+          <Field
+            name="mailsFromUs"
+            component={CheckBox}/>
+          <Typography variant={H6}
+                      className={classes.question}>
+            {t( 'checkout:Shipping address same as Billing address' )}
+          </Typography>
+        </FormControl>
+
         <div className={classes.row}>
           <Icon
             className={classes.giftIcon}
             icon={ICONS.GIFT}/>
-          <Typography className={classes.headingIcon}>
+          <Typography variant={H6}
+            className={classes.question}>
             {t( 'checkout:Would you like this gift wrapped?' )}
           </Typography>
         </div>
 
         <FormControl className={classes.formControlRadio}>
           <Field className={classes.radioField} name="isWrapped" component={RadioGroup}>
-            <Radio classes={{ root: classes.radio }} value='Yes' label="Yes" />
-            <Typography className={classes.headingRadio}>
+            <Radio
+              icon={<RadioUnchecked className={classes.radioIcon} />}
+              checkedIcon={<RadioChecked className={classes.radioIcon}/>}
+              classes={{ root: classes.radio }} value='Yes' label="Yes"
+            />
+            <Typography variant={H6} className={classes.headingRadio}>
               {'Yes'}
             </Typography>
-            <Radio  classes={{ root: classes.radio }} value='No' label="No" />
-            <Typography className={classes.headingRadio}>
+            <Radio
+              icon={<RadioUnchecked className={classes.radioIcon} />}
+              checkedIcon={<RadioChecked className={classes.radioIcon}/>}
+              classes={{ root: classes.radio }} value='No' label="No" />
+            <Typography variant={H6} className={classes.headingRadio}>
               {'No'}
             </Typography>
           </Field>

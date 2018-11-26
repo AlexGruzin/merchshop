@@ -19,7 +19,7 @@ import { required } from 'helpers/validators/generic';
 
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H1, SUBHEADING, HEADLINE, BODY1 } from 'constants/typography';
+import { H6, SUBTITLE2 } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -37,8 +37,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class AccountDetails extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     handleSubmit: PropTypes.func.isRequired,
     initialize: PropTypes.func.isRequired,
     initialValues: PropTypes.object.isRequired,
@@ -71,13 +71,14 @@ export default class AccountDetails extends PureComponent {
             onSubmit={handleSubmit}
           >
 
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:Contact' )}
             </Typography>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Email' )}
               </Typography>
               <Field
@@ -90,7 +91,8 @@ export default class AccountDetails extends PureComponent {
                 }}/>
             </FormControl>
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Phone' )}
               </Typography>
               <Field
@@ -106,7 +108,8 @@ export default class AccountDetails extends PureComponent {
             </Typography>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:First Name' )}
               </Typography>
               <Field
@@ -117,7 +120,8 @@ export default class AccountDetails extends PureComponent {
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Last Name' )}
               </Typography>
               <Field
@@ -137,7 +141,7 @@ export default class AccountDetails extends PureComponent {
                 : <Button
                   type="submit"
                   className={classes.addCardButton}>
-                  {t( 'account:Save Payment Details' )}
+                  {t( 'account:Save Changes' )}
                 </Button>
             }
 

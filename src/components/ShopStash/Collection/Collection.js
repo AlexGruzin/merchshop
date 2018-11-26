@@ -4,7 +4,8 @@ import GrowBox from 'components/ShopStash/GrowBox';
 import {
   COLLECTION_VIEW_MODES,
   productTypes,
-  VIEW_COMPONENTS
+  VIEW_COMPONENTS,
+  VIEW_COLUMNS,
 } from 'constants/shop';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -17,8 +18,8 @@ import styles from './styles';
 export default class Collection extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     items: PropTypes.array.isRequired,
     ProductRenderingComponent: PropTypes.func.isRequired,
     viewMode: PropTypes.string.isRequired,
@@ -66,11 +67,11 @@ export default class Collection extends PureComponent {
 
         switch( viewComponent ) {
           case VIEW_COMPONENTS.MOBILE:
-            columnsPerRow = 1;
+            columnsPerRow = VIEW_COLUMNS.MOBILE_SINGLE_VIEW;
             break;
 
           case VIEW_COMPONENTS.DESKTOP:
-            columnsPerRow = 3;
+            columnsPerRow = VIEW_COLUMNS.DESKTOP_SINGLE_VIEW;
             break;
         }
 
@@ -85,11 +86,11 @@ export default class Collection extends PureComponent {
 
         switch( viewComponent ) {
           case VIEW_COMPONENTS.MOBILE:
-            columnsPerRow = 2;
+            columnsPerRow = VIEW_COLUMNS.MOBILE_MULTI_VIEW;
             break;
 
           case VIEW_COMPONENTS.DESKTOP:
-            columnsPerRow = 6;
+            columnsPerRow = VIEW_COLUMNS.DESKTOP_MULTI_VIEW;
             break;
         }
         break;
@@ -103,10 +104,9 @@ export default class Collection extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP 768-*/}
+        {/* DESKTOP 768-*/}
         <Hidden smDown>
           <div className={itemsContainer}>
-
             {
               items.map(( item, index ) => {
                 return (

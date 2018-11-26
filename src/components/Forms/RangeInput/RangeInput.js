@@ -1,12 +1,13 @@
-import React, { PureComponent } from 'react';
+import Typography from '@material-ui/core/Typography';
+
+import { SUBTITLE1 } from 'constants/typography';
 import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import injectSheet from 'react-jss';
 import styles from './styles';
 import { translate } from 'react-i18next';
 import TextInput from 'components/Forms/TextInput';
-
-import Typography from '@material-ui/core/Typography';
 
 import { SUBHEADING } from 'constants/typography';
 
@@ -62,7 +63,7 @@ export default class RangeInput extends PureComponent {
       <div className={classes.root}>
 
 
-        <Typography className={classes.minLabel} variant={SUBHEADING}>
+        <Typography className={classes.minLabel} variant={SUBTITLE1}>
           {t( "filter:min" )}
         </Typography>
         <TextInput
@@ -74,7 +75,7 @@ export default class RangeInput extends PureComponent {
           type={'number'}
         />
 
-        <Typography className={classes.maxLabel} variant={SUBHEADING}>
+        <Typography className={classes.maxLabel} variant={SUBTITLE1}>
           {t( "filter:max" )}
         </Typography>
         <TextInput

@@ -10,8 +10,8 @@ import ModalsHeader from 'components/ModalsHeader';
 @injectSheet( styles )
 export default class ForgotPasswordModal extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     closeModal: PropTypes.func.isRequired,
     sendResetPasswordMail: PropTypes.func.isRequired,
   };

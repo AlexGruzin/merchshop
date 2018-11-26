@@ -4,120 +4,89 @@ import palette from './palette';
 export default {
   useNextVariants: true,
 
+  caption: {
+    fontSize: '0.833rem',
+    fontFamily: 'Helvetica Neue'
+  },
+
   button: {
-    fontFamily: 'Avenir-Heavy',
-    fontSize: '12px',
-    fontWeight: 900,
-    letterSpacing: '0.5px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    textTransform: 'uppercase',
-  },
-
-  h5: {
-    fontFamily: [
-      'HelveticaNeue-Medium',
-    ].join( ',' ),
-    fontSize: '12px',
-    textTransform: 'uppercase',
-    padding: 0,
-    color: colors.BLACK,
-  },
-
-  h2: {
-    fontFamily: 'Avenir',
-    fontSize: '10px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.3px',
-    color: colors.BLACK,
-  },
-
-  h3: {
-    fontFamily: 'Avenir',
-    fontSize: '12px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.5px',
-    color: colors.BLACK,
+    fontSize: '1rem',
+    fontFamily: 'HelveticaNeue_Medium',
     fontWeight: '500',
   },
 
+  h2: {
+    fontSize: '2.08rem',
+    fontFamily: 'HelveticaNeue_Medium',
+    fontWeight: '300',
+  },
+
+  h3: {
+    fontSize: '1.66rem',
+    fontFamily: 'HelveticaNeue_Bold',
+    fontWeight: 'bold',
+  },
+
   h4: {
-    fontFamily: 'HelveticaNeue-Light',
-    fontSize: '12px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '0.5px',
+    fontSize: '1.5rem',
+    fontFamily: 'Helvetica Neue',
+    letterSpacing: '0.75px',
   },
 
-  body1: {
-    fontFamily: 'Avenir',
-    fontSize: '12px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    letterSpacing: '0.5px',
-    textTransform: 'none',
-    fontWeight: 'inherit',
-    color: 'inherit',
-  },
-
-  body2: {
-    fontFamily: 'Avenir',
-    fontWeight: 'inherit',
-    color: 'inherit',
-  },
-
-  h1: {
-    fontFamily: 'HelveticaNeue-Bold',
-    fontWeight: 900,
-    fontSize: '20px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    letterSpacing: 'normal',
-    textTransform: 'none',
-    color: palette.secondary.main
-  },
-
-  subtitle1: {
-    fontFamily: 'HelveticaNeue',
-    fontWeight: 300,
-    fontSize: '8px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    letterSpacing: '0.3px',
-    textTransform: 'none',
+  h5: {
+    fontSize: '1.25rem',
+    fontFamily: 'HelveticaNeue_Bold',
   },
 
   h6: {
-    fontFamily: 'Avenir-Book',
-    fontSize: '13px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
+    fontSize: '1rem',
+
+    fontFamily: 'Helvetica Neue',
+    fontWeight: 'normal',
+    textTransform: 'capitalize',
+  },
+
+  body1: {
+    fontSize: '1rem',
+    lineHeight: 1.66,
+    fontFamily: 'HelveticaNeue_Light',
+    fontWeight: '300',
     letterSpacing: '0.5px',
-    textTransform: 'none',
+  },
+
+  body2: {
+    fontSize: '1rem',
+    fontFamily: 'HelveticaNeue_Bold',
+    fontWeight: '500',
+    letterSpacing: '0.5px',
+  },
+
+  subtitle1: {
+    fontSize: '1.16rem',
+    fontFamily: 'HelveticaNeue_Light',
+    lineHeight: 'normal',
+    fontWeight: '300',
+    letterSpacing: '0.6px',
   },
 
   subtitle2: {
-    fontFamily: 'Avenir-Heavy',
-    fontSize: '17px',
-    fontStyle: 'normal',
-    fontStretch: 'normal',
-    letterSpacing: '0.5px',
-    textTransform: 'none',
+    fontSize: '1.1rem',
+    fontFamily: 'HelveticaNeue_Medium',
+    lineHeight: 'normal',
+    fontWeight: '500',
+    letterSpacing: '0.6px',
   },
 
+  headline: {
+    fontFamily: 'HelveticaNeue_Bold',
+    fontSize: '0.916rem',
+  },
 
   fontFamily: [
-    'sofia-pro',
-    'Arial',
+    'Helvetica Neue',
     'sans-serif',
   ].join( ',' ),
   fontWeight: 'normal',
   fontStyle: 'normal',
-  htmlFontSize: 16,
 };
 

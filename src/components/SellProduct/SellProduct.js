@@ -6,7 +6,7 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING, H1 } from 'constants/typography';
+import { BODY1, SUBTITLE1, H1, BODY2 } from 'constants/typography';
 import Images from 'theme/images';
 
 import Icon from 'components/Icon';
@@ -17,8 +17,8 @@ import { ICONS } from 'constants/icons';
 export default class SellProduct extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     name: PropTypes.string.isRequired,
     cost: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
@@ -46,7 +46,7 @@ export default class SellProduct extends PureComponent {
     return (
       <div className={classes.root}>
         <div className={classes.imageWrapper}>
-          { soldOut && <Typography className={classes.soldOut} variant={BODY1}>{t( 'homePage:soldOut' )}</Typography> }
+          { soldOut && <Typography className={classes.soldOut} variant={BODY2}>{t( 'homePage:SOLD OUT' )}</Typography> }
           <div
             className={classes.image}
             style={{
@@ -77,7 +77,7 @@ export default class SellProduct extends PureComponent {
             placeholderSymbol={
               <Icon icon={ICONS.STAR_HALF} className={classes.star}/>
             }/>
-          <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
+          <Typography className={classes.reviewsCount} variant={SUBTITLE1}>{reviews}</Typography>
         </div>
       </div>
     );

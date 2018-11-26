@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import DropdownSelect from 'components/Forms/DropdownSelect';
+import OldDropdownSelect from 'components/Forms/DropdownSelect';
 import RangeInput from 'components/Forms/RangeInput';
 
 import { productsFilter, productTypes } from 'constants/shop';
@@ -18,8 +18,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Filter extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     handleSubmit: PropTypes.func.isRequired,
   };
 
@@ -58,7 +58,7 @@ export default class Filter extends PureComponent {
                 type: 'text'
               }}
               name="productType"
-              component={DropdownSelect}>
+              component={OldDropdownSelect}>
               {productsFilter}
             </Field>
           </div>

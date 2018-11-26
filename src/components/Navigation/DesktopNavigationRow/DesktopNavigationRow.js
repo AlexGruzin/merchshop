@@ -17,29 +17,23 @@ import styles from './styles';
 @injectSheet( styles )
 export default class DesktopNavigationRow extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     headerLinks: PropTypes.array.isRequired,
   };
 
   render() {
     const {
-      t,
       classes,
       headerLinks,
     } = this.props;
-
-    const {
-      leftDroppedSubRoutes,
-    } = classes;
 
     return (
       <div className={classes.navigationRow}>
         <div className={classes.navRowWrapper}>
           {headerLinks.map(( linkItem, index, items ) => {
 
-            const centralLink = ( items.length/2 ).toFixed( 0 );
-
+            const centralLink = ( items.length / 2 ).toFixed( 0 );
 
             switch ( linkItem.type ) {
               case HEADER_LINKS_TYPES.COMMON_ROUTE:
@@ -53,12 +47,14 @@ export default class DesktopNavigationRow extends PureComponent {
                 return (
                   <DesktopSubRoutes
                     modificatorClass={
-                      index > centralLink ? leftDroppedSubRoutes : null
+                      index > centralLink ? classes.leftDroppedSubRoutes : null
                     }
                     key={index}
                     label={linkItem.label}
                     subRoutes={linkItem.subRoutes}/>
                 );
+              default:
+                throw new Error( `Unrecognized link type: ${linkItem.type}` )
             }
 
           })}

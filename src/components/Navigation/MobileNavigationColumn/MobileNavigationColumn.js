@@ -11,7 +11,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import InputBase from '@material-ui/core/InputBase';
 
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
@@ -22,17 +21,18 @@ import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
 import { AUTHENTICATE } from 'constants/routing';
-import { HEADLINE, SUBHEADING } from 'constants/typography';
+import { HEADLINE, SUBTITLE1 } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
+import { BUTTON } from 'constants/typography';
 
 @translate()
 @injectSheet( styles )
 export default class MobileNavigationColumn extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     headerLinks: PropTypes.array.isRequired,
     cartProductsAmount: PropTypes.number,
   };
@@ -151,7 +151,7 @@ export default class MobileNavigationColumn extends PureComponent {
                           className={classes.swipedButton}>
                           <Typography
                             className={classes.buttonLabel}
-                            variant={HEADLINE}>
+                            variant={BUTTON}>
                             {t( 'headerLinks:SIGNUPLOGIN' )}
                           </Typography>
                         </Button>
@@ -175,10 +175,10 @@ export default class MobileNavigationColumn extends PureComponent {
                 className={classes.mobileIconSearch}/>
 
               <div onClick={this.swapCheckout}
-                className={classes.interactiveCan}>
+                   className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
-                    variant={SUBHEADING}
+                    variant={SUBTITLE1}
                     className={classes.canNumberLabel}>
                     {cartProductsAmount}
                   </Typography>

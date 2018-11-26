@@ -8,17 +8,13 @@ import classNames from 'classnames';
 import AccountDropDown from 'pages/Account/AccountDropDown';
 import Button from '@material-ui/core/Button';
 
-import Collection from 'components/ShopStash/Collection';
-import StashedProduct from 'components/ShopStash/StashedProduct';
-import Hidden from '@material-ui/core/Hidden';
-
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
 import styles from './styles';
 import { ADD_CARD } from 'constants/routing';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H1, SUBHEADING, HEADLINE } from 'constants/typography';
+import { H6, SUBTITLE1, BUTTON } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -27,8 +23,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class PaymentMethods extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -58,13 +54,13 @@ export default class PaymentMethods extends PureComponent {
 
                     <Typography
                       className={classes.typeLabel}
-                      variant={SUBHEADING}>
+                      variant={H6}>
                       {method.type}
                     </Typography>
 
                     <Typography
                       className={classes.cardLabel}
-                      variant={HEADLINE}>
+                      variant={BUTTON}>
                       {`${method.card} **** **** **** ${method.lastNumbers}`}
                     </Typography>
 

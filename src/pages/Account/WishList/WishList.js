@@ -20,8 +20,8 @@ import { WISH_LIST } from 'constants/account';
 @injectSheet( styles )
 export default class WishList extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -33,7 +33,7 @@ export default class WishList extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP */}
+        {/* DESKTOP */}
         <Hidden smDown>
 
           <AccountDropDown

@@ -6,24 +6,24 @@ export default ({ colors }) => ({
   },
 
   textFieldMinCost: {
-    border: `1px solid ${colors.GREY400}`,
+    border: `1px solid ${colors.GRAY400}`,
     padding: '0 3px',
     background: colors.WHITE,
 
     '&:hover': {
-      borderColor: colors.GREY800,
+      borderColor: colors.GRAY800,
     },
 
     width: '35%',
   },
 
   textFieldMaxCost: {
-    border: `1px solid ${colors.GREY400}`,
+    border: `1px solid ${colors.GRAY400}`,
     padding: '0 3px',
     background: colors.WHITE,
 
     '&:hover': {
-      borderColor: colors.GREY800,
+      borderColor: colors.GRAY800,
     },
 
     width: '35%',

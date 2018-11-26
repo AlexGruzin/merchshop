@@ -2,18 +2,16 @@ import palette from '../../palette';
 import colors from '../../colors';
 
 export default {
-  root: {},
+  root: {
+    padding: '0 7px',
+  },
 
   input: {
     '&::-webkit-input-placeholder': {
       color: colors.BLACK,
       opacity: 1,
-      fontSize: '12px',
+      fontSize: '1rem',
     },
-
-    width: '96%',
-    paddingLeft: '2%',
-    paddingRight: '2%',
   },
 
 };
