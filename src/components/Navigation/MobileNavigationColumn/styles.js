@@ -42,7 +42,7 @@ export default function({ colors, breakpoints, values, palette }) {
     },
 
     mobileIconSearch: {
-      fontSize: '14px',
+      fontSize: values.LARGE_FONT_SIZE,
       padding: '5px',
       marginRight: '1.8vw',
     },
@@ -53,7 +53,7 @@ export default function({ colors, breakpoints, values, palette }) {
     },
 
     mobileIconCan: {
-      fontSize: '18px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     interactiveCan: {
@@ -72,12 +72,11 @@ export default function({ colors, breakpoints, values, palette }) {
     canNumberLabel: {
       userSelect: 'none',
       cursor: 'pointer',
-      height: '10px',
+      height: '11px',
       position: 'relative',
       color: colors.BLACK,
-      fontFamily: 'Avenir',
-      fontSize: '10px',
-      bottom: '5px',
+      fontSize: '11px',
+      bottom: '4px',
     },
 
     // ---- Swiping menu ----
@@ -162,9 +161,6 @@ export default function({ colors, breakpoints, values, palette }) {
     searchInput: {
       display: 'flex',
       width: '100%',
-      fontWeight: '300',
-      fontFamily: 'Avenir',
-      fontSize: '14px',
       lineHeight: '30px',
     },
 

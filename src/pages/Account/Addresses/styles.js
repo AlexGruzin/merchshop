@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+      background: colors.WHITE,
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -22,17 +23,13 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     field: {
-      marginBottom: '7px',
+      marginBottom: '12px',
     },
 
     input: {
       border: `1px solid ${colors.GRAY400}`,
       borderRadius: '3px',
       height: '40px',
-
-      fontFamily: 'Avenir',
-      fontSize: '14px',
-      letterSpacing: '0.5px',
     },
 
     detailsRoot: {
@@ -45,10 +42,7 @@ export default function({ colors, values, breakpoints, palette }) {
       marginTop: '20px',
       marginBottom: '15px',
 
-      fontSize: '16px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
+      textTransform: 'uppercase',
     },
 
     heading: {

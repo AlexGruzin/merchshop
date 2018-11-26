@@ -7,6 +7,7 @@ import injectSheet from 'react-jss';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
+import { BODY2 } from 'constants/typography';
 
 import styles from './styles';
 
@@ -22,7 +23,7 @@ export default class MobileMenuRoute extends PureComponent {
   };
 
   static defaultProps = {
-    labelClass: 'h5',
+    labelClass: BODY2,
   };
 
   render() {

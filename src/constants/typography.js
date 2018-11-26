@@ -1,6 +1,6 @@
-export const HEADLINE = 'headline';
-export const SUBHEADING = 'subtitle1';
+export const SUBTITLE1 = 'subtitle1';
 export const SUBTITLE2 = 'subtitle2';
+export const HEADLINE = 'headline';
 
 export const BODY1 = 'body1';
 export const BODY2 = 'body2';

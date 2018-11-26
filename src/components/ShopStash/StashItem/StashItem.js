@@ -6,7 +6,7 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING } from 'constants/typography';
+import { BODY1, SUBTITLE1 } from 'constants/typography';
 import Images from 'theme/images';
 
 @translate()
@@ -76,7 +76,7 @@ export default class SellItem extends PureComponent {
                   backgroundImage: `url('${Images.placeholder}')`
                 }}/>
             }/>
-          <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
+          <Typography className={classes.reviewsCount} variant={SUBTITLE1}>{reviews}</Typography>
         </div>
       </div>
     );

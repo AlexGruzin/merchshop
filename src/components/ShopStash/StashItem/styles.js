@@ -23,7 +23,6 @@ export default function({ colors, palette }) {
     label: {
       color: colors.BLACK,
       textTransform: 'uppercase',
-      fontSize: '15px',
       margin: '12px 0 1px 0',
     },
 

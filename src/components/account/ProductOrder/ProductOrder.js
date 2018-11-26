@@ -7,7 +7,7 @@ import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 import Delete from '@material-ui/icons/DeleteOutline';
 
-import { H1, H4, SUBHEADING, CAPTION } from 'constants/typography';
+import { H1, H4, SUBTITLE1, CAPTION } from 'constants/typography';
 import styles from './styles';
 
 import { productTypes, productsFilter } from 'constants/shop';

@@ -1,14 +1,13 @@
 export default {
-  PRIMARY_FONT: 'Avenir',
-  AVENIR_BOOK_FONT: 'Avenir-Book',
-  HELVETICA_NEUE: 'HelveticaNeue',
+  HELVETICA_NEUE: 'Helvetica Neue',
 
   EXTRA_SMALL_FONT_SIZE: '8px',
-  SMALL_FONT_SIZE: '10px',
-  MEDIUM_FONT_SIZE: '12px',
-  MEDIUM_LARGE_FONT_SIZE: '14px',
-  LARGE_FONT_SIZE: '17px',
-  EXTRA_LARGE_FONT_SIZE: '20px',
-  GIANT_FONT_SIZE: '32px',
+  SMALL_FONT_SIZE: '0.83rem',
+  MEDIUM_FONT_SIZE: '1rem',
+  MEDIUM_LARGE_FONT_SIZE: '1.1rem',
+  LARGE_FONT_SIZE: '1.166rem',
+  LARGE_GIANT_FONT_SIZE: '1.25rem',
+  GIANT_FONT_SIZE: '1.5rem',
+  EXTRA_GIANT_FONT_SIZE: '1.66rem',
 
 };

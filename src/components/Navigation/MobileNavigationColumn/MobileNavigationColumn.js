@@ -22,7 +22,7 @@ import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
 import { AUTHENTICATE } from 'constants/routing';
-import { HEADLINE, SUBHEADING } from 'constants/typography';
+import { HEADLINE, SUBTITLE1 } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
@@ -178,7 +178,7 @@ export default class MobileNavigationColumn extends PureComponent {
                 className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
-                    variant={SUBHEADING}
+                    variant={SUBTITLE1}
                     className={classes.canNumberLabel}>
                     {cartProductsAmount}
                   </Typography>

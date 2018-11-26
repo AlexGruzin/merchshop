@@ -1,7 +1,7 @@
 import Typography from '@material-ui/core/Typography';
 import SellItem from 'components/SellItem';
 
-import { H1 } from 'constants/typography';
+import { H3 } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
@@ -22,7 +22,7 @@ export default class BestSellers extends PureComponent {
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant="h1">{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant={H3}>{t( 'homePage:Best Sellers' )}</Typography>
         <ScrollMenu
           alignCenter={false}
           data={bestSellers.map( item => <SellItem {...item} key={item.id} /> )}/>

@@ -19,7 +19,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     icon: {
       color: colors.BLACK,
-      fontSize: '12px',
+      fontSize: values.MEDIUM_FONT_SIZE,
       lineHeight: '43px',
       margin: '0 17px',
     },

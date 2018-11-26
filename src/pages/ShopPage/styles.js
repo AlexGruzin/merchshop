@@ -1,43 +1,45 @@
-export default ( colors, palette ) => ({
-  // -- descktop
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
+export default function({ colors, breakpoints, palette }) {
+  return {
+    // -- desktop
+    root: {
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: colors.WHITE,
+    },
 
-  shopContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
+    shopContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
 
-  paginationContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-  },
+    paginationContainer: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
 
-  // ---mobile
+    // ---mobile
 
-  mobileShopContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
+    mobileShopContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
 
-  mobileFilterPart: {
-    display: 'flex',
-    width: '100%',
-    zIndex: '10',
-  },
+    mobileFilterPart: {
+      display: 'flex',
+      width: '100%',
+      zIndex: '10',
+    },
 
-  mobileItemsPart: {
-    display: 'flex',
-    width: '100%',
-  },
+    mobileItemsPart: {
+      display: 'flex',
+      width: '100%',
+    },
 
-  mobilePaginationContainer: {
-    display: 'flex',
-    width: '96%',
-    alignSelf: 'center',
-    justifyContent: 'center',
-  },
-
-});
+    mobilePaginationContainer: {
+      display: 'flex',
+      width: '96%',
+      alignSelf: 'center',
+      justifyContent: 'center',
+    },
+  }
+}

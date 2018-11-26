@@ -8,7 +8,6 @@ export default {
     '&::-webkit-input-placeholder': {
       color: colors.BLACK,
       opacity: 1,
-      fontSize: '12px',
     },
 
     width: '96%',

@@ -7,7 +7,7 @@ import injectSheet from 'react-jss';
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { HEADLINE, CORAL_LINK } from 'constants/typography';
-import { BODY1 } from "../../../constants/typography";
+import { BODY2 } from 'constants/typography';
 
 import styles from './styles';
 
@@ -44,7 +44,7 @@ export default class DesktopMenuRoute extends PureComponent {
                 classes.ButtonLabel,
                 route === CORAL_LINK ? classes.coral : null,
               )}
-              variant={BODY1}>
+              variant={BODY2}>
               {t( label )}
             </Typography>
           </Link>

@@ -14,6 +14,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { mod } from 'react-swipeable-views-core';
 import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 import styles from './styles';
+import { BUTTON } from 'constants/typography';
 
 const EnhancedSwipeableViews = autoPlay( virtualize( SwipeableViews ));
 
@@ -53,7 +54,8 @@ class Slide extends PureComponent {
             className={classes.sliderButton}>
             <Typography
               className={classes.sliderLabel}
-              variant='button'>
+              variant={BUTTON}
+            >
               {'Shop Helmets'}
             </Typography>
             <Icon

@@ -8,13 +8,10 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     title: {
+      textTransform: 'uppercase',
+
       marginTop: '25px',
       marginBottom: '15px',
-
-      fontSize: '16px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
     },
 
     heading: {
@@ -22,7 +19,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     headingCheckBox: {
-      fontSize: '14px',
+      fontSize: values.LARGE_FONT_SIZE,
       lineHeight: '24px',
     },
 
@@ -39,8 +36,13 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     giftIcon: {
-      fontSize: '18px',
+      fontSize: values.GIANT_FONT_SIZE,
       marginRight: '5px',
+    },
+
+    question: {
+      fontSize: '1rem',
+      alignSelf: 'center',
     },
 
     formControlRadio: {
@@ -52,16 +54,18 @@ export default function({ colors, values, breakpoints, palette }) {
       padding: 0,
     },
 
+    radioIcon: {
+      fontSize: '18px',
+    },
+
     radioField: {
       display: 'flex',
       flexDirection: 'row',
+      marginTop: '5px',
       width: '100%',
-      //height: '50px',
     },
 
     headingRadio: {
-      fontSize: '14px',
-      lineHeight: '30px',
       marginRight: '10px',
       marginLeft: '3px',
     },
@@ -76,8 +80,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
-      fontSize: '25px',
-      marginTop: '10px',
+      marginTop: '25px',
     },
 
     submitButton: {

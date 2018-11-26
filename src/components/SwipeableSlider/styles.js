@@ -70,7 +70,7 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderButtonLink: {},
 
     buttonIcon: {
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     sliderLabel: {

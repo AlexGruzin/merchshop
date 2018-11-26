@@ -5,6 +5,7 @@ export default function({ colors, values, breakpoints, palette }) {
       flexDirection: 'column',
       justifyContent: 'center',
       width: '100%',
+      height: '100%',
     },
 
     // -- Items
@@ -27,7 +28,7 @@ export default function({ colors, values, breakpoints, palette }) {
     totalWrapper: {
       display: 'flex',
       flexDirection: 'column',
-      width: '96%',
+      flexGrow: 1,
       padding: '10px 2%',
       background: colors.GRAY200,
     },
@@ -44,20 +45,14 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     totalLabel: {
-      fontFamily: 'HelveticaNeue-Medium',
-      fontSize: '16px',
       textTransform: 'uppercase',
-      letterSpacing: '0.6px',
       margin: '0 15px',
       marginTop: '30px',
     },
 
     totalSum: {
-      fontFamily: 'HelveticaNeue-Light',
-      fontSize: '30px',
       margin: '0 15px',
       marginTop: '10px',
-      fontWeight: '100',
     },
 
     applyWrapper: {
@@ -84,7 +79,7 @@ export default function({ colors, values, breakpoints, palette }) {
     checkoutButton: {
       display: 'flex',
       flexGrow: '1',
-      height: '40px',
+      maxHeight: '40px',
       background: colors.BLACK,
       color: colors.WHITE,
       margin: '0 15px',

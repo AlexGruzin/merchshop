@@ -4,7 +4,8 @@ import GrowBox from 'components/ShopStash/GrowBox';
 import {
   COLLECTION_VIEW_MODES,
   productTypes,
-  VIEW_COMPONENTS
+  VIEW_COMPONENTS,
+  VIEW_COLUMNS,
 } from 'constants/shop';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -66,11 +67,11 @@ export default class Collection extends PureComponent {
 
         switch( viewComponent ) {
           case VIEW_COMPONENTS.MOBILE:
-            columnsPerRow = 1;
+            columnsPerRow = VIEW_COLUMNS.MOBILE_SINGLE_VIEW;
             break;
 
           case VIEW_COMPONENTS.DESKTOP:
-            columnsPerRow = 3;
+            columnsPerRow = VIEW_COLUMNS.DESKTOP_SINGLE_VIEW;
             break;
         }
 
@@ -85,11 +86,11 @@ export default class Collection extends PureComponent {
 
         switch( viewComponent ) {
           case VIEW_COMPONENTS.MOBILE:
-            columnsPerRow = 2;
+            columnsPerRow = VIEW_COLUMNS.MOBILE_MULTI_VIEW;
             break;
 
           case VIEW_COMPONENTS.DESKTOP:
-            columnsPerRow = 6;
+            columnsPerRow = VIEW_COLUMNS.DESKTOP_MULTI_VIEW;
             break;
         }
         break;

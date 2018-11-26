@@ -1,4 +1,4 @@
-export default function({ colors, palette }) {
+export default function({ colors, palette, values }) {
   return {
     paginationContainer: {
       display: 'flex',
@@ -17,12 +17,8 @@ export default function({ colors, palette }) {
       color: colors.CORAL,
     },
     paginationFont: {
-      fontFamily: 'Avenir-Book',
-      fontWeight: 300,
-      fontSize: '14px',
-      fontStyle: 'normal',
-      fontStretch: 'normal',
-      letterSpacing: '0.3px',
+      fontFamily: values.HELVETICA_NEUE,
+
       textTransform: 'none',
     },
 

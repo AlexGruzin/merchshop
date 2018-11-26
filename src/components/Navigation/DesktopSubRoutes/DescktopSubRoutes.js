@@ -6,7 +6,7 @@ import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import { BODY1 } from "../../../constants/typography";
+import { BODY1, BODY2 } from "../../../constants/typography";
 
 import styles from './styles';
 
@@ -42,7 +42,7 @@ export default class DesktopMenuRoute extends PureComponent {
             to={''}>
             <Typography
               className={classNames( classes.ButtonLabel, classes[label.toLowerCase()])}
-              variant={BODY1}>
+              variant={BODY2}>
               {t( label )}
             </Typography>
           </Link>

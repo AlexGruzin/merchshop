@@ -2,6 +2,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
 
   phraze: {
     marginLeft: '5px',
+    textTransform: 'none',
   },
 
   promo: {

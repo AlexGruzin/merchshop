@@ -1,4 +1,4 @@
-export default function({ colors, palette, breakpoints }) {
+export default function({ colors, palette, breakpoints, values }) {
   return {
     // -- scaleable
     root: {
@@ -29,7 +29,7 @@ export default function({ colors, palette, breakpoints }) {
     },
 
     like: {
-      fontSize: '15px',
+      fontSize: values.LARGE_GIANT_FONT_SIZE,
       position: 'absolute',
       top: 0,
       marginTop: '1.2vw',
@@ -88,13 +88,10 @@ export default function({ colors, palette, breakpoints }) {
       cursor: 'pointer',
       color: colors.BLACK,
       textTransform: 'uppercase',
-      fontSize: '15px',
       margin: '12px 0 1px 0',
     },
 
     cost: {
-      letterSpacing: '0.5px',
-      fontSize: '15px',
       margin: '3px 0',
     },
 
@@ -104,9 +101,7 @@ export default function({ colors, palette, breakpoints }) {
     },
 
     reviewsCount: {
-      fontFamily: 'HelveticaNeue-Bold',
-      fontSize: '11px',
-      color: palette.secondary.main,
+      fontSize: '0.83rem',
       marginLeft: '4.4px',
     },
 
