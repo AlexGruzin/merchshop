@@ -101,7 +101,7 @@ export default function({ colors, palette, breakpoints, values }) {
 
     rating: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-start',
     },
 
     reviewsCount: {
