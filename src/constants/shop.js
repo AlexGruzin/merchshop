@@ -63,6 +63,21 @@ export const ShopItems = [{
   reviews: 63,
   image: '/img/helmet1.jpg',
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
+  colors: [
+    '#000',
+    '#944f58',
+    '#002b56',
+    '#e8b117',
+    '#9b9b9b'
+  ],
+  sizes: [
+    'S',
+    'M',
+    'L'
+  ],
+  description: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  features: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  videoUrl: 'https://www.youtube.com/watch?v=x5Kw_R6PjH8'
 }, {
   id: '002',
   productType: PRODUCT_TYPES.REGULAR,
@@ -173,3 +188,14 @@ export const ShopItems = [{
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 },
 ];
+
+
+export const singleShopItem = {
+  ...ShopItems[0],
+  media: [
+    { type: 'image', url: ShopItems[0].image },
+    { type: 'image', url: ShopItems[1].image },
+    { type: 'image', url: ShopItems[2].image },
+    { type: 'image', url: ShopItems[3].image },
+  ]
+};

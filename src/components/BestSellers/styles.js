@@ -1,6 +1,16 @@
-export default () => ({
+export default ({ values, breakpoints }) => ({
   bestSellers: {
-    margin: '28px 30px 27px 30px',
+    padding: '16px 0 27px 0',
+    margin: 'auto',
+    '& .slick-slider': {
+      padding: '0 50px',
+      [breakpoints.down( 'xs' )]: {
+        padding: '0 25px'
+      }
+    },
+    '& .slick-list': {
+      overflow: 'visible'
+    }
   },
 
   bestSellersItems: {
@@ -8,4 +18,14 @@ export default () => ({
     display: 'flex',
     justifyContent: 'space-between'
   },
+  slide: {
+    padding: values.SMALL_RELATIVE_SIZE
+  },
+  productBox: {
+    width: '100%'
+  },
+  title: {
+    margin: `${values.SMALL_RELATIVE_SIZE} 30px`,
+    fontWeight: 700,
+  }
 });

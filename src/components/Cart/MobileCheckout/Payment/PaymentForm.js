@@ -21,8 +21,8 @@ import styles from './styles';
 export default class ShippingForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {

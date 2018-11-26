@@ -30,8 +30,8 @@ const orderData = RECENT_ORDERS[1];
 @injectSheet( styles )
 export default class OrderInfo extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {

@@ -17,8 +17,8 @@ import styles from './styles';
 export default class Collection extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     items: PropTypes.array.isRequired,
     ProductRenderingComponent: PropTypes.func.isRequired,
     viewMode: PropTypes.string.isRequired,
@@ -103,10 +103,9 @@ export default class Collection extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP 768-*/}
+        {/* DESKTOP 768-*/}
         <Hidden smDown>
           <div className={itemsContainer}>
-
             {
               items.map(( item, index ) => {
                 return (

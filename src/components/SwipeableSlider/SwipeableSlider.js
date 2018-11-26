@@ -20,7 +20,7 @@ const EnhancedSwipeableViews = autoPlay( virtualize( SwipeableViews ));
 @injectSheet( styles )
 class Slide extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     index: PropTypes.number.isRequired,
     productImage: PropTypes.string.isRequired,
     productLink: PropTypes.string.isRequired,
@@ -49,6 +49,8 @@ class Slide extends PureComponent {
           <Button
             component={Link}
             to={productLink}
+            variant={'text'}
+            color={'primary'}
             size="medium"
             className={classes.sliderButton}>
             <Typography
@@ -69,7 +71,7 @@ class Slide extends PureComponent {
 @injectSheet( styles )
 export default class Slider extends React.Component {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     items: PropTypes.array.isRequired,
   };
 

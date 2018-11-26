@@ -22,8 +22,8 @@ export default class MobileSubRoutes extends PureComponent {
     label: PropTypes.string.isRequired,
     subRoutes: PropTypes.array.isRequired,
     opened: PropTypes.bool,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   constructor( props ) {

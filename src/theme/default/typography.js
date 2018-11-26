@@ -21,6 +21,7 @@ export default {
   },
   body1: {
     fontSize: '1rem',
+    lineHeight: 1.66
   },
   body2: {
     fontSize: '0.916rem'

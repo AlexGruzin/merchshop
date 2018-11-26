@@ -14,8 +14,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class ReviewItem extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     itemData: PropTypes.object.isRequired,
   };
 

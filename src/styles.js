@@ -9,7 +9,7 @@ export default {
       },
       {
         fontFamily: "Helvetica Neue",
-        src: 'url("/fonts/HelveticaNeue-Regular.ttf") format("truetype")',
+        src: 'url("/fonts/HelveticaNeue-Medium.ttf") format("truetype")',
         fontWeight: 400,
         fontStyle: 'normal',
       },
@@ -57,9 +57,19 @@ export default {
 
     body: {
       margin: 0,
+      overflowX: 'hidden',
+      backgroundColor: '#fff'
     },
     html: {
-      // fontSize: '62.5%'
+      overflowX: 'hidden',
+      fontSize: 12
+    },
+    image: {
+      userSelect: 'none',
+      userDrag: 'none'
+    },
+    '*:focus': {
+      outline: 'none'
     }
   }
 };

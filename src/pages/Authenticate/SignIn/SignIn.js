@@ -20,8 +20,8 @@ export default class SignIn extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
     openModal: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {

@@ -16,8 +16,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class HomePage extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     handleFilterSubmit: PropTypes.func.isRequired,
   };
 

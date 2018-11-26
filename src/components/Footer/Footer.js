@@ -17,7 +17,7 @@ import { BODY1 } from 'constants/typography';
 @injectSheet( styles )
 export default class Footer extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     linkList: PropTypes.array,
   };
 

@@ -82,6 +82,7 @@ export default function({ colors, values, breakpoints, palette }) {
       bottom: '33px',
       height: '40px',
       width: '180px',
+      border: 'none'
     },
 
     arrowSliderIcon: {},

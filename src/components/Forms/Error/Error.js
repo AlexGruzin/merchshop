@@ -10,7 +10,7 @@ import { BODY2 } from 'constants/typography';
 @injectSheet( styles )
 export default class Error extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     error: PropTypes.string,
     messageType: PropTypes.string,
   };

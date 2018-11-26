@@ -13,7 +13,7 @@ import styles from './styles';
 @injectSheet( styles )
 class Item extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -60,7 +60,7 @@ class Item extends PureComponent {
 @injectSheet( styles )
 export default class Slider extends React.Component {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   constructor( props ) {

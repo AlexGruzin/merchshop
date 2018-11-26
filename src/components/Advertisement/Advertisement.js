@@ -16,11 +16,11 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Advertisement extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     visibility: PropTypes.bool,
   };
 
-  static deaultProps = {
+  static defaultProps = {
     visibility: false,
   };
 
@@ -29,9 +29,9 @@ export default class Advertisement extends PureComponent {
 
     const {
       root,
-      advertismentWrapper,
-      advertismentRow,
-      phraze,
+      advertisementWrapper,
+      advertisementRow,
+      phrase,
       advertIconWrapper,
       advertIcon,
     } = classes;
@@ -43,21 +43,21 @@ export default class Advertisement extends PureComponent {
     return (
       <div className={root}>
 
-        <div className={advertismentWrapper}>
+        <div className={advertisementWrapper}>
 
-          <div className={advertismentRow}>
+          <div className={advertisementRow}>
             <Typography
-              className={classNames( phraze, classes.promo )}
+              className={classNames( phrase, classes.promo )}
               style={{
                 textTransform: 'uppercase'
               }}
               variant={H3}>Free delivery</Typography>
-            <Typography className={phraze}variant={H3}>across Indonesia</Typography>
+            <Typography className={phrase} variant={H3}>across Indonesia</Typography>
 
             <Hidden xsDown>
-              <Typography className={phraze} variant={H3}>|</Typography>
-              <div className={advertismentRow}>
-                <Typography className={phraze} variant={H3}>We offer FREE Exchanges & Refunds</Typography>
+              <Typography className={phrase} variant={H3}>|</Typography>
+              <div className={advertisementRow}>
+                <Typography className={phrase} variant={H3}>We offer FREE Exchanges & Refunds</Typography>
               </div>
             </Hidden>
 
@@ -66,9 +66,7 @@ export default class Advertisement extends PureComponent {
         </div>
 
         <div className={advertIconWrapper}>
-          <Icon
-            icon={ICONS.CROSS_ICON}
-            className={advertIcon}/>
+          <Icon icon={ICONS.CROSS_ICON} className={advertIcon} />
         </div>
 
       </div>

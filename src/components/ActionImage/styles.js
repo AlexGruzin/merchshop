@@ -24,8 +24,10 @@ export default function({ colors, values, breakpoints, palette }) {
       height: '40px',
       minWidth: '190px',
       left: '50%',
-      bottom: '33px',
+      bottom: '34px',
       justifyContent: 'space-between',
+      border: 'none',
+      transform: 'translate3d(-50%, 0, 0)'
     },
 
     buttonIcon: {

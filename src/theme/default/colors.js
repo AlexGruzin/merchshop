@@ -31,6 +31,8 @@ export default {
   GRAY50: '#FAFAFA',
   GRAY100: '#F5F5F5',
   GRAY200: '#F9F9F9',
+  STEPPER_BORDER: '#F7F7F7',
   // GRAY400: '#DCDCDC',
+  TRANSPARENT: 'rgba(0, 0, 0, 0)'
 };
 

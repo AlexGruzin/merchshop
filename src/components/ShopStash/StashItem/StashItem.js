@@ -11,12 +11,12 @@ import Images from 'theme/images';
 
 @translate()
 @injectSheet( styles )
-export default class SellItem extends PureComponent {
+export default class StashItem extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     itemData:  PropTypes.object.isRequired,
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   static defaultProps = {

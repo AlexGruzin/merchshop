@@ -26,8 +26,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class StageCollection extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     cartItems: PropTypes.array.isRequired,
     handleClose: PropTypes.func.isRequired,
   };

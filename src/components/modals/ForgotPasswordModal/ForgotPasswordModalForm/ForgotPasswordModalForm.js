@@ -13,8 +13,8 @@ import Typography from '@material-ui/core/Typography';
 @injectSheet( styles )
 export default class ForgotPasswordModal extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     handleSubmit: PropTypes.func.isRequired,
   };
 

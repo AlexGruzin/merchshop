@@ -18,9 +18,9 @@ import styles from './styles';
 export default class Product extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     itemData:  PropTypes.object.isRequired,
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     itemViewClass: PropTypes.string.isRequired,
     soldClass: PropTypes.string.isRequired,
     likeClass: PropTypes.string.isRequired,

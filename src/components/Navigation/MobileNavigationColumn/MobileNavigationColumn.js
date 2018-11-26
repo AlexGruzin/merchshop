@@ -31,8 +31,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class MobileNavigationColumn extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     headerLinks: PropTypes.array.isRequired,
     cartProductsAmount: PropTypes.number,
   };
@@ -175,7 +175,7 @@ export default class MobileNavigationColumn extends PureComponent {
                 className={classes.mobileIconSearch}/>
 
               <div onClick={this.swapCheckout}
-                className={classes.interactiveCan}>
+                   className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
                     variant={SUBHEADING}

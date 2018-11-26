@@ -3,7 +3,6 @@ export default function({ colors, breakpoints, palette }) {
     ExpandedButtonContainer: {
       display: 'flex',
       zIndex: '100',
-      flexDirection: 'column',
       minWidth: '100px',
       width: '110px',
 
@@ -26,6 +25,8 @@ export default function({ colors, breakpoints, palette }) {
     Button: {
       lineHeight: '50px',
       textDecoration: 'none',
+      display: 'flex',
+      width: '100%'
     },
 
     ButtonLabel: {
@@ -36,12 +37,13 @@ export default function({ colors, breakpoints, palette }) {
 
     ExpandedSubRoutesContainer: {
       display: 'flex',
-      position: 'relative',
+      position: 'absolute',
       width: '100%',
       height: '0px',
       transition: 'all .3s ease-in-out',
       visibility: 'hidden',
       opacity: 0,
+      top: '100%'
     },
 
 
@@ -57,14 +59,11 @@ export default function({ colors, breakpoints, palette }) {
       width: '210px',
     },
 
-    SubButtonWrapper: {
-      '&:hover': {
-        background: colors.GRAY300,
-      },
-
+    SubButton: {
       height: '37px',
       display: 'flex',
       justifyContent: 'flex-start',
+      alignItems: 'center',
 
       [breakpoints.down( 'lg' )]: {
         paddingLeft: '3px',
@@ -74,11 +73,14 @@ export default function({ colors, breakpoints, palette }) {
       },
     },
 
-    SubButton: {
+    SubButtonLink: {
       color: colors.BLACK,
       margin: 'auto 0',
       padding: '5px',
       textDecoration: 'none',
+      '&:hover': {
+        background: colors.GRAY300,
+      },
     },
     SubButtonLabel: {
       fontWeight: 300

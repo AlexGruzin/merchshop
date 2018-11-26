@@ -20,8 +20,8 @@ import { PRODUCT_TYPES, ShopItems, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from
 @injectSheet( styles )
 export default class RecentOrders extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {

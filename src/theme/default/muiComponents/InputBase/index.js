@@ -8,12 +8,11 @@ export default {
     '&::-webkit-input-placeholder': {
       color: colors.BLACK,
       opacity: 1,
-      fontSize: '12px',
+      fontSize: '1rem',
     },
-
-    width: '96%',
-    paddingLeft: '2%',
-    paddingRight: '2%',
+    // width: '96%',
+    // paddingLeft: '2%',
+    // paddingRight: '2%',
   },
 
 };

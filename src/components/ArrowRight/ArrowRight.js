@@ -8,7 +8,7 @@ import styles from './styles';
 export default class ArrowRight extends PureComponent {
 
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   render() {

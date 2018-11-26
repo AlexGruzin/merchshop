@@ -13,7 +13,7 @@ export default class TextInput extends PureComponent {
   static propTypes = {
     input: PropTypes.object.isRequired,
     meta: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
     multiline: PropTypes.bool,
     placeholder: PropTypes.string,
     className: PropTypes.string,

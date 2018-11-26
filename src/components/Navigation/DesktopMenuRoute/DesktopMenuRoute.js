@@ -17,8 +17,8 @@ export default class DesktopMenuRoute extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {
@@ -28,10 +28,6 @@ export default class DesktopMenuRoute extends PureComponent {
       route,
       label,
     } = this.props;
-
-    const {
-      coral
-    } = classes;
 
     return (
       <div className={classes.ButtonContainer}>

@@ -16,8 +16,8 @@ export default class MobileMenuRoute extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     labelClass: PropTypes.string,
   };
 

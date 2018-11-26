@@ -1,5 +1,5 @@
 export default ( colors, palette ) => ({
-  // -- descktop
+  // -- desktop
   root: {
     display: 'flex',
     flexDirection: 'column',

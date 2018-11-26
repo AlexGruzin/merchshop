@@ -1,6 +1,6 @@
 export default ({ palette, colors, breakpoints, values }) => ({
 
-  phraze: {
+  phrase: {
     marginLeft: '5px',
   },
 
@@ -18,7 +18,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
   },
 
   // scaled styles
-  advertismentRow: {
+  advertisementRow: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -46,7 +46,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
     },
   },
 
-  advertismentWrapper: {
+  advertisementWrapper: {
     display: 'flex',
     width: '100%',
     padding: '0 10px',
