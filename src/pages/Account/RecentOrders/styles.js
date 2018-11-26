@@ -3,6 +3,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+      background: colors.WHITE,
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -22,8 +23,8 @@ export default function({ colors, values, breakpoints, palette }) {
 
     ordersItemWrapper: {
       display: 'flex',
-      maxHeight: '86px',
-      width: '582px',
+      minHeight: '86px',
+      minWidth: '291px',
       flexGrow: 1,
       flexDirection: 'row',
       margin: '7px 7px',
@@ -37,29 +38,20 @@ export default function({ colors, values, breakpoints, palette }) {
       padding: '9px',
     },
 
-    orderLabel: {
-      fontSize: '15px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '100',
-    },
+    orderLabel: {},
 
     link: {
       textDecoration: 'none',
     },
 
     dateLabel: {
+      textTransform: 'none',
       marginTop: '5px',
-      fontSize: '12px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '100',
     },
 
     statusLabel: {
       marginTop: 'auto',
-      fontSize: '12px',
       color: colors.GRAY500,
-      letterSpacing: '0.5px',
-      fontWeight: '900',
     },
 
     imagesWrapper: {

@@ -23,7 +23,7 @@ import { required } from 'helpers/validators/generic';
 import styles from './styles';
 import { PAYMENT_METHODS } from 'constants/routing';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H1, SUBHEADING, HEADLINE, BODY1 } from 'constants/typography';
+import { H6, SUBTITLE2 } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -76,8 +76,7 @@ export default class AddNewCard extends PureComponent {
                 className={classes.backLink}
                 to={ PAYMENT_METHODS }>
                 <Typography
-                  className={classes.backLabel}
-                  variant={H1}>
+                  className={classes.backLabel}>
                   {t( 'account:Back to Payment Methods' )}
                 </Typography>
               </Link>
@@ -90,13 +89,14 @@ export default class AddNewCard extends PureComponent {
             onSubmit={handleSubmit}
           >
 
-            <Typography
+            <Typography variant={SUBTITLE2}
               className={classes.title}>
               {t( 'checkout:CREDIT CARD' )}
             </Typography>
 
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Credit Card Number' )}
               </Typography>
               <Field
@@ -108,7 +108,8 @@ export default class AddNewCard extends PureComponent {
                 component={TextInput}/>
             </FormControl>
             <FormControl className={classes.formControl}>
-              <Typography className={classes.heading}>
+              <Typography variant={H6}
+                className={classes.heading}>
                 {t( 'checkout:Card Holder Name' )}
               </Typography>
               <Field
@@ -123,7 +124,8 @@ export default class AddNewCard extends PureComponent {
             <div className={classes.row}>
 
               <FormControl className={classes.formControlDate}>
-                <Typography className={classes.heading}>
+                <Typography variant={H6}
+                  className={classes.heading}>
                   {t( 'checkout:Expiry Date (MM/YY)' )}
                 </Typography>
                 <Field
@@ -136,7 +138,8 @@ export default class AddNewCard extends PureComponent {
               </FormControl>
 
               <FormControl className={classes.formControlCCV}>
-                <Typography className={classes.heading}>
+                <Typography variant={H6}
+                  className={classes.heading}>
                   {t( 'checkout:CCV' )}
                 </Typography>
                 <Field

@@ -24,7 +24,7 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     ButtonLabel: {
-      fontWeight: 500,
+      textTransform: 'uppercase',
     },
   }
 }

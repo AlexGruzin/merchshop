@@ -67,23 +67,20 @@ export default function({ breakpoints, palette, colors, values }) {
     },
     rating: {
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
     },
 
     cost: {
       letterSpacing: '0.5px',
-      fontSize: '15px',
       margin: '3px 0',
     },
 
     reviewsCount: {
-      fontFamily: 'HelveticaNeue-Bold',
-      fontSize: '11px',
       color: palette.secondary.main,
       marginLeft: '4.4px',
     },
     star: {
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
   };
 }

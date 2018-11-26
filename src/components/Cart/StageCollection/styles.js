@@ -1,5 +1,12 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
+
+    rootSwipeContainer: {
+      display: 'flex',
+      width: '100%',
+      flexDirection: 'column',
+    },
+
     headLine: {
       display: 'flex',
       flexDirection: 'row',
@@ -7,6 +14,7 @@ export default function({ colors, values, breakpoints, palette }) {
       alignItems: 'center',
       width: '100%',
       height: '55px',
+      minHeight: '55px',
     },
 
     backButton: {
@@ -15,14 +23,10 @@ export default function({ colors, values, breakpoints, palette }) {
       alignItems: 'center',
     },
 
-    backLabel: {
-      fontSize: '15px',
-    },
-
     backIcon: {
-      fontSize: '25px',
+      fontSize: '22px',
       transform: 'rotate(90deg)',
-      margin: '0 2px 0 10px',
+      marginLeft: '10px',
     },
 
     interactiveCan: {
@@ -42,16 +46,15 @@ export default function({ colors, values, breakpoints, palette }) {
     canNumberLabel: {
       userSelect: 'none',
       cursor: 'pointer',
-      height: '10px',
+      height: '11px',
       position: 'relative',
       color: colors.BLACK,
-      fontFamily: 'Avenir',
-      fontSize: '10px',
-      bottom: '5px',
+      fontSize: '11px',
+      bottom: '4px',
     },
 
     mobileIconCan: {
-      fontSize: values.EXTRA_LARGE_FONT_SIZE,
+      fontSize: values.GIANT_FONT_SIZE,
       padding: '0 10px',
     },
 
@@ -79,9 +82,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- label
     stageLabel: {
-      color: colors.GRAY400,
-      fontSize: '20px',
-      marginTop: '15px',
+      marginTop: values.LARGE_GIANT_FONT_SIZE,
       marginBottom: '5px',
     },
 
@@ -100,9 +101,8 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- rounds
     round: {
-      background: colors.WHITE,
       position: 'relative',
-      top: '-4px',
+      top: '-3px',
       border: '1px solid',
       borderRadius: '50%',
       width: '5px',
@@ -117,7 +117,7 @@ export default function({ colors, values, breakpoints, palette }) {
       background: colors.BLACK,
       width: '9px',
       height: '9px',
-      top: '-6px',
+      top: '-5px',
     },
 
     passedRound: {

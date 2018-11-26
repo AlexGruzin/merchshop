@@ -6,33 +6,34 @@ export default {
   ALERT: '#FFA000',
   FACEBOOK: '#4267B2',
   GOOGLE: '#E64746',
-  CORAL: '#F25353',
+
+  GRAY50: '#FAFAFA',
+  GRAY200: '#F9F9F9',
   GRAY300: '#F4F4F4',
   GRAY500: '#9E9E9E',
   GRAY600: '#757575',
   GRAY900: '#263238',
-  SLIDER_GRAY: '#81898C',
-  GRAY400: '#B5B5B5',
-  //  DEFAULT THEME
-  //    PRIMARY
-  OTHER_GRAY400: '#8E8E8E',
-  GREY600: '#757575',
+
   GRAY_LIGHT: '#cecece',
   GRAY_DARK: '#4e4e4e',
   ZEPLIN_GREY: '#81898c',
   GRAY_TEXT: '#9b9b9b',
+  GRAY_ACTIVE: '#DCDCDC',
+  OTHER_GRAY400: '#8E8E8E',
+  SLIDER_GRAY: '#81898C',
+  STEPPER_BORDER: '#F7F7F7',
+
+  TRANSPARENT: 'rgba(0, 0, 0, 0)',
+
   //  default theme
   //    primary
-  GREY400: '#8e8e8e',
+  GRAY100: '#F5F5F5',
+  WHITE: '#FFF',
+  CORAL: '#F25353',
+
+  //    SECONDARY
+  GRAY400: '#8e8e8e',
   BLACK: '#000',
   GRAY800: '#424242',
-  //    SECONDARY
-  WHITE: '#FFF',
-  GRAY50: '#FAFAFA',
-  GRAY100: '#F5F5F5',
-  GRAY200: '#F9F9F9',
-  STEPPER_BORDER: '#F7F7F7',
-  // GRAY400: '#DCDCDC',
-  TRANSPARENT: 'rgba(0, 0, 0, 0)'
 };
 

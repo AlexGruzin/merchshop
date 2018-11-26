@@ -1,4 +1,4 @@
-export default function({ colors, palette, breakpoints }) {
+export default function({ colors, palette, breakpoints, values }) {
   return {
     root: {
       display: 'flex',
@@ -64,8 +64,6 @@ export default function({ colors, palette, breakpoints }) {
     singleSoldClass: {
       height: '21px',
       width: '96px',
-
-      fontSize: '14px',
     },
 
     // ------------------------------------- Multi View Mode --------------------------------
@@ -110,7 +108,7 @@ export default function({ colors, palette, breakpoints }) {
       height: '17px',
       width: '66px',
 
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     multiDestinationItem: {

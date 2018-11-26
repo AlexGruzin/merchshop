@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
-import { H3 } from 'constants/typography';
+import { H6, BUTTON } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
@@ -20,8 +20,8 @@ export default class Advertisement extends PureComponent {
     visibility: PropTypes.bool,
   };
 
-  static defaultProps = {
-    visibility: false,
+  static deaultProps = {
+    visibility: true,
   };
 
   render() {
@@ -36,7 +36,7 @@ export default class Advertisement extends PureComponent {
       advertIcon,
     } = classes;
 
-    if ( !this.props.visibility ) {
+    if ( this.props.visibility ) {
       return null
     }
 
@@ -51,13 +51,13 @@ export default class Advertisement extends PureComponent {
               style={{
                 textTransform: 'uppercase'
               }}
-              variant={H3}>Free delivery</Typography>
-            <Typography className={phrase} variant={H3}>across Indonesia</Typography>
+              variant={BUTTON}>Free delivery</Typography>
+            <Typography className={phrase} variant={H6}>across Indonesia</Typography>
 
             <Hidden xsDown>
-              <Typography className={phrase} variant={H3}>|</Typography>
+              <Typography className={phrase} variant={H6}>|</Typography>
               <div className={advertisementRow}>
-                <Typography className={phrase} variant={H3}>We offer FREE Exchanges & Refunds</Typography>
+                <Typography className={phrase} variant={H6}>We offer FREE Exchanges & Refunds</Typography>
               </div>
             </Hidden>
 

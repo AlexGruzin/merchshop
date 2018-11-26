@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
@@ -6,41 +7,50 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING } from 'constants/typography';
+import { BODY1, SUBHEADING, H1 } from 'constants/typography';
 import Images from 'theme/images';
+
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
-export default class StashItem extends PureComponent {
+export default class ProductBox extends PureComponent {
 
   static propTypes = {
     t: PropTypes.func,
-    itemData:  PropTypes.object.isRequired,
     classes: PropTypes.object,
+    name: PropTypes.string.isRequired,
+    cost: PropTypes.string.isRequired,
+    rate: PropTypes.number.isRequired,
+    reviews: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    soldOut: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   static defaultProps = {
     soldOut: false,
+    className: '',
   };
 
   render() {
     const {
-      itemData,
       classes,
       t,
-    } = this.props;
-
-    const {
-      label,
+      name,
       cost,
       rate,
-      image,
       reviews,
-    } = itemData;
+      image,
+      soldOut,
+      className
+    } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classNames( classes.root, className )}>
         <div className={classes.imageWrapper}>
+          { soldOut && <Typography className={classes.soldOut} variant={BODY1}>{t( 'homePage:soldOut' )}</Typography> }
           <div
             className={classes.image}
             style={{
@@ -48,7 +58,7 @@ export default class StashItem extends PureComponent {
             }}/>
         </div>
 
-        <Typography className={classes.label} variant={BODY1}>{label}</Typography>
+        <Typography className={classes.name} variant={BODY1}>{name}</Typography>
         <Typography className={classes.cost} variant={BODY1}>{t( 'homePage:cost' ).replace( '${cost}', cost )}</Typography>
 
         <div className={classes.rating}>
@@ -58,23 +68,15 @@ export default class StashItem extends PureComponent {
             emptySymbol={
               <div
                 className={classes.star}
-                style={{ // TODO: stars should be made with icomoon icons
+                style={{
                   backgroundImage: `url('${Images.gray}')`
                 }}/>
             }
             fullSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.black}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starActivated}/>
             }
             placeholderSymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.placeholder}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starHalf}/>
             }/>
           <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
         </div>

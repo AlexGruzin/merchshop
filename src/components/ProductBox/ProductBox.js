@@ -7,8 +7,7 @@ import styles from './styles';
 import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
-import { BODY1, SUBHEADING, H1 } from 'constants/typography';
-import Images from 'theme/images';
+import { BODY1, CAPTION, H1 } from 'constants/typography';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -66,11 +65,7 @@ export default class ProductBox extends PureComponent {
             readonly
             initialRating={rate}
             emptySymbol={
-              <div
-                className={classes.star}
-                style={{
-                  backgroundImage: `url('${Images.gray}')`
-                }}/>
+              <Icon icon={ICONS.STAR_FILLED} className={classes.starEmpty}/>
             }
             fullSymbol={
               <Icon icon={ICONS.STAR_FILLED} className={classes.starActivated}/>
@@ -78,7 +73,7 @@ export default class ProductBox extends PureComponent {
             placeholderSymbol={
               <Icon icon={ICONS.STAR_FILLED} className={classes.starHalf}/>
             }/>
-          <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviews}</Typography>
+          <Typography className={classes.reviewsCount} variant={CAPTION}>{reviews}</Typography>
         </div>
       </div>
     );

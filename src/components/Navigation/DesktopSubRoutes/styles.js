@@ -30,11 +30,10 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     ButtonLabel: {
-      fontWeight: 500
+      textTransform: 'uppercase',
     },
 
     // ---- expanded part ----
-
     ExpandedSubRoutesContainer: {
       display: 'flex',
       position: 'absolute',
@@ -45,7 +44,6 @@ export default function({ colors, breakpoints, palette }) {
       opacity: 0,
       top: '100%'
     },
-
 
     ExpandedSubRoutes: {
       display: 'flex',

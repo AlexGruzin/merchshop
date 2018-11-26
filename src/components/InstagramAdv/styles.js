@@ -1,4 +1,4 @@
-export default ({ breakpoints }) => ({
+export default ({ breakpoints, values }) => ({
   instagram: {
     display: 'flex',
     height: '254px',
@@ -33,7 +33,7 @@ export default ({ breakpoints }) => ({
     textTransform: 'lowercase',
   },
   instagramIcon: {
-    fontSize: '15px',
+    fontSize: values.LARGE_GIANT_FONT_SIZE,
     marginRight: '7px',
   },
 });

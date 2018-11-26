@@ -48,6 +48,13 @@ export const STASHED_PRODUCT_TYPES = {
   TWIN: 'twin',
 };
 
+export const VIEW_COLUMNS = {
+  MOBILE_SINGLE_VIEW: 1,
+  MOBILE_MULTI_VIEW: 2,
+  DESKTOP_SINGLE_VIEW: 3,
+  DESKTOP_MULTI_VIEW: 6,
+};
+
 export const STEPS_VISUALISE = {
   SHIPPING: 'Shipping',
   PAYMENT: 'Payment',

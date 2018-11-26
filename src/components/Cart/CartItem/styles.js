@@ -1,8 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
-    root: {
-
-    },
+    root: {},
 
     // -- Items
 
@@ -38,12 +36,9 @@ export default function({ colors, values, breakpoints, palette }) {
 
     nameLabel: {
       marginTop: '10px',
-      fontSize: '15px',
     },
 
-    costLabel: {
-      fontSize: '14px',
-    },
+    costLabel: {},
 
     addRemoveSection: {
       display: 'flex',
@@ -51,18 +46,18 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'space-between',
       alignItems: 'center',
       border: '1px solid',
-      padding: '0 5px',
+      padding: '0 2px',
 
       marginTop: 'auto',
       marginBottom: '10px',
       width: '80px',
       height: '26px',
 
-      fontSize: '20px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     amountLabel: {
-      fontSize: '15px',
+      fontSize: '13px',
     },
 
     removeColumn: {

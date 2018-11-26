@@ -70,7 +70,7 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderButtonLink: {},
 
     buttonIcon: {
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     sliderLabel: {
@@ -124,7 +124,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     'disactivated': {
-      backgroundColor: colors.GRAY400,
+      backgroundColor: colors.GRAY_ACTIVE,
     },
 
   }

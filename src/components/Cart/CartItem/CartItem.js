@@ -6,7 +6,7 @@ import { ICONS } from 'constants/icons';
 
 import { productsFilter, productTypes } from 'constants/shop';
 
-import { CAPTION, H1, H4, SUBHEADING } from 'constants/typography';
+import { CAPTION, H1, H4, SUBTITLE1, BODY2 } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
@@ -47,12 +47,12 @@ export default class CartItem extends PureComponent {
         <div className={classes.infoColumn}>
 
           <Typography className={classes.nameLabel}
-            variant={H4}>
+            variant={SUBTITLE1}>
             {itemData.label}
           </Typography>
 
           <Typography className={classes.costLabel}
-            variant={H1}>
+            variant={BODY2}>
             {`Rp ${itemData.cost}`}
           </Typography>
 

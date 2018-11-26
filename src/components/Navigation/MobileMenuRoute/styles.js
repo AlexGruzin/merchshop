@@ -1,6 +1,7 @@
 export default function({ colors, breakpoints, palette }) {
   return {
     swipingNavLabel: {
+      textTransform: 'uppercase',
       padding: '5px 0',
     },
 

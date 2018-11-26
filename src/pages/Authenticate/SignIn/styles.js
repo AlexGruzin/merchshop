@@ -16,7 +16,7 @@ export default ({ colors, spacing, breakpoints, values }) => ({
     textAlign: 'center',
     marginTop: '20px',
     textDecoration: 'underline',
-    fontSize: '12px',
+    fontSize: values.MEDIUM_FONT_SIZE,
     cursor: 'pointer',
     '&:hover': {
       textDecoration: 'underline',

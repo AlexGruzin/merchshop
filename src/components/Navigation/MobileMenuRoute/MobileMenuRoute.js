@@ -7,6 +7,7 @@ import injectSheet from 'react-jss';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
+import { BODY2 } from 'constants/typography';
 
 import styles from './styles';
 
@@ -17,12 +18,13 @@ export default class MobileMenuRoute extends PureComponent {
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
     classes: PropTypes.object,
+    className: PropTypes.object,
     t: PropTypes.func,
     labelClass: PropTypes.string,
   };
 
   static defaultProps = {
-    labelClass: 'h5',
+    labelClass: BODY2,
   };
 
   render() {
@@ -32,6 +34,7 @@ export default class MobileMenuRoute extends PureComponent {
       route,
       label,
       labelClass,
+      className,
     } = this.props;
 
     return (
@@ -42,7 +45,7 @@ export default class MobileMenuRoute extends PureComponent {
           to={route}
           className={classes.listItemWithSubroutes}>
           <Typography
-            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
+            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()], className )}
             variant={labelClass}>
             {t( label )}
           </Typography>

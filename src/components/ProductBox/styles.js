@@ -8,7 +8,6 @@ export default function({ breakpoints, palette, colors, values }) {
       marginRight: '11px',
 
       [breakpoints.down( 'xs' )]: {
-        // width: '128px',
         marginRight: '8px',
       },
     },
@@ -26,11 +25,9 @@ export default function({ breakpoints, palette, colors, values }) {
 
     imageWrapper: {
       width: '100%',
-      // height: '183px',
       position: 'relative',
       paddingTop: '100%',
       [breakpoints.down( 'xs' )]: {
-        // height: '128px',
       },
     },
 
@@ -73,33 +70,31 @@ export default function({ breakpoints, palette, colors, values }) {
     },
     rating: {
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
     },
 
     cost: {
-      fontFamily: 'HelveticaNeue-Light',
       margin: '3px 0',
     },
 
     reviewsCount: {
-      fontSize: '10px',
-      fontFamily: 'HelveticaNeue-Medium',
+      fontSize: values.SMALL_FONT_SIZE,
       color: colors.GRAY_DARK,
       marginLeft: '4.4px',
     },
 
-    starDeactivated: {
-      fontSize: '10px',
+    starEmpty: {
+      fontSize: values.SMALL_FONT_SIZE,
       color: colors.GRAY_LIGHT,
     },
 
     starActivated: {
-      fontSize: '10px',
-      color: colors.GREY600,
+      fontSize: values.SMALL_FONT_SIZE,
+      color: colors.GRAY600,
     },
 
     starHalf: {
-      fontSize: '10px',
+      fontSize: values.SMALL_FONT_SIZE,
     },
   };
 }

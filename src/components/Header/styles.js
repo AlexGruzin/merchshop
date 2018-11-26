@@ -37,7 +37,7 @@ export default function({ colors, breakpoints, palette, values }) {
     },
 
     smallIconCan: {
-      fontSize: values.LARGE_FONT_SIZE,
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     canWrapper: {
@@ -51,15 +51,20 @@ export default function({ colors, breakpoints, palette, values }) {
 
     canNumberWrapper: {
       position: 'absolute',
+      cursor: 'pointer',
       height: '0px',
     },
 
     canNumberLabel: {
       position: 'relative',
       color: colors.BLACK,
-      fontFamily: 'Avenir',
-      fontSize: '10px',
-      bottom: '5px',
+      fontSize: '11px',
+      bottom: '6px',
+    },
+
+    swipeContainer: {
+      display: 'flex',
+      height: '100%',
     },
 
     navigationRow: {
@@ -77,11 +82,9 @@ export default function({ colors, breakpoints, palette, values }) {
       width: '80%',
       height: '50px',
       margin: 'auto',
-
     },
 
     // ---- scaled styles ----
-
     rootHeader: {
       display: 'flex',
       flexDirection: 'column',
@@ -187,13 +190,10 @@ export default function({ colors, breakpoints, palette, values }) {
     },
 
     placeHolderLabel: {
-      fontFamily: 'Avenir',
-      fontSize: '14px',
       padding: '0',
       paddingLeft: '30px',
       lineHeight: '28px',
       width: '0px',
-
 
       transition: 'width 0.5s ease-in-out',
 
@@ -205,7 +205,8 @@ export default function({ colors, breakpoints, palette, values }) {
 
       '&::placeholder': {
         textOverflow: 'ellipsis !important',
-        fontSize: '14px',
+
+        fontFamily: values.HELVETICA_NEUE,
         color: colors.BLACK,
         opacity: 1,
       }
