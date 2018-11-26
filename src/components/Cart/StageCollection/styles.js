@@ -54,7 +54,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     mobileIconCan: {
-      fontSize: values.EXTRA_LARGE_FONT_SIZE,
+      fontSize: values.EXTRA_GIANT_FONT_SIZE,
       padding: '0 10px',
     },
 
@@ -82,7 +82,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     // ---- label
     stageLabel: {
-      marginTop: '15px',
+      marginTop: values.LARGE_GIANT_FONT_SIZE,
       marginBottom: '5px',
     },
 

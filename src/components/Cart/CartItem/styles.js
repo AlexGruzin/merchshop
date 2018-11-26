@@ -1,8 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
-    root: {
-
-    },
+    root: {},
 
     // -- Items
 
@@ -55,7 +53,7 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '80px',
       height: '26px',
 
-      fontSize: '15px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     amountLabel: {
