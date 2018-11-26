@@ -10,10 +10,14 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Loading extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     children: PropTypes.node.isRequired,
-    blocking: PropTypes.bool.isRequired,
+    blocking: PropTypes.bool,
     renderChildren: PropTypes.bool
+  };
+
+  static defaultProps = {
+    blocking: false
   };
 
   render() {

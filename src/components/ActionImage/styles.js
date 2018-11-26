@@ -28,6 +28,7 @@ export default function({ colors, values, breakpoints, palette }) {
       left: 'calc(50% - 90px)',
       bottom: '33px',
       justifyContent: 'space-between',
+      border: 'none',
     },
 
     buttonIcon: {
@@ -35,7 +36,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     buttonLabel: {
-      marginRight: '28px',
+      marginRight: '0 auto',
     },
   };
 }

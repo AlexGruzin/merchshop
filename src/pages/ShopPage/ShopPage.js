@@ -21,8 +21,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class ShopPage extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -34,7 +34,7 @@ export default class ShopPage extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP */}
+        {/* DESKTOP */}
         <Hidden smDown>
           <div className={classes.shopContainer}>
             <Collection

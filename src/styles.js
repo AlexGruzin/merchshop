@@ -4,17 +4,17 @@ export default {
       {
         fontFamily: "HelveticaNeue",
         src: 'url("/fonts/HelveticaNeue.ttf") format("truetype")',
-        //fontWeight: 400,
+        fontWeight: 400,
         fontStyle: 'italic',
       },
       {
-        //fontFamily: "Helvetica Neue",
+        fontFamily: "HelveticaNeue-Italic",
         src: 'url("/fonts/HelveticaNeue-Italic.ttf") format("truetype")',
         fontWeight: 400,
         fontStyle: 'italic',
       },
       {
-        //fontFamily: "Helvetica Neue",
+        fontFamily: "HelveticaNeue-BoldItalic",
         src: 'url("/fonts/HelveticaNeue-BoldItalic.ttf") format("truetype")',
         fontWeight: 700,
         fontStyle: 'italic',
@@ -72,9 +72,19 @@ export default {
 
     body: {
       margin: 0,
+      overflowX: 'hidden',
+      backgroundColor: '#fff'
     },
     html: {
-      fontSize: '12px',
+      overflowX: 'hidden',
+      fontSize: 12
+    },
+    image: {
+      userSelect: 'none',
+      userDrag: 'none'
+    },
+    '*:focus': {
+      outline: 'none'
     }
   }
 };

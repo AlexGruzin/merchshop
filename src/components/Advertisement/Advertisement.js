@@ -29,9 +29,9 @@ export default class Advertisement extends PureComponent {
 
     const {
       root,
-      advertismentWrapper,
-      advertismentRow,
-      phraze,
+      advertisementWrapper,
+      advertisementRow,
+      phrase,
       advertIconWrapper,
       advertIcon,
     } = classes;
@@ -43,21 +43,21 @@ export default class Advertisement extends PureComponent {
     return (
       <div className={root}>
 
-        <div className={advertismentWrapper}>
+        <div className={advertisementWrapper}>
 
-          <div className={advertismentRow}>
+          <div className={advertisementRow}>
             <Typography
-              className={classNames( phraze, classes.promo )}
+              className={classNames( phrase, classes.promo )}
               style={{
                 textTransform: 'uppercase'
               }}
               variant={BUTTON}>Free delivery</Typography>
-            <Typography className={phraze}variant={H6}>across Indonesia</Typography>
+            <Typography className={phrase} variant={H6}>across Indonesia</Typography>
 
             <Hidden xsDown>
-              <Typography className={phraze} variant={H6}>|</Typography>
-              <div className={advertismentRow}>
-                <Typography className={phraze} variant={H6}>We offer FREE Exchanges & Refunds</Typography>
+              <Typography className={phrase} variant={H6}>|</Typography>
+              <div className={advertisementRow}>
+                <Typography className={phrase} variant={H6}>We offer FREE Exchanges & Refunds</Typography>
               </div>
             </Hidden>
 
@@ -66,9 +66,7 @@ export default class Advertisement extends PureComponent {
         </div>
 
         <div className={advertIconWrapper}>
-          <Icon
-            icon={ICONS.CROSS_ICON}
-            className={advertIcon}/>
+          <Icon icon={ICONS.CROSS_ICON} className={advertIcon} />
         </div>
 
       </div>

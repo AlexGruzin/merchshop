@@ -1,3 +1,4 @@
+import about from "./about";
 import header from './header';
 import auth from './auth';
 import loading from './loading';
@@ -22,4 +23,5 @@ export default {
   footerLinks,
   shop,
   filter,
+  about
 };

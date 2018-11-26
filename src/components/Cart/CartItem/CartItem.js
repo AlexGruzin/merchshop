@@ -17,8 +17,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class CartItem extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     itemData: PropTypes.object.isRequired,
   };
 

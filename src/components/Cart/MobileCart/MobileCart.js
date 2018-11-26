@@ -23,8 +23,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class MobileCart extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     cartItems: PropTypes.array.isRequired,
     handleClose: PropTypes.func.isRequired,
 

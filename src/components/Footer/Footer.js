@@ -17,7 +17,7 @@ import { BODY1, H6 } from 'constants/typography';
 @injectSheet( styles )
 export default class Footer extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     linkList: PropTypes.array,
   };
 
@@ -31,19 +31,19 @@ export default class Footer extends PureComponent {
       <div className={classes.footerContainer}>
         <nav className={classes.footerColumn}>
           <ul className={classes.ulList}>
-          {LINK_LIST.map(( link, index ) => (
+            {LINK_LIST.map(( link, index ) => (
 
-            <li className={classes.footerButton}>
-              <Link
-                key={link}
-                to={link.route}
-              >
-                <Typography variant={BODY1}>
-                  {t( link.label )}
-                </Typography>
-              </Link>
-            </li>
-          ))}
+              <li className={classes.footerButton}>
+                <Link
+                  key={link}
+                  to={link.route}
+                >
+                  <Typography variant={BODY1}>
+                    {t( link.label )}
+                  </Typography>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -98,7 +98,7 @@ export default class Footer extends PureComponent {
                   </Typography>
                 </Link>
 
-            </Typography>
+              </Typography>
 
             </div>
           </div>

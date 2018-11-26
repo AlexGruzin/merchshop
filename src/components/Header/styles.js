@@ -1,12 +1,12 @@
 export default function({ colors, breakpoints, palette, values }) {
   return {
-
     smDown: {
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
       height: '100px',
     },
+
     logoRow: {
       display: 'flex',
       height: '50px',
@@ -37,7 +37,7 @@ export default function({ colors, breakpoints, palette, values }) {
     },
 
     smallIconCan: {
-      fontSize: values.LARGE_FONT_SIZE,
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     canWrapper: {
@@ -59,7 +59,7 @@ export default function({ colors, breakpoints, palette, values }) {
       position: 'relative',
       color: colors.BLACK,
       fontSize: '11px',
-      bottom: '5px',
+      bottom: '6px',
     },
 
     swipeContainer: {
@@ -110,13 +110,13 @@ export default function({ colors, breakpoints, palette, values }) {
         alignSelf: 'flex-end',
       },
     },
-
     logoIcon: {
       height: '32px',
       fontSize: values.GIANT_FONT_SIZE,
       marginTop: '22px',
       marginLeft: 'calc(50% - 40px)',
-
+      textDecoration: 'none',
+      color: colors.BLACK,
       margin: '0 auto',
       alignSelf: 'flex-end',
     },
@@ -185,7 +185,6 @@ export default function({ colors, breakpoints, palette, values }) {
       padding: '3px',
       fontSize: values.MEDIUM_LARGE_FONT_SIZE,
       margin: '0 5px',
-
       left: '30px',
       position: 'relative',
     },

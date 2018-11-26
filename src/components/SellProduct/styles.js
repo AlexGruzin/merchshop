@@ -67,7 +67,7 @@ export default function({ breakpoints, palette, colors, values }) {
     },
     rating: {
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
     },
 
     cost: {

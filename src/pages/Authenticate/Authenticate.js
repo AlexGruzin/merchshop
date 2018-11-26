@@ -16,13 +16,13 @@ import SignUp from './SignUp';
 @injectSheet( styles )
 export default class Authenticate extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     sendSignUpData: PropTypes.func.isRequired,
     sendSignInData: PropTypes.func.isRequired,
     openForgotPasswordModal: PropTypes.func.isRequired,
     selectTab: PropTypes.func.isRequired,
     selectedTab: PropTypes.number.isRequired,
-    t: PropTypes.func.isRequired,
+    t: PropTypes.func,
   };
 
   render() {

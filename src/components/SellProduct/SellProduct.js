@@ -17,8 +17,8 @@ import { ICONS } from 'constants/icons';
 export default class SellProduct extends PureComponent {
 
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     name: PropTypes.string.isRequired,
     cost: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,

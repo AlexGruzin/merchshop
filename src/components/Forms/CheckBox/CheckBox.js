@@ -10,7 +10,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 @injectSheet( styles )
 export default class CheckBox extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     input: PropTypes.object.isRequired,
 
     className: PropTypes.string,

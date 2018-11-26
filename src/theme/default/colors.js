@@ -21,6 +21,9 @@ export default {
   GRAY_ACTIVE: '#DCDCDC',
   OTHER_GRAY400: '#8E8E8E',
   SLIDER_GRAY: '#81898C',
+  STEPPER_BORDER: '#F7F7F7',
+
+  TRANSPARENT: 'rgba(0, 0, 0, 0)',
 
   //  default theme
   //    primary

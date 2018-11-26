@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Rating from 'react-rating';
 
 import { CAPTION, BODY1 } from 'constants/typography';
-import Images from 'theme/images';
 
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';

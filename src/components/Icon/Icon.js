@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import injectSheet from 'react-jss';
@@ -11,11 +11,12 @@ export default class Icon extends PureComponent {
     classes: PropTypes.object,
     className: PropTypes.string,
     icon: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {
     className: '',
-    classes: () => null
+    onClick: null
   };
 
   render() {
@@ -23,7 +24,7 @@ export default class Icon extends PureComponent {
 
     return (
       <div
-        className={classnames( classes.root, className )}
+        className={classNames( classes.root, className )}
         dangerouslySetInnerHTML={{ __html: icon }}
         onClick={onClick}/>
     );

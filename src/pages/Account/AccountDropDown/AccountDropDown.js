@@ -20,8 +20,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class AccountDropDown extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     currentRoute: PropTypes.string.isRequired,
     currentLabel: PropTypes.string.isRequired,
   };
@@ -40,7 +40,7 @@ export default class AccountDropDown extends PureComponent {
     return (
       <div className={classes.root}>
 
-        {/* DESCKTOP */}
+        {/* DESKTOP */}
         <Hidden xsDown>
           <div className={classes.smDown}>
 

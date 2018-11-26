@@ -37,8 +37,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class AccountDetails extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     handleSubmit: PropTypes.func.isRequired,
     initialize: PropTypes.func.isRequired,
     initialValues: PropTypes.object.isRequired,

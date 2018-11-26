@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import { ICONS } from 'constants/icons';
 import Icon from 'components/Icon';
-import classNames from 'classnames';
+// import classNames from 'classnames';
 import Hidden from '@material-ui/core/Hidden';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
@@ -15,25 +15,28 @@ import StageCollection from 'components/Cart/StageCollection';
 import Typography from '@material-ui/core/Typography';
 import DesktopNavigationRow from 'components/Navigation/DesktopNavigationRow';
 import MobileNavigationColumn from 'components/Navigation/MobileNavigationColumn';
+import Link from 'components/Link';
 
 import { ShopItems } from 'constants/shop';
-import { AUTHENTICATE } from 'constants/routing';
-import { HEADER_LINKS_TYPES, NAVIGATION_LINKS } from 'constants/headerLinkList';
+// import { AUTHENTICATE } from 'constants/routing';
+import { NAVIGATION_LINKS } from 'constants/headerLinkList';
+import * as Routes from "../../constants/routing";
 import styles from './styles';
 
 @translate()
 @injectSheet( styles )
 export default class Header extends PureComponent {
   static propTypes = {
-    i18n: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
-    makeLogout: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    i18n: PropTypes.object,
+    t: PropTypes.func,
+    makeLogout: PropTypes.func,
+    classes: PropTypes.object,
     linkList: PropTypes.array,
   };
 
   static defaultProps = {
     linkList: NAVIGATION_LINKS,
+    makeLogout: () => null,
   };
 
   constructor( props ) {
@@ -52,7 +55,6 @@ export default class Header extends PureComponent {
 
   render() {
     const {
-      t,
       classes,
       linkList,
     } = this.props;
@@ -73,16 +75,15 @@ export default class Header extends PureComponent {
           <div className={classes.smDown}>
 
             <div className={classes.logoRow}>
-
-              <Icon icon={ICONS.ZULU_ICON} className={classes.logoIcon}/>
-
+              <Link to={Routes.HOME} className={classes.logoIcon}>
+                <Icon icon={ICONS.ZULU_ICON} />
+              </Link>
               <div className={classes.actionsWrapper}>
 
                 <div className={classes.searchContainer}>
                   <Icon
                     icon={ICONS.SEARCH_ICON}
-                    className={classes.smallIconSearch}
-                  />
+                    className={classes.smallIconSearch}/>
                   <TextField
                     placeholder={'Search'}
                     className={classes.searchField}
@@ -135,18 +136,14 @@ export default class Header extends PureComponent {
 
               </div>
             </div>
-
-            <DesktopNavigationRow
-              headerLinks={linkList}/>
-
+            <DesktopNavigationRow headerLinks={linkList}/>
           </div>
 
         </Hidden>
 
         {/* MOBILE */}
         <Hidden mdUp>
-          <MobileNavigationColumn
-            headerLinks={linkList}/>
+          <MobileNavigationColumn headerLinks={linkList}/>
         </Hidden>
 
       </div>

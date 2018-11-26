@@ -14,8 +14,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class InstagramAdv extends PureComponent {
   static propTypes = {
-    t: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    t: PropTypes.func,
+    classes: PropTypes.object,
     images: PropTypes.array.isRequired,
   };
 
@@ -25,6 +25,8 @@ export default class InstagramAdv extends PureComponent {
     return (
       <div className={classes.instagram}>
         <Button
+          variant={'text'}
+          color={'primary'}
           component={Link}
           to="/"
           size="medium"

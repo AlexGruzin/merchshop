@@ -24,8 +24,8 @@ export default class MobileSubRoutes extends PureComponent {
     label: PropTypes.string.isRequired,
     subRoutes: PropTypes.array.isRequired,
     opened: PropTypes.bool,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   constructor( props ) {
@@ -80,7 +80,9 @@ export default class MobileSubRoutes extends PureComponent {
                 key={subLink.label}
                 label={t( subLink.label )}
                 route={subLink.route}
-                labelClass={BODY1}/>
+                labelClass={BODY1}
+                className={classes.textTransform}
+              />
             ))}
           </List>
         </Collapse>

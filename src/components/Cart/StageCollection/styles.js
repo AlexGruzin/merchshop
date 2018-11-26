@@ -54,7 +54,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     mobileIconCan: {
-      fontSize: values.EXTRA_GIANT_FONT_SIZE,
+      fontSize: values.GIANT_FONT_SIZE,
       padding: '0 10px',
     },
 

@@ -82,6 +82,7 @@ export default function({ colors, values, breakpoints, palette }) {
       bottom: '33px',
       height: '40px',
       width: '180px',
+      border: 'none'
     },
 
     arrowSliderIcon: {},
@@ -123,7 +124,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     'disactivated': {
-      backgroundColor: colors.GRAY400,
+      backgroundColor: colors.GRAY_ACTIVE,
     },
 
   }

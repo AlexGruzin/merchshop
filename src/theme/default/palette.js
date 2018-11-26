@@ -3,7 +3,7 @@ export default {
   primary: {
     light: colors.GRAY100,
     main: colors.WHITE,
-    dark: colors.CORAL,
+    dark: colors.BLACK,
     contrastText: colors.RED600,
   },
 

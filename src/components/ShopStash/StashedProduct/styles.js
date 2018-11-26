@@ -53,7 +53,7 @@ export default function({ colors, palette, breakpoints, values }) {
 
       right: '4%',
       fontWeight: '900',
-      top: '2%',
+      top: '4%',
 
       backgroundColor: palette.primary.main,
       textTransform: 'uppercase',
@@ -95,14 +95,19 @@ export default function({ colors, palette, breakpoints, values }) {
       margin: '3px 0',
     },
 
+    rootRate: {
+      display: 'flex',
+    },
+
     rating: {
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
     },
 
     reviewsCount: {
       fontSize: '0.83rem',
       marginLeft: '4.4px',
+      lineHeight: '1.4',
     },
 
     star: {

@@ -7,15 +7,19 @@ export default function({ colors, palette, values }) {
       flexDirection: 'row',
       textDecoration: 'none',
     },
+
     pageName: {
       textDecoration: 'none',
-      margin: 'auto 10px',
+      margin: 'auto 2px',
+      padding: '3px 6px',
       listStyleType: 'none',
       cursor: 'pointer',
     },
+
     activeClassName: {
       color: colors.CORAL,
     },
+
     paginationFont: {
       fontFamily: values.HELVETICA_NEUE,
 

@@ -26,12 +26,12 @@ export default ({ breakpoints, values }) => ({
     left: '50%',
     top: '50%',
     padding: '13px 37px 12px 40px',
-    transform: 'translate3d(-50%, -50%, 0)'
+    transform: 'translate3d(-50%, -50%, 0)',
+    border: 'none'
   },
   instagramButtonLabel: {
     textTransform: 'lowercase',
   },
-
   instagramIcon: {
     fontSize: values.LARGE_GIANT_FONT_SIZE,
     marginRight: '7px',

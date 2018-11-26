@@ -17,8 +17,9 @@ export default class MobileMenuRoute extends PureComponent {
   static propTypes = {
     label: PropTypes.string.isRequired,
     route: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    className: PropTypes.object,
+    t: PropTypes.func,
     labelClass: PropTypes.string,
   };
 
@@ -33,6 +34,7 @@ export default class MobileMenuRoute extends PureComponent {
       route,
       label,
       labelClass,
+      className,
     } = this.props;
 
     return (
@@ -43,7 +45,7 @@ export default class MobileMenuRoute extends PureComponent {
           to={route}
           className={classes.listItemWithSubroutes}>
           <Typography
-            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
+            className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()], className )}
             variant={labelClass}>
             {t( label )}
           </Typography>
