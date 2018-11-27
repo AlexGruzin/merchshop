@@ -7,7 +7,6 @@ export default function({ colors, values, breakpoints, palette }) {
       height: '325px',
       flexDirection: 'column',
       width: '100%',
-      margin: 'auto',
       justifyContent: 'center',
     },
 
@@ -19,7 +18,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     item: {
       width: '100%',
-      //background: colors.ZEPLIN_GREY,
       color: colors.WHITE,
     },
 
@@ -120,7 +118,7 @@ export default function({ colors, values, breakpoints, palette }) {
     indicator: {
       transition: 'all 0.5s ease',
       borderRadius: '50%',
-      borderColor: colors.GREY400,
+      borderColor: colors.GRAY400,
       border: '1px solid',
 
       display: 'flex',
@@ -130,7 +128,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     'activated': {
-      backgroundColor: colors.GREY400,
+      backgroundColor: colors.GRAY400,
     },
 
     'disactivated': {
@@ -150,7 +148,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     likeDisabled: {
-      color: colors.GREY400,
+      color: colors.GRAY400,
     },
 
     zoomer: {

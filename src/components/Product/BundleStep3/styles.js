@@ -3,9 +3,42 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
-      flexDirection: 'column',
       margin: '0 17px',
       marginTop: '8px',
+
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'row',
+        margin: 0,
+        marginBottom: '100px'
+      },
+      [breakpoints.down( 'sm' )]: {
+        flexDirection: 'column',
+      },
+    },
+
+    leftSide: {
+      display: 'flex',
+
+      [breakpoints.up( 'sm' )]: {
+        width: '63%',
+        padding: '40px 2%',
+
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+      },
+    },
+
+    rightSide: {
+      display: 'flex',
+      flexDirection: 'column',
+
+      [breakpoints.up( 'sm' )]: {
+        width: '37%',
+        justifyContent: 'center',
+
+        paddingTop: '20px',
+        paddingRight: '1%',
+      },
     },
 
     finalItemContainer: {
@@ -14,6 +47,10 @@ export default function({ colors, values, breakpoints, palette }) {
       boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
       padding: '17px',
       marginBottom: '7px',
+
+      [breakpoints.up( 'sm' )]: {
+        marginLeft: '11px',
+      },
     },
 
     imageWrapper: {
@@ -42,18 +79,16 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     itemProductLabel: {
-      fontSize: '20px',
       marginTop: '23px',
     },
 
     productLabel: {
-      fontSize: '20px',
       marginTop: '23px',
       marginLeft: '17px',
     },
 
     cost: {
-      fontSize: '15px',
+      marginTop: '7px',
       marginLeft: '17px',
     },
 
@@ -66,9 +101,9 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     backLink: {
-      fontFamily: 'Avenir',
+
+
       alignSelf: 'center',
-      fontSize: '12px',
       textDecoration: 'underline',
       marginBottom: '30px',
     },

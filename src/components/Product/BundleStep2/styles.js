@@ -2,14 +2,44 @@ export default function({ colors, values, breakpoints, palette }) {
   return {
     root: {
       display: 'flex',
+
+      [breakpoints.up( 'sm' )]: {
+        flexDirection: 'row',
+        marginBottom: '100px'
+      },
+      [breakpoints.down( 'sm' )]: {
+        flexDirection: 'column',
+      },
+    },
+
+    leftSide: {
+      display: 'flex',
+
+      [breakpoints.up( 'sm' )]: {
+        width: '50%',
+        padding: '40px 8%',
+      },
+    },
+
+    rightSide: {
+      display: 'flex',
       flexDirection: 'column',
-      width: '100%',
+
+      [breakpoints.up( 'sm' )]: {
+        width: '50%',
+        paddingTop: '20px',
+        paddingRight: '1%',
+      },
     },
 
     formRoot: {
       display: 'flex',
       flexDirection: 'column',
       margin: '0 17px',
+
+      [breakpoints.up( 'sm' )]: {
+        margin: '0 0',
+      },
     },
 
     productLabel: {
@@ -19,7 +49,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     dropDownField: {
       height: '40px',
-      border: `1px solid ${colors.BLACK}`,
       flexGrow: 3,
     },
 
@@ -31,7 +60,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'flex-start',
-      marginBottom: '27px',
+      marginBottom: '17px',
     },
 
     dotWrapper: {
@@ -73,11 +102,20 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.BLACK,
     },
 
+    guideIcon:{
+      display: 'flex',
+      alignSelf: 'center',
+      justifySelf: 'flex-end',
+      margin: '0 5px 0 20px',
+    },
+
     guideLabel: {
+      display: 'flex',
       flexGrow: 1,
       alignSelf: 'center',
       textAlign: 'center',
-      height: '40px',
+
+      textDecoration: 'underline',
     },
 
     buttonWrapper: {

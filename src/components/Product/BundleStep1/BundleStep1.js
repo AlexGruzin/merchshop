@@ -3,7 +3,6 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import history from 'store/history';
-import queryString from 'query-string';
 import classNames from 'classnames';
 
 import Typography from '@material-ui/core/Typography';
@@ -21,13 +20,13 @@ import { CAPTION } from 'constants/typography';
 
 import { DESCRIPTION, COMPOSE, REVIEWS_AMOUNT, RATE } from 'constants/product';
 import { BestSellers as sellers } from 'constants/home';
-import { H1, H4, SUBHEADING } from 'constants/typography';
+import { H5, H3, SUBTITLE1, H6 } from 'constants/typography';
 import { CREATE_BUNDLE_STEPS } from 'constants/product';
 import styles from './styles';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
-import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
+import { ShopItems, PRODUCT_TYPES, singleShopItem } from 'constants/shop';
 
 @translate()
 @injectSheet( styles )
@@ -36,6 +35,7 @@ export default class BundleStep1 extends PureComponent {
     t: PropTypes.func.isRequired,
     classes: PropTypes.object.isRequired,
     productData: PropTypes.object.isRequired,
+    productImages: PropTypes.array.isRequired,
     location: PropTypes.object.isRequired,
     customSubmit: PropTypes.func.isRequired,
   };
@@ -68,6 +68,7 @@ export default class BundleStep1 extends PureComponent {
       t,
       classes,
       productData,
+      productImages,
       customSubmit
     } = this.props;
 
@@ -77,25 +78,15 @@ export default class BundleStep1 extends PureComponent {
       expandedIcon,
     } = classes;
 
-    let {
-      images,
+    const {
       label,
       cost,
       description,
       compose,
-      rate,
-      reviewsAmount,
-      reviewsData,
       rateData,
-    } = ShopItems[0]; // productData
+    } = productData;
 
-
-    description = DESCRIPTION;
-    compose = COMPOSE;
-    reviewsAmount = REVIEWS_AMOUNT;
-    reviewsData = <ProductRating
-      rateData={rateData}
-    />;
+    const reviewsAmount = rateData.totalAmount;
 
     const collapseContainer = ( open, data ) => {
       return(
@@ -108,7 +99,8 @@ export default class BundleStep1 extends PureComponent {
             timeout="auto"
             unmountOnExit>
             <div className={classes.expandedContent}>
-              <Typography className={classes.expandedContentText}>
+              <Typography variant={H6}
+                className={classes.expandedContentText}>
                 {data}
               </Typography>
             </div>
@@ -120,95 +112,103 @@ export default class BundleStep1 extends PureComponent {
     return (
       <div className={root}>
 
-        <ProductSlider
-          images={images}/>
-
-        <div className={classes.infoBlock}>
-
-          <Typography
-            variant={H4}
-            className={classes.productLabel}>
-            {label}
-          </Typography>
-
-          <Typography
-            variant={H1}
-            className={classes.cost}>
-            {`Rp ${cost}`}
-          </Typography>
-
-          <Button
-            onClick={ () => customSubmit( CREATE_BUNDLE_STEPS.ITEM_CONFIGURATION ) }
-            className={classes.buildButton}>
-            {t( 'product:BUILD YOUR BUNDLE' )}
-          </Button>
+        <div className={classes.leftSide}>
+          <ProductSlider
+            images={productImages}/>
         </div>
 
-        <div className={classes.expandedBlock}>
+        <div className={classes.rightSide}>
+          <div className={classes.infoBlock}>
 
-          <div className={classes.expandHead}>
-            <Typography className={classes.category}>
-              {t( 'Description' )}
+            <Typography
+              variant={H3}
+              className={classes.productLabel}>
+              {label}
             </Typography>
 
-            <Checkbox
-              onChange={this.descriptionOpener}
-              className={classes.expandSwitch}
-              icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-              checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
-            />
-          </div>
-
-          {collapseContainer( this.state.openDescription, description )}
-
-        </div>
-
-        <div className={classes.expandedBlock}>
-
-          <div className={classes.expandHead}>
-            <Typography className={classes.category}>
-              {t( 'What`s inside' )}
+            <Typography
+              variant={H5}
+              className={classes.cost}>
+              {`Rp ${cost}`}
             </Typography>
 
-            <Checkbox
-              onChange={this.composeOpener}
-              className={classes.expandSwitch}
-              icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-              checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/> }
-            />
+            <Button
+              onClick={ () => customSubmit( CREATE_BUNDLE_STEPS.ITEM_CONFIGURATION ) }
+              className={classes.buildButton}>
+              {t( 'product:BUILD YOUR BUNDLE' )}
+            </Button>
           </div>
 
-          {collapseContainer( this.state.openCompose, compose )}
+          <div className={classes.expandedBlock}>
 
-        </div>
+            <div className={classes.expandHead}>
+              <Typography
+                variant={H6}
+                className={classes.category}>
+                {t( 'Description' )}
+              </Typography>
 
-        <div className={classes.expandedBlock}>
+              <Checkbox
+                onChange={this.descriptionOpener}
+                className={classes.expandSwitch}
+                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
+              />
+            </div>
 
-          <div className={classes.expandHead}>
-            <Typography className={classes.category}>
-              {t( 'Reviews' )}
-            </Typography>
+            {collapseContainer( this.state.openDescription, description )}
 
-            <StarRate className={classes.rateStars} rate={4}/>
-
-            <Typography className={classes.reviewsCount} variant={SUBHEADING}>{reviewsAmount}</Typography>
-
-            <Checkbox
-              onChange={this.reviewsOpener}
-              className={classes.expandSwitch}
-              icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-              checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
-            />
           </div>
 
-          {collapseContainer( this.state.openReview, reviewsData )}
+          <div className={classes.expandedBlock}>
 
+            <div className={classes.expandHead}>
+              <Typography
+                variant={H6}
+                className={classes.category}>
+                {t( 'What`s inside' )}
+              </Typography>
+
+              <Checkbox
+                onChange={this.composeOpener}
+                className={classes.expandSwitch}
+                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/> }
+              />
+            </div>
+
+            {collapseContainer( this.state.openCompose, compose )}
+
+          </div>
+
+          <div className={classes.expandedBlock}>
+
+            <div className={classes.expandHead}>
+              <Typography variant={H6}
+                className={classes.category}>
+                {t( 'Reviews' )}
+              </Typography>
+
+              <StarRate className={classes.rateStars} rate={4}/>
+
+              <Typography className={classes.reviewsCount} variant={SUBTITLE1}>{reviewsAmount}</Typography>
+
+              <Checkbox
+                onChange={this.reviewsOpener}
+                className={classes.expandSwitch}
+                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
+              />
+            </div>
+
+            {collapseContainer( this.state.openReview, <ProductRating rateData={rateData}/> )}
+
+          </div>
+
+          {/*<SellingRow*/}
+            {/*title={'product:You may also like'}*/}
+            {/*bestSellers={sellers} />*/}
         </div>
-
-        <SellingRow
-          title={'product:You may also like:'}
-          bestSellers={sellers} />
-
       </div>
     );
   }

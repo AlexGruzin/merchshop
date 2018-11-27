@@ -1,3 +1,13 @@
+export const COLLECTION_VIEW_MODES = {
+  SINGLE: 'single',
+  MULTI: 'multi',
+};
+
+export const VIEW_COMPONENTS = {
+  MOBILE: 'mobile',
+  DESKTOP: 'desktop',
+};
+
 export const PRODUCT_TYPES = {
   ALL: 'All',
   REGULAR: 'Regular',
@@ -72,8 +82,23 @@ export const ShopItems = [{
     'M',
     'L'
   ],
+  rateData: {
+    totalAmount: 354,
+    rates: [{
+      5: 308
+    }, {
+      4: 38
+    }, {
+      3: 3
+    }, {
+      2: 1
+    }, {
+      1: 4
+    },],
+  },
   description: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
   features: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  compose: 'x1 VIPER helmet\n x1 SNAP visor',
   videoUrl: 'https://www.youtube.com/watch?v=x5Kw_R6PjH8'
 }, {
   id: '002',
@@ -196,3 +221,14 @@ export const ShopItems = [{
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 },
 ];
+
+export const singleShopItem = {
+  ...ShopItems[0],
+  media: [
+    { type: 'image', url: ShopItems[0].image },
+    { type: 'image', url: ShopItems[1].image },
+    { type: 'image', url: ShopItems[2].image },
+    { type: 'image', url: ShopItems[3].image },
+  ]
+};
+

@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
 import history from 'store/history';
-import queryString from 'query-string';
 import classNames from 'classnames';
 
 import BundleStep1 from 'components/Product/BundleStep1';
@@ -16,8 +15,8 @@ import { CREATE_BUNDLE_STEPS } from 'constants/product';
 import styles from './styles';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+import { ShopItems, PRODUCT_TYPES, singleShopItem } from 'constants/shop';
 
-import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
 
 @injectSheet( styles )
 export default class ProductPage extends PureComponent {
@@ -47,20 +46,23 @@ export default class ProductPage extends PureComponent {
       productData,
     } = this.props;
 
+    const productImages = singleShopItem.media.filter( item => item.type === 'image' );
+    const imagesUrls = [...productImages.map(( item ) => item.url )];
+
     const bundleStepper = ( step ) => {
-      console.log( step );
+
       switch ( step ) {
         case CREATE_BUNDLE_STEPS.ITEM_CONFIGURATION:
           return (
-            <BundleStep2 customSubmit={this.customSubmit}/>
+            <BundleStep2 productData={singleShopItem}  productImages={imagesUrls} customSubmit={this.customSubmit}/>
           );
         case CREATE_BUNDLE_STEPS.FINAL_INSPECTION:
           return (
-            <BundleStep3 customSubmit={this.customSubmit}/>
+            <BundleStep3 productData={singleShopItem} customSubmit={this.customSubmit}/>
           );
         default:
           return(
-            <BundleStep3 customSubmit={this.customSubmit}/>
+            <BundleStep1 productData={singleShopItem} productImages={imagesUrls} customSubmit={this.customSubmit}/>
           );
       }
     };

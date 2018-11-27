@@ -1,7 +1,7 @@
 export default ({ values, breakpoints }) => ({
   bestSellers: {
-    padding: '16px 0 27px 0',
-    margin: 'auto',
+    margin: '16px 0 27px 0',
+
     '& .slick-slider': {
       padding: '0 50px',
       [breakpoints.down( 'xs' )]: {
@@ -26,6 +26,6 @@ export default ({ values, breakpoints }) => ({
   },
   title: {
     margin: `${values.SMALL_RELATIVE_SIZE} 30px`,
-    fontWeight: 700,
+    fontSize: values.EXTRA_GIANT_FONT_SIZE,
   }
 });

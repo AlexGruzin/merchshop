@@ -20,12 +20,6 @@ export default {
         fontStyle: 'italic',
       },
       {
-        fontFamily: "HelveticaNeue-Light",
-        src: 'url("/fonts/HelveticaNeue-Light.ttf") format("truetype")',
-        fontWeight: 300,
-        fontStyle: 'normal',
-      },
-      {
         fontFamily: "HelveticaNeue-LightItalic",
         src: 'url("/fonts/HelveticaNeue-LightItalic.ttf") format("truetype")',
         fontWeight: 300,

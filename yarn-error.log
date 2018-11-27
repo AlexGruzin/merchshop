@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js start
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/alexandergruzinov/WebStormProj/newProj/front/package.json: Unexpected token / in JSON at position 6491
+  SyntaxError: /Users/alexandergruzinov/WebStormProj/newProj/front/package.json: Unexpected token < in JSON at position 1665
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:1130:59
       at Generator.next (<anonymous>)
@@ -23,11 +23,12 @@ Trace:
 
 npm manifest: 
   {
-    "name": "zulu-website-2",
+    "name": "zulu-website",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
       "@babel/core": "^7.1.5",
+      "@babel/plugin-proposal-class-properties": "^7.1.0",
       "@babel/plugin-proposal-decorators": "^7.1.2",
       "@material-ui/core": "^3.4.0",
       "@material-ui/icons": "^3.0.1",
@@ -42,6 +43,7 @@ npm manifest:
       "bfj": "6.1.1",
       "case-sensitive-paths-webpack-plugin": "2.1.2",
       "chalk": "2.4.1",
+      "classnames": "latest",
       "connected-react-router": "^5.0.1",
       "css-functions": "^1.0.5",
       "css-loader": "1.0.0",
@@ -71,6 +73,16 @@ npm manifest:
       "js-cookie": "^2.2.0",
       "jss": "^9.8.7",
       "jss-preset-default": "^4.5.0",
+  <<<<<<< HEAD
+      "jwt-decode": "^2.2.0",
+      "lodash": "^4.17.4",
+      "moment": "^2.22.2",
+      "query-string": "^6.2.0",
+      "react": "^16.0.0",
+      "react-block-ui": "^1.1.0",
+      "react-dev-utils": "^4.2.1",
+      "react-dom": "^16.0.0",
+  =======
       "lodash": "^4.17.11",
       "mini-css-extract-plugin": "0.4.3",
       "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -86,16 +98,20 @@ npm manifest:
       "react-block-ui": "^1.1.3",
       "react-dev-utils": "^6.1.1",
       "react-dom": "^16.6.1",
+  >>>>>>> master
       "react-helmet": "^5.2.0",
       "react-horizontal-scrolling-menu": "^0.3.6",
       "react-i18next": "^8.3.7",
       "react-immutable-proptypes": "^2.1.0",
       "react-jss": "^8.6.1",
       "react-paginate": "^6.0.0",
+      "react-player": "^1.7.0",
       "react-rating": "^1.5.0",
       "react-redux": "^5.1.1",
       "react-router": "^4.3.1",
       "react-router-dom": "^4.3.1",
+      "react-router-redux": "^4.0.8",
+      "react-slick": "^0.23.2",
       "react-swipeable-views": "^0.13.0",
       "redux": "^4.0.1",
       "redux-actions": "^2.6.4",
@@ -108,6 +124,7 @@ npm manifest:
       "reselect": "^4.0.0",
       "resolve": "1.8.1",
       "sass-loader": "7.1.0",
+      "slick-carousel": "^1.8.1",
       "style-loader": "0.23.0",
       "terser-webpack-plugin": "1.1.0",
       "url-loader": "1.1.1",
@@ -120,9 +137,6 @@ npm manifest:
       "start": "node scripts/start.js",
       "build": "node scripts/build.js",
       "test": "node scripts/test.js"
-    },
-    "eslintConfig": {
-      "extends": "react-app"
     },
     "browserslist": [
       ">0.2%",
@@ -177,117 +191,18 @@ npm manifest:
       ],
       "plugins": [
         [
+          "@babel/plugin-proposal-class-properties"
+        ],
+        [
           "@babel/plugin-proposal-decorators",
           {
             "legacy": true
           }
         ]
+  
       ]
     },
-  
-    "eslint": {
-      "extends": [
-        "eslint:recommended",
-        "plugin:jest/recommended",
-        "plugin:react/recommended"
-      ],
-      "parser": "babel-eslint",
-      "plugins": [
-        "babel",
-        "jest",
-        "react"
-      ],
-      "env": {
-        "browser": true,
-        "es6": true,
-        "jest/globals": true,
-        "node": true
-      },
-      "parserOptions": {
-        "ecmaFeatures": {
-          "experimentalObjectRestSpread": true,
-          "experimentalTransformClassProperties": true,
-          "jsx": true
-        },
-        "sourceType": "module"
-      },
-      "rules": {
-        "react/no-unknown-property": [
-          "warn"
-        ],
-        "react/jsx-indent": [
-          "error",
-          2
-        ],
-        "react/jsx-indent-props": [
-          "error",
-          2
-        ],
-        "react/jsx-closing-bracket-location": [
-          1,
-          {
-            "selfClosing": "after-props",
-            "nonEmpty": "after-props"
-          }
-        ],
-        "indent": [
-          "error",
-          2,
-          {
-            "SwitchCase": 1
-          }
-        ],
-        "class-methods-use-this": "off",
-        "jsx-a11y/anchor-is-valid": "off",
-        "jsx-a11y/label-has-for": "off",
-        "no-console": "off",
-        "space-in-parens": [
-          "error",
-          "always",
-          {
-            "exceptions": [
-              "{}",
-              "[]",
-              "()",
-              "empty"
-            ]
-          }
-        ],
-        "space-before-function-paren": [
-          "error",
-          "never"
-        ],
-        "space-before-blocks": [
-          "error",
-          "always"
-        ],
-        "object-curly-spacing": [
-          "error",
-          "always"
-        ],
-        "no-unused-vars": "off",
-        "babel/semi": "off",
-        "no-empty": "off",
-        "react/prop-types": "warn",
-        "react/jsx-key": "warn",
-        "react/display-name": "warn"
-      },
-      "settings": {
-        "react": {
-          "createClass": "createReactClass",
-          // Regex for Component Factory to use,
-          // default to "createReactClass"
-          "pragma": "React",
-          // Pragma to use, default to "React"
-          "version": "^16.0.0"
-          // React version, default to the latest React stable release
-        }
-      }
-    },
-  
-    "pre-commit": [
-  
-    ]
+    "pre-commit": []
   }
 
 yarn manifest: 
@@ -523,7 +438,7 @@ Lockfile:
       "@babel/helper-remap-async-to-generator" "^7.1.0"
       "@babel/plugin-syntax-async-generators" "^7.0.0"
   
-  "@babel/plugin-proposal-class-properties@7.1.0":
+  "@babel/plugin-proposal-class-properties@7.1.0", "@babel/plugin-proposal-class-properties@^7.1.0":
     version "7.1.0"
     resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.1.0.tgz#9af01856b1241db60ec8838d84691aa0bd1e8df4"
     dependencies:
@@ -2305,7 +2220,7 @@ Lockfile:
       isobject "^3.0.0"
       static-extend "^0.1.1"
   
-  classnames@^2.2.5:
+  classnames@^2.2.5, classnames@latest:
     version "2.2.6"
     resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   
@@ -3225,6 +3140,10 @@ Lockfile:
       graceful-fs "^4.1.2"
       memory-fs "^0.4.0"
       tapable "^1.0.0"
+  
+  enquire.js@^2.1.6:
+    version "2.1.6"
+    resolved "https://registry.yarnpkg.com/enquire.js/-/enquire.js-2.1.6.tgz#3e8780c9b8b835084c3f60e166dbc3c2a3c89814"
   
   entities@~1.1.1:
     version "1.1.1"
@@ -5465,6 +5384,12 @@ Lockfile:
     version "5.0.1"
     resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   
+  json2mq@^0.2.0:
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/json2mq/-/json2mq-0.2.0.tgz#b637bd3ba9eabe122c83e9720483aeb10d2c904a"
+    dependencies:
+      string-convert "^0.2.0"
+  
   json3@^3.3.2:
     version "3.3.2"
     resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1"
@@ -5681,6 +5606,10 @@ Lockfile:
       parse-json "^2.2.0"
       pify "^2.0.0"
       strip-bom "^3.0.0"
+  
+  load-script@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
   
   loader-fs-cache@^1.0.0:
     version "1.0.1"
@@ -7277,7 +7206,7 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   
-  prettier@^1.14.2:
+  prettier@^1.14.2, prettier@^1.14.3:
     version "1.15.2"
     resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.2.tgz#d31abe22afa4351efa14c7f8b94b58bb7452205e"
   
@@ -7338,7 +7267,7 @@ Lockfile:
       kleur "^2.0.1"
       sisteransi "^0.1.1"
   
-  prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
+  prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
     version "15.6.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
     dependencies:
@@ -7597,6 +7526,14 @@ Lockfile:
     dependencies:
       prop-types "^15.6.1"
   
+  react-player@^1.7.0:
+    version "1.7.0"
+    resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.7.0.tgz#16444c72a1163479d40e03ac4cbaf35da2a808ad"
+    dependencies:
+      deepmerge "^2.0.1"
+      load-script "^1.0.0"
+      prop-types "^15.5.6"
+  
   react-rating@^1.5.0:
     version "1.5.0"
     resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.5.0.tgz#ae53f98f4ba0ae1a8109e63e662724275f52d83c"
@@ -7627,6 +7564,10 @@ Lockfile:
       react-router "^4.3.1"
       warning "^4.0.1"
   
+  react-router-redux@^4.0.8:
+    version "4.0.8"
+    resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+  
   react-router@^4.3.1:
     version "4.3.1"
     resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
@@ -7645,6 +7586,17 @@ Lockfile:
     dependencies:
       exenv "^1.2.1"
       shallowequal "^1.0.1"
+  
+  react-slick@^0.23.2:
+    version "0.23.2"
+    resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.23.2.tgz#8d8bdbc77a6678e8ad36f50c32578c7c0f1c54f6"
+    dependencies:
+      classnames "^2.2.5"
+      enquire.js "^2.1.6"
+      json2mq "^0.2.0"
+      lodash.debounce "^4.0.8"
+      prettier "^1.14.3"
+      resize-observer-polyfill "^1.5.0"
   
   react-swipeable-views-core@^0.13.0:
     version "0.13.0"
@@ -8018,6 +7970,10 @@ Lockfile:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
   
+  resize-observer-polyfill@^1.5.0:
+    version "1.5.0"
+    resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz#660ff1d9712a2382baa2cad450a4716209f9ca69"
+  
   resolve-cwd@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -8349,6 +8305,10 @@ Lockfile:
     dependencies:
       is-fullwidth-code-point "^2.0.0"
   
+  slick-carousel@^1.8.1:
+    version "1.8.1"
+    resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+  
   snapdragon-node@^2.0.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -8576,6 +8536,10 @@ Lockfile:
   stream-shift@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
+  
+  string-convert@^0.2.0:
+    version "0.2.1"
+    resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
   
   string-length@^2.0.0:
     version "2.0.0"

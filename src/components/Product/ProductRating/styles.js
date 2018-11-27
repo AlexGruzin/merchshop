@@ -1,4 +1,4 @@
-export default function({ colors, breakpoints, palette }) {
+export default function({ colors, breakpoints, palette, values }) {
   return {
 
     root: {
@@ -8,8 +8,11 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     title: {
-      fontSize: '17px',
       alignSelf: 'center',
+    },
+
+    rating: {
+      marginTop: '20px',
     },
 
     row: {
@@ -28,18 +31,17 @@ export default function({ colors, breakpoints, palette }) {
     },
 
     askLabel: {
-      fontSize: '11px',
       margin: '10px 0',
       marginRight: '20px',
     },
 
     totalLabel: {
-      color: colors.GREY400,
-      fontSize: '11px',
+      color: colors.GRAY400,
     },
 
     buttonLabel: {
-      fontSize: '10px',
+      color: colors.WHITE,
+      fontSize: values.SMALL_FONT_SIZE,
     },
 
     rateButton: {
@@ -47,7 +49,6 @@ export default function({ colors, breakpoints, palette }) {
       width: '47%',
       height: '30px',
       background: colors.BLACK,
-      color: colors.WHITE,
       marginRight: '20px',
     },
 

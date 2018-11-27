@@ -15,7 +15,12 @@ import Slider from 'react-slick';
 export default class BestSellers extends PureComponent {
   static propTypes = {
     classes: PropTypes.object,
+    title: PropTypes.string,
     bestSellers: PropTypes.array.isRequired,
+  };
+
+  static defaultProps = {
+    title: 'homePage:bestSellers',
   };
 
   constructor( props ) {
@@ -83,11 +88,11 @@ export default class BestSellers extends PureComponent {
   };
 
   render() {
-    const { t, bestSellers, classes } = this.props;
+    const { t, bestSellers, classes, title } = this.props;
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant={typography.H3} className={classes.title}>{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant={typography.H5} className={classes.title}>{t( title )}</Typography>
         {this.renderSlider( bestSellers )}
       </div>
     );

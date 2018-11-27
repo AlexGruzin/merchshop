@@ -11,7 +11,7 @@ import classNames from 'classnames';
 import StarRate from 'components/Product/StarRate';
 import LineRate from 'components/Product/LineRate';
 
-import { BODY1, SUBHEADING, H4, HEADLINE } from 'constants/typography';
+import { BODY1, BODY2, SUBTITLE1, H4, H6 } from 'constants/typography';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
@@ -56,7 +56,7 @@ export default class ProductReviews extends PureComponent {
                 >
                   <StarRate rate={mark}/>
 
-                  <Typography className={classes.amount} variant={HEADLINE}>{`(${amount})`}</Typography>
+                  <Typography className={classes.amount} variant={H6}>{`(${amount})`}</Typography>
 
                   <LineRate rate={amount*100/rateData.totalAmount} />
                 </div>
@@ -72,21 +72,23 @@ export default class ProductReviews extends PureComponent {
           <StarRate rate={5}/>
         </div>
 
-        <Typography className={classes.totalLabel}>{`${rateData.totalAmount} Reviews`}</Typography>
+        <Typography variant={H6} className={classes.totalLabel}>{`${rateData.totalAmount} Reviews`}</Typography>
 
-        <Typography className={classes.askLabel} variant={H4}>{'6 QUESTIONS / 6 ANSWERS'}</Typography>
+        <Typography className={classes.askLabel} variant={SUBTITLE1}>{'6 QUESTIONS / 6 ANSWERS'}</Typography>
 
         <div className={classes.row}>
           <Button
             className={classes.rateButton}>
-            <Typography className={classes.buttonLabel}>
+            <Typography variant={BODY1}
+              className={classes.buttonLabel}>
               {t( 'cart:ASK A QUESTION' )}
             </Typography>
           </Button>
 
           <Button
             className={classes.rateButton}>
-            <Typography className={classes.buttonLabel}>
+            <Typography variant={BODY1}
+              className={classes.buttonLabel}>
               {t( 'cart:WRITE A REVIEW' )}
             </Typography>
           </Button>
@@ -94,13 +96,13 @@ export default class ProductReviews extends PureComponent {
 
         <div className={classes.row}>
           <Typography
-            className={classNames( classes.askLabel )}
-            variant={H4}>
+            className={classes.askLabel}
+            variant={BODY1}>
             {`REVIEWS (${rateData.totalAmount})`}
           </Typography>
           <Typography
             className={classes.askLabel}
-            variant={H4}>
+            variant={BODY1}>
             {`QUESTIONS (${'6'})`}
           </Typography>
 

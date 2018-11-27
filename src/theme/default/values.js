@@ -1,5 +1,6 @@
 export default {
   HELVETICA_NEUE: 'Helvetica Neue',
+  HELVETICA_NEUE_LIGHT: 'HelveticaNeue-Light',
 
   TINY_RELATIVE_SIZE: '0.25rem',
   SMALL_RELATIVE_SIZE: '0.5rem',
