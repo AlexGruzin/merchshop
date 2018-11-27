@@ -1,30 +1,28 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Field } from 'redux-form/immutable';
-import injectSheet from 'react-jss';
-import { translate } from 'react-i18next';
-import styles from './styles';
-import classNames from 'classnames';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
-
-import Card from '@material-ui/icons/CreditCard';
-import Pal from '@material-ui/icons/LocalParking';
-import Help from '@material-ui/icons/Help';
+import Typography from '@material-ui/core/Typography';
+import classNames from 'classnames';
 
 import TextInput from 'components/Forms/TextInput';
-import Button from '@material-ui/core/Button';
 
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
+import { H6, BUTTON, SUBTITLE2 } from 'constants/typography';
 import { required } from 'helpers/validators/generic';
-import { BODY1, BUTTON, SUBHEADING } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import { Field } from 'redux-form/immutable';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
 export default class ShippingForm extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {
@@ -41,88 +39,91 @@ export default class ShippingForm extends PureComponent {
     return (
       <form
         className={classes.shippingRoot}
-        onSubmit={handleSubmit}
-      >
+        onSubmit={handleSubmit}>
 
         <Typography
-          className={classes.title}>
+          className={classes.title}
+          variant={SUBTITLE2}>
           {t( 'checkout:SELECT A PAYMENT OPTION' )}
         </Typography>
 
         <div className={classNames( classes.chooseWrapper, classes.enabled )}>
-          <Card color='inherit' fontSize='inherit'/>
-          <Typography className={classes.chooseLabel}>
+          <Icon
+            className={classes.variantIcon}
+            icon={ICONS.CARD}/>
+          <Typography className={classNames( classes.enabled )}>
             {t( 'cart:CREDIT CARD' )}
           </Typography>
         </div>
 
         <div className={classes.chooseWrapper}>
-          <Pal color='inherit' fontSize='inherit'/>
+          <Icon
+            className={classes.variantIcon}
+            icon={ICONS.PAY_PAL}/>
           <Typography className={classes.chooseLabel}>
             {t( 'cart:PAYPAL' )}
           </Typography>
         </div>
 
         <Typography
+          variant={SUBTITLE2}
           className={classes.title}>
           {t( 'checkout:CREDIT CARD' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Credit Card Number' )}
           </Typography>
           <Field
             validate={[required]}
             name="CardNumber"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6}
+            className={classes.heading}>
             {t( 'checkout:Card Holder Name' )}
           </Typography>
           <Field
             validate={[required]}
             name="CardHolderName"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
 
         <div className={classes.row}>
 
           <FormControl className={classes.formControlDate}>
-            <Typography className={classes.heading}>
+            <Typography variant={H6}
+              className={classes.heading}>
               {t( 'checkout:Expiry Date (MM/YY)' )}
             </Typography>
             <Field
               validate={[required]}
               name="ExpiryDate"
-              disableUnderline
               className={classes.field}
-              inputClassName={classes.input}
               component={TextInput}/>
           </FormControl>
 
           <FormControl className={classes.formControlCCV}>
-            <Typography className={classes.heading}>
+            <Typography variant={H6}
+              className={classes.heading}>
               {t( 'checkout:CCV' )}
             </Typography>
             <Field
               validate={[required]}
               name="ccv"
-              disableUnderline
               className={classes.field}
-              inputClassName={classes.input}
               component={TextInput}/>
           </FormControl>
 
           <div className={classes.formIcon}>
-            <Help fontSize='inherit'/>
+            <Icon
+              className={classes.questionIcon}
+              icon={ICONS.QUESTION}/>
           </div>
         </div>
 

@@ -4,5 +4,4 @@ export default () => ({
     userSelect: 'none',
     cursor: 'pointer',
   },
-
 });

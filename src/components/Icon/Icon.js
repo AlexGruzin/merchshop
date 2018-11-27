@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React, { PureComponent } from 'react';
 import injectSheet from 'react-jss';
 
 import styles from './styles';
@@ -8,13 +8,15 @@ import styles from './styles';
 @injectSheet( styles )
 export default class Icon extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     className: PropTypes.string,
     icon: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {
     className: '',
+    onClick: null
   };
 
   render() {
@@ -22,10 +24,9 @@ export default class Icon extends PureComponent {
 
     return (
       <div
-        className={classnames( classes.root, className )}
+        className={classNames( classes.root, className )}
         dangerouslySetInnerHTML={{ __html: icon }}
-        onClick={onClick}
-      />
+        onClick={onClick}/>
     );
   }
 }

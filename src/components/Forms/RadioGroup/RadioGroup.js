@@ -1,14 +1,14 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import RadioGroup from '@material-ui/core/RadioGroup';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import injectSheet from 'react-jss';
 import styles from './styles';
-import RadioGroup from '@material-ui/core/RadioGroup';
 
 @injectSheet( styles )
 export default class CustomRadioGroup extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     input: PropTypes.object.isRequired,
 
     className: PropTypes.string,
@@ -36,8 +36,7 @@ export default class CustomRadioGroup extends PureComponent {
           onChange={( event, value ) => input.onChange( value )}
           classes={{
             root: classes.rootRadioGroup,
-          }}
-        >
+          }}>
           {children}
         </RadioGroup>
       </div>

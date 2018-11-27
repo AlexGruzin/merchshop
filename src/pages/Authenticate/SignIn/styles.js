@@ -16,7 +16,7 @@ export default ({ colors, spacing, breakpoints, values }) => ({
     textAlign: 'center',
     marginTop: '20px',
     textDecoration: 'underline',
-    fontSize: '12px',
+    fontSize: values.MEDIUM_FONT_SIZE,
     cursor: 'pointer',
     '&:hover': {
       textDecoration: 'underline',
@@ -30,18 +30,20 @@ export default ({ colors, spacing, breakpoints, values }) => ({
     width: '100%',
   },
   heading: {
-    fontSize: values.MEDIUM_LARGE_FONT_SIZE,
-    fontWeight: '600',
   },
   submitButton: {
     display: 'flex',
     height: '50px',
+    border: 'solid 1px black',
 
     [breakpoints.down( 'md' )]: {
       width: '100%',
     },
     [breakpoints.up( 'md' )]: {
       width: '300px',
+    },
+    [breakpoints.up( 'lg' )]: {
+      width: '500px',
     },
 
   },

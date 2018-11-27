@@ -1,25 +1,24 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
-import injectSheet from 'react-jss';
 import Typography from '@material-ui/core/Typography';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
-import Delete from '@material-ui/icons/DeleteOutline';
-
-import { H1, H4, SUBHEADING, CAPTION } from 'constants/typography';
-import styles from './styles';
-
-import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
+
+import { productsFilter, productTypes } from 'constants/shop';
+
+import { CAPTION, H1, H4, SUBTITLE1, BODY2 } from 'constants/typography';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import { translate } from 'react-i18next';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 @translate()
 @injectSheet( styles )
 export default class CartItem extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     itemData: PropTypes.object.isRequired,
   };
 
@@ -48,12 +47,12 @@ export default class CartItem extends PureComponent {
         <div className={classes.infoColumn}>
 
           <Typography className={classes.nameLabel}
-            variant={H4}>
+            variant={SUBTITLE1}>
             {itemData.label}
           </Typography>
 
           <Typography className={classes.costLabel}
-            variant={H1}>
+            variant={BODY2}>
             {`Rp ${itemData.cost}`}
           </Typography>
 
@@ -69,11 +68,8 @@ export default class CartItem extends PureComponent {
         </div>
 
         <div className={classes.removeColumn}>
-          <Delete
-            className={classes.trashIcon}
-            fontSize='inherit'
-            onClick={()=>console.log( 'remove item' )}
-          />
+          <Icon className={classes.trashIcon}
+            icon={ICONS.TRASH}/>
         </div>
 
       </div>

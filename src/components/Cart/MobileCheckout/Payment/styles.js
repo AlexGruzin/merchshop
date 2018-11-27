@@ -13,25 +13,21 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'center',
       width: '100%',
       height: '40px',
-      border: `1px solid ${colors.GREY400}`,
-      color: colors.GREY400,
-      fontSize: '18px',
+      border: `1px solid ${colors.GRAY400}`,
+      color: colors.GRAY400,
+      fontSize: values.GIANT_FONT_SIZE,
 
       marginBottom: '7px',
     },
 
     enabled: {
-      border: `1px solid ${colors.BLACK}`,
+      borderColor: colors.BLACK,
       color: colors.BLACK,
     },
 
     chooseLabel: {
-      fontSize: '12px',
-      fontFamily: 'Avenir-Heavy',
-      fontWeight: 900,
-      lineHeight: '1.5',
+      color: colors.GRAY400,
       textTransform: 'uppercase',
-      letterSpacing: '0.5px',
     },
 
     formControl: {
@@ -48,25 +44,19 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       width: '20%',
     },
+
     formIcon: {
       display: 'flex',
-      width: '10%',
+      width: '15%',
       justifyContent: 'center',
-      alignItems: 'center',
-
-      fontSize: '28px',
-      marginTop: '25px',
-      marginRight: '10px',
+      fontSize: '22px',
+      alignSelf: 'flex-end',
+      marginBottom: '17px',
     },
 
     title: {
       marginTop: '25px',
       marginBottom: '15px',
-
-      fontSize: '16px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
     },
 
     heading: {
@@ -78,12 +68,6 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'space-between',
     },
 
-    input: {
-      border: `1px solid ${colors.GREY400}`,
-      borderRadius: '2px',
-      height: '40px',
-    },
-
     submitButton: {
       width: '100%',
       height: '40px',
@@ -91,6 +75,17 @@ export default function({ colors, values, breakpoints, palette }) {
       color: colors.WHITE,
       marginTop: '30px',
       marginBottom: '5px',
+    },
+
+    variantIcon: {
+      fontSize: '20px',
+      marginRight: '10px',
+    },
+
+    questionIcon: {
+      fontSize: '28px',
+      marginTop: '25px',
+      marginRight: '10px',
     },
   }
 }

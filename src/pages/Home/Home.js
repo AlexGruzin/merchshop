@@ -5,7 +5,6 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 
 // components
-import Advertisement from 'components/Advertisement';
 import SwipeableSlider from 'components/SwipeableSlider';
 import Shops from 'components/Shops';
 import SellingRow from 'components/SellingRow';
@@ -30,8 +29,6 @@ export default class Home extends PureComponent {
         <ReactHelmet
           title={t( 'homePage:title' )}/>
 
-        <Advertisement />
-
         <SwipeableSlider
           items={[
             {
@@ -43,6 +40,9 @@ export default class Home extends PureComponent {
             }, {
               image: Images.image1,
               link: '/helm3'
+            }, {
+              image: Images.image1,
+              link: '/helm4'
             }, {
               image: Images.image1,
               link: '/helm4'

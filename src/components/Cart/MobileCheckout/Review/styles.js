@@ -1,7 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
     reviewRoot: {
-      display: 'flex',
       flexDirection: 'column',
       width: '100%',
       margin: '15px 0',
@@ -22,11 +21,6 @@ export default function({ colors, values, breakpoints, palette }) {
     title: {
       marginTop: '25px',
       marginBottom: '15px',
-
-      fontSize: '16px',
-      fontFamily: 'HelveticaNeue-Medium',
-      fontWeight: '500',
-      letterSpacing: '0.6px',
     },
 
     heading: {
@@ -57,14 +51,12 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     subCategoryData: {
-      fontWeight: 600,
-      marginBottom: '15px',
+      marginBottom: '20px',
     },
 
     totalBlock: {
       display: 'flex',
       flexDirection: 'column',
-      width: '94%',
       background: colors.GRAY200,
       padding: '0 3%',
     },
@@ -85,10 +77,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     totalLabel: {
-      fontFamily: 'HelveticaNeue-Medium',
-      fontSize: '16px',
       textTransform: 'uppercase',
-      letterSpacing: '0.6px',
       margin: '0 15px',
       marginTop: '30px',
     },
@@ -98,11 +87,14 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     totalSum: {
-      fontFamily: 'HelveticaNeue-Light',
       fontSize: '30px',
       margin: '0 15px',
       marginTop: '10px',
-      fontWeight: '100',
+    },
+
+    giftIcon: {
+      fontSize: values.GIANT_FONT_SIZE,
+      marginRight: '5px',
     },
   }
 }

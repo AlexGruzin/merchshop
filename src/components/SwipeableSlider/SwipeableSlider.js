@@ -1,26 +1,27 @@
-import React, { PureComponent }  from 'react';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
-import classNames from 'classnames'
 import Typography from '@material-ui/core/Typography';
-
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay, virtualize } from 'react-swipeable-views-utils';
-import { mod } from 'react-swipeable-views-core';
+import classNames from 'classnames'
 
 import Icon from 'components/Icon';
-import { ICONS } from 'constants/icons';
 import { SLIDING_DELAY } from 'constants/home';
+import { ICONS } from 'constants/icons';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import injectSheet from 'react-jss';
+import { Link } from 'react-router-dom';
+
+import SwipeableViews from 'react-swipeable-views';
+import { mod } from 'react-swipeable-views-core';
+import { autoPlay, virtualize } from 'react-swipeable-views-utils';
 import styles from './styles';
+import { BUTTON } from 'constants/typography';
 
 const EnhancedSwipeableViews = autoPlay( virtualize( SwipeableViews ));
 
 @injectSheet( styles )
 class Slide extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     index: PropTypes.number.isRequired,
     productImage: PropTypes.string.isRequired,
     productLink: PropTypes.string.isRequired,
@@ -49,15 +50,18 @@ class Slide extends PureComponent {
           <Button
             component={Link}
             to={productLink}
+            variant={'text'}
+            color={'primary'}
             size="medium"
             className={classes.sliderButton}>
             <Typography
               className={classes.sliderLabel}
-              variant='button'>
+              variant={BUTTON}
+            >
               {'Shop Helmets'}
             </Typography>
             <Icon
-              className={''}
+              className={classes.buttonIcon}
               icon={ICONS.ARROW_ICON}/>
           </Button>
         </div>
@@ -69,7 +73,7 @@ class Slide extends PureComponent {
 @injectSheet( styles )
 export default class Slider extends React.Component {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     items: PropTypes.array.isRequired,
   };
 
@@ -86,13 +90,13 @@ export default class Slider extends React.Component {
 
   handleChangeIndex = index => {
     this.setState({
-      index: index,
+      index: mod( index, this.props.items.length ),
     });
   };
 
   slideRenderer = ( params ) => {
     const { index, key } = params;
-    const circularIndex = mod( index, 4 );
+    const circularIndex = mod( index, this.props.items.length );
 
     return(
       <Slide
@@ -142,8 +146,7 @@ export default class Slider extends React.Component {
                       className={classNames(
                         classes.indicator,
                         index === this.state.index ? classes.activated : classes.disactivated,
-                      )}
-                    />
+                      )}/>
                   </div>
                 )}
               )

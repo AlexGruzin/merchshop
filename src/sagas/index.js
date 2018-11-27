@@ -6,6 +6,7 @@ import { saga as profileSaga } from 'domains/profile';
 import { saga as httpSaga } from 'domains/http';
 import { saga as sessionSaga } from 'domains/session';
 import { saga as cartSaga } from 'domains/cart';
+import { saga as accountSaga } from 'domains/account';
 
 export default function* rootSaga() {
   yield all([
@@ -16,5 +17,6 @@ export default function* rootSaga() {
     profileSaga(),
     sessionSaga(),
     cartSaga(),
+    accountSaga(),
   ]);
 }

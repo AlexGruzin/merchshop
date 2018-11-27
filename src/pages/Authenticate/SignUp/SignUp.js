@@ -10,13 +10,15 @@ import TextInput from 'components/Forms/TextInput';
 import PasswordInput from 'components/Forms/PasswordInput';
 import Button from '@material-ui/core/Button';
 
+import { HEADLINE } from 'constants/typography';
+
 @translate()
 @injectSheet( styles )
 export default class SignUp extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   render() {
@@ -27,7 +29,7 @@ export default class SignUp extends PureComponent {
         className={classes.signUp}
         onSubmit={handleSubmit}>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:email' )}
           </Typography>
           <Field
@@ -39,7 +41,7 @@ export default class SignUp extends PureComponent {
             }}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:firstName' )}
           </Typography>
           <Field
@@ -48,7 +50,7 @@ export default class SignUp extends PureComponent {
             inputClassName={classes.input}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:lastName' )}
           </Typography>
           <Field
@@ -57,7 +59,7 @@ export default class SignUp extends PureComponent {
             inputClassName={classes.input}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={HEADLINE} className={classes.heading}>
             {t( 'auth:password' )}
           </Typography>
           <Field
@@ -68,7 +70,9 @@ export default class SignUp extends PureComponent {
         <Button
           type="submit"
           className={classes.submitButton}>
-          {t( 'auth:signUp' )}
+          <Typography variant="button">
+            {t( 'auth:signUp' )}
+          </Typography>
         </Button>
       </form>
     );

@@ -8,21 +8,36 @@ export default ({ colors, palette, breakpoints, spacing, values }) => ({
   selectedTab: {
 
   },
-  tabWrapperScaled: {
-    backgroundColor: colors.RED600,
+
+  tabContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 'calc(100% - 300px)', //Footer + Header
+  },
+
+  tabWrapper: {
 
     [breakpoints.down( 'md' )]: {
       width: '100%',
     },
     [breakpoints.up( 'md' )]: {
-      width: '70%',
+      width: '60%',
+      maxWidth: '600px',
+    },
+    [breakpoints.up( 'lg' )]: {
+      width: '50%',
+      maxWidth: '600px',
     },
   },
 
-  tabs: {},
   swipeableViews: {
-    backgroundColor: colors.GREY300,
+    backgroundColor: palette.primary.main,
   },
+
+  rootTabs: {
+
+  },
+
   tab: {
   },
 });

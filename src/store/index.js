@@ -1,34 +1,20 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Map } from 'immutable';
-import Immutable from 'immutable';
+import { routerMiddleware } from 'connected-react-router/immutable';
+import Immutable, { Map } from 'immutable';
 import installDevTools from 'immutable-devtools';
-
-// router
-import history from './history';
-import { routerMiddleware } from 'react-router-redux';
-
-// middlewares
-import createSagaMiddleware from 'redux-saga';
-import { apiMiddleware } from 'redux-api-middleware';
-import persistState from 'redux-localstorage';
-
 // cookies
 import Cookies from 'js-cookie';
-import { createCookieMiddleware } from 'redux-cookie';
-
 //helpers
-import getLocalStorageConfig from 'services/localstorage';
-import rootReducer from 'reducers';
+import createRootReducer from 'reducers';
+import { applyMiddleware, compose, createStore } from 'redux';
+import { apiMiddleware } from 'redux-api-middleware';
+import { createCookieMiddleware } from 'redux-cookie';
+// middlewares
+import createSagaMiddleware from 'redux-saga';
 import rootSaga from 'sagas';
-
-// constants
-import LOCAL_STORAGE_CONFIG from 'constants/localstorage';
+// router
+import history from './history';
 
 let initialState = Map();
-
-const enhancers = [
-  persistState(['session', 'routing'], getLocalStorageConfig( LOCAL_STORAGE_CONFIG )),
-];
 
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [
@@ -37,6 +23,8 @@ const middleware = [
   routerMiddleware( history ),
   createCookieMiddleware( Cookies ),
 ];
+
+const enhancers = [];
 
 if ( process.env.NODE_ENV === 'development' ) {
   const devToolsExtension = window.devToolsExtension;
@@ -54,7 +42,7 @@ const composedEnhancers = compose(
 );
 
 const store = createStore(
-  rootReducer,
+  createRootReducer( history ),
   initialState,
   composedEnhancers,
 );

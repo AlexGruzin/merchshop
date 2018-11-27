@@ -5,7 +5,7 @@ export default function({ colors, values, breakpoints, palette }) {
     cartItemWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      height: '115px',
+      minHeight: '105px',
       width: '100%',
       boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.2)',
       marginBottom: '10px',
@@ -34,15 +34,14 @@ export default function({ colors, values, breakpoints, palette }) {
 
     nameLabel: {
       marginTop: '10px',
-      fontSize: '18px',
     },
 
-    costLabel: {
-      fontSize: '15px',
-    },
+    costLabel: {},
 
     amount: {
-      marginTop: '30px',
+      textTransform: 'none',
+      marginTop: 'auto',
+      marginBottom: '10px',
     },
 
     emptyColumn: {

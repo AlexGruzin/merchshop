@@ -5,13 +5,15 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 import TextField from '@material-ui/core/TextField';
 import Error from 'components/Forms/Error';
+import { translate } from 'react-i18next';
 
+@translate()
 @injectSheet( styles )
 export default class TextInput extends PureComponent {
   static propTypes = {
     input: PropTypes.object.isRequired,
     meta: PropTypes.object.isRequired,
-
+    t: PropTypes.func,
     multiline: PropTypes.bool,
     placeholder: PropTypes.string,
     className: PropTypes.string,
@@ -33,7 +35,7 @@ export default class TextInput extends PureComponent {
     errorClassName: '',
     type: 'text',
     variant: 'standard',
-    disableUnderline: false,
+    disableUnderline: true,
   };
 
   render() {
@@ -50,21 +52,35 @@ export default class TextInput extends PureComponent {
       errorClassName,
       variant,
       disableUnderline,
+      t,
     } = this.props;
 
-    const errorMessage = meta.error || meta.warning;
-    const messageType = ( meta.error ) ? 'error' : 'warning';
-    const error = !!meta.error && meta.touched;
+    const {
+      rootWrapper,
+      root,
+      errorClass,
+    } = classes;
+
+    let rootModificatorClass;
+
+    const errorMessage = (meta.error) ? t(meta.error) : t(meta.warning);
+    const messageType = (meta.error) ? 'error' : 'warning';
+    const errorStatus = !!meta.error && meta.touched;
+
+    if ( errorStatus ) {
+      rootModificatorClass = errorClass;
+    }
 
     return (
-      <div className={classNames( className, classes.textInput )}>
+      <div className={classNames( className, rootWrapper )}>
         <TextField
+          className={classNames( root, rootModificatorClass )}
           variant={variant}
-          error={error}
+          error={errorStatus}
           multiline={multiline}
           placeholder={placeholder}
           InputProps={{
-            className: inputClassName,
+            className: classNames( classes.input, inputClassName ),
             fullWidth: true,
             disableUnderline: disableUnderline,
           }}

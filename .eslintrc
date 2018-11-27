@@ -20,6 +20,7 @@
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "experimentalTransformClassProperties": true,
+      "legacyDecorators": true,
       "jsx": true
     },
     "sourceType": "module"
@@ -40,7 +41,10 @@
     "object-curly-spacing": ["error", "always"],
     "no-unused-vars": "off",
     "babel/semi": "off",
-    "no-empty": "off"
+    "no-empty": "off",
+    "react/prop-types": "warn",
+    "react/jsx-key": "warn",
+    "react/display-name": "warn"
   },
   "settings": {
     "react": {

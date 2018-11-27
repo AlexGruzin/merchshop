@@ -33,7 +33,7 @@ export const BestSellers = [{
   cost: '399,000',
   rate: 4.5,
   reviews: 122,
-  image: '/img/helmet5.jpg',
+  image: '/img/helmet3.jpg',
 }];
 
 export const InstagramImages = ['/img/instagram1.jpeg', '/img/instagram2.jpeg', '/img/instagram3.jpg', '/img/instagram4.jpg'];

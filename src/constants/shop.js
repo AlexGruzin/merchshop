@@ -38,6 +38,13 @@ export const STASHED_PRODUCT_TYPES = {
   TWIN: 'twin',
 };
 
+export const VIEW_COLUMNS = {
+  MOBILE_SINGLE_VIEW: 1,
+  MOBILE_MULTI_VIEW: 2,
+  DESKTOP_SINGLE_VIEW: 3,
+  DESKTOP_MULTI_VIEW: 6,
+};
+
 export const STEPS_VISUALISE = {
   SHIPPING: 'Shipping',
   PAYMENT: 'Payment',
@@ -52,22 +59,22 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet1.jpg',
-  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
-  rateData: {
-    totalAmount: 354,
-    rates: [{
-      5: 308
-    }, {
-      4: 38
-    }, {
-      3: 3
-    }, {
-      2: 1
-    }, {
-      1: 4
-    },],
-  },
+  colors: [
+    '#000',
+    '#944f58',
+    '#002b56',
+    '#e8b117',
+    '#9b9b9b'
+  ],
+  sizes: [
+    'S',
+    'M',
+    'L'
+  ],
+  description: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  features: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  videoUrl: 'https://www.youtube.com/watch?v=x5Kw_R6PjH8'
 }, {
   id: '002',
   productType: PRODUCT_TYPES.REGULAR,
@@ -76,7 +83,6 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet2.jpg',
-  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '003',

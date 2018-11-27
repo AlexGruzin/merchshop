@@ -1,1 +1,1 @@
-export { default } from './DescktopSubRoutes';
+export { default } from './DesktopSubRoutes';

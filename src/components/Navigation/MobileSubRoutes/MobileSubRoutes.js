@@ -1,18 +1,20 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import Collapse from '@material-ui/core/Collapse';
+import Divider from '@material-ui/core/Divider';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
+import Typography from '@material-ui/core/Typography';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 import classNames from 'classnames';
+
+import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 
-import Typography from '@material-ui/core/Typography';
-import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import Collapse from '@material-ui/core/Collapse';
-import List from '@material-ui/core/List';
-
-import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
+import { BODY2, BODY1 } from 'constants/typography';
 import styles from './styles';
 
 @translate()
@@ -22,8 +24,8 @@ export default class MobileSubRoutes extends PureComponent {
     label: PropTypes.string.isRequired,
     subRoutes: PropTypes.array.isRequired,
     opened: PropTypes.bool,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   constructor( props ) {
@@ -34,7 +36,7 @@ export default class MobileSubRoutes extends PureComponent {
   }
 
   subRouteOpener = () => {
-    this.setState( state => ({ open: !state.open }) );
+    this.setState( state => ({ open: !state.open }));
   };
 
   render() {
@@ -57,7 +59,7 @@ export default class MobileSubRoutes extends PureComponent {
           onClick={this.subRouteOpener}>
           <Typography
             className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
-            variant='h5'>
+            variant={BODY2}>
             {t( label )}
           </Typography>
           {open
@@ -76,9 +78,11 @@ export default class MobileSubRoutes extends PureComponent {
             {subRoutes.map(( subLink, index ) => (
               <MobileMenuRoute
                 key={subLink.label}
-                label={t ( subLink.label )}
+                label={t( subLink.label )}
                 route={subLink.route}
-                labelClass={'h4'}/>
+                labelClass={BODY1}
+                className={classes.textTransform}
+              />
             ))}
           </List>
         </Collapse>

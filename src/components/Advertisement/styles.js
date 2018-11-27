@@ -1,7 +1,8 @@
 export default ({ palette, colors, breakpoints, values }) => ({
 
-  phraze: {
-    marginLeft: '10px',
+  phrase: {
+    marginLeft: '5px',
+    textTransform: 'none',
   },
 
   promo: {
@@ -10,20 +11,21 @@ export default ({ palette, colors, breakpoints, values }) => ({
 
   advertIcon: {
     display: 'flex',
-    fontSize: values.EXTRA_SMALL_FONT_SIZE,
-    height: '100%',
+    fontSize: '6px',
+    height: '35px',
+    width: '35px',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   // scaled styles
-  advertismentRow: {
+  advertisementRow: {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
 
     [breakpoints.down( 'sm' )]: {
-      margin: '0 2%',
+
     },
     [breakpoints.up( 'sm' )]: {
       margin: '0',
@@ -35,7 +37,7 @@ export default ({ palette, colors, breakpoints, values }) => ({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: palette.primary.dark,
+    backgroundColor: colors.GRAY300,
 
     [breakpoints.down( 'sm' )]: {
       height: '50px',
@@ -45,9 +47,10 @@ export default ({ palette, colors, breakpoints, values }) => ({
     },
   },
 
-  advertismentWrapper: {
+  advertisementWrapper: {
     display: 'flex',
     width: '100%',
+    padding: '0 10px',
     justifyContent: 'center',
 
     [breakpoints.down( 'sm' )]: {
@@ -59,13 +62,14 @@ export default ({ palette, colors, breakpoints, values }) => ({
   },
 
   advertIconWrapper: {
+    display: 'flex',
     height: '100%',
     width: '35px',
+    alignItems: 'center',
     lineHeight: '35px',
     justifySelf: 'flex-end',
-    backgroundColor: palette.primary.dark,
-    padding: '0 1%',
-    color: palette.secondary.main,
+    padding: '0 5px',
+    color: colors.BLACK,
   },
 
 });

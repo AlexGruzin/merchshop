@@ -4,7 +4,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       width: '100%',
       height: '500px',
-      background: colors.GREY300,
+      background: colors.GRAY300,
       borderRight: '1px solid black',
     },
 

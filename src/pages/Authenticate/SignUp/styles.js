@@ -1,4 +1,4 @@
-export default ({ colors, spacing, values }) => ({
+export default ({ colors, spacing, values, breakpoints }) => ({
   signUp: {
     minHeight: '250px',
     justifyContent: 'space-between',
@@ -17,14 +17,21 @@ export default ({ colors, spacing, values }) => ({
     width: '100%',
   },
   heading: {
-    fontSize: '14px',
-    fontWeight: '600',
   },
   submitButton: {
-    backgroundColor: colors.RED,
-    maxWidth: '150px',
-    borderRadius: '4px',
-    color: colors.WHITE,
-    fontSize: '15px',
+    display: 'flex',
+    height: '50px',
+    border: 'solid 1px black',
+
+    [breakpoints.down( 'md' )]: {
+      width: '100%',
+    },
+    [breakpoints.up( 'md' )]: {
+      width: '300px',
+    },
+    [breakpoints.up( 'lg' )]: {
+      width: '500px',
+    },
+
   },
 });

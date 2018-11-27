@@ -1,16 +1,16 @@
 import colors from './colors';
 export default {
   primary: {
-    light: colors.GREY50,
+    light: colors.GRAY100,
     main: colors.WHITE,
-    dark: colors.GREY100,
+    dark: colors.BLACK,
     contrastText: colors.RED600,
   },
 
   secondary: {
-    light: colors.GREY400,
+    light: colors.GRAY400,
     main: colors.BLACK,
-    dark: colors.GREY800,
+    dark: colors.GRAY800,
     contrastText: colors.RED600,
   },
 
@@ -23,7 +23,7 @@ export default {
   },
 
   error: {
-    main: colors.ERROR,
+    main: colors.CORAL,
   },
 
   warning: {

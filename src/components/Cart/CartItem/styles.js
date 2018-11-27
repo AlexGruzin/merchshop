@@ -1,8 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
-    root: {
-
-    },
+    root: {},
 
     // -- Items
 
@@ -33,17 +31,14 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       width: '50%',
       flexDirection: 'column',
-      marginLeft: '15px',
+      marginLeft: '10px',
     },
 
     nameLabel: {
       marginTop: '10px',
-      fontSize: '18px',
     },
 
-    costLabel: {
-      fontSize: '15px',
-    },
+    costLabel: {},
 
     addRemoveSection: {
       display: 'flex',
@@ -51,19 +46,19 @@ export default function({ colors, values, breakpoints, palette }) {
       justifyContent: 'space-between',
       alignItems: 'center',
       border: '1px solid',
-      padding: '0 5px',
+      padding: '0 2px',
 
-      marginTop: '30px',
+      marginTop: 'auto',
+      marginBottom: '10px',
       width: '80px',
       height: '26px',
 
-      fontSize: '22px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     amountLabel: {
-      fontSize: '17px',
+      fontSize: '13px',
     },
-
 
     removeColumn: {
       display: 'flex',
@@ -73,6 +68,11 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '10%',
 
       marginBottom: '15px',
+    },
+
+    trashIcon: {
+      marginRight: '10px',
+      fontSize: '16px',
     },
   }
 }
