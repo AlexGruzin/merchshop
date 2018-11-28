@@ -33,7 +33,7 @@ const Router = () => (
     <Route exact path={Routes.ADDRESSES} component={Addresses} />
     <Route exact path={Routes.ADD_CARD} component={AddNewCard} />
     <Route exact path={Routes.ORDER} component={OrderInfo} />
-    <Route exact path={'/q'} component={Pdp} />
+    <Route exact path={Routes.PRODUCT} component={Pdp} />
     <Route exact path={Routes.ABOUT} component={About} />
     <Route path="*" component={NotFound} />
   </Switch>
