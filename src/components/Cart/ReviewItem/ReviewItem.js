@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import Typography from '@material-ui/core/Typography';
 
-import { H1, H4, H6, SUBHEADING, CAPTION } from 'constants/typography';
+import { H1, H4, H6, SUBTITLE1, CAPTION } from 'constants/typography';
 import styles from './styles';
 
 import { productTypes, productsFilter } from 'constants/shop';
@@ -14,8 +14,8 @@ import { ICONS } from 'constants/icons';
 @injectSheet( styles )
 export default class ReviewItem extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     itemData: PropTypes.object.isRequired,
   };
 
@@ -45,13 +45,11 @@ export default class ReviewItem extends PureComponent {
 
           <Typography
             className={classes.nameLabel}
-            variant={H4}>
+            variant={SUBTITLE1}>
             {itemData.label}
           </Typography>
 
-          <Typography
-            className={classes.costLabel}
-            variant={H1}>
+          <Typography>
             {`Rp ${itemData.cost}`}
           </Typography>
 

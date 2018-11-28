@@ -1,5 +1,6 @@
 export default function({ breakpoints, palette, colors, values }) {
   return {
+
     root: {
       display: 'flex',
       flexDirection: 'column',
@@ -11,6 +12,7 @@ export default function({ breakpoints, palette, colors, values }) {
         marginRight: '8px',
       },
     },
+
     image: {
       width: '100%',
       height: '100%',
@@ -18,6 +20,7 @@ export default function({ breakpoints, palette, colors, values }) {
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
     },
+
     imageWrapper: {
       width: '100%',
       height: '183px',
@@ -27,42 +30,52 @@ export default function({ breakpoints, palette, colors, values }) {
         height: '128px',
       },
     },
+
     soldOut: {
       color: palette.secondary.main,
-      position: 'absolute',
-      fontSize: '11px',
-      right: '8px',
-      fontWeight: '900',
-      top: '7px',
-      height: '12px',
-      lineHeight: '12px',
-      padding: '2px 12px 5px 12px',
       backgroundColor: palette.primary.main,
       textTransform: 'uppercase',
-      cursor: 'default',
+      fontSize: '0.916rem',  // to const
+      position: 'absolute',
+
+      right: '8px',
+      top: '7px',
+      height: '12px',
+      lineHeight: '2px',
+      padding: '2px 12px 5px 12px',
     },
+
     name: {
-      color: palette.secondary.main,
-      height: '15px',
       margin: '12px 0 1px 0',
     },
+
     rating: {
       display: 'flex',
       alignItems: 'flex-end',
     },
-    reviewsCount: {
-      color: palette.secondary.main,
-      marginLeft: '4.4px',
-      height: '10px',
-      paddingBottom: '2px',
+
+    cost: {
+      margin: '3px 0',
     },
-    star: {
-      opacity: '.5',
-      width: '8.2px',
-      height: '7.5px',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-    }
+
+    reviewsCount: {
+      fontSize: values.SMALL_FONT_SIZE,
+      color: colors.GRAY_DARK,
+      marginLeft: '4.4px',
+    },
+
+    starEmpty: {
+      fontSize: values.SMALL_FONT_SIZE,
+      color: colors.GRAY_LIGHT,
+    },
+
+    starActivated: {
+      fontSize: values.SMALL_FONT_SIZE,
+      color: colors.GRAY600,
+    },
+
+    starHalf: {
+      fontSize: values.SMALL_FONT_SIZE,
+    },
   };
 }

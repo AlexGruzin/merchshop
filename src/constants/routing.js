@@ -1,6 +1,15 @@
 export const HOME = '/';
 export const AUTHENTICATE = '/auth';
 export const SHOP = '/shop';
+export const ACCOUNT = '/account';
+export const ORDER = '/account/order/:id';
+export const WISHLIST = '/account/wishlist';
+export const PAYMENT_METHODS = '/account/payment_methods';
+export const ACCOUNT_DETAILS = '/account/details';
+export const ADDRESSES = '/account/addresses';
+export const ADD_CARD = '/account/add_card';
+export const PDP = '/product/:product_slug';
+export const ABOUT = '/about';
 
 export const UNAUTHORIZED_ROUTES = [
   AUTHENTICATE,
@@ -9,4 +18,10 @@ export const UNAUTHORIZED_ROUTES = [
 export const UNACTIVATED_ROUTES = [
   HOME,
   SHOP,
+  ACCOUNT,
+  PAYMENT_METHODS,
+  ACCOUNT_DETAILS,
+  ADDRESSES,
+  ADD_CARD,
+  ORDER,
 ];

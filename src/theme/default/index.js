@@ -10,6 +10,7 @@ import iconButton from './muiComponents/IconButton';
 import collapseArea from './muiComponents/Collapse';
 import inputBase from './muiComponents/InputBase';
 import buttonBase from './muiComponents/ButtonBase';
+import outlinedInput from './muiComponents/OutlinedInput';
 import values from './values';
 
 const breakpointValues = {
@@ -35,11 +36,6 @@ export default createMuiTheme({
     MuiExpansionPanel: expansionPanel,
     MuiExpansionPanelSummary: expansionPanelSummary,
     MuiExpansionPanelActions: expansionPanelActions,
-  },
-
-  props: {
-    MuiButtonBase: {
-      disableRipple: true, // No more ripple
-    },
+    MuiOutlinedInput: outlinedInput
   },
 });

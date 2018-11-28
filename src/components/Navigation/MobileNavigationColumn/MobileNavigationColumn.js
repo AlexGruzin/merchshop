@@ -20,7 +20,8 @@ import MobileSubRoutes from 'components/Navigation/MobileSubRoutes';
 import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
-import { HEADLINE, SUBHEADING } from 'constants/typography';
+import { AUTHENTICATE } from 'constants/routing';
+import { BUTTON, SUBTITLE1 } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
@@ -29,8 +30,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class MobileNavigationColumn extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     headerLinks: PropTypes.array.isRequired,
     openLogRequestModal: PropTypes.func.isRequired,
     cartProductsAmount: PropTypes.number,
@@ -152,7 +153,7 @@ export default class MobileNavigationColumn extends PureComponent {
                           className={classes.swipedButton}>
                           <Typography
                             className={classes.buttonLabel}
-                            variant={HEADLINE}>
+                            variant={BUTTON}>
                             {t( 'headerLinks:SIGNUPLOGIN' )}
                           </Typography>
                         </Button>
@@ -176,10 +177,10 @@ export default class MobileNavigationColumn extends PureComponent {
                 className={classes.mobileIconSearch}/>
 
               <div onClick={this.swapCheckout}
-                className={classes.interactiveCan}>
+                   className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
-                    variant={SUBHEADING}
+                    variant={SUBTITLE1}
                     className={classes.canNumberLabel}>
                     {cartProductsAmount}
                   </Typography>

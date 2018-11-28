@@ -1,4 +1,4 @@
-export default function({ colors, palette }) {
+export default function({ colors, palette, values }) {
   return {
     paginationContainer: {
       display: 'flex',
@@ -7,22 +7,22 @@ export default function({ colors, palette }) {
       flexDirection: 'row',
       textDecoration: 'none',
     },
+
     pageName: {
       textDecoration: 'none',
-      margin: 'auto 10px',
+      margin: 'auto 2px',
+      padding: '3px 6px',
       listStyleType: 'none',
       cursor: 'pointer',
     },
+
     activeClassName: {
       color: colors.CORAL,
     },
+
     paginationFont: {
-      fontFamily: 'Avenir-Book',
-      fontWeight: 300,
-      fontSize: '14px',
-      fontStyle: 'normal',
-      fontStretch: 'normal',
-      letterSpacing: '0.3px',
+      fontFamily: values.HELVETICA_NEUE,
+
       textTransform: 'none',
     },
 
@@ -44,6 +44,10 @@ export default function({ colors, palette }) {
       textDecoration: 'none',
       listStyleType: 'none',
       textAlign: 'center',
+
+      '& a': {
+        textDecoration: 'none',
+      },
     },
   };
 }

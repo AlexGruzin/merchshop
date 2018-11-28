@@ -15,7 +15,7 @@ export default class ActionImage extends PureComponent {
     to: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   render() {
@@ -29,6 +29,8 @@ export default class ActionImage extends PureComponent {
             backgroundImage: `url('${src}')`
           }}/>
         <Button
+          variant={'text'}
+          color={'primary'}
           component={Link}
           to={to}
           size="medium"

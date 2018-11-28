@@ -15,7 +15,7 @@ import {
   STAGES_TYPES,
   STEPS_VISUALISE
 } from 'constants/shop';
-import { BODY1, H1, H4, H6, SUBHEADING, SUBTITLE2 } from 'constants/typography';
+import { BODY1, BODY2, H1, H4, H6, SUBTITLE1, SUBTITLE2 } from 'constants/typography';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
@@ -26,8 +26,8 @@ import styles from './styles';
 @injectSheet( styles )
 export default class StageCollection extends PureComponent {
   static propTypes = {
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
     cartItems: PropTypes.array.isRequired,
     handleClose: PropTypes.func.isRequired,
   };
@@ -55,9 +55,11 @@ export default class StageCollection extends PureComponent {
 
     const {
       root,
+      commonlabel,
       activelabel,
       passedlabel,
 
+      commonRound,
       activeRound,
       passedRound,
     } = classes;
@@ -67,8 +69,8 @@ export default class StageCollection extends PureComponent {
         <div className={classes.stepperWrapper}>
           <div className={classes.stageWrap}>
 
-            <div className={classNames( classes.stageLabel, label1 )}>
-              <Typography >
+            <div className={classes.stageLabel}>
+              <Typography variant={BODY2} className={label1}>
                 {t( 'cart:Shipping' )}
               </Typography>
             </div>
@@ -77,8 +79,8 @@ export default class StageCollection extends PureComponent {
           </div>
 
           <div className={classes.stageWrap}>
-            <div className={classNames( classes.stageLabel, label2 )}>
-              <Typography >
+            <div className={classes.stageLabel}>
+              <Typography variant={BODY2} className={label2}>
                 {t( 'cart:Payment' )}
               </Typography>
             </div>
@@ -87,8 +89,8 @@ export default class StageCollection extends PureComponent {
           </div>
 
           <div className={classes.stageWrap}>
-            <div className={classNames( classes.stageLabel, label3 )}>
-              <Typography >
+            <div className={classes.stageLabel}>
+              <Typography variant={BODY2} className={label3}>
                 {t( 'cart:Review' )}
               </Typography>
             </div>
@@ -104,11 +106,11 @@ export default class StageCollection extends PureComponent {
       switch ( step ) {
         case STEPS_VISUALISE.SHIPPING:
           return ( stageStepperStyling(
-            activelabel,activeRound
+            activelabel,activeRound,commonlabel,commonRound,commonlabel,commonRound
           ));
         case STEPS_VISUALISE.PAYMENT:
           return ( stageStepperStyling(
-            passedlabel,passedRound,activelabel,activeRound
+            passedlabel,passedRound,activelabel,activeRound,commonlabel,commonRound
           ));
         case STEPS_VISUALISE.REVIEW:
           return ( stageStepperStyling(
@@ -159,7 +161,7 @@ export default class StageCollection extends PureComponent {
 
     return (
 
-      <div>
+      <div className={classes.rootSwipeContainer}>
         <div className={classes.headLine}>
           <div
             onClick={handleClose}
@@ -167,9 +169,7 @@ export default class StageCollection extends PureComponent {
             <ExpandMore
               className={classes.backIcon}
               fontSize='inherit'/>
-            <Typography
-              className={classes.backLabel}
-              variant={H1}>
+            <Typography>
               {'Back to Shop'}
             </Typography>
           </div>
@@ -177,7 +177,7 @@ export default class StageCollection extends PureComponent {
           <div className={classes.interactiveCan}>
             <div className={classes.canNumberWrapper}>
               <Typography
-                variant={SUBHEADING}
+                variant={SUBTITLE1}
                 onClick={this.swapCheckout}
                 className={classes.canNumberLabel}>
                 {'3'}
@@ -190,9 +190,8 @@ export default class StageCollection extends PureComponent {
           </div>
         </div>
 
-        <div className={root}>
-          {stageSwitch( this.state.allowedStage )}
-        </div>
+        {stageSwitch( this.state.allowedStage )}
+
       </div>
     );
   }

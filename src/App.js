@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Router from 'router';
 import Header from 'components/Header';
@@ -7,6 +7,7 @@ import Footer from 'components/Footer';
 import Loading from 'components/Loading';
 import ModalPortals from 'components/ModalsPortal';
 import injectSheet from 'react-jss';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import styles from './styles';
 
@@ -14,13 +15,16 @@ import styles from './styles';
 class App extends Component {
   render() {
     return (
-      <Loading>
-        <Header />
-        <Advertisement />
-        <Router />
-        <Footer />
-        <ModalPortals />
-      </Loading>
+      <Fragment>
+        <CssBaseline />
+        <Loading>
+          <Header />
+          <Advertisement />
+          <Router />
+          <Footer />
+          <ModalPortals />
+        </Loading>
+      </Fragment>
     );
   }
 }

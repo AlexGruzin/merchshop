@@ -1,16 +1,14 @@
-import { LOCATION_CHANGE } from 'react-router-redux';
-import { takeEvery, cancel, call, fork, take, put, select } from 'redux-saga/effects';
-import { push } from 'react-router-redux';
+import { LOCATION_CHANGE } from 'connected-react-router/immutable';
 // constants
 import * as Routes from 'constants/routing';
-//selectors
-import { Selectors as ProfileSelectors } from 'domains/profile';
-// view sagas
-import home from './views/home';
-import authenticate from './views/authenticate';
-
+import { call, cancel, fork, take, takeEvery } from 'redux-saga/effects';
 // init
 import initialize from './initialize';
+import authenticate from './views/authenticate';
+//selectors
+// import { Selectors as ProfileSelectors } from 'domains/profile';
+// view sagas
+import home from './views/home';
 
 const viewSagas = {
   [Routes.AUTHENTICATE]: authenticate,

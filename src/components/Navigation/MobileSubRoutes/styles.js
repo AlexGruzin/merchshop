@@ -1,6 +1,7 @@
 export default function({ colors, breakpoints, palette }) {
   return {
     swipingNavLabel: {
+      textTransform: 'uppercase',
       padding: '5px 0',
     },
 
@@ -11,6 +12,10 @@ export default function({ colors, breakpoints, palette }) {
     mobileSubRouteContainer: {
       width: '100%',
       boxShadow: 'none',
+    },
+
+    textTransform: {
+      textTransform: 'none',
     },
   }
 }

@@ -7,7 +7,7 @@ export default ({ colors, values }) => ({
   title: {
     lineHeight: '64px',
     fontSize: 14,
-    color: colors.GREY800,
+    color: colors.GRAY800,
   },
   close: {
     color: colors.GRAY,

@@ -1,14 +1,30 @@
-import colors from '../../colors';
 import palette from '../../palette';
 
 export default {
-  root: {
-    background: palette.primary.main,
+  textPrimary: {
+    backgroundColor: palette.primary.main,
     color: palette.secondary.main,
-    borderRadius: 0,
+    borderStyle: 'solid',
     '&:hover': {
       backgroundColor: palette.primary.main,
-    },
+      color: palette.secondary.main,
+    }
   },
-  label: {},
+
+  textSecondary: {
+    backgroundColor: palette.secondary.main,
+    color: palette.primary.main,
+    borderRadius: 0,
+    '&:hover': {
+      backgroundColor: palette.secondary.main,
+      color: palette.primary.main,
+    }
+  },
+
+  root: {
+    padding: '12px 16px',
+    borderColor: palette.secondary.main,
+    borderWidth: 1,
+    borderRadius: 0,
+  }
 };

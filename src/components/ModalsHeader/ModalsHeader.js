@@ -10,7 +10,7 @@ import { ICONS } from 'constants/icons';
 export default class ModalsHeader extends PureComponent {
   static propTypes = {
     onCrossIconClick: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
   };
 
   render() {

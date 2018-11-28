@@ -13,6 +13,8 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
+
+import { BODY2, BODY1 } from 'constants/typography';
 import styles from './styles';
 
 @translate()
@@ -22,8 +24,8 @@ export default class MobileSubRoutes extends PureComponent {
     label: PropTypes.string.isRequired,
     subRoutes: PropTypes.array.isRequired,
     opened: PropTypes.bool,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
   };
 
   constructor( props ) {
@@ -57,7 +59,7 @@ export default class MobileSubRoutes extends PureComponent {
           onClick={this.subRouteOpener}>
           <Typography
             className={classNames( classes.swipingNavLabel, classes[label.toLowerCase()])}
-            variant='h5'>
+            variant={BODY2}>
             {t( label )}
           </Typography>
           {open
@@ -76,9 +78,11 @@ export default class MobileSubRoutes extends PureComponent {
             {subRoutes.map(( subLink, index ) => (
               <MobileMenuRoute
                 key={subLink.label}
-                label={t ( subLink.label )}
+                label={t( subLink.label )}
                 route={subLink.route}
-                labelClass={'h4'}/>
+                labelClass={BODY1}
+                className={classes.textTransform}
+              />
             ))}
           </List>
         </Collapse>

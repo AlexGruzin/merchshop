@@ -9,9 +9,9 @@ import { ICONS } from 'constants/icons';
 import {
   BODY1,
   BUTTON,
-  H1,
+  H2,
   H6,
-  SUBHEADING,
+  SUBTITLE1,
   SUBTITLE2
 } from 'constants/typography';
 import PropTypes from 'prop-types';
@@ -25,8 +25,8 @@ import styles from './styles';
 export default class Review extends PureComponent {
   static propTypes = {
     handleSubmit: PropTypes.func.isRequired,
-    classes: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,
+    classes: PropTypes.object,
+    t: PropTypes.func,
 
     cartItems: PropTypes.array.isRequired,
   };
@@ -43,7 +43,7 @@ export default class Review extends PureComponent {
       <div
         className={classes.reviewRoot}>
 
-        <Typography
+        <Typography variant={SUBTITLE2}
           className={classNames( classes.title, classes.bagTitle )}>
           {t( 'checkout:BAG' )}
         </Typography>
@@ -59,7 +59,7 @@ export default class Review extends PureComponent {
         </div>
 
         <div className={classes.infoBlock}>
-          <Typography
+          <Typography variant={SUBTITLE2}
             className={classes.title}>
             {t( 'checkout:CONTACT' )}
           </Typography>
@@ -89,7 +89,7 @@ export default class Review extends PureComponent {
         </div>
 
         <div className={classes.infoBlock}>
-          <Typography
+          <Typography variant={SUBTITLE2}
             className={classes.title}>
             {t( 'checkout:SHIPPING' )}
           </Typography>
@@ -122,14 +122,14 @@ export default class Review extends PureComponent {
             <Icon
               className={classes.giftIcon}
               icon={ICONS.GIFT}/>
-            <Typography className={classes.headingIcon}>
+            <Typography variant={H6}>
               {t( 'checkout:Gift wrapping included' )}
             </Typography>
           </div>
         </div>
 
         <div className={classes.infoBlock}>
-          <Typography
+          <Typography variant={SUBTITLE2}
             className={classes.title}>
             {t( 'checkout:PAYMENT' )}
           </Typography>
@@ -156,7 +156,6 @@ export default class Review extends PureComponent {
               { `${t( 'cart:Subtotal' )}:`}
             </Typography>
             <Typography
-              variant={SUBTITLE2}
               className={classes.cost}>
               {'Rp 798,000'}
             </Typography>
@@ -169,20 +168,19 @@ export default class Review extends PureComponent {
               { `10% ${t( 'cart:Discount' )}:`}
             </Typography>
             <Typography
-              variant={SUBTITLE2}
               className={classes.cost}>
               {'-Rp 79,800'}
             </Typography>
           </div>
 
           <Typography
-            variant={H1}
+            variant={SUBTITLE2}
             className={classes.totalLabel}>
             {`${t( 'cart:Total' )}:`}
           </Typography>
 
           <Typography
-            variant={H1}
+            variant={H2}
             className={classes.totalSum}>
             {'Rp 718,200'}
           </Typography>

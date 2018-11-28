@@ -11,7 +11,7 @@ import styles from './styles';
 export default class Collection extends PureComponent {
 
   static propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object,
     pageCount: PropTypes.number.isRequired,
     marginPages: PropTypes.number.isRequired,
     pageRange: PropTypes.number.isRequired,
