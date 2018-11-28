@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import styles from './styles';
 import ModalsHeader from 'components/ModalsHeader';
 
-import { HEADLINE, CAPTION, BUTTON } from 'constants/typography';
+import { H3, H6, BUTTON, SECONDARY, PRIMARY } from 'constants/typography';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
@@ -43,35 +43,39 @@ export default class ForgotPasswordModal extends PureComponent {
 
           <div className={classes.rootLogRequest}>
 
-            <Typography
+            <Typography variant={H3}
               className={classes.bigDescription}>
               {t( 'cart:Lorem ipsum dolor sit \n amet, aperiam posidonium \n scripserit' )}
             </Typography>
 
             <div className={classes.buttonWrapper}>
 
-              <Button
+              <Button color={PRIMARY}
+                className={classes.logButton}
                 onClick={() => {
                   closeModal();
                   openSignUpModal();
-                }}
-                className={classes.signButton}>
-                {t( 'checkout:SIGN UP' )}
+                }}>
+                <Typography variant={BUTTON}>
+                  {t( 'checkout:SIGN UP' )}
+                </Typography>
               </Button>
 
-              <Button
+              <Button color={SECONDARY}
+                className={classes.logButton}
                 onClick={() => {
                   closeModal();
                   openLogInModal();
-                }}
-                className={classes.logButton}>
-                {t( 'checkout:LOG IN' )}
+                }}>
+                <Typography variant={BUTTON}>
+                  {t( 'checkout:LOG IN' )}
+                </Typography>
               </Button>
             </div>
 
             <Typography
               className={classes.orBlock}
-              variant={CAPTION}>
+              variant={H6}>
               {'or'}
             </Typography>
 
@@ -81,7 +85,7 @@ export default class ForgotPasswordModal extends PureComponent {
                 type="submit"
                 className={classes.facebookButton}>
                 <Icon icon={ICONS.FACEBOOK_ICON} className={classes.smallIconSearch}/>
-                <Typography className={classes.label} variant={BUTTON}>
+                <Typography className={classes.label}>
                   {t( 'checkout:CONNECT WITH FACEBOOK' )}
                 </Typography>
               </Button>
@@ -89,8 +93,8 @@ export default class ForgotPasswordModal extends PureComponent {
               <Button
                 type="submit"
                 className={classes.googleButton}>
-                <Icon icon={ICONS.GOO} className={classes.smallIconSearch}/>
-                <Typography className={classes.label} variant={BUTTON}>
+                <Icon icon={ICONS.GOOGLE} className={classes.smallIconSearch}/>
+                <Typography className={classes.label}>
                   {t( 'checkout:CONNECT WITH GOOGLE' )}
                 </Typography>
               </Button>

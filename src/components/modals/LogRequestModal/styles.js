@@ -10,14 +10,8 @@ export default function({ breakpoints, palette, colors, values }) {
     },
 
     bigDescription: {
-      fontFamily: 'HelveticaNeue-Light',
-      fontSize: '20px',
-      fontWeight: '300',
-      letterSpacing: '0.8px',
       alignSelf: 'center',
       textAlign: 'center',
-
-      width: '257px',
       marginBottom: '25px',
 
       whiteSpace: 'pre-line',
@@ -36,6 +30,7 @@ export default function({ breakpoints, palette, colors, values }) {
 
     orBlock: {
       margin: '20px 0',
+      textTransform: 'none',
     },
 
     signButton: {
@@ -48,9 +43,7 @@ export default function({ breakpoints, palette, colors, values }) {
     },
 
     logButton: {
-      width: '100%',
-      color: colors.WHITE,
-      background: colors.BLACK,
+      marginTop: '7px',
     },
 
     facebookButton: {

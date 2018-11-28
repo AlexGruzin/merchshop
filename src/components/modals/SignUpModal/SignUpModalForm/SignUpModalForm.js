@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
 
+import { H3, H6, BUTTON, SECONDARY } from 'constants/typography';
+
 @translate()
 @injectSheet( styles )
 export default class LogInModalForm extends PureComponent {
@@ -33,21 +35,18 @@ export default class LogInModalForm extends PureComponent {
         className={classes.root}
         onSubmit={handleSubmit}>
 
-        <Typography
-          className={classes.bigDescription}>
+        <Typography variant={H3} className={classes.bigDescription}>
           {t( 'auth:Sign up and save your \n details for faster checkout!' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'checkout:First Name' )}
           </Typography>
           <Field
             validate={[required]}
             name="firstName"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}
             props={{
               type: 'email',
@@ -55,29 +54,25 @@ export default class LogInModalForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'auth:Last Name' )}
           </Typography>
           <Field
             validate={[required]}
             name="lastName"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
 
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'checkout:Email' )}
           </Typography>
           <Field
             validate={[required]}
             name="email"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}
             props={{
               type: 'email',
@@ -85,20 +80,18 @@ export default class LogInModalForm extends PureComponent {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'auth:Password' )}
           </Typography>
           <Field
             validate={[required]}
             name="password"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
 
 
-        <Button
+        <Button color={SECONDARY}
           type="submit"
           className={classes.submitButton}>
           {t( 'auth:SIGN UP' )}
@@ -107,8 +100,7 @@ export default class LogInModalForm extends PureComponent {
         <Link
           className={classes.bottomLink}
           to={''}>
-          <Typography
-            className={classes.link}>
+          <Typography className={classes.link}>
             {t( 'auth:ALREADY HAVE AN ACCOUNT? LOG IN!' )}
           </Typography>
         </Link>

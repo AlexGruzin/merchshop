@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
 
+import { H3, H6, BUTTON, SECONDARY } from 'constants/typography';
+
 @translate()
 @injectSheet( styles )
 export default class LogInModalForm extends PureComponent {
@@ -33,51 +35,47 @@ export default class LogInModalForm extends PureComponent {
         className={classes.root}
         onSubmit={handleSubmit}>
 
-        <Typography
-          className={classes.bigDescription}>
+        <Typography variant={H3} className={classes.bigDescription}>
           {t( 'auth:Welcome back!' )}
         </Typography>
 
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'checkout:Email' )}
           </Typography>
           <Field
             validate={[required]}
             name="email"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}
             props={{
               type: 'email',
             }}/>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <Typography className={classes.heading}>
+          <Typography variant={H6} className={classes.heading}>
             {t( 'auth:Password' )}
           </Typography>
           <Field
             validate={[required]}
             name="password"
-            disableUnderline
             className={classes.field}
-            inputClassName={classes.input}
             component={TextInput}/>
         </FormControl>
 
 
-        <Button
+        <Button color={SECONDARY}
           type="submit"
           className={classes.submitButton}>
-          {t( 'auth:LOG IN' )}
+          <Typography variant={BUTTON}>
+            {t( 'auth:LOG IN' )}
+          </Typography>
         </Button>
 
         <Link
           className={classes.bottomLink}
           to={''}>
-          <Typography
-            className={classes.link}>
+          <Typography variant={BUTTON}>
             {t( 'auth:NEW HERE? SIGN UP!' )}
           </Typography>
         </Link>
