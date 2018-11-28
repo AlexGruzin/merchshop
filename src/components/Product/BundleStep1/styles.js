@@ -18,7 +18,8 @@ export default function({ colors, values, breakpoints, palette }) {
 
       [breakpoints.up( 'sm' )]: {
         width: '50%',
-        padding: '40px 8%',
+        padding: '40px 40px',
+        justifyContent: 'center',
       },
     },
 
@@ -37,7 +38,6 @@ export default function({ colors, values, breakpoints, palette }) {
     infoBlock: {
       display: 'flex',
       flexDirection: 'column',
-      //flexGrow: 1,
       margin: '0 17px',
 
       [breakpoints.up( 'sm' )]: {
@@ -63,7 +63,6 @@ export default function({ colors, values, breakpoints, palette }) {
     expandedBlock: {
       display: 'flex',
       flexWrap: 'wrap',
-      //flexGrow: 1,
 
       boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
     },

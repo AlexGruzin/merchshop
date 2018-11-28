@@ -2,11 +2,9 @@ export default function({ colors, values, breakpoints, palette }) {
   return {
     sliderContainer: {
       position: 'relative',
-
+      width: '425px',
       display: 'flex',
-      height: '325px',
       flexDirection: 'column',
-      width: '100%',
       justifyContent: 'center',
     },
 
@@ -28,6 +26,10 @@ export default function({ colors, values, breakpoints, palette }) {
       overflow: 'hidden',
       position: 'relative',
       width: '100%',
+
+      [breakpoints.up( 'sm' )]: {
+        height: '425px',
+      },
     },
 
     SliderImage: {
@@ -75,6 +77,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     leftArrow: {
+      marginLeft: '3%',
       display: 'flex',
       left: 0,
       position: 'absolute',
@@ -82,6 +85,7 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     rightArrow: {
+      marginRight: '3%',
       display: 'flex',
       right: 0,
       position: 'absolute',

@@ -17,7 +17,8 @@ export default function({ colors, values, breakpoints, palette }) {
 
       [breakpoints.up( 'sm' )]: {
         width: '50%',
-        padding: '40px 8%',
+        padding: '40px 40px',
+        justifyContent: 'center',
       },
     },
 
