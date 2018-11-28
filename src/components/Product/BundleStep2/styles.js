@@ -106,7 +106,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       alignSelf: 'center',
       justifySelf: 'flex-end',
-      margin: '0 5px 0 20px',
+      margin: '0 3px 0 18px',
     },
 
     guideLabel: {
@@ -116,6 +116,7 @@ export default function({ colors, values, breakpoints, palette }) {
       textAlign: 'center',
 
       textDecoration: 'underline',
+      whiteSpace: 'nowrap',
     },
 
     buttonWrapper: {

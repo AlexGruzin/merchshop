@@ -26,6 +26,9 @@ export default function({ colors, values, breakpoints, palette }) {
         flexDirection: 'row',
         flexWrap: 'wrap',
       },
+      [breakpoints.down( 'sm' )]: {
+        flexDirection: 'column',
+      },
     },
 
     rightSide: {
