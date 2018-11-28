@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import classNames from 'classnames'
 import Typography from '@material-ui/core/Typography';
+import ImagePagination from './ImagePagination';
 import Checkbox from '@material-ui/core/Checkbox';
 
 import SwipeableViews from 'react-swipeable-views';
@@ -117,6 +118,7 @@ export default class ProductSlider extends React.Component {
       classes,
       images,
       liked,
+      paginationType,
     } = this.props;
 
     const {
@@ -150,25 +152,38 @@ export default class ProductSlider extends React.Component {
           checkedIcon={<Icon icon={ICONS.LIKE_ENABLED} className={likeEnabled}/>}
         />
 
-        <div className={classes.sliderIndicatorContainer}>
-          {
-            images.map(( item, index ) => {
-              return(
-                <div
-                  key={index}
-                  className={classes.sliderIndicatorButton}
-                  onClick={() => this.handleChangeIndex( index )}>
+        {paginationType === 'dots'
+          ? <div className={classes.sliderIndicatorContainer}>
+            {
+              images.map(( item, index ) => {
+                return(
                   <div
-                    className={classNames(
-                      classes.indicator,
-                      index === this.state.index ? classes.activated : classes.disactivated,
-                    )}
-                  />
-                </div>
+                    key={index}
+                    className={classes.sliderIndicatorButton}
+                    onClick={() => this.handleChangeIndex( index )}>
+                    <div
+                      className={classNames(
+                        classes.indicator,
+                        index === this.state.index ? classes.activated : classes.disactivated,
+                      )}
+                    />
+                  </div>
+                )}
+              )
+            }
+          </div>
+          :  <div className={classes.previewContainer}>
+            {images.map((url, index ) =>
+              <ImagePagination
+                width={`${Math.round( 100 / images.length )}%`}
+                i={index}
+                key={index}
+                active={this.state.index === index}
+                url={url}
+                onClick={this.handleChangeIndex} />
               )}
-            )
-          }
-        </div>
+          </div>
+        }
 
         <div onClick={() => this.moveLeft( index )}
           className={classes.leftArrow}>

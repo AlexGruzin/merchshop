@@ -29,7 +29,7 @@ export default function({ colors, values, breakpoints, palette }) {
       [breakpoints.up( 'sm' )]: {
         width: '50%',
         paddingTop: '20px',
-        paddingRight: '1%',
+        paddingRight: '4%',
       },
     },
 

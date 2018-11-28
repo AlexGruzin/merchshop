@@ -168,6 +168,46 @@ export default function({ colors, values, breakpoints, palette }) {
       marginRight: '3vw',
     },
 
+    // imagePagination
 
+    previewContainer: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      padding: '0 1.5px',
+      marginTop: 3
+    },
+
+    preview: {
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%',
+    },
+
+    previewWrapper: {
+      height: 0,
+      position: 'relative',
+      margin: '0 1.5px 4px',
+      cursor: 'pointer'
+    },
+
+    previewActive: {
+      '&::after': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        backgroundColor: '#fff',
+        opacity: 0.3,
+        pointerEvents: 'none',
+        width: '100%',
+        height: '100%'
+      }
+    }
   }
 }

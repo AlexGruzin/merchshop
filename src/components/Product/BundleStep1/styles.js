@@ -3,10 +3,21 @@ export default function({ colors, values, breakpoints, palette }) {
 
     root: {
       display: 'flex',
+      flexDirection: 'column',
+
+      [breakpoints.up( 'sm' )]: {
+        marginBottom: '100px'
+      },
+      [breakpoints.down( 'sm' )]: {
+
+      },
+    },
+
+    rootRow: {
+      display: 'flex',
 
       [breakpoints.up( 'sm' )]: {
         flexDirection: 'row',
-        marginBottom: '100px'
       },
       [breakpoints.down( 'sm' )]: {
         flexDirection: 'column',
@@ -15,6 +26,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     leftSide: {
       display: 'flex',
+      alignItems: 'flex-start',
 
       [breakpoints.up( 'sm' )]: {
         width: '50%',
@@ -30,7 +42,7 @@ export default function({ colors, values, breakpoints, palette }) {
       [breakpoints.up( 'sm' )]: {
         width: '50%',
         paddingTop: '20px',
-        paddingRight: '1%',
+        paddingRight: '4%',
       },
     },
 
@@ -121,10 +133,23 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     reviewsCount: {
-
-      fontFamily: 'HelveticaNeue-Bold',
-      fontSize: '11px',
       marginLeft: '5px',
+    },
+
+    videoWrapper: {
+      padding: '7px 0',
+
+      [breakpoints.up( 'sm' )]: {
+        marginTop: '18px',
+        marginBottom: '34px',
+      }
+    },
+
+    videoInnerWrapper: {
+      paddingTop: '56.25%',
+      height: 0,
+      width: '100%',
+      position: 'relative'
     },
   };
 }

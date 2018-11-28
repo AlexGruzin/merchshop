@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 import PropTypes from 'prop-types';
+import ReactPlayer from "react-player";
 import history from 'store/history';
 import classNames from 'classnames';
 
@@ -112,103 +113,120 @@ export default class BundleStep1 extends PureComponent {
     return (
       <div className={root}>
 
-        <div className={classes.leftSide}>
-          <ProductSlider
-            images={productImages}/>
+        <div className={classes.rootRow}>
+          <div className={classes.leftSide}>
+            <ProductSlider
+              paginationType="dots"
+              images={productImages}/>
+          </div>
+
+          <div className={classes.rightSide}>
+            <div className={classes.infoBlock}>
+
+              <Typography
+                variant={H3}
+                className={classes.productLabel}>
+                {label}
+              </Typography>
+
+              <Typography
+                variant={H5}
+                className={classes.cost}>
+                {`Rp ${cost}`}
+              </Typography>
+
+              <Button
+                onClick={ () => customSubmit( CREATE_BUNDLE_STEPS.ITEM_CONFIGURATION ) }
+                className={classes.buildButton}>
+                {t( 'product:BUILD YOUR BUNDLE' )}
+              </Button>
+            </div>
+
+            <div className={classes.expandedBlock}>
+
+              <div className={classes.expandHead}>
+                <Typography
+                  variant={H6}
+                  className={classes.category}>
+                  {t( 'Description' )}
+                </Typography>
+
+                <Checkbox
+                  onChange={this.descriptionOpener}
+                  className={classes.expandSwitch}
+                  icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                  checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
+                />
+              </div>
+
+              {collapseContainer( this.state.openDescription, description )}
+
+            </div>
+
+            <div className={classes.expandedBlock}>
+
+              <div className={classes.expandHead}>
+                <Typography
+                  variant={H6}
+                  className={classes.category}>
+                  {t( 'What`s inside' )}
+                </Typography>
+
+                <Checkbox
+                  onChange={this.composeOpener}
+                  className={classes.expandSwitch}
+                  icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                  checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/> }
+                />
+              </div>
+
+              {collapseContainer( this.state.openCompose, compose )}
+
+            </div>
+
+            <div className={classes.expandedBlock}>
+
+              <div className={classes.expandHead}>
+                <Typography variant={H6}
+                            className={classes.category}>
+                  {t( 'Reviews' )}
+                </Typography>
+
+                <StarRate className={classes.rateStars} rate={4}/>
+
+                <Typography className={classes.reviewsCount} variant={SUBTITLE1}>{reviewsAmount}</Typography>
+
+                <Checkbox
+                  onChange={this.reviewsOpener}
+                  className={classes.expandSwitch}
+                  icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
+                  checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
+                />
+              </div>
+
+              {collapseContainer( this.state.openReview, <ProductRating rateData={rateData}/> )}
+
+            </div>
+
+            <div className={classes.videoWrapper}>
+              <div className={classes.videoInnerWrapper}>
+                <ReactPlayer url={'https://youtu.be/x5Kw_R6PjH8'} width={'100%'} height={'100%'} style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0
+                }} />
+              </div>
+
+            </div>
+
+          </div>
         </div>
 
-        <div className={classes.rightSide}>
-          <div className={classes.infoBlock}>
 
-            <Typography
-              variant={H3}
-              className={classes.productLabel}>
-              {label}
-            </Typography>
 
-            <Typography
-              variant={H5}
-              className={classes.cost}>
-              {`Rp ${cost}`}
-            </Typography>
-
-            <Button
-              onClick={ () => customSubmit( CREATE_BUNDLE_STEPS.ITEM_CONFIGURATION ) }
-              className={classes.buildButton}>
-              {t( 'product:BUILD YOUR BUNDLE' )}
-            </Button>
-          </div>
-
-          <div className={classes.expandedBlock}>
-
-            <div className={classes.expandHead}>
-              <Typography
-                variant={H6}
-                className={classes.category}>
-                {t( 'Description' )}
-              </Typography>
-
-              <Checkbox
-                onChange={this.descriptionOpener}
-                className={classes.expandSwitch}
-                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
-              />
-            </div>
-
-            {collapseContainer( this.state.openDescription, description )}
-
-          </div>
-
-          <div className={classes.expandedBlock}>
-
-            <div className={classes.expandHead}>
-              <Typography
-                variant={H6}
-                className={classes.category}>
-                {t( 'What`s inside' )}
-              </Typography>
-
-              <Checkbox
-                onChange={this.composeOpener}
-                className={classes.expandSwitch}
-                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/> }
-              />
-            </div>
-
-            {collapseContainer( this.state.openCompose, compose )}
-
-          </div>
-
-          <div className={classes.expandedBlock}>
-
-            <div className={classes.expandHead}>
-              <Typography variant={H6}
-                className={classes.category}>
-                {t( 'Reviews' )}
-              </Typography>
-
-              <StarRate className={classes.rateStars} rate={4}/>
-
-              <Typography className={classes.reviewsCount} variant={SUBTITLE1}>{reviewsAmount}</Typography>
-
-              <Checkbox
-                onChange={this.reviewsOpener}
-                className={classes.expandSwitch}
-                icon={<Icon icon={ICONS.PLUS} className={expandedIcon}/>}
-                checkedIcon={<Icon icon={ICONS.MINUS} className={pandedIcon}/>}
-              />
-            </div>
-
-            {collapseContainer( this.state.openReview, <ProductRating rateData={rateData}/> )}
-
-          </div>
-
-          {/*<SellingRow*/}
-            {/*title={'product:You may also like'}*/}
-            {/*bestSellers={sellers} />*/}
-        </div>
+        <SellingRow
+          title={'product:You may also like'}
+          bestSellers={sellers} />
       </div>
     );
   }

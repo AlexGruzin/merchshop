@@ -140,7 +140,7 @@ export default class BundleStep2 extends PureComponent {
 
               <Link to={'size_guide'} className={classes.guideLabel}>
                 <Typography variant={H6}>
-                  {t( 'product:Size Guide' )}
+                  {t( 'product:SizeGuide' )}
                 </Typography>
               </Link>
             </div>
