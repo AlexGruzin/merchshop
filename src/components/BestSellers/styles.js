@@ -26,6 +26,6 @@ export default ({ values, breakpoints }) => ({
   },
   title: {
     margin: `${values.SMALL_RELATIVE_SIZE} 30px`,
-    fontWeight: 700,
+    fontSize: values.EXTRA_GIANT_FONT_SIZE,
   }
 });

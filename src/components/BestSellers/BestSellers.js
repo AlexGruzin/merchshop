@@ -87,7 +87,7 @@ export default class BestSellers extends PureComponent {
 
     return (
       <div className={classes.bestSellers}>
-        <Typography variant={typography.H3} className={classes.title}>{t( 'homePage:bestSellers' )}</Typography>
+        <Typography variant={typography.H5} className={classes.title}>{t( 'homePage:bestSellers' )}</Typography>
         {this.renderSlider( bestSellers )}
       </div>
     );
