@@ -3,14 +3,63 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       display: 'flex',
       flexDirection: 'column',
-      width: '90%',
+      width: '100%',
       margin: '0 5%',
+      marginBottom: '5%',
 
+      [breakpoints.up( 'sm' )]: {
+        margin: '0 2%',
+        marginBottom: '2%',
+      },
+    },
+
+    blocksContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+
+      [breakpoints.up( 'sm' )]: {
+        alignItems: 'flex-end',
+      },
+
+      [breakpoints.down( 'sm' )]: {
+        flexDirection: 'column',
+      },
+    },
+
+    filterBlock: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginRight: '40px',
+      marginBottom: '15px',
+    },
+
+    selectBlock: {
+      width: '34%',
+
+      [breakpoints.down( 'sm' )]: {
+        width: '100%',
+      },
+    },
+
+    colorBlock: {
+      width: '40%',
+
+      [breakpoints.down( 'sm' )]: {
+        width: '100%',
+      },
+    },
+
+    sizeBlock: {
+      width: '26%',
+
+      [breakpoints.down( 'sm' )]: {
+        width: '100%',
+      },
     },
 
     dropDownField: {
+      width: '100%',
       height: '40px',
-      marginBottom: '15px',
     },
 
     colorLabel: {
@@ -21,7 +70,6 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginBottom: '15px',
     },
 
     dotWrapper: {
@@ -35,7 +83,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     sizesWrapper: {
       display: 'flex',
-      marginBottom: '15px',
     },
 
     size: {
@@ -57,6 +104,11 @@ export default function({ colors, values, breakpoints, palette }) {
     buttonWrapper: {
       display: 'flex',
       marginTop: '15px',
+
+      [breakpoints.up( 'sm' )]: {
+        alignSelf: 'center',
+        width: '30%',
+      },
     },
 
     filterButton: {

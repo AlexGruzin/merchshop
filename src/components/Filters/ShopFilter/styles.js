@@ -90,10 +90,12 @@ export default function({ colors, values, breakpoints, palette }) {
     absoluteBlock: {
       display: 'flex',
       position: 'absolute',
-      height: '300px',
+
       width: '100%',
       background: colors.WHITE,
       boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2)',
+
+
     },
   }
 }

@@ -50,62 +50,75 @@ export default class FilterForm extends PureComponent {
         className={root}
         onSubmit={handleSubmit}>
 
-        <Field
-          name="filterSortBy"
-          component={DropdownSelect}
-          props={{
-            className: classes.dropDownField,
-            value: '',
-            placeholder: 'Sort By: Top Rated',
-          }}
-        >
-          {[{ name: `Sort By: Top Rated` }]}
-        </Field>
 
-        <Typography
-          className={classes.colorLabel}
-          variant={H6}>
-          {`${t( 'filter:Colors' )}:`}
-        </Typography>
+        <div className={classes.blocksContainer}>
 
-        <div className={classes.dotsWrapper}>
-          {
-            TRACKED_COLORS.map(( item )=> {
+          <div className={classNames(classes.filterBlock, classes.selectBlock)}>
+            <Field
+              name="filterSortBy"
+              component={DropdownSelect}
+              props={{
+                className: classes.dropDownField,
+                value: '',
+                placeholder: 'Sort By: Top Rated',
+              }}
+            >
+              {[{ name: `Sort By: Top Rated` }]}
+            </Field>
+          </div>
 
-              return(
-                <FormControl key={item.color} className={dotWrapper}>
-                  <Field
-                    name={`color_${item.color}`}
-                    component={ColorPick}
-                    props={{
-                      color: item.color,
-                      cursor: item.cursor,
-                      modificator: item.modificator,
-                    }}
-                  />
-                </FormControl>
-              )}
-            )
-          }
+          <div className={classNames(classes.filterBlock, classes.colorBlock)}>
+
+            <Typography
+              className={classes.colorLabel}
+              variant={H6}>
+              {`${t( 'filter:Colors' )}:`}
+            </Typography>
+
+            <div className={classes.dotsWrapper}>
+              {
+                TRACKED_COLORS.map(( item )=> {
+
+                  return(
+                    <FormControl key={item.color} className={dotWrapper}>
+                      <Field
+                        name={`color_${item.color}`}
+                        component={ColorPick}
+                        props={{
+                          color: item.color,
+                          cursor: item.cursor,
+                          modificator: item.modificator,
+                        }}
+                      />
+                    </FormControl>
+                  )}
+                )
+              }
+            </div>
+          </div>
+
+          <div className={classNames(classes.filterBlock, classes.sizeBlock)}>
+
+            <Typography
+              className={classes.sizesLabel}
+              variant={H6}>
+              {`${t( 'filter:Sizes' )}:`}
+            </Typography>
+
+            <div className={classes.sizesWrapper}>
+              {
+                TRACKED_SIZES.map(( item )=> (
+
+                  <div key={item.size} className={classes.size}>
+                    <SizePick
+                      label={item.size}
+                    />
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
 
-        <Typography
-          className={classes.sizesLabel}
-          variant={H6}>
-          {`${t( 'filter:Sizes' )}:`}
-        </Typography>
-
-        <div className={classes.sizesWrapper}>
-          {
-            TRACKED_SIZES.map(( item )=> (
-
-              <div key={item.size} className={classes.size}>
-                <SizePick
-                  label={item.size}
-                />
-              </div>
-            ))}
-        </div>
 
         <div className={classes.buttonWrapper}>
           <Button color={SECONDARY}
