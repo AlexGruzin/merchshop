@@ -1,3 +1,5 @@
+import colors from '../../colors';
+
 export default {
   root: {
     '& $notchedOutline': {
@@ -6,7 +8,7 @@ export default {
     },
     '&$focused': {
       '& $notchedOutline': {
-        borderColor: 'black',
+        borderColor: colors.BLACK_BORDER,
         borderRadius: 0,
         borderWidth: 1
       }

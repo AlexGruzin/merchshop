@@ -1,5 +1,6 @@
 import Hidden from '@material-ui/core/Hidden';
 // components
+import ShopFilter from 'components/Filters/ShopFilter';
 import Collection from 'components/ShopStash/Collection';
 import Pagination from 'components/ShopStash/Pagination';
 import StashedProduct from 'components/ShopStash/StashedProduct';
@@ -23,12 +24,14 @@ export default class ShopPage extends PureComponent {
   static propTypes = {
     t: PropTypes.func,
     classes: PropTypes.object,
+    handleFilterSubmit: PropTypes.func.isRequired,
   };
 
   render() {
     const {
       t,
       classes,
+      handleFilterSubmit,
     } = this.props;
 
     return (
@@ -37,6 +40,15 @@ export default class ShopPage extends PureComponent {
         {/* DESKTOP */}
         <Hidden smDown>
           <div className={classes.shopContainer}>
+
+            <ShopFilter
+              initProductType={ PRODUCT_TYPES.ALL }
+              handleSubmit={  // Should be 'onSubmit' when store connected
+                ( values )=>{handleFilterSubmit}
+              }
+              viewMode={COLLECTION_VIEW_MODES.SINGLE}
+            />
+
             <Collection
               items={ShopItems}
               ProductRenderingComponent={StashedProduct}
@@ -55,6 +67,16 @@ export default class ShopPage extends PureComponent {
         <Hidden mdUp>
 
           <div className={classes.mobileShopContainer}>
+
+            <div className={classes.filterPart}>
+              <ShopFilter
+                initProductType={ PRODUCT_TYPES.ALL }
+                handleSubmit={  // Should be 'onSubmit' when store connected
+                  ( values )=>{handleFilterSubmit}
+                }
+                viewMode={COLLECTION_VIEW_MODES.MULTI}
+              />
+            </div>
 
             <div className={classes.mobileItemsPart}>
               <Collection

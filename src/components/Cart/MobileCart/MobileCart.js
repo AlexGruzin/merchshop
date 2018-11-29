@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import CartItem from 'components/Cart/CartItem';
 import { ICONS } from 'constants/icons';
 
-import { productsFilter, productTypes } from 'constants/shop';
+import { PRODUCTS_FILTER, productTypes } from 'constants/shop';
 import {
   H2,
   H4,

@@ -4,7 +4,7 @@ import Remove from '@material-ui/icons/Remove';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
-import { productsFilter, productTypes } from 'constants/shop';
+import { PRODUCTS_FILTER, productTypes } from 'constants/shop';
 
 import { CAPTION, H1, H4, SUBTITLE1, BODY2 } from 'constants/typography';
 import PropTypes from 'prop-types';
