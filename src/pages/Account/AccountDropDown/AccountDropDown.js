@@ -88,8 +88,7 @@ export default class AccountDropDown extends PureComponent {
                   {t( currentLabel )}
                 </Typography>
 
-                <Icon className={classes.droppIcon}
-                  icon={ICONS.EXPAND}/>
+                <Icon className={classes.dropIcon} icon={ICONS.EXPAND_DOWN}/>
               </div>
 
               <div className={classes.ExpandedSubRoutesContainer}>

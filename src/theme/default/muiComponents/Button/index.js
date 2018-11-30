@@ -1,10 +1,17 @@
 import palette from '../../palette';
+import colors from '../../colors';
 
 export default {
+
   textPrimary: {
-    backgroundColor: palette.primary.main,
     color: palette.secondary.main,
+    backgroundColor: palette.primary.main,
+
+    borderWidth: '1px',
     borderStyle: 'solid',
+    borderRadius: 0,
+    borderColor: colors.BLACK_BORDER,
+
     '&:hover': {
       backgroundColor: palette.primary.main,
       color: palette.secondary.main,
@@ -12,19 +19,18 @@ export default {
   },
 
   textSecondary: {
-    backgroundColor: palette.secondary.main,
     color: palette.primary.main,
-    borderRadius: 0,
+    backgroundColor: palette.secondary.main,
+
     '&:hover': {
-      backgroundColor: palette.secondary.main,
-      color: palette.primary.main,
+      backgroundColor: palette.primary.main,
+      color: palette.secondary.main,
     }
   },
 
   root: {
-    padding: '12px 16px',
-    borderColor: palette.secondary.main,
-    borderWidth: 1,
+    padding: '10px 16px',
+
     borderRadius: 0,
   }
 };

@@ -13,12 +13,4 @@ export default ({ colors }) => ({
   errorClass: {
     borderColor: colors.CORAL,
   },
-
-  input: {
-    height: '40px',
-
-    fontFamily: 'Avenir',
-    fontSize: '14px',
-    letterSpacing: '0.5px',
-  }
 });

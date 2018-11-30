@@ -78,17 +78,12 @@ export default function({ colors, values, breakpoints, palette }) {
     addCardButton: {
       display: 'flex',
       flexGrow: '1',
-      height: '40px',
-      background: colors.BLACK,
-      color: colors.WHITE,
       margin: '25px 17px',
     },
 
     savedButton: {
       display: 'flex',
       flexGrow: '1',
-      height: '40px',
-      border: `1px solid ${colors.BLACK}`,
       margin: '25px 17px',
     },
 

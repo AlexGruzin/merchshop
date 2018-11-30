@@ -1,8 +1,6 @@
 export default function({ colors, values, breakpoints, palette }) {
   return {
-    root: {
-
-    },
+    root: {},
 
     // ----------- mobile ----------
 
@@ -38,8 +36,7 @@ export default function({ colors, values, breakpoints, palette }) {
     ButtonWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      padding: '0 17px',
-      margin: 'auto 0',
+      padding: `10px ${values.MOBILE_SIDE_PADDING}`,
     },
 
     Button: {
@@ -49,9 +46,9 @@ export default function({ colors, values, breakpoints, palette }) {
 
     ButtonLabel: {},
 
-    droppIcon: {
+    dropIcon: {
       margin: 'auto 5px',
-      fontSize: '4px',
+      fontSize: values.EXPAND_ICON_SIZE,
     },
 
     // ---- expanded part ----

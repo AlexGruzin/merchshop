@@ -63,9 +63,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     addCardButton: {
       display: 'flex',
-      height: '40px',
-      background: colors.BLACK,
-      color: colors.WHITE,
       margin: '15px 17px',
       marginTop: 'auto',
 

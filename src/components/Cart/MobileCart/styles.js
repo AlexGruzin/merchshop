@@ -58,8 +58,6 @@ export default function({ colors, values, breakpoints, palette }) {
     applyWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      border: '1px solid',
-      height: '40px',
       margin: '0 15px',
       marginTop: '30px',
     },
@@ -79,9 +77,6 @@ export default function({ colors, values, breakpoints, palette }) {
     checkoutButton: {
       display: 'flex',
       flexGrow: '1',
-      maxHeight: '40px',
-      background: colors.BLACK,
-      color: colors.WHITE,
       margin: '0 15px',
       marginTop: '15px',
     },

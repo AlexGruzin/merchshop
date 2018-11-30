@@ -12,8 +12,6 @@ export default function({ colors, values, breakpoints, palette }) {
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
-      height: '40px',
-      border: `1px solid ${colors.GRAY400}`,
       color: colors.GRAY400,
       fontSize: values.GIANT_FONT_SIZE,
 
@@ -70,8 +68,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     submitButton: {
       width: '100%',
-      height: '40px',
-      background: colors.BLACK,
       color: colors.WHITE,
       marginTop: '30px',
       marginBottom: '5px',
