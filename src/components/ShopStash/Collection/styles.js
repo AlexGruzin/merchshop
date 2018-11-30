@@ -1,8 +1,18 @@
 export default function({ colors, palette, breakpoints, values }) {
   return {
+
     root: {
       display: 'flex',
       width: '100%',
+    },
+
+    itemsWrapper: {
+      display: 'flex',
+      position: 'relative',
+      justifyContent: 'flex-start',
+      WebkitFlexWrap: 'wrap',
+      flexWrap: 'wrap',
+      marginLeft: '85px',
     },
 
     itemWrapper: {

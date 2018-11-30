@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { H1, H4, H6, SUBTITLE1, CAPTION } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter } from 'constants/shop';
+import { PRODUCT_TYPES, productsFilter } from 'constants/shop';
 import { ICONS } from 'constants/icons';
 
 @translate()

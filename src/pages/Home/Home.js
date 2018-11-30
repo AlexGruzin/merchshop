@@ -7,7 +7,7 @@ import injectSheet from 'react-jss';
 // components
 import SwipeableSlider from 'components/SwipeableSlider';
 import Shops from 'components/Shops';
-import BestSellers from 'components/BestSellers';
+import SellingRow from 'components/SellingRow';
 import InstagramAdv from 'components/InstagramAdv';
 
 // constants
@@ -51,7 +51,9 @@ export default class Home extends PureComponent {
 
         <Shops />
 
-        <BestSellers bestSellers={sellers} />
+        <SellingRow
+          title={'homePage:bestSellers'}
+          bestSellers={sellers} />
 
         <InstagramAdv images={InstagramImages} />
 
