@@ -79,6 +79,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     backLink: {
       textDecoration: 'none',
+      padding: '10px',
     },
 
     backLabel: {},

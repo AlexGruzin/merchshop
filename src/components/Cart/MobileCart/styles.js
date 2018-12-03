@@ -66,12 +66,12 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexGrow: '4',
       background: colors.WHITE,
+      border: `1px solid black`,
     },
 
     applyButton: {
       display: 'flex',
       flexGrow: '1',
-      borderLeft: '1px solid',
     },
 
     checkoutButton: {

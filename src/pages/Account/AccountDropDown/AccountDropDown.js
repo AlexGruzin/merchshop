@@ -41,7 +41,7 @@ export default class AccountDropDown extends PureComponent {
       <div className={classes.root}>
 
         {/* DESKTOP */}
-        <Hidden xsDown>
+        <Hidden smDown>
           <div className={classes.smDown}>
 
             <div className={classes.welcomeContainer}>
@@ -77,11 +77,11 @@ export default class AccountDropDown extends PureComponent {
         </Hidden>
 
         {/* MOBILE */}
-        <Hidden smUp>
+        <Hidden mdUp>
           <div className={classes.mdUp}>
 
             <div className={classes.dropButtonContainer}>
-              <div className={classes.ButtonWrapper}>
+              <div className={classes.SubButton}>
                 <Typography
                   className={classes.ButtonLabel}
                   variant={BUTTON}>
@@ -95,19 +95,16 @@ export default class AccountDropDown extends PureComponent {
                 <div className={classes.ExpandedSubRoutes}>
                   {ACCOUNT_DROPPING_ROUTES.map(( subRoute, index ) => {
                     return(
-                      <div
+                      <Link
                         key={subRoute.route}
-                        className={classes.SubButtonWrapper}>
-                        <Link
-                          className={classes.SubButton}
-                          to={subRoute.route}>
-                          <Typography
-                            className={classes.SubButtonLabel}
-                            variant={BUTTON}>
-                            {t( subRoute.name )}
-                          </Typography>
-                        </Link>
-                      </div>
+                        className={classes.SubButton}
+                        to={subRoute.route}>
+                        <Typography
+                          className={classes.SubButtonLabel}
+                          variant={BUTTON}>
+                          {t( subRoute.name )}
+                        </Typography>
+                      </Link>
                     );
                   })}
                 </div>

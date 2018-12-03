@@ -22,9 +22,7 @@ export default function({ colors, values, breakpoints, palette }) {
       },
     },
 
-    field: {
-      marginBottom: '12px',
-    },
+    field: {},
 
     detailsRoot: {
       display: 'flex',

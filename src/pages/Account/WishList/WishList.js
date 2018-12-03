@@ -60,7 +60,7 @@ export default class WishList extends PureComponent {
               currentLabel={'account:WishList'}
             />
 
-            <div className={classes.mobileItemsPart}>
+            <div className={classes.wishContainer}>
               <Collection
                 items={WISH_LIST}
                 ProductRenderingComponent={StashedProduct}

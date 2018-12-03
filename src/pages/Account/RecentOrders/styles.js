@@ -4,6 +4,7 @@ export default function({ colors, values, breakpoints, palette }) {
     root: {
       display: 'flex',
       background: colors.WHITE,
+      marginBottom: '50px',
 
       [breakpoints.down( 'xs' )]: {
         flexDirection: 'column',
@@ -27,7 +28,7 @@ export default function({ colors, values, breakpoints, palette }) {
       minWidth: '291px',
       flexGrow: 1,
       flexDirection: 'row',
-      margin: '7px 7px',
+      margin: '7px 2vw',
       boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.2)',
     },
 

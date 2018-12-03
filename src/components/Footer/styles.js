@@ -120,10 +120,12 @@ export default function({ colors, breakpoints, values }) {
 
     subscribeButton: {
       justifyContent: 'space-between',
+      background: colors.WHITE,
 
       [breakpoints.down( 'sm' )]: {
         width: '100%',
       },
+
       [breakpoints.up( 'sm' )]: {
         width: '290px',
       },

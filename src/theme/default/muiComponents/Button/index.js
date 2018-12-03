@@ -29,7 +29,7 @@ export default {
   },
 
   root: {
-    padding: '10px 16px',
+    padding: '11px 16px',
 
     borderRadius: 0,
   }

@@ -70,20 +70,17 @@ export default function({ colors, palette, breakpoints, values }) {
     multiItemsWrapper: {
       display: 'flex',
       flexDirection: 'row',
+      width: '100%',
 
       [breakpoints.down( 'md' )]: {
         justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
         flexWrap: 'wrap',
-        width: '94%',
-        margin: '0 3%',
       },
 
       [breakpoints.up( 'md' )]: {
         justifyContent: 'space-around',
         WebkitFlexWrap: 'wrap',
-        width: '100%',
-        margin: '10px 0',
       },
     },
 
@@ -92,7 +89,7 @@ export default function({ colors, palette, breakpoints, values }) {
 
       [breakpoints.down( 'sm' )]: {
         width: '48%',
-        marginTop: '25px',
+        marginBottom: '25px',
       },
       [breakpoints.up( 'sm' )]: {
         width: '175px',

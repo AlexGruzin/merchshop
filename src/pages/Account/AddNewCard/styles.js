@@ -5,7 +5,7 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       background: colors.WHITE,
 
-      [breakpoints.down( 'xs' )]: {
+      [breakpoints.down( 'sm' )]: {
         flexDirection: 'column',
         minHeight: 'calc(100% - 70px)',
       },
@@ -39,6 +39,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     backLink: {
       textDecoration: 'none',
+      padding: '10px',
     },
 
     backLabel: {},
@@ -46,22 +47,25 @@ export default function({ colors, values, breakpoints, palette }) {
     backIcon: {
       fontSize: '20px',
       transform: 'rotate(90deg)',
-      marginLeft: '13px',
+      marginLeft: values.MOBILE_SMALL_SIDE_INDENT,
     },
 
     row: {
       display: 'flex',
       justifyContent: 'space-between',
+      alignItems: 'center',
     },
 
-    field: {
-      marginBottom: '12px',
-    },
+    field: {},
 
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',
-      margin: '0 17px',
+      margin: `0 ${values.MOBILE_MEDIUN_SIDE_INDENT}`,
+
+      [breakpoints.up( 'md' )]: {
+        margin: `0 ${values.MOBILE_SMALL_SIDE_INDENT}`,
+      },
     },
 
     title: {
@@ -107,8 +111,10 @@ export default function({ colors, values, breakpoints, palette }) {
       width: '15%',
       justifyContent: 'center',
       fontSize: '22px',
-      alignSelf: 'flex-end',
-      marginBottom: '17px',
+    },
+
+    questionIcon: {
+      padding: '10px',
     },
   }
 }

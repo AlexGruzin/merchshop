@@ -5,7 +5,11 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       background: colors.WHITE,
 
-      [breakpoints.down( 'xs' )]: {
+      [breakpoints.up( 'md' )]: {
+        flexDirection: 'row',
+      },
+
+      [breakpoints.down( 'sm' )]: {
         flexDirection: 'column',
         minHeight: 'calc(100% - 70px)',
       },
@@ -16,10 +20,14 @@ export default function({ colors, values, breakpoints, palette }) {
       flexDirection: 'column',
       flexGrow: 1,
 
-      [breakpoints.up( 'sm' )]: {
+      [breakpoints.down( 'md' )]: {
+        margin: `0 ${values.MOBILE_SMALL_SIDE_INDENT}`,
+      },
+
+      [breakpoints.up( 'md' )]: {
         flexDirection: 'column',
-        width: '58%',
-        margin: '40px 50px'
+        margin: '40px 50px',
+        marginRight: '15vw',
       },
     },
 
@@ -32,16 +40,15 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     trashIcon: {
-      marginRight: '10px',
-      fontSize: '16px',
+      padding: '10px',
+      fontSize: values.GIANT_FONT_SIZE,
     },
 
     paymentItemWrapper: {
       display: 'flex',
-      maxHeight: '68px',
-      flexGrow: 1,
+      justifyContent: 'space-between',
+      width: '100%',
       flexDirection: 'row',
-      margin: '0 7px',
       marginBottom: '10px',
       boxShadow: '0px 0px 3px 0px rgba(0, 0, 0, 0.2)',
     },
@@ -49,10 +56,8 @@ export default function({ colors, values, breakpoints, palette }) {
     infoColumn: {
       display: 'flex',
       justifyContent: 'center',
-
       flexDirection: 'column',
-      flexGrow: 1,
-      padding: '9px',
+      padding: '20px 10px',
     },
 
     typeLabel: {
@@ -66,9 +71,9 @@ export default function({ colors, values, breakpoints, palette }) {
       margin: '15px 17px',
       marginTop: 'auto',
 
-      [breakpoints.up( 'sm' )]: {
-        margin: '30px 5px',
-        width: '50%',
+      [breakpoints.up( 'md' )]: {
+        margin: '30px 0',
+        width: '33%',
       },
     },
 

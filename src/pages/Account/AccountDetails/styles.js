@@ -22,14 +22,12 @@ export default function({ colors, values, breakpoints, palette }) {
       },
     },
 
-    field: {
-      marginBottom: '12px',
-    },
+    field: {},
 
     detailsRoot: {
       display: 'flex',
       flexDirection: 'column',
-      margin: '0 17px',
+      margin: `0 ${values.MOBILE_MEDIUN_SIDE_INDENT}`,
     },
 
     title: {

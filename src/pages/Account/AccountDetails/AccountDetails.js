@@ -18,7 +18,7 @@ import { required } from 'helpers/validators/generic';
 
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H6, SUBTITLE2, PRIMARY } from 'constants/typography';
+import { H6, SUBTITLE2, PRIMARY, SECONDARY } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -132,23 +132,21 @@ export default class AccountDetails extends PureComponent {
 
             {
               dataStatus
-                ?  <Button
-                  type="submit"
-                  className={classes.addCardButton}>
-                  {t( 'account:Save Changes' )}
-                </Button>
-                : <Button color={PRIMARY}
+                ? <Button
+                  color={PRIMARY}
                   className={classes.savedButton}>
                   <Icon className={classes.savedIcon} icon={ICONS.DONE_CIRCLED} />
                   {t( 'account:SAVED!' )}
                 </Button>
-
+                : <Button color={SECONDARY}
+                  type="submit"
+                  className={classes.addCardButton}>
+                  {t( 'account:Save Changes' )}
+                </Button>
             }
 
           </form>
-
         </div>
-
       </div>
     );
   }

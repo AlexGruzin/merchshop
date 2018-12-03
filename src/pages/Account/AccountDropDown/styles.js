@@ -15,7 +15,6 @@ export default function({ colors, values, breakpoints, palette }) {
       display: 'flex',
       flexGrow: 1,
       justifyContent: 'center',
-      height: '43px',
       zIndex: '100',
       boxShadow: '0 2px 4px 0 rgba(238, 238, 238, 0.5)',
       flexDirection: 'column',
@@ -36,7 +35,7 @@ export default function({ colors, values, breakpoints, palette }) {
     ButtonWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      padding: `10px ${values.MOBILE_SIDE_PADDING}`,
+
     },
 
     Button: {
@@ -71,23 +70,19 @@ export default function({ colors, values, breakpoints, palette }) {
       boxShadow: '0px 3px 4px 0px rgba(0, 0, 0, 0.2)',
     },
 
-    SubButtonWrapper: {
+
+
+    SubButton: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+
       '&:hover': {
         background: colors.GRAY300,
       },
 
-      height: '37px',
-      display: 'flex',
-      justifyContent: 'flex-start',
-      padding: '0 17px',
-      margin: '3px 0',
-    },
-
-    SubButton: {
       color: colors.BLACK,
-      margin: 'auto 0',
-      padding: '0px',
       textDecoration: 'none',
+      padding: `15px ${values.MOBILE_MEDIUN_SIDE_INDENT}`,
     },
 
     // --------- desktop ----------

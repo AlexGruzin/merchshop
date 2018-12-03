@@ -15,5 +15,6 @@ export default {
 
   EXPAND_ICON_SIZE: '4px',
 
-  MOBILE_SIDE_PADDING: '5.5vw',
+  MOBILE_MEDIUN_SIDE_INDENT: '5.5vw',
+  MOBILE_SMALL_SIDE_INDENT: '2.5vw',
 };

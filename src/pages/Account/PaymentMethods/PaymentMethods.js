@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import styles from './styles';
 import { ADD_CARD } from 'constants/routing';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H6, SUBTITLE1, BUTTON } from 'constants/typography';
+import { H6, SUBTITLE1, BUTTON, SECONDARY } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -78,7 +78,7 @@ export default class PaymentMethods extends PureComponent {
             })
           }
 
-          <Button
+          <Button color={SECONDARY}
             component={Link}
             to={ADD_CARD}
             className={classes.addCardButton}>
