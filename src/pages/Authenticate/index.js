@@ -1,15 +1,13 @@
 import Authenticate from './Authenticate';
 import { connect } from 'react-redux';
-import { sendSignUpData, sendSignInData, selectTab } from 'actionsCreators/views/authenticate';
+import { sendSignUpData, sendLogInData } from 'actionsCreators/views/authenticate';
 import authenticateSelector from './selector';
 // action creators
-import { openForgotPasswordModal } from 'actionsCreators/modals';
+const openForgotPasswordModal = () =>{};
 
 const mapDispatchToProps = ({
   sendSignUpData,
-  sendSignInData,
-  openForgotPasswordModal,
-  selectTab,
+  sendLogInData,
 });
 
 export default connect( authenticateSelector, mapDispatchToProps )(

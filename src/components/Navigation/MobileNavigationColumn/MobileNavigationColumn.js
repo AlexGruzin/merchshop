@@ -22,11 +22,10 @@ import StageCollection from 'components/Cart/StageCollection';
 
 import { ShopItems } from 'constants/shop';
 import { AUTHENTICATE } from 'constants/routing';
-import { HEADLINE, SUBTITLE1 } from 'constants/typography';
+import { BUTTON, SUBTITLE1 } from 'constants/typography';
 import { HEADER_LINKS_TYPES } from 'constants/headerLinkList';
 
 import styles from './styles';
-import { BUTTON } from 'constants/typography';
 
 @translate()
 @injectSheet( styles )
@@ -35,6 +34,7 @@ export default class MobileNavigationColumn extends PureComponent {
     classes: PropTypes.object,
     t: PropTypes.func,
     headerLinks: PropTypes.array.isRequired,
+    openLogRequestModal: PropTypes.func.isRequired,
     cartProductsAmount: PropTypes.number,
   };
 
@@ -81,6 +81,7 @@ export default class MobileNavigationColumn extends PureComponent {
       classes,
       headerLinks,
       cartProductsAmount,
+      openLogRequestModal,
     } = this.props;
 
     const {
@@ -157,8 +158,9 @@ export default class MobileNavigationColumn extends PureComponent {
                     <ListItem>
                       <div className={classes.swipedButtonWrapper}>
                         <Button
-                          component={Link}
-                          to={AUTHENTICATE}
+                          onClick={() => {
+                            this.hideDrawer();
+                            openLogRequestModal();}}
                           size="medium"
                           className={classes.swipedButton}>
                           <Typography

@@ -7,12 +7,18 @@ import styles from './styles';
 import injectSheet from 'react-jss';
 // modals
 import ForgotPasswordModal from 'components/modals/ForgotPasswordModal';
+import LogRequestModal from 'components/modals/LogRequestModal';
+import LogInModal from 'components/modals/LogInModal';
+import SignUpModal from 'components/modals/SignUpModal';
 
 // modals
 import ModalTypes from 'constants/modals';
 
 const mapTypeToModal = {
   [ModalTypes.FORGOT_PASSWORD]: ForgotPasswordModal,
+  [ModalTypes.LOG_REQUEST]: LogRequestModal,
+  [ModalTypes.LOG_IN]: LogInModal,
+  [ModalTypes.SIGN_UP]: SignUpModal,
 };
 
 @injectSheet( styles )

@@ -5,7 +5,7 @@ import Header from 'components/Header';
 import Advertisement from 'components/Advertisement';
 import Footer from 'components/Footer';
 import Loading from 'components/Loading';
-// import ModalPortals from 'components/ModalsPortal';
+import ModalPortals from 'components/ModalsPortal';
 import injectSheet from 'react-jss';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
@@ -22,6 +22,7 @@ class App extends Component {
           <Advertisement />
           <Router />
           <Footer />
+          <ModalPortals />
         </Loading>
       </Fragment>
     );

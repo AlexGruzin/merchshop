@@ -13,7 +13,6 @@ export default {
     fontSize: '1rem',
     fontFamily: 'HelveticaNeue_Medium',
     fontWeight: '500',
-    lineHeight: 'normal',
     color: 'inherit',
   },
 
@@ -26,8 +25,8 @@ export default {
   h3: {
     fontSize: '1.66rem',
     fontFamily: 'HelveticaNeue_Light',
-    fontWeight: 300,
-    letterSpacing: '0.8px',
+    fontWeight: '100',
+    lineHeight: 'normal',
   },
 
   h4: {
@@ -43,7 +42,6 @@ export default {
 
   h6: {
     fontSize: '1rem',
-
     fontFamily: 'Helvetica Neue',
     fontWeight: 'normal',
     textTransform: 'capitalize',

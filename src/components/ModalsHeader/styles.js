@@ -1,29 +1,25 @@
-import { rgba } from 'css-functions';
-
 export default ({ colors, values }) => ({
   head: {
-    height: '64px',
-    borderBottom: `1px solid ${colors.BORDER_COLOR}`,
-    background: colors.GRAY200,
+    height: '30px',
     display: 'flex',
-    justifyContent: 'space-between',
-    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+    justifyContent: 'flex-end',
   },
-  content: {
-    height: '236px',
-  },
+
   title: {
     lineHeight: '64px',
     margin: '0 auto',
     color: colors.GRAY800,
   },
-  close: {
+
+  crossWrapper: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: colors.RED,
-    background: colors.BLACK,
-    height: '20px',
-    width: '50px',
   },
+
+  crossIcon: {
+    fontSize: values.EXTRA_SMALL_FONT_SIZE,
+    padding: '9px',
+  },
+
 });

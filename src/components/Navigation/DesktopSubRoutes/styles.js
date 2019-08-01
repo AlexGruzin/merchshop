@@ -37,7 +37,7 @@ export default function({ colors, breakpoints, palette }) {
     ExpandedSubRoutesContainer: {
       display: 'flex',
       position: 'absolute',
-      width: '100%',
+      width: 'inherit',
       height: '0px',
       transition: 'all .3s ease-in-out',
       visibility: 'hidden',
