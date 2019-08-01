@@ -16,4 +16,7 @@ export const TITLE = 'title';
 export const CAPTION = 'caption';
 export const BUTTON = 'button';
 
+export const PRIMARY = 'primary';
+export const SECONDARY = 'secondary';
+
 export const CORAL_LINK = '/promo';

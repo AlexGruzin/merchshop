@@ -79,8 +79,9 @@ export default class Product extends PureComponent {
           <div
             className={classes.image}
             style={{
-              backgroundImage: `url('${image}')`
-            }}/>
+               backgroundImage: `url('${image}')`
+            }}
+          />
 
           <Checkbox className={like}
             icon={<Icon icon={ICONS.LIKE_DISABLED} className={likeDisabled}/> }

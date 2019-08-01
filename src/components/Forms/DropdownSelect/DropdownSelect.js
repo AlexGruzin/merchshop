@@ -9,7 +9,8 @@ import styles from './styles';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -57,7 +58,7 @@ export default class DropdownSelect extends PureComponent {
               paper: classes.menuPaper,
             }
           }}
-          IconComponent={ExpandMore}
+          IconComponent={<Icon icon={ICONS.EXPAND_DOWN}/>}
           value={value}>
           <MenuItem value='' disabled>{placeholder}</MenuItem>
           {choices.map( size =>

@@ -14,4 +14,8 @@ export default {
   EXTRA_GIANT_FONT_SIZE: '1.66rem',
   MASSIVE_RELATIVE_SIZE: '2.5rem',
 
+  EXPAND_ICON_SIZE: '4px',
+
+  MOBILE_MEDIUN_SIDE_INDENT: '5.5vw',
+  MOBILE_SMALL_SIDE_INDENT: '2.5vw',
 };

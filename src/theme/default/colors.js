@@ -23,6 +23,7 @@ export default {
   SLIDER_GRAY: '#81898C',
   STEPPER_BORDER: '#F7F7F7',
 
+  BLACK_BORDER: 'rgba(0, 0, 0, 1)',
   TRANSPARENT: 'rgba(0, 0, 0, 0)',
 
   //  default theme

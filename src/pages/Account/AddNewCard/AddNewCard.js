@@ -12,7 +12,6 @@ import AccountDropDown from 'pages/Account/AccountDropDown';
 import Button from '@material-ui/core/Button';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Hidden from '@material-ui/core/Hidden';
-import DoneIcon from '@material-ui/icons/CheckCircleOutline';
 import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
 
@@ -23,14 +22,14 @@ import { required } from 'helpers/validators/generic';
 import styles from './styles';
 import { PAYMENT_METHODS } from 'constants/routing';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H6, SUBTITLE2 } from 'constants/typography';
+import { H6, SUBTITLE2, PRIMARY, SECONDARY } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
 @reduxForm({
   form: 'AddNewCard',
-  })
+})
 @translate()
 @injectSheet( styles )
 export default class AddNewCard extends PureComponent {
@@ -82,7 +81,6 @@ export default class AddNewCard extends PureComponent {
               </Link>
             </div>
           </div>
-
 
           <form
             className={classes.detailsRoot}
@@ -154,23 +152,21 @@ export default class AddNewCard extends PureComponent {
 
             {
               dataStatus
-                ? <Button
+                ? <Button color={PRIMARY}
                   className={classes.savedButton}>
-                  <DoneIcon className={classes.savedIcon} />
+                  <Icon icon={ICONS.DONE_CIRCLED} className={classes.savedIcon} />
                   {t( 'account:SAVED!' )}
                 </Button>
-                : <Button
+                : <Button color={SECONDARY}
                   type="submit"
                   className={classes.addCardButton}>
                   {t( 'account:Save Payment Details' )}
                 </Button>
             }
 
-
           </form>
 
         </div>
-
       </div>
     );
   }

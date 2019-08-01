@@ -95,7 +95,7 @@ export default class Collection extends PureComponent {
         }
         break;
     }
-
+console.log(items.length, columnsPerRow )
     let growBox = <GrowBox />;
     if ( items.length % columnsPerRow === 0  ) {
       growBox = null

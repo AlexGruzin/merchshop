@@ -7,10 +7,8 @@ import classNames from 'classnames';
 // components
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import Hidden from '@material-ui/core/Hidden';
 
-import Button from '@material-ui/core/Button';
 
 import ReviewItem from 'components/Cart/ReviewItem';
 import AccountDropDown from 'pages/Account/AccountDropDown';
@@ -55,9 +53,7 @@ export default class OrderInfo extends PureComponent {
           <div className={classes.headLine}>
             <div
               className={classes.backButton}>
-              <ExpandMore
-                className={classes.backIcon}
-                fontSize='inherit'/>
+              <Icon icon={ICONS.EXPAND_DOWN}/>
               <Link
                 className={classes.backLink}
                 to={ ACCOUNT }>

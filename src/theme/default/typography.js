@@ -13,6 +13,8 @@ export default {
     fontSize: '1rem',
     fontFamily: 'HelveticaNeue_Medium',
     fontWeight: '500',
+    lineHeight: 'normal',
+    color: 'inherit',
   },
 
   h2: {
