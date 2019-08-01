@@ -164,7 +164,6 @@
           "legacy": true
         }
       ]
-
     ]
   },
   "pre-commit": []
