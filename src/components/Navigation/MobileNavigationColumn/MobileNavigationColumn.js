@@ -5,6 +5,7 @@ import { translate } from 'react-i18next';
 import injectSheet from 'react-jss';
 
 import { Link } from 'react-router-dom';
+import InputBase from '@material-ui/core/InputBase';
 import Typography from '@material-ui/core/Typography';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import List from '@material-ui/core/List';
@@ -46,8 +47,15 @@ export default class MobileNavigationColumn extends PureComponent {
     this.state = {
       mobileMenuOpened: false,
       mobileCheckoutOpened: false,
+      searchMode: false,
     }
   }
+
+  swapMode = () => {
+    this.setState({
+      searchMode: !this.state.searchMode,
+    });
+  };
 
   swapCheckout = () => {
     this.setState({
@@ -77,20 +85,24 @@ export default class MobileNavigationColumn extends PureComponent {
 
     const {
       mobileHeader,
+      mobileHeaderSearch,
       hider,
+      searchElementsWrapper,
+      searchIconMode,
+      searchInputMode,
       closeIconMode,
     } = classes;
 
     const {
       mobileMenuOpened,
       mobileCheckoutOpened,
-
+      searchMode,
     } = this.state;
 
     return (
       <div className={classes.mdUp} >
 
-        <div className={mobileHeader}>
+        <div className={classNames( mobileHeader, searchMode ? hider : null )}>
 
           <div className={classes.headerFlexPart}>
             <div className={classes.menuIconWrapper}>
@@ -170,12 +182,13 @@ export default class MobileNavigationColumn extends PureComponent {
 
           <div className={classes.headerFlexPart}>
             <div className={classes.leftIconsWrapper}>
+
               <Icon
                 icon={ICONS.SEARCH_ICON}
+                onClick={this.swapMode}
                 className={classes.mobileIconSearch}/>
 
-              <div onClick={this.swapCheckout}
-                   className={classes.interactiveCan}>
+              <div onClick={this.swapCheckout} className={classes.interactiveCan}>
                 <div className={classes.canNumberWrapper}>
                   <Typography
                     variant={SUBTITLE1}
@@ -212,6 +225,35 @@ export default class MobileNavigationColumn extends PureComponent {
           </div>
         </div>
 
+        <div className={classNames( mobileHeaderSearch, searchMode ? null : hider )}>
+
+          <div className={searchElementsWrapper}>
+            <div className={searchIconMode}>
+              <Icon
+                icon={ICONS.SEARCH_ICON}
+                className={classes.mobileIconSearch}/>
+            </div>
+
+            <div className={searchInputMode}>
+              {
+                searchMode
+                  ? <InputBase
+                    className={classes.searchInput}
+                    autoFocus={searchMode}/>
+                  : null
+              }
+            </div>
+
+            <div className={closeIconMode}>
+              <Icon
+                icon={ICONS.CROSS_ICON}
+                onClick={this.swapMode}
+                className={classes.closeIconSvg}/>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     );
   }

@@ -13,6 +13,8 @@ export default {
     fontSize: '1rem',
     fontFamily: 'HelveticaNeue_Medium',
     fontWeight: '500',
+    lineHeight: 'normal',
+    color: 'inherit',
   },
 
   h2: {
@@ -23,8 +25,9 @@ export default {
 
   h3: {
     fontSize: '1.66rem',
-    fontFamily: 'HelveticaNeue_Bold',
-    fontWeight: 'bold',
+    fontFamily: 'HelveticaNeue_Light',
+    fontWeight: 300,
+    letterSpacing: '0.8px',
   },
 
   h4: {
@@ -48,7 +51,6 @@ export default {
 
   body1: {
     fontSize: '1rem',
-    lineHeight: 1.66,
     fontFamily: 'HelveticaNeue_Light',
     fontWeight: '300',
     letterSpacing: '0.5px',

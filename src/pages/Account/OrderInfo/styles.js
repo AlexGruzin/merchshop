@@ -79,6 +79,7 @@ export default function({ colors, values, breakpoints, palette }) {
 
     backLink: {
       textDecoration: 'none',
+      padding: '10px',
     },
 
     backLabel: {},
@@ -113,10 +114,6 @@ export default function({ colors, values, breakpoints, palette }) {
     },
 
     submitButton: {
-      width: '100%',
-      height: '40px',
-      background: colors.BLACK,
-      color: colors.WHITE,
       marginTop: '30px',
       marginBottom: '5px',
     },

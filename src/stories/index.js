@@ -9,6 +9,7 @@ import StashItem from 'components/ShopStash/StashedProduct';
 import { productTypes, ShopItems } from 'constants/shop';
 import Filter from 'containers/Filter';
 
+import { ShopItems, PRODUCT_TYPES } from 'constants/shop';
 import ShopPage from 'pages/ShopPage';
 import React from 'react';
 

@@ -1,4 +1,4 @@
-export default function({ colors, breakpoints, palette }) {
+export default function({ values }) {
   return {
     swipingNavLabel: {
       textTransform: 'uppercase',
@@ -16,6 +16,10 @@ export default function({ colors, breakpoints, palette }) {
 
     textTransform: {
       textTransform: 'none',
+    },
+
+    expandIcon: {
+      fontSize: values.EXPAND_ICON_SIZE,
     },
   }
 }

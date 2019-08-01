@@ -2,10 +2,7 @@ import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
 import Typography from '@material-ui/core/Typography';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import classNames from 'classnames';
 
 import MobileMenuRoute from 'components/Navigation/MobileMenuRoute';
@@ -16,6 +13,8 @@ import injectSheet from 'react-jss';
 
 import { BODY2, BODY1 } from 'constants/typography';
 import styles from './styles';
+import Icon from 'components/Icon';
+import { ICONS } from 'constants/icons';
 
 @translate()
 @injectSheet( styles )
@@ -63,8 +62,8 @@ export default class MobileSubRoutes extends PureComponent {
             {t( label )}
           </Typography>
           {open
-            ? <ExpandLess fontSize='inherit' />
-            : <ExpandMore fontSize='inherit'/>}
+            ? <Icon className={classes.expandIcon} icon={ICONS.EXPAND_UP}/>
+            : <Icon className={classes.expandIcon} icon={ICONS.EXPAND_DOWN}/>}
         </ListItem>
         <Divider/>
         <Collapse
