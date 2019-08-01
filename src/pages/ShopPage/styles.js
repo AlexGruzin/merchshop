@@ -9,7 +9,7 @@ export default function({ colors, breakpoints, palette }) {
 
     shopContainer: {
       display: 'flex',
-      flexDirection: 'row',
+      flexDirection: 'column',
     },
 
     paginationContainer: {

@@ -43,7 +43,7 @@ export default function({ colors, palette, breakpoints, values }) {
     },
 
     soldOutLabel: {
-      zIndex: 10,
+      zIndex: 3,
       textAlign: 'center',
       color: colors.BLACK,
       position: 'absolute',

@@ -33,7 +33,7 @@ export const STAGES_TYPES = {
   },
 };
 
-export const productsFilter = [
+export const PRODUCTS_FILTER = [
   {
     name: PRODUCT_TYPES.ALL,
   },{

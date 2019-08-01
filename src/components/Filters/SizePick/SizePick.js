@@ -5,13 +5,10 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 @injectSheet( styles )
-export default class ColorPick extends PureComponent {
+export default class SizePick extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
-    children: PropTypes.array.isRequired,
-    color: PropTypes.string.isRequired,
-    cursor: PropTypes.string.isRequired,
-    modificator: PropTypes.string,
+    label: PropTypes.string.isRequired,
   };
 
   constructor( props ) {
@@ -21,45 +18,35 @@ export default class ColorPick extends PureComponent {
     };
   }
 
-  static defaultProps = {
-    className: null,
-  };
-
   handleChange = ( event ) => {
     this.setState({ value: event.target.value });
+  };
+
+  static defaultProps = {
+    className: null,
   };
 
   render() {
     const {
       input,
-      type,
-      value,
 
-      color,
-      cursor,
-      modificator,
+      label,
       classes,
       className,
     } = this.props;
 
     return (
-      <div
-        className={classNames( className, classes.wrapper )}
-        style={{
-          background: color,
-          border: modificator ? `0.5px solid ${modificator}` : null,
-        }}>
-
+      <div className={classNames( className, classes.wrapper )}>
         <input
-          id={color}
+          id={label}
           type="checkbox"
           checked={this.state.value}
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <label style={{
-          color: cursor,
-        }} for={color} />
+        <label
+          for={label}
+        >{label}</label>
       </div>
     );
   }

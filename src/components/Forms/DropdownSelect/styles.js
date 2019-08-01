@@ -10,7 +10,6 @@ export default function({ colors, values, breakpoints, palette }) {
     },
     formControl: {
       width: '70%',
-      margin: '1em 0'
     },
 
     select: {

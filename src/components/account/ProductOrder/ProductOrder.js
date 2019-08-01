@@ -10,7 +10,7 @@ import Remove from '@material-ui/icons/Remove';
 import { H1, H4, SUBTITLE1, CAPTION } from 'constants/typography';
 import styles from './styles';
 
-import { productTypes, productsFilter } from 'constants/shop';
+import { productTypes, PRODUCTS_FILTER } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
 
