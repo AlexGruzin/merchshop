@@ -9,6 +9,7 @@ export default function({ colors, palette, breakpoints, values }) {
     },
 
     image: {
+      display: 'flex',
       backgroundSize: 'contain',
       backgroundPosition: 'center',
       height: '100%',
@@ -23,18 +24,14 @@ export default function({ colors, palette, breakpoints, values }) {
       position: 'relative',
     },
 
-    likeWrapper: {
-      position: 'relative',
-      height: '0px',
-    },
+    likeWrapper: {},
 
     like: {
-      fontSize: values.LARGE_GIANT_FONT_SIZE,
+      fontSize: values.LARGE_FONT_SIZE,
       position: 'absolute',
-      top: 0,
-      marginTop: '1.2vw',
-      marginLeft: '1.2vw',
-      padding: 0,
+      top: '2.2vw',
+      left: '2.5vw',
+      padding: '5px',
     },
 
     likeEnabled: {
@@ -46,7 +43,7 @@ export default function({ colors, palette, breakpoints, values }) {
     },
 
     soldOutLabel: {
-      zIndex: 10,
+      zIndex: 3,
       textAlign: 'center',
       color: colors.BLACK,
       position: 'absolute',

@@ -133,7 +133,7 @@ export default function({ colors, breakpoints, values, palette }) {
     searchIconMode: {
       display: 'flex',
       alignItems: 'center',
-      margin: '0 10px',
+      marginLeft: '10px',
     },
 
     searchInputMode: {
@@ -150,12 +150,10 @@ export default function({ colors, breakpoints, values, palette }) {
 
     closeIconSvg: {
       display: 'flex',
-      fontSize: values.EXTRA_SMALL_FONT_SIZE,
-      height: '35px',
-      width: '35px',
+      fontSize: '6px',
+      padding: '15px',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '0 10px',
     },
 
     searchInput: {

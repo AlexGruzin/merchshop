@@ -3,9 +3,6 @@ import palette from './palette';
 import colors from './colors';
 import typography from './typography';
 import button from './muiComponents/Button';
-import expansionPanel from './muiComponents/ExpansionPanel';
-import expansionPanelSummary from './muiComponents/ExpansionPanelSummary';
-import expansionPanelActions from './muiComponents/ExpansionPanelActions';
 import iconButton from './muiComponents/IconButton';
 import collapseArea from './muiComponents/Collapse';
 import inputBase from './muiComponents/InputBase';
@@ -33,9 +30,6 @@ export default createMuiTheme({
     MuiButton: button,
     MuiCollapse: collapseArea,
     MuiIconButton: iconButton,
-    MuiExpansionPanel: expansionPanel,
-    MuiExpansionPanelSummary: expansionPanelSummary,
-    MuiExpansionPanelActions: expansionPanelActions,
     MuiOutlinedInput: outlinedInput
   },
 });

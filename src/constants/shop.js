@@ -33,7 +33,7 @@ export const STAGES_TYPES = {
   },
 };
 
-export const productsFilter = [
+export const PRODUCTS_FILTER = [
   {
     name: PRODUCT_TYPES.ALL,
   },{
@@ -82,8 +82,23 @@ export const ShopItems = [{
     'M',
     'L'
   ],
+  rateData: {
+    totalAmount: 354,
+    rates: [{
+      5: 308
+    }, {
+      4: 38
+    }, {
+      3: 3
+    }, {
+      2: 1
+    }, {
+      1: 4
+    },],
+  },
   description: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
   features: 'ZULU open-face helmet in Osiris features a sleek black glossy shell with a contrasting maroon interior. Features a high-impact ABS shell, vinyl leather interior, removable anti-bacterial liner, micro-metric buckle and a multi-density EPS liner. All ZULU helmets are SNI certified for maximum safety.',
+  compose: 'x1 VIPER helmet\n x1 SNAP visor',
   videoUrl: 'https://www.youtube.com/watch?v=x5Kw_R6PjH8'
 }, {
   id: '002',
@@ -102,6 +117,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 67,
   image: '/img/helmet3.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '004',
@@ -111,6 +127,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet4.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '005',
@@ -120,6 +137,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet5.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '006',
@@ -129,6 +147,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet1.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '007',
@@ -138,6 +157,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet2.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '008',
@@ -147,6 +167,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 67,
   image: '/img/helmet3.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '009',
@@ -156,6 +177,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet4.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '010',
@@ -165,6 +187,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet5.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '011',
@@ -174,6 +197,7 @@ export const ShopItems = [{
   rate: 4,
   reviews: 63,
   image: '/img/helmet1.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '012',
@@ -183,6 +207,7 @@ export const ShopItems = [{
   rate: 4.5,
   reviews: 122,
   image: '/img/helmet2.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 }, {
   id: '013',
@@ -192,10 +217,10 @@ export const ShopItems = [{
   rate: 4,
   reviews: 67,
   image: '/img/helmet3.jpg',
+  images: ['/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg','/img/helmet3.jpg'],
   viewType: STASHED_PRODUCT_TYPES.SINGLE,
 },
 ];
-
 
 export const singleShopItem = {
   ...ShopItems[0],
@@ -206,3 +231,4 @@ export const singleShopItem = {
     { type: 'image', url: ShopItems[3].image },
   ]
 };
+

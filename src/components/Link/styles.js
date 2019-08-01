@@ -3,6 +3,7 @@ export default function({ colors, breakpoints, palette, values }) {
 
     root: {
       textDecoration: 'none',
+      textDecorationColor: colors.BLACK,
       cursor: 'pointer',
     },
   }

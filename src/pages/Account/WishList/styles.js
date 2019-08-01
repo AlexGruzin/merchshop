@@ -10,6 +10,12 @@ export default function({ colors, values, breakpoints, palette }) {
     wishContainer: {
       display: 'flex',
       flexGrow: 1,
+      margin: '40px',
+
+      [breakpoints.down( 'md' )]: {
+        margin: `0 ${values.MOBILE_SMALL_SIDE_INDENT}`,
+        marginTop: values.MOBILE_SMALL_SIDE_INDENT,
+      }
     },
 
     mobileWishContainer: {

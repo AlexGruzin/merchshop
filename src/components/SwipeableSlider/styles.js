@@ -80,7 +80,6 @@ export default function({ colors, values, breakpoints, palette }) {
     sliderButton: {
       position: 'absolute',
       bottom: '33px',
-      height: '40px',
       width: '180px',
       border: 'none'
     },

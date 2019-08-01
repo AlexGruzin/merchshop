@@ -23,7 +23,6 @@ export default function({ colors, values, breakpoints, palette }) {
 
     button: {
       position: 'absolute',
-      height: '40px',
       minWidth: '190px',
       left: 'calc(50% - 90px)',
       bottom: '33px',

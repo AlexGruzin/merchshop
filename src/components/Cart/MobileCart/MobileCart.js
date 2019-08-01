@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import CartItem from 'components/Cart/CartItem';
 import { ICONS } from 'constants/icons';
 
-import { productsFilter, productTypes } from 'constants/shop';
+import { PRODUCTS_FILTER, productTypes } from 'constants/shop';
 import {
   H2,
   H4,
@@ -104,7 +104,7 @@ export default class MobileCart extends PureComponent {
             <InputBase
               className={classes.applyInput}
               placeholder="Promo code"/>
-            <Button
+            <Button color={PRIMARY}
               type="submit"
               className={classes.applyButton}>
               {t( 'cart:APPLY' )}

@@ -49,7 +49,6 @@ export default {
 
   body1: {
     fontSize: '1rem',
-    lineHeight: 1.66,
     fontFamily: 'HelveticaNeue_Light',
     fontWeight: '300',
     letterSpacing: '0.5px',

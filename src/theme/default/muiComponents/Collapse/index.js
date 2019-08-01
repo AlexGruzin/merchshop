@@ -2,7 +2,7 @@ import colors from '../../colors';
 
 export default {
   container: {
-    boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+    boxShadow: '0 1px 3px 0 rgba(211, 211, 211, 0.5)',
   },
   wrapper: {},
   wrapperInner: {},

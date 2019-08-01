@@ -10,7 +10,6 @@ import classNames from 'classnames';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
-import DoneIcon from '@material-ui/icons/CheckCircleOutline';
 
 import AccountDropDown from 'pages/Account/AccountDropDown';
 import TextInput from 'components/Forms/TextInput';
@@ -19,7 +18,7 @@ import { required } from 'helpers/validators/generic';
 
 import styles from './styles';
 import { PAYMENT_METHODS_LIST } from 'constants/account';
-import { H6, SUBTITLE2 } from 'constants/typography';
+import { H6, SUBTITLE2, PRIMARY, SECONDARY } from 'constants/typography';
 import { PRODUCT_TYPES, COLLECTION_VIEW_MODES, VIEW_COMPONENTS } from 'constants/shop';
 import Icon from 'components/Icon';
 import { ICONS } from 'constants/icons';
@@ -134,11 +133,12 @@ export default class AccountDetails extends PureComponent {
             {
               dataStatus
                 ? <Button
+                  color={PRIMARY}
                   className={classes.savedButton}>
-                  <DoneIcon className={classes.savedIcon} />
+                  <Icon className={classes.savedIcon} icon={ICONS.DONE_CIRCLED} />
                   {t( 'account:SAVED!' )}
                 </Button>
-                : <Button
+                : <Button color={SECONDARY}
                   type="submit"
                   className={classes.addCardButton}>
                   {t( 'account:Save Changes' )}
@@ -146,9 +146,7 @@ export default class AccountDetails extends PureComponent {
             }
 
           </form>
-
         </div>
-
       </div>
     );
   }

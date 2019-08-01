@@ -14,6 +14,7 @@ import PaymentMethods from 'pages/Account/PaymentMethods';
 import Addresses from 'pages/Account/Addresses';
 import AddNewCard from 'pages/Account/AddNewCard';
 import OrderInfo from 'pages/Account/OrderInfo';
+import ProductPage from 'pages/ProductPage';
 
 import NotFound from 'pages/NotFound';
 import About from "pages/About";
@@ -24,6 +25,7 @@ const Router = () => (
     <Route exact path={Routes.HOME} component={Home} />
     <Route exact path={Routes.AUTHENTICATE} component={Authenticate} />
     <Route exact path={Routes.SHOP} component={Shop} />
+    <Route exact path={Routes.PRODUCT} component={ProductPage} />
     <Route exact path={Routes.ACCOUNT} component={RecentOrders} />
     <Route exact path={Routes.WISHLIST} component={WishList} />
     <Route exact path={Routes.ACCOUNT_DETAILS} component={AccountDetails} />
@@ -31,7 +33,7 @@ const Router = () => (
     <Route exact path={Routes.ADDRESSES} component={Addresses} />
     <Route exact path={Routes.ADD_CARD} component={AddNewCard} />
     <Route exact path={Routes.ORDER} component={OrderInfo} />
-    <Route exact path={Routes.PDP} component={Pdp} />
+    <Route exact path={Routes.PRODUCT} component={Pdp} />
     <Route exact path={Routes.ABOUT} component={About} />
     <Route path="*" component={NotFound} />
   </Switch>

@@ -1,6 +1,7 @@
 export const HOME = '/';
 export const AUTHENTICATE = '/auth';
 export const SHOP = '/shop';
+export const PRODUCT = '/product/:productId';
 export const ACCOUNT = '/account';
 export const ORDER = '/account/order/:id';
 export const WISHLIST = '/account/wishlist';
@@ -18,6 +19,7 @@ export const UNAUTHORIZED_ROUTES = [
 export const UNACTIVATED_ROUTES = [
   HOME,
   SHOP,
+  PRODUCT,
   ACCOUNT,
   PAYMENT_METHODS,
   ACCOUNT_DETAILS,
