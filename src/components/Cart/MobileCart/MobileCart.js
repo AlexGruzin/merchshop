@@ -104,7 +104,7 @@ export default class MobileCart extends PureComponent {
             <InputBase
               className={classes.applyInput}
               placeholder="Promo code"/>
-            <Button color={PRIMARY}
+            <Button color="primary"
               type="submit"
               className={classes.applyButton}>
               {t( 'cart:APPLY' )}

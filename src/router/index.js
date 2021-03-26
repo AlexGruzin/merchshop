@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 
-import * as Routes from '../constants/routing';
+import * as Routes from 'constants/routing';
 
 // views
 import Home from 'pages/Home';
@@ -23,18 +23,18 @@ import Pdp from "pages/Pdp";
 const Router = () => (
   <Switch>
     <Route exact path={Routes.HOME} component={Home} />
-    <Route exact path={Routes.AUTHENTICATE} component={Authenticate} />
-    <Route exact path={Routes.SHOP} component={Shop} />
-    <Route exact path={Routes.PRODUCT} component={ProductPage} />
-    <Route exact path={Routes.ACCOUNT} component={RecentOrders} />
-    <Route exact path={Routes.WISHLIST} component={WishList} />
-    <Route exact path={Routes.ACCOUNT_DETAILS} component={AccountDetails} />
-    <Route exact path={Routes.PAYMENT_METHODS} component={PaymentMethods} />
-    <Route exact path={Routes.ADDRESSES} component={Addresses} />
-    <Route exact path={Routes.ADD_CARD} component={AddNewCard} />
-    <Route exact path={Routes.ORDER} component={OrderInfo} />
-    <Route exact path={Routes.PRODUCT} component={Pdp} />
-    <Route exact path={Routes.ABOUT} component={About} />
+    <Route path={Routes.AUTHENTICATE} component={Authenticate} />
+    <Route path={Routes.SHOP} component={Shop} />
+    <Route path={Routes.PRODUCT} component={ProductPage} />
+    <Route path={Routes.ACCOUNT} component={RecentOrders} />
+    <Route path={Routes.WISHLIST} component={WishList} />
+    <Route path={Routes.ACCOUNT_DETAILS} component={AccountDetails} />
+    <Route path={Routes.PAYMENT_METHODS} component={PaymentMethods} />
+    <Route path={Routes.ADDRESSES} component={Addresses} />
+    <Route path={Routes.ADD_CARD} component={AddNewCard} />
+    <Route path={Routes.ORDER} component={OrderInfo} />
+    <Route path={Routes.PRODUCT} component={Pdp} />
+    <Route path={Routes.ABOUT} component={About} />
     <Route path="*" component={NotFound} />
   </Switch>
 );

@@ -45,9 +45,8 @@ export default class DropdownSelect extends PureComponent {
     return (
       <FormControl className={classNames( className, classes.formControl )} >
         <Select
-          displayEmpty
-          input={<OutlinedInput labelWidth={0} classes={{
-          }}/>}
+          // displayEmpty
+          // input={<OutlinedInput labelWidth={0} classes={{}}/>}
           classes={{
             root: classes.root,
             select: classes.select,
@@ -58,8 +57,9 @@ export default class DropdownSelect extends PureComponent {
               paper: classes.menuPaper,
             }
           }}
-          IconComponent={<Icon icon={ICONS.EXPAND_DOWN}/>}
-          value={value}>
+          // IconComponent={<Icon icon={ICONS.EXPAND_DOWN}/>}
+          // value={value}
+        >
           <MenuItem value='' disabled>{placeholder}</MenuItem>
           {choices.map( size =>
             Array.isArray( size ) ?

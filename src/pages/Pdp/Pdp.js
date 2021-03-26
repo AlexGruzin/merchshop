@@ -18,7 +18,6 @@ import classNames from 'classnames';
 import { H3, H5, BODY1 } from 'constants/typography';
 import styles from "./styles";
 
-
 @translate()
 @injectSheet( styles )
 export default class Pdp extends Component {

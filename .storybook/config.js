@@ -13,7 +13,7 @@ import jss from 'jss'
 import { JssProvider } from 'react-jss'
 import preset from 'jss-preset-default'
 
-import theme from '../src/theme/default';
+import theme from '/theme/default';
 
 jss.setup( preset());
 

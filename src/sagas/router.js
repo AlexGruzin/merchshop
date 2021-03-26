@@ -36,10 +36,11 @@ function* onchange({ payload }) {
   //     }
   // }
 
+  console.log(pathname);
   const currentRoute = Object
     .keys( viewSagas )
     .find( key => pathname.startsWith( key ));
-
+  console.log(currentRoute);
   if ( currentRoute ) {
     task = yield fork( viewSagas[currentRoute]);
   }
